@@ -125,7 +125,7 @@
                 <button class="btn btn-primary" type="button" id="createBtn">Update</button>
 
 
-                <a href="{{route('heritageListing')}}">
+                <a href="{{route('projectListing')}}">
                     <button class="btn btn-primary" type="button">Cancel</button>
                 </a>
 

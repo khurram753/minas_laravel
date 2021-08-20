@@ -141,6 +141,59 @@
                     </ul>
                 </li>
 
+                <li class="submenu">
+                    <a
+                        @if(Request()->route()->getName() == 'productListing' ||
+                            Request()->route()->getName() == 'productCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-tachometer-alt"></i> <span> Product </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('productListing')}}">Listing</a></li>
+                        <li><a href="{{route('productCreate')}}">Create New Product</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="submenu">
+                    <a
+                        @if(Request()->route()->getName() == 'newsCategoryListing' ||
+                            Request()->route()->getName() == 'newsCategoryCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-tachometer-alt"></i> <span> News Category </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('newsCategoryListing')}}">Listing</a></li>
+                        <li><a href="{{route('newsCategoryCreate')}}">Create New News Category</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="submenu">
+                    <a
+                        @if(Request()->route()->getName() == 'newsListing' ||
+                            Request()->route()->getName() == 'newsCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-tachometer-alt"></i> <span> News  </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('newsListing')}}">Listing</a></li>
+                        <li><a href="{{route('newsCreate')}}">Create New News </a></li>
+                    </ul>
+                </li>
+
 
 
 

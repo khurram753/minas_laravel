@@ -62,6 +62,8 @@ Route::namespace('Admin')->group(function () {
         Route::post('project-category-delete', 'ProjectCategoryController@delete')->name('projectCategoryDelete');
 
 
+
+
         Route::get('category-listing', 'CategoriesController@index')->name('categoryListing');
         Route::get('create-category', 'CategoriesController@create')->name('categoryCreate');
         Route::post('save-category', 'CategoriesController@save')->name('categorySave');
@@ -82,6 +84,33 @@ Route::namespace('Admin')->group(function () {
         Route::get('edit-material/{id}', 'MaterialController@edit')->name('materialEdit');
         Route::post('update-material', 'MaterialController@update')->name('materialUpdate');
         Route::post('material-delete', 'MaterialController@delete')->name('materialDelete');
+
+
+        Route::get('product-listing', 'ProductController@index')->name('productListing');
+        Route::get('create-product', 'ProductController@create')->name('productCreate');
+        Route::post('save-product', 'ProductController@save')->name('productSave');
+        Route::get('edit-product/{id}', 'ProductController@edit')->name('productEdit');
+        Route::post('update-product', 'ProductController@update')->name('productUpdate');
+        Route::post('product-delete', 'ProductController@delete')->name('productDelete');
+
+
+        Route::get('news-category-listing', 'NewsCategoryController@index')->name('newsCategoryListing');
+        Route::get('create-news-category', 'NewsCategoryController@create')->name('newsCategoryCreate');
+        Route::post('save-news-category', 'NewsCategoryController@save')->name('newsCategorySave');
+        Route::get('edit-news-category/{id}', 'NewsCategoryController@edit')->name('newsCategoryEdit');
+        Route::post('update-news-category', 'NewsCategoryController@update')->name('newsCategoryUpdate');
+        Route::post('news-category-delete', 'NewsCategoryController@delete')->name('newsCategoryDelete');
+
+
+        Route::get('news-listing', 'NewsController@index')->name('newsListing');
+        Route::get('create-news', 'NewsController@create')->name('newsCreate');
+        Route::post('save-news', 'NewsController@save')->name('newsSave');
+        Route::get('edit-news/{id}', 'NewsController@edit')->name('newsEdit');
+        Route::post('update-news', 'NewsController@update')->name('newsUpdate');
+        Route::post('news-delete', 'NewsController@delete')->name('newsDelete');
+
+
+
 
 
         Route::get('user-listing', 'UserController@index')->name('userListing');
@@ -128,15 +157,6 @@ Route::namespace('Admin')->group(function () {
         Route::post('update-size', 'SizeController@update')->name('sizeUpdate');
         Route::post('size-delete', 'SizeController@delete')->name('sizeDelete');
 
-        Route::get('product-listing', 'ProductController@index')->name('productListing');
-        Route::get('create-product', 'ProductController@create')->name('productCreate');
-        Route::post('save-product', 'ProductController@save')->name('productSave');
-        Route::get('edit-product/{id}', 'ProductController@edit')->name('productEdit');
-        Route::post('update-product', 'ProductController@update')->name('productUpdate');
-        Route::post('product-delete', 'ProductController@delete')->name('productDelete');
-        Route::get('category-size','ProductController@getCategorySize')->name('getCategorySize');
-        Route::get('delete-gallery/{id}','ProductController@deleteGallery')->name('delete-gallery');
-        Route::post('update-gallery','ProductController@updateGallery')->name('update-gallery');
 
 
     });
