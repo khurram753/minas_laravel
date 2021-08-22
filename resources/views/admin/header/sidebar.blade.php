@@ -36,6 +36,80 @@
                     </ul>
                 </li>
 
+                <li class="submenu">
+                    <a
+                        @if(Request()->route()->getName() == 'contactUsListing' ||
+                            Request()->route()->getName() == 'contactUsCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span> Contact Us Store </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('contactUsListing')}}">Listing</a></li>
+                        <li><a href="{{route('contactUsCreate')}}">Create</a></li>
+                    </ul>
+                </li>
+
+                <li class="submenu">
+                    <a
+                        @if(Request()->route()->getName() == 'storeListing' ||
+                            Request()->route()->getName() == 'storeCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span> Stores </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('storeListing')}}">Listing</a></li>
+                        <li><a href="{{route('storeCreate')}}">Create</a></li>
+                    </ul>
+                </li>
+
+                <li class="submenu">
+                    <a
+                        @if(Request()->route()->getName() == 'pressListing' ||
+                            Request()->route()->getName() == 'pressCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span> Media Kit Types  </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('pressListing')}}">Listing</a></li>
+                        <li><a href="{{route('pressCreate')}}">Create</a></li>
+
+
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a
+                        @if(Request()->route()->getName() == 'pressRecordListing' ||
+                            Request()->route()->getName() == 'pressRecordCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span> Media Kit Records </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('pressRecordListing')}}">Listing</a></li>
+                        <li><a href="{{route('pressRecordCreate')}}">Create</a></li>
+
+
+                    </ul>
+                </li>
+
+
 
                 <li class="submenu">
                     <a
@@ -86,6 +160,41 @@
                     <ul class="list-unstyled">
                         <li><a href="{{route('projectListing')}}">Listing</a></li>
                         <li><a href="{{route('projectCreate')}}">Create New Project</a></li>
+                    </ul>
+                </li>
+
+                <li class="submenu">
+                    <a
+                        @if(Request()->route()->getName() == 'newsCategoryListing' ||
+                            Request()->route()->getName() == 'newsCategoryCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-tachometer-alt"></i> <span> News Category </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('newsCategoryListing')}}">Listing</a></li>
+                        <li><a href="{{route('newsCategoryCreate')}}">Create New News Category</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="submenu">
+                    <a
+                        @if(Request()->route()->getName() == 'newsListing' ||
+                            Request()->route()->getName() == 'newsCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-tachometer-alt"></i> <span> News  </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('newsListing')}}">Listing</a></li>
+                        <li><a href="{{route('newsCreate')}}">Create New News </a></li>
                     </ul>
                 </li>
 
@@ -159,40 +268,7 @@
                 </li>
 
 
-                <li class="submenu">
-                    <a
-                        @if(Request()->route()->getName() == 'newsCategoryListing' ||
-                            Request()->route()->getName() == 'newsCategoryCreate')
-                        class="active"
-                        @endif
-                        href="javascript:void(0)">
-                        <i class="fas fa-tachometer-alt"></i> <span> News Category </span>
-                        <span class="menu-arrow"></span>
-                    </a>
 
-                    <ul class="list-unstyled">
-                        <li><a href="{{route('newsCategoryListing')}}">Listing</a></li>
-                        <li><a href="{{route('newsCategoryCreate')}}">Create New News Category</a></li>
-                    </ul>
-                </li>
-
-
-                <li class="submenu">
-                    <a
-                        @if(Request()->route()->getName() == 'newsListing' ||
-                            Request()->route()->getName() == 'newsCreate')
-                        class="active"
-                        @endif
-                        href="javascript:void(0)">
-                        <i class="fas fa-tachometer-alt"></i> <span> News  </span>
-                        <span class="menu-arrow"></span>
-                    </a>
-
-                    <ul class="list-unstyled">
-                        <li><a href="{{route('newsListing')}}">Listing</a></li>
-                        <li><a href="{{route('newsCreate')}}">Create New News </a></li>
-                    </ul>
-                </li>
 
 
 

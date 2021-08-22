@@ -1,7 +1,7 @@
 @extends('layout.dashboard-layout.app')
 
 @section('title')
-    QUALITY AND CRAFTSMANSHIP
+    Edit Store
 @endsection
 
 
@@ -12,10 +12,10 @@
             <div class="row">
                 <div class="col-xl-12 bh-mb">
                     <div class="breadcrumb-holder">
-                        <h1 class="main-title float-left"> QUALITY AND CRAFTSMANSHIP</h1>
+                        <h1 class="main-title float-left">Edit Store</h1>
                         <ol class="breadcrumb float-right">
                             <li class="breadcrumb-item">Home</li>
-                            <li class="breadcrumb-item active"> QUALITY AND CRAFTSMANSHIP</li>
+                            <li class="breadcrumb-item active">Edit Store</li>
                         </ol>
                         <div class="clearfix"></div>
                     </div>
@@ -28,64 +28,56 @@
                 <div class="row">
 
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Title</label>
-                            <input type="text" class="form-control" name="title"
-                                   placeholder="Enter Page Name" required
-                                   maxlength="50" value="{{$data->title}}">
+                            <label for="exampleInputEmail1">Store Name</label>
+                            <select class="form-control" name="store_id">
+                                <option value="" selected disabled>Select</option>
+                                @foreach($contactUsListing as $contactUs)
+                                    <option value="{{$contactUs->id}}" {{$data->store_id == $contactUs->id ? 'selected':''}}>{{$contactUs->title}}</option>
+                                @endforeach
+                            </select>
                         </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Description</label>
-                            <textarea class="form-control" name="description">{{$data->description}}</textarea>
+                            <textarea name="description" class="form-control editor">{{$data->description}}</textarea>
+
                         </div>
+
+                    </div>
+
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
                         <div class="custom-dbhome">
                             <div class="form-group ">
                                 <div class="db-bannerIMG">
-                                    @if($data->header_image)
-                                        <img class="image_1" src="{{asset($data->header_image)}}">
+                                    @if($data->rotate_image)
+                                        <img class="image_1" src="{{asset($data->rotate_image)}}">
                                     @else
                                         <img class="image_1" src="{{asset('admin/images/no_image.jpg')}}">
                                     @endif
-
                                 </div>
                                 <label for="exampleInputEmail1">Image </label>
-                                <input type="file" class="images_select" name="header_image"
+                                <input type="file" class="images_select" name="rotate_image"
                                        onchange="readURL(this,'image_1');">
-
                             </div>
                         </div>
 
                     </div>
+
+
                 </div>
-                <h2>Process Steps</h2>
+
+                <h2>Store Image</h2>
 
                 <div class="row add_more_button_row">
 
-{{--                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">--}}
-{{--                        <div class="form-group">--}}
-{{--                            <label for="exampleInputEmail1">Title</label>--}}
-{{--                            <input type="text" class="form-control" name="process[0][title]"--}}
-{{--                                   placeholder="Enter Page Name" required--}}
-{{--                                   maxlength="50">--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">--}}
-
-{{--                        <div class="form-group">--}}
-{{--                            <label for="exampleInputEmail1">Description</label>--}}
-{{--                            <textarea class="form-control" name="process[0][description]"></textarea>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">--}}
-{{--                        <div class="form-group">--}}
-{{--                            <label for="exampleInputEmail1">Step Number</label>--}}
-{{--                            <input type="text" class="form-control" name="process[0][step_number]"--}}
-{{--                                   placeholder="Enter Step Number" required--}}
-{{--                                   maxlength="2">--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                         <button type="button" class="add_more_process">Add More</button>
                     </div>
@@ -93,8 +85,8 @@
                 </div>
 
 
-                @foreach($data->process as $key => $process)
-                    <input type="hidden" name="process[{{$key}}][id]" value="{{$process->id}}">
+                @foreach($data->storeImage as $key => $image)
+                    <input type="hidden" name="process[{{$key}}][id]" value="{{$image->id}}">
                     <div class="row delete_row">
 
                         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
@@ -102,49 +94,49 @@
                                 <label for="exampleInputEmail1">Title</label>
                                 <input type="text" class="form-control" name="process[{{$key}}][title]"
                                        placeholder="Enter Page Name" required
-                                       maxlength="50" value="{{$process->title}}">
+                                       maxlength="50" value="{{$image->title}}">
                             </div>
                         </div>
                         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Description</label>
-                                <textarea class="form-control" name="process[{{$key}}][description]">{{$process->description}}</textarea>
+                                <textarea class="form-control" name="process[{{$key}}][description]">{{$image->description}}</textarea>
                             </div>
                         </div>
                         <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Step Number</label>
-                                <input type="text" class="form-control" name="process[{{$key}}][step_number]"
-                                       placeholder="Enter Step Number" required
-                                       maxlength="2" value="{{$process->step_number}}">
+                                <label for="exampleInputEmail1">Year</label>
+                                <input type="text" class="form-control" name="process[{{$key}}][date]"
+                                       placeholder="Enter Year" required
+                                       value="{{$image->date}}">
                             </div>
                         </div>
 
                         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div class="custom-dbhome">
-                            <div class="form-group" style="width: 100%!important">
-                                <div class="db-bannerIMG">
-                                    @if($process->background_image)
-                                        <img class="images_{{$key}}" src="{{asset($process->background_image)}}">
-                                    @else
-                                        <img class="images_{{$key}}" src="{{asset('admin/images/no_image.jpg')}}">
-                                    @endif
-                                </div>
-                                <label for="exampleInputEmail1">Background Image </label>
-                                <input type="file" class="images_select"
-                                       name="process[{{$key}}][background_image]"
-                                       value="{{$process->background_image}}"
-                                       onchange="readURL(this,'images_{{$key}}');">
+                                <div class="form-group" style="width: 100%!important">
+                                    <div class="db-bannerIMG">
+                                        @if($image->image)
+                                            <img class="images_{{$key}}" src="{{asset($image->image)}}">
+                                        @else
+                                            <img class="images_{{$key}}" src="{{asset('admin/images/no_image.jpg')}}">
+                                        @endif
+                                    </div>
+                                    <label for="exampleInputEmail1"> Image </label>
+                                    <input type="file" class="images_select"
+                                           name="process[{{$key}}][image]"
+                                           value="{{$image->image}}"
+                                           onchange="readURL(this,'images_{{$key}}');">
 
+                                </div>
                             </div>
-                        </div>
                         </div>
 
 
 
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                            <button type="button" data-id="{{$process->id}}" class="delete_process">Delete Row</button>
+                            <button type="button" data-id="{{$image->id}}" class="delete_process">Delete Row</button>
                         </div>
 
                     </div>
@@ -153,6 +145,10 @@
 
                 <button class="btn btn-primary" type="button" id="createBtn">Update</button>
 
+
+                <a href="{{route('storeListing')}}">
+                    <button class="btn btn-primary" type="button">Cancel</button>
+                </a>
 
             </form>
         </div>
@@ -164,11 +160,12 @@
 
 @section('script')
 
+
     <script>
 
         $(document).ready(function () {
 
-            var number = {{count($data->process)}};
+            var number = {{count($data->storeImage)}};
 
 
             $('#createBtn').click(function () {
@@ -190,7 +187,7 @@
                 $.ajax({
 
                     type: 'POST',
-                    url: '{{route("qualityUpdate")}}',
+                    url: '{{route("storeUpdate")}}',
                     data: data,
                     cache: false,
                     contentType: false,
@@ -202,11 +199,11 @@
                             $.unblockUI();
                             successMsg(response.message);
 
-                            setTimeout(function () {
-                                    window.location.reload();
-                                }
-                                , 2000);
-                        } else if (response.result == 'error') {
+                            setTimeout(function(){
+                                    window.location.href='{{route('storeListing')}}'}
+                                ,2000);
+                        }
+                        else if(response.result == 'error'){
                             $.unblockUI();
                             errorMsg(response.message);
                         }
@@ -217,7 +214,6 @@
                         $.each(data.responseJSON.errors, function (key, value) {
                             $.unblockUI();
                             errorMsg(value);
-                            return false;
                         });
                     }
 
@@ -246,8 +242,8 @@
 
                 html += '<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">';
                 html += '<div class="form-group">';
-                html += '<label for="exampleInputEmail1">Step Number</label>';
-                html += '<input type="text" class="form-control" name="process['+number+'][step_number]" placeholder="Enter Step Number" maxlength="50">';
+                html += '<label for="exampleInputEmail1">Year</label>';
+                html += '<input type="text" class="form-control" name="process['+number+'][date]" placeholder="Enter Year" maxlength="50">';
                 html += '</div> </div>';
 
                 html += '<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">';
@@ -257,7 +253,7 @@
                 html += '<img class="images_'+number+'" src="{{asset('admin/images/no_image.jpg')}}">';
                 html += '</div>';
                 html += '<label for="exampleInputEmail1">Background Image </label>';
-                html += '<input type="file" class="images_select" name="process['+number+'][background_image]" onchange="readURL(this,`images_'+number+'`);">';
+                html += '<input type="file" class="images_select" name="process['+number+'][image]" onchange="readURL(this,`images_'+number+'`);">';
                 html += '</div>';
                 html += '</div>';
                 html += '</div>';
@@ -275,13 +271,11 @@
 
             $(document).on('click','.delete_process',function (){
 
-                // var data = $(this).data('id');
-
                 var data = $(this).data('id');
                 var this_data = $(this);
 
-                if (data !== undefined) {
-
+                if (data !== undefined)
+                {
                     $.blockUI({
                         css: {
                             border: 'none',
@@ -297,14 +291,14 @@
                     $.ajax({
 
                         type: 'GET',
-                        url: '{{route("deleteProcess")}}',
-                        data: {id: data},
+                        url: '{{route("deleteStoreImage")}}',
+                        data: {id:data},
 
                         success: function (response, status) {
 
                             if (response.result == 'success') {
                                 $.unblockUI();
-                                $(this).parents('div.delete_row').remove();
+                                this_data.parents('div.delete_row').remove();
                                 successMsg(response.message);
 
                                 setTimeout(function () {
@@ -333,7 +327,10 @@
                     this_data.parents('div.delete_row').remove();
                 }
 
+
+
             });
+
 
         });
 
@@ -352,12 +349,12 @@
                     isSuccess = fileTypes.indexOf(extension) > -1;
                 if (extension != 'jfif') {
                     // if (isSuccess && size <= 1000000) {
-                        reader.onload = function (e) {
-                            $('.' + className).attr('src', e.target.result);
-                        };
+                    reader.onload = function (e) {
+                        $('.' + className).attr('src', e.target.result);
+                    };
 
-                        reader.readAsDataURL(input.files[0]);
-                        // $('#image_upload_preview').show();
+                    reader.readAsDataURL(input.files[0]);
+                    // $('#image_upload_preview').show();
 
                     // } else {
                     //     errorMsg('You can only upload png,jpg or jpeg files and size of flag should not greater than 1MB');
@@ -381,7 +378,6 @@
                 }
             }
         }
-
     </script>
 
 @endsection

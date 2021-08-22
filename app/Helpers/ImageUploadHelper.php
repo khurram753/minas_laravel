@@ -17,4 +17,15 @@ class ImageUploadHelper
         return $path.$fileNameUpload;
     }
 
+    public static function uploadFile($folderName , $file , $fileName)
+    {
+        $filename = $fileName;
+        $destinationPath = public_path($folderName);
+        $file->move($destinationPath,$filename);
+
+        return $folderName.$fileName;
+
+    }
+
+
 }

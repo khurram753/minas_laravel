@@ -62,8 +62,6 @@ Route::namespace('Admin')->group(function () {
         Route::post('project-category-delete', 'ProjectCategoryController@delete')->name('projectCategoryDelete');
 
 
-
-
         Route::get('category-listing', 'CategoriesController@index')->name('categoryListing');
         Route::get('create-category', 'CategoriesController@create')->name('categoryCreate');
         Route::post('save-category', 'CategoriesController@save')->name('categorySave');
@@ -110,8 +108,39 @@ Route::namespace('Admin')->group(function () {
         Route::post('news-delete', 'NewsController@delete')->name('newsDelete');
 
 
+        Route::get('contact-us-listing', 'ContactUsController@index')->name('contactUsListing');
+        Route::get('create-contact-us', 'ContactUsController@create')->name('contactUsCreate');
+        Route::post('save-contact-us', 'ContactUsController@save')->name('contactUsSave');
+        Route::get('edit-contact-us/{id}', 'ContactUsController@edit')->name('contactUsEdit');
+        Route::post('update-contact-us', 'ContactUsController@update')->name('contactUsUpdate');
+        Route::post('contact-us-delete', 'ContactUsController@delete')->name('contactUsDelete');
 
+        Route::get('store-listing', 'StoreController@index')->name('storeListing');
+        Route::get('create-store', 'StoreController@create')->name('storeCreate');
+        Route::post('save-store', 'StoreController@save')->name('storeSave');
+        Route::get('edit-store/{id}', 'StoreController@edit')->name('storeEdit');
+        Route::post('update-store', 'StoreController@update')->name('storeUpdate');
+        Route::post('store-delete', 'StoreController@delete')->name('storeDelete');
+        Route::get('delete-store-image','StoreController@deleteStoreImage')->name('deleteStoreImage');
 
+//        Route::get('press-photos','PressController@photos')->name('press-photos');
+//        Route::get('press-videos','PressController@videos')->name('press-videos');
+//        Route::get('press-newYearCard','PressController@newYearCard')->name('press-newYearCard');
+//        Route::get('press-mediaKit','PressController@mediaKit')->name('press-mediaKit');
+
+        Route::get('media-kit-listing', 'PressController@index')->name('pressListing');
+        Route::get('create-media-kit', 'PressController@create')->name('pressCreate');
+        Route::post('save-media-kit', 'PressController@save')->name('pressSave');
+        Route::get('edit-media-kit/{id}', 'PressController@edit')->name('pressEdit');
+        Route::post('update-media-kit', 'PressController@update')->name('pressUpdate');
+        Route::post('media-kit-delete', 'PressController@delete')->name('pressDelete');
+
+        Route::get('media-kit-records-listing', 'PressRecordsController@index')->name('pressRecordListing');
+        Route::get('create-media-kit-records', 'PressRecordsController@create')->name('pressRecordCreate');
+        Route::post('save-media-kit-records', 'PressRecordsController@save')->name('pressRecordSave');
+        Route::get('edit-media-kit-records/{id}', 'PressRecordsController@edit')->name('pressRecordEdit');
+        Route::post('update-media-kit-records', 'PressRecordsController@update')->name('pressRecordUpdate');
+        Route::post('media-kit-records-delete', 'PressRecordsController@delete')->name('pressRecordDelete');
 
         Route::get('user-listing', 'UserController@index')->name('userListing');
         Route::get('create-user', 'UserController@create')->name('userCreate');
@@ -119,44 +148,6 @@ Route::namespace('Admin')->group(function () {
         Route::get('edit-user/{id}', 'UserController@edit')->name('userEdit');
         Route::post('update-user', 'UserController@update')->name('userUpdate');
         Route::post('user-delete', 'UserController@delete')->name('userDelete');
-
-
-        Route::get('type-listing', 'TypeController@index')->name('typeListing');
-        Route::get('create-type', 'TypeController@create')->name('typeCreate');
-        Route::post('save-type', 'TypeController@save')->name('typeSave');
-        Route::get('edit-type/{id}', 'TypeController@edit')->name('typeEdit');
-        Route::post('update-type', 'TypeController@update')->name('typeUpdate');
-        Route::post('type-delete', 'TypeController@delete')->name('typeDelete');
-
-
-        Route::get('wear-size-listing', 'WearSizeController@index')->name('wearSizeListing');
-        Route::get('create-wear-size', 'WearSizeController@create')->name('wearSizeCreate');
-        Route::post('save-wear-size', 'WearSizeController@save')->name('wearSizeSave');
-        Route::get('edit-wear-size/{id}', 'WearSizeController@edit')->name('wearSizeEdit');
-        Route::post('update-wear-size', 'WearSizeController@update')->name('wearSizeUpdate');
-        Route::post('wear-size-delete', 'WearSizeController@delete')->name('wearSizeDelete');
-
-        Route::get('body-type-listing', 'BodyTypeController@index')->name('bodyTypeListing');
-        Route::get('create-body-type', 'BodyTypeController@create')->name('bodyTypeCreate');
-        Route::post('save-body-type', 'BodyTypeController@save')->name('bodyTypeSave');
-        Route::get('edit-body-type/{id}', 'BodyTypeController@edit')->name('bodyTypeEdit');
-        Route::post('update-body-type', 'BodyTypeController@update')->name('bodyTypeUpdate');
-        Route::post('body-type-delete', 'BodyTypeController@delete')->name('bodyTypeDelete');
-
-        Route::get('style-listing', 'StyleController@index')->name('styleListing');
-        Route::get('create-style', 'StyleController@create')->name('styleCreate');
-        Route::post('save-style', 'StyleController@save')->name('styleSave');
-        Route::get('edit-style/{id}', 'StyleController@edit')->name('styleEdit');
-        Route::post('update-style', 'StyleController@update')->name('styleUpdate');
-        Route::post('style-delete', 'StyleController@delete')->name('styleDelete');
-
-        Route::get('size-listing', 'SizeController@index')->name('sizeListing');
-        Route::get('create-size', 'SizeController@create')->name('sizeCreate');
-        Route::post('save-size', 'SizeController@save')->name('sizeSave');
-        Route::get('edit-size/{id}', 'SizeController@edit')->name('sizeEdit');
-        Route::post('update-size', 'SizeController@update')->name('sizeUpdate');
-        Route::post('size-delete', 'SizeController@delete')->name('sizeDelete');
-
 
 
     });
