@@ -1,4 +1,4 @@
-<html lang="en-US" class="placeholder backgroundblendmode objectfit object-fit backgroundcliptext bgsizecover skrollr skrollr-desktop">
+<html lang="en-US" >
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="{{asset('site/images/favicon-32x32.png')}}">
@@ -10,9 +10,9 @@
 
 </head>
 
-<body
-    class="home page-template page-template-page-templates page-template-home page-template-page-templateshome-php page page-id-15 desktop loaded"
-    data-new-gr-c-s-check-loaded="14.1014.0" data-gr-ext-installed="" style="">
+
+<body class="{{Request()->route()->getName() == 'home' ? 'home page-template page-template-page-templates page-template-home page-template-page-templateshome-php page page-id-15 desktop loaded"
+data-new-gr-c-s-check-loaded="14.1014.0':'' }}">
 
 @if(Request()->route()->getName() != 'home')
     <div class="site-container relative overflow">
