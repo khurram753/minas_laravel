@@ -18,7 +18,9 @@ class CreateCMSTable extends Migration
 
             $table->string('image')->nullable();
             $table->string('page_name');
-            $table->text('description');
+            $table->text('description')->nullable();
+            $table->string('text')->nullable();
+            $table->string('video')->nullable();
 
             $table->timestamps();
         });

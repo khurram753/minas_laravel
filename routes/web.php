@@ -18,7 +18,8 @@ use Illuminate\Support\Facades\Route;
 //})->name('home');
 
 Route::namespace("Site")->group(function () {
-
+    Route::get('/','MainController@index')->name('home');
+    Route::get('home','HomeController@index')->name('homepage');
 
 });
 

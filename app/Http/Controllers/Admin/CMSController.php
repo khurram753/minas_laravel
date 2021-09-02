@@ -21,6 +21,16 @@ class CMSController extends Controller
         return $service->update($request);
     }
 
+    public function editBanner(CMSService $service)
+    {
+        return $service->editBanner();
+    }
+
+    public function updateBanner (CMSRequest $request,CMSService $service)
+    {
+        return $service->updateBanner($request);
+    }
+
     public function editQualityCraftsmanship(CMSService $service)
     {
         return $service->editQualityCraftsmanship();
