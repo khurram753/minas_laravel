@@ -3098,20 +3098,23 @@ var s, Main = {
                         autoAlpha: 0, delay: e, onComplete: function () {
                             O.holder.remove()
                         }
-                    }), jQuery.ajax({
-                        url: templateURL + "ajax_corporate_intro.php",
-                        type: "post",
-                        data: {}
-                    }), 767 < x && p.play()
-                }), jQuery(A).click(function (e) {
-                    e.preventDefault(), e.stopPropagation();
-                    var a = jQuery(this).attr("href");
-                    C.reverse();
-                    var t = C.duration(), r = 1e3 * t;
-                    TweenMax.to(O.mouse, 1, {autoAlpha: 0, delay: t}), setTimeout(function () {
-                        window.location.href = a
-                    }, r)
-                });
+                    }),
+                        //     jQuery.ajax({
+                        //     url: templateURL + "ajax_corporate_intro.php",
+                        //     type: "post",
+                        //     data: {}
+                        // }),
+                    767 < x && p.play()
+                }),
+                    jQuery(A).click(function (e) {
+                        e.preventDefault(), e.stopPropagation();
+                        var a = jQuery(this).attr("href");
+                        C.reverse();
+                        var t = C.duration(), r = 1e3 * t;
+                        TweenMax.to(O.mouse, 1, {autoAlpha: 0, delay: t}), setTimeout(function () {
+                            window.location.href = a
+                        }, r)
+                    });
                 var S = window.innerWidth / 2, E = window.innerHeight / 2, I = jQuery("#mouse")[0], B = "200 200",
                     Y = Object.assign(I, {
                         $cursor: I.querySelector("svg"),
@@ -3159,23 +3162,23 @@ var s, Main = {
                 }), jQuery(H).on("mouseleave", function (e) {
                     Svg.resetHoverState({ref: I, svgOrigin: B})
                 });
-                // var D = {
-                //     el: jQuery("#mouse"),
-                //     x: window.innerWidth / 2,
-                //     y: window.innerHeight / 2,
-                //     w: 400,
-                //     h: 400,
-                //     update: function () {
-                //         l = this.x - this.w / 2, w = this.y - this.h / 2, this.el.css({transform: "translate3d(" + l + "px, " + w + "px, 0)"})
-                //     }
-                // };
-                // jQuery(window).mousemove(function (e) {
-                //     S = e.clientX, E = e.clientY
-                // }), setInterval(function () {
-                //     D.x = c(D.x, S, .1), D.y = c(D.y, E, .1), D.update()
-                // }, 1e3 / 60)
+                var D = {
+                    el: jQuery("#mouse"),
+                    x: window.innerWidth / 2,
+                    y: window.innerHeight / 2,
+                    w: 400,
+                    h: 400,
+                    update: function () {
+                        l = this.x - this.w / 2, w = this.y - this.h / 2, this.el.css({transform: "translate3d(" + l + "px, " + w + "px, 0)"})
+                    }
+                };
+                jQuery(window).mousemove(function (e) {
+                    S = e.clientX, E = e.clientY
+                }), setInterval(function () {
+                    D.x = c(D.x, S, .1), D.y = c(D.y, E, .1), D.update()
+                }, 1e3 / 60)
             }
-            // else 767 < x && p.play(), u.play(), h.play()
+            else 767 < x && p.play(), u.play(), h.play()
         } else u.play();
         if (document.getElementById("page-intro") && scroll_to_position(0, .2), document.getElementById("container360")) {
             var L, X = jQuery("#container360"), z = X.data("image"), N = X.innerWidth(), $ = X.innerHeight();

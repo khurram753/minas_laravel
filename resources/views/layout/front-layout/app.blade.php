@@ -1,4 +1,4 @@
-<html lang="en-US">
+<html lang="en-US" class="placeholder backgroundblendmode objectfit object-fit backgroundcliptext bgsizecover skrollr skrollr-desktop">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="{{asset('site/images/favicon-32x32.png')}}">

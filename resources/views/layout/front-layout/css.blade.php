@@ -3,7 +3,7 @@
 <script src="{{asset('site/js/inpage.js')}}"></script>
 
 
-<style type="text/css" id="wp-custom-css">
+<style id="wp-custom-css">
     .footer-logo:last-child {
         margin-left: 18px;
     }
