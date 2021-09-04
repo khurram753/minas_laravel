@@ -17,4 +17,9 @@ class HeritageController extends Controller
     {
         return $heritageService->show($request);
     }
+
+    public function detail($id,HeritageService $heritageService)
+    {
+        return $heritageService->detail($id);
+    }
 }

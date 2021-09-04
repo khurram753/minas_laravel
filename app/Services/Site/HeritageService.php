@@ -24,4 +24,21 @@ class HeritageService
             return response()->json(['result'=>'error','message'=>'Record Not Found']);
         }
     }
+
+    public function detail($id)
+    {
+        $data = Heritage::find($id);
+        if($data)
+        {
+            $previousURL = Heritage::where('year','<=',$data->year)->where('id','!=',$data->id)->first();
+            $nextURL = Heritage::where('year','>=',$data->year)->where('id','!=',$data->id)->first();
+
+            return view('site.heritage.detail',compact('data','previousURL','nextURL'));
+
+
+        }
+        else{
+            return redirect()>back()->with('error','Record Not Found');
+        }
+    }
 }

@@ -164,7 +164,7 @@
                                 this_id.find('span.heritage-link').addClass('loc');
 
                                 $('#heritage-title').text(response.data.year);
-                                $('#heritage-text').text(response.data.description);
+                                $('#heritage-text').text(response.data.name);
 
                                 $('#heritage-title').css({
                                     'opacity': 1, 'transform': 'matrix(1, 0, 0, 1, 0, 0)',

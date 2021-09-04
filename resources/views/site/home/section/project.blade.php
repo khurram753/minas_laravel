@@ -33,17 +33,18 @@
                             </div>
                         </div>
                     </div>
-                    <div
-                        class="abs-tr top-40 z-20 right--150 overflow js-img-reveal desktop-right--60 tablet-hor-hidden skrollr-pointer overflow skrollable skrollable-before"
-                        data-emit-events="" data-bottom-top="" data-trans="1.3" data-delay="0.1" style="">
-                        <div class="js-img-reveal__holder overflow">
-                            <div class="js-img-reveal__image">
-                                <div class="fill-dimensions multiply bg-grey opc-50 z-10"></div>
-                                <img class="resp-image" src="{{asset($project->projectGallery->first()->images)}}"
-                                     alt="">
+                    @if(sizeof($project->projectGallery) > 0)
+                        <div class="abs-tr top-40 z-20 right--150 overflow js-img-reveal desktop-right--60 tablet-hor-hidden skrollr-pointer overflow skrollable skrollable-before"
+                            data-emit-events="" data-bottom-top="" data-trans="1.3" data-delay="0.1" style="">
+                            <div class="js-img-reveal__holder overflow">
+                                <div class="js-img-reveal__image">
+                                    <div class="fill-dimensions multiply bg-grey opc-50 z-10"></div>
+                                    <img class="resp-image" src="{{asset($project->projectGallery->first()->images)}}"
+                                         alt="">
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endif
                     <div class=" maxw-770 m-auto a-right trans desktop-acenter">
                         <a href="project.html" aria-label="Read more about Carbon Black Bar cart" itemprop="url" class="a-right link-to-white color-white link-underline display--inline desktop-acenter">
                             <span class="font-bold font-12 extra-lh4 extra-ls mb-33 display--block opc-0 no-visible js-fade-up skrollr-pointer skrollable skrollable-before" data-emit-events="" data-bottom-top="" data-trans="1.4" style="">
