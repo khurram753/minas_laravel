@@ -3178,7 +3178,7 @@ var s, Main = {
                     D.x = c(D.x, S, .1), D.y = c(D.y, E, .1), D.update()
                 }, 1e3 / 60)
             }
-            // else 767 < x && p.play(), u.play(), h.play()
+            else 767 < x && p.play(), u.play(), h.play()
         } else u.play();
         if (document.getElementById("page-intro") && scroll_to_position(0, .2), document.getElementById("container360")) {
             var L, X = jQuery("#container360"), z = X.data("image"), N = X.innerWidth(), $ = X.innerHeight();
