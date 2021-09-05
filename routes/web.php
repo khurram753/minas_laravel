@@ -26,6 +26,9 @@ Route::namespace("Site")->group(function () {
     Route::get('heritage-detail/{id}',"HeritageController@detail")->name('getHeritageDetail');
     Route::get('project','ProjectController@index')->name('project');
     Route::get('project-detail/{id}','ProjectController@detail')->name('projectDetail');
+    Route::get('news-update','NewsController@index')->name('newsUpdate');
+    Route::get('news-update-detail/{id}','NewsController@detail')->name('newsUpdateDetail');
+
 
 
 });
