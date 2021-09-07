@@ -4045,7 +4045,8 @@ var s, Main = {
             }, forceHeight: !1
         })
     }, close_menu: function () {
-    }, build_sliders: function (e) {
+    },
+    build_sliders: function (e) {
         var d = {
             ease1: CustomEase.create("ease1", ".45,.01,.07,1"),
             ease2: CustomEase.create("ease2", "M0,0 C0.496,0.174 0.396,1 1,1"),
@@ -4112,7 +4113,8 @@ var s, Main = {
                 }
             })
         })
-    }, escape_triggers: function () {
+    },
+    escape_triggers: function () {
         Main.el.menu_close.trigger("click")
     }, checkform_ns: function (e, a) {
         clear_errors(e);
