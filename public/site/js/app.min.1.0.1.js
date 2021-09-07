@@ -3610,17 +3610,17 @@ var s, Main = {
         }), xe.close.click(function () {
             Ce.handler.removeClass("loc"), ke.reverse(), ke.timeScale(1.7)
         }), document.getElementById("popup-slider")) {
-            // var Me = {
-            //     trigger: jQuery(".js-open-slider"),
-            //     container: jQuery("#popup-slider"),
-            //     bg: jQuery("#popup-slider__bg"),
-            //     contents: jQuery("#popup-slider__contents"),
-            //     close: jQuery("#popup-slider__close"),
-            //     slider: jQuery("#popup-slider__holder"),
-            //     controls: jQuery("#popup-slider__prev, #popup-slider__next"),
-            //     total: 0,
-            //     slider_initialized: !1
-            // },
+            var Me = {
+                trigger: jQuery(".js-open-slider"),
+                container: jQuery("#popup-slider"),
+                bg: jQuery("#popup-slider__bg"),
+                contents: jQuery("#popup-slider__contents"),
+                close: jQuery("#popup-slider__close"),
+                slider: jQuery("#popup-slider__holder"),
+                controls: jQuery("#popup-slider__prev, #popup-slider__next"),
+                total: 0,
+                slider_initialized: !1
+            },
                 Te = new TimelineMax({
                 paused: !0, onComplete: function () {
                     TweenMax.to(Me.contents, .6, {

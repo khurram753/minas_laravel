@@ -29,6 +29,8 @@ Route::namespace("Site")->group(function () {
     Route::get('news-update','NewsController@index')->name('newsUpdate');
     Route::get('news-update-detail/{id}','NewsController@detail')->name('newsUpdateDetail');
     Route::get('quality-craftsmanship','QualityController@index')->name('quality');
+    Route::get('contact-us','ContactUsController@index')->name('contactUs');
+    Route::get('store-detail/{id}','ContactUsController@storeDetail')->name('storeDetail');
 
 
 
