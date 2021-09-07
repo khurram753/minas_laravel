@@ -46,7 +46,7 @@
                         <ul id="menu-footer-menu_en" class="menu-ul">
                             <li id="menu-item-379"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-379 main-item item--74 mnu-1">
-                                \
+                                
                                 <a href="about.html" class="menu-a menu-link item--74">About</a>
                             </li>
                             <li id="menu-item-380"

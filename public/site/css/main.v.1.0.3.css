@@ -2725,7 +2725,7 @@ input[type="range"].time::-webkit-slider-thumb {
 body,
 html {
     font-family: "helvetica_neue_light", Arial, Helvetica, sans-serif;
-    font-size: 19px;
+    font-size: 18px;
     line-height: 30px;
     color: #fff;
 }
@@ -9195,4 +9195,17 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 .project_img_abHeight img {
     height: 100%;
     object-fit: cover;
+}
+
+
+/* about */
+
+.page-template-about p,
+.page-template-about li {
+    font-size: 18px !important;
+}
+
+.page-template-about h3,
+.page-template-about h2 {
+    font-size: 25px;
 }
