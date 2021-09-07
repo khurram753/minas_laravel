@@ -13,7 +13,7 @@
                     DISCOVER OUR LATEST NEWS
                 </div>
                 <div class="btn-black opc-0 no-visible js-fade-in skrollr-pointer tablet-hor-hidden skrollable skrollable-before" data-emit-events="" data-bottom-top="" data-cubic="custom" data-trans="1.6" style="">
-                    <a href="news-and-update.html"
+                    <a href="{{route('newsUpdate')}}"
                        class="circle-btn cursor relative display--inline circle-link">
                         <svg class="circle-btn__wrapper-circle" xmlns="http://www.w3.org/2000/svg"
                              viewBox="0 0 151.689 148.568">
@@ -42,7 +42,7 @@
         @foreach($news as $singleNews)
             <article class="block-33 tablet-hor-50 tablet-100 mb-37 display--inline-top mt-50 mt-50" itemscope="" itemtype="http://schema.org/NewsArticle" style="float: left">
                 <div class="gutter tablet-hor-center">
-                    <a itemprop="url" href="project.html" aria-label="Read more about Moving on to a new era" class="post-link display--block relative maxw-477 link-underline m-auto">
+                    <a itemprop="url" href="{{route('newsUpdateDetail',['id'=>$singleNews->id])}}" aria-label="Read more about Moving on to a new era" class="post-link display--block relative maxw-477 link-underline m-auto">
                         <span class="display--block relative pt-65p  mb-33 js-scale-out overflow skrollr-pointer tablet-nopad--top skrollable skrollable-before" data-emit-events="" data-bottom-top="" data-delay="0" style="">
                             <span class="display--block abs-tl block-100 js-scale-out__holder opc-0 no-visible overflow tablet-rel">
                                 <span class="display--block js-scale-out__img">

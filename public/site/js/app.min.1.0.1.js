@@ -3889,37 +3889,40 @@ var s, Main = {
                 }
 
                 C.set(M, { className: "+=overflow" }, 0), C.to(O.bg, 1.4, {
-                    autoAlpha: 1,
-                    scale: 1,
-                    transformOrigin: "center center",
-                    ease: T.ease3
-                }, 0), C.staggerTo(O.fade, 1.2, {
-                    autoAlpha: 1,
-                    ease: T.ease1
-                }, .2, .5), C.to(O.mouse, 1.2, { autoAlpha: 1, ease: T.ease1 }, .2, .5), jQuery(b).click(function() {
-                    C.reverse();
-                    var e = C.duration();
-                    TweenMax.to(O.holder, 1, {
-                        autoAlpha: 0,
-                        delay: e,
-                        onComplete: function() {
-                            O.holder.remove()
-                        }
-                    }), jQuery.ajax({
-                        url: templateURL + "ajax_corporate_intro.php",
-                        type: "post",
-                        data: {}
-                    }), 767 < x && p.play()
-                }), jQuery(A).click(function(e) {
-                    e.preventDefault(), e.stopPropagation();
-                    var a = jQuery(this).attr("href");
-                    C.reverse();
-                    var t = C.duration(),
-                        r = 1e3 * t;
-                    TweenMax.to(O.mouse, 1, { autoAlpha: 0, delay: t }), setTimeout(function() {
-                        window.location.href = a
-                    }, r)
-                });
+                        autoAlpha: 1,
+                        scale: 1,
+                        transformOrigin: "center center",
+                        ease: T.ease3
+                    }, 0), C.staggerTo(O.fade, 1.2, {
+                        autoAlpha: 1,
+                        ease: T.ease1
+                    }, .2, .5), C.to(O.mouse, 1.2, { autoAlpha: 1, ease: T.ease1 }, .2, .5), jQuery(b).click(function() {
+                        C.reverse();
+                        var e = C.duration();
+                        TweenMax.to(O.holder, 1, {
+                                autoAlpha: 0,
+                                delay: e,
+                                onComplete: function() {
+                                    O.holder.remove()
+                                }
+                            }),
+                            //     jQuery.ajax({
+                            //     url: templateURL + "ajax_corporate_intro.php",
+                            //     type: "post",
+                            //     data: {}
+                            // }),
+                            767 < x && p.play()
+                    }),
+                    jQuery(A).click(function(e) {
+                        e.preventDefault(), e.stopPropagation();
+                        var a = jQuery(this).attr("href");
+                        C.reverse();
+                        var t = C.duration(),
+                            r = 1e3 * t;
+                        TweenMax.to(O.mouse, 1, { autoAlpha: 0, delay: t }), setTimeout(function() {
+                            window.location.href = a
+                        }, r)
+                    });
                 var S = window.innerWidth / 2,
                     E = window.innerHeight / 2,
                     I = jQuery("#mouse")[0],
@@ -3978,23 +3981,22 @@ var s, Main = {
                 }), jQuery(H).on("mouseleave", function(e) {
                     Svg.resetHoverState({ ref: I, svgOrigin: B })
                 });
-                // var D = {
-                //     el: jQuery("#mouse"),
-                //     x: window.innerWidth / 2,
-                //     y: window.innerHeight / 2,
-                //     w: 400,
-                //     h: 400,
-                //     update: function () {
-                //         l = this.x - this.w / 2, w = this.y - this.h / 2, this.el.css({transform: "translate3d(" + l + "px, " + w + "px, 0)"})
-                //     }
-                // };
-                // jQuery(window).mousemove(function (e) {
-                //     S = e.clientX, E = e.clientY
-                // }), setInterval(function () {
-                //     D.x = c(D.x, S, .1), D.y = c(D.y, E, .1), D.update()
-                // }, 1e3 / 60)
-            }
-            // else 767 < x && p.play(), u.play(), h.play()
+                var D = {
+                    el: jQuery("#mouse"),
+                    x: window.innerWidth / 2,
+                    y: window.innerHeight / 2,
+                    w: 400,
+                    h: 400,
+                    update: function() {
+                        l = this.x - this.w / 2, w = this.y - this.h / 2, this.el.css({ transform: "translate3d(" + l + "px, " + w + "px, 0)" })
+                    }
+                };
+                jQuery(window).mousemove(function(e) {
+                    S = e.clientX, E = e.clientY
+                }), setInterval(function() {
+                    D.x = c(D.x, S, .1), D.y = c(D.y, E, .1), D.update()
+                }, 1e3 / 60)
+            } else 767 < x && p.play(), u.play(), h.play()
         } else u.play();
         if (document.getElementById("page-intro") && scroll_to_position(0, .2), document.getElementById("container360")) {
             var L, X = jQuery("#container360"),
@@ -4485,129 +4487,129 @@ var s, Main = {
                         }, .5), TweenMax.to(Me.close, 1, { autoAlpha: 1, ease: T.ease1 }, .5)
                     }
                 });
-            Te.set(M, { className: "+=overflow" }).to(Me.container, .01, { autoAlpha: 1 }).to(Me.bg, 1, {
-                    scaleY: 1,
-                    ease: T.ease4
-                }, .1), Me.trigger.click(function() {
-                    var e = jQuery(this),
-                        a = e.data("id");
-                    Me.controls.addClass("opc-0");
-                    var t;
-                    t = e.data("goto"), Me.slider_initialized && Me.slider.gsapSlider("destroy"), jQuery.ajax({
-                        // url: templateURL + "ajax_gallery.php",
-                        // type: "post",
-                        // data: {id: a, goto_slide: t},
-                        success: function(e) {
-                            // var a = jQuery.parseJSON(e);
-                            // var a  = 6;
-                            var a = {
-                                total: 6,
-                                html: `<article class="slider__item fill-dimensions a-center  slide--active"                               data-index="0">
-                <div class="maxw-270 abs-tl color-white a-left top-44 left-70 popup-slider__info">
-            <div class="font-bold font-12 extra-lh3 extra-ls">
-            2001
-            </div>
-            <div class="font-bold font-25">
-            PRODUCT DISPLAYS
-        </div>
-        <div class="font-light font-17">
-        THAT ILLUMINATE AND HIGHLIGHT ONLY THE PRODUCTS
-    </div>
-    </div>
-    <div class="display--inline m-auto block-100 mt-50 popup-slider__image">
-        <img src="https://www.minas-designs.com/wp-content/uploads/mykonos_store_5.jpg" alt="Minas Designs-mykonos_store_5" class="popup-slider__img  display--block m-auto">
-        </div>
-        </article>
-
-        <article class="slider__item fill-dimensions a-center" data-index="1">
-        <div class="maxw-270 abs-tl color-white a-left top-44 left-70 popup-slider__info">
-        <div class="font-bold font-12 extra-lh3 extra-ls">
-        1998
-        </div>
-        <div class="font-bold font-25">
-        TABLE MIRROR
-    </div>
-    <div class="font-light font-17">
-        HANDMADE BY MINAS ACCORDING TO THE SHAPE OF THE HUMAN BODY
-    </div>
-    </div>
-    <div class="display--inline m-auto block-100 mt-50 popup-slider__image">
-        <img src="https://www.minas-designs.com/wp-content/uploads/mykonos_store_6.jpg" alt="Minas Designs-mykonos_store_6" class="popup-slider__img  display--block m-auto">
-        </div>
-        </article>
-
-        <article class="slider__item fill-dimensions a-center" data-index="2">
-        <div class="maxw-270 abs-tl color-white a-left top-44 left-70 popup-slider__info">
-        <div class="font-bold font-12 extra-lh3 extra-ls">
-        2003
-        </div>
-        <div class="font-bold font-25">
-        RESTORED ENTRANCE
-    </div>
-    <div class="font-light font-17">
-
-        </div>
-        </div>
-        <div class="display--inline m-auto block-100 mt-50 popup-slider__image">
-        <img src="https://www.minas-designs.com/wp-content/uploads/mykonos_store_1.jpg" alt="Minas Designs-mykonos_store_1" class="popup-slider__img  display--block m-auto">
-        </div>
-        </article>
-
-        <article class="slider__item fill-dimensions a-center" data-index="3">
-        <div class="maxw-270 abs-tl color-white a-left top-44 left-70 popup-slider__info">
-        <div class="font-bold font-12 extra-lh3 extra-ls">
-        2007
-        </div>
-        <div class="font-bold font-25">
-        TABLE MIRROR
-    </div>
-    <div class="font-light font-17">
-        HANDMADE BY MINAS ACCORDING TO THE SHAPE OF THE HUMAN BODY
-    </div>
-    </div>
-    <div class="display--inline m-auto block-100 mt-50 popup-slider__image">
-        <img src="https://www.minas-designs.com/wp-content/uploads/mykonos_store_2.jpg" alt="Minas Designs-mykonos_store_2" class="popup-slider__img  display--block m-auto">
-        </div>
-        </article>
-
-
-        <article class="slider__item fill-dimensions a-center  " data-index="4">
-        <div class="maxw-270 abs-tl color-white a-left top-44 left-70 popup-slider__info">
-        <div class="font-bold font-12 extra-lh3 extra-ls"> 1998</div>
-        <div class="font-bold font-25">PRODUCT DISPLAYS</div>
-    <div class="font-light font-17"> THAT ILLUMINATE AND HIGHLIGHT ONLY THE PRODUCTS</div>
-    </div>
-    <div class="display--inline m-auto block-100 mt-50 popup-slider__image"><img
-    src="https://www.minas-designs.com/wp-content/uploads/mykonos_store_3.jpg"
-    alt="Minas Designs-mykonos_store_3" class="popup-slider__img  display--block m-auto">
-        </div>
-        </article>
-
-        <article class="slider__item fill-dimensions a-center  " data-index="5">
-        <div class="maxw-270 abs-tl color-white a-left top-44 left-70 popup-slider__info">
-        <div class="font-bold font-12 extra-lh3 extra-ls"> 2009</div>
-        <div class="font-bold font-25">TABLE MIRROR</div>
-    <div class="font-light font-17">
-        HANDMADE BY MINAS ACCORDING TO THE SHAPE OF THE HUMAN BODY
-    </div>
-    </div>
-    <div class="display--inline m-auto block-100 mt-50 popup-slider__image"><img
-    src="https://www.minas-designs.com/wp-content/uploads/mykonos_store_4.jpg"
-    alt="Minas Designs-mykonos_store_4" class="popup-slider__img  display--block m-auto">
-        </div>
-        </article>`
-                            }
-                            console.log(a.total);
-                            1 < a.total && (Me.slider.attr("data-totalslides", a.total), Me.total = a.total, Me.contents.html(a.html), 1100 <= x && (Main.build_sliders(Me.slider), Me.slider_initialized = !0, 0 < t && Me.slider.data("plugin_gsapSlider").gotoSlide(t, 0, "next")), Te.timeScale(1).play())
-                        }
-                    })
-                }),
-                Me.close.click(function() {
-                    TweenMax.to(Me.controls, .8, { autoAlpha: 0, ease: T.ease1 }, 0), TweenMax.to(Me.close, .8, {
-                        autoAlpha: 0,
-                        ease: T.ease1
-                    }, 0), TweenMax.to(Me.contents, 1, { autoAlpha: 0, ease: T.ease1 }, .5), Te.timeScale(1.2).reverse()
-                })
+            //         Te.set(M, {className: "+=overflow"}).to(Me.container, .01, {autoAlpha: 1}).to(Me.bg, 1, {
+            //             scaleY: 1,
+            //             ease: T.ease4
+            //         }, .1),
+            //             Me.trigger.click(function () {
+            //             var e = jQuery(this), a = e.data("id");
+            //             Me.controls.addClass("opc-0");
+            //             var t;
+            //             t = e.data("goto"), Me.slider_initialized && Me.slider.gsapSlider("destroy"), jQuery.ajax({
+            //                 // url: templateURL + "ajax_gallery.php",
+            //                 // type: "post",
+            //                 // data: {id: a, goto_slide: t},
+            //                 success: function (e) {
+            //                     // var a = jQuery.parseJSON(e);
+            //                     // var a  = 6;
+            //                     var a = {
+            //                         total: 6,
+            //                         html: `<article class="slider__item fill-dimensions a-center  slide--active"                               data-index="0">
+            //             <div class="maxw-270 abs-tl color-white a-left top-44 left-70 popup-slider__info">
+            //         <div class="font-bold font-12 extra-lh3 extra-ls">
+            //         2001
+            //         </div>
+            //         <div class="font-bold font-25">
+            //         PRODUCT DISPLAYS
+            //     </div>
+            //     <div class="font-light font-17">
+            //     THAT ILLUMINATE AND HIGHLIGHT ONLY THE PRODUCTS
+            // </div>
+            // </div>
+            // <div class="display--inline m-auto block-100 mt-50 popup-slider__image">
+            //     <img src="https://www.minas-designs.com/wp-content/uploads/mykonos_store_5.jpg" alt="Minas Designs-mykonos_store_5" class="popup-slider__img  display--block m-auto">
+            //     </div>
+            //     </article>
+            //
+            //     <article class="slider__item fill-dimensions a-center" data-index="1">
+            //     <div class="maxw-270 abs-tl color-white a-left top-44 left-70 popup-slider__info">
+            //     <div class="font-bold font-12 extra-lh3 extra-ls">
+            //     1998
+            //     </div>
+            //     <div class="font-bold font-25">
+            //     TABLE MIRROR
+            // </div>
+            // <div class="font-light font-17">
+            //     HANDMADE BY MINAS ACCORDING TO THE SHAPE OF THE HUMAN BODY
+            // </div>
+            // </div>
+            // <div class="display--inline m-auto block-100 mt-50 popup-slider__image">
+            //     <img src="https://www.minas-designs.com/wp-content/uploads/mykonos_store_6.jpg" alt="Minas Designs-mykonos_store_6" class="popup-slider__img  display--block m-auto">
+            //     </div>
+            //     </article>
+            //
+            //     <article class="slider__item fill-dimensions a-center" data-index="2">
+            //     <div class="maxw-270 abs-tl color-white a-left top-44 left-70 popup-slider__info">
+            //     <div class="font-bold font-12 extra-lh3 extra-ls">
+            //     2003
+            //     </div>
+            //     <div class="font-bold font-25">
+            //     RESTORED ENTRANCE
+            // </div>
+            // <div class="font-light font-17">
+            //
+            //     </div>
+            //     </div>
+            //     <div class="display--inline m-auto block-100 mt-50 popup-slider__image">
+            //     <img src="https://www.minas-designs.com/wp-content/uploads/mykonos_store_1.jpg" alt="Minas Designs-mykonos_store_1" class="popup-slider__img  display--block m-auto">
+            //     </div>
+            //     </article>
+            //
+            //     <article class="slider__item fill-dimensions a-center" data-index="3">
+            //     <div class="maxw-270 abs-tl color-white a-left top-44 left-70 popup-slider__info">
+            //     <div class="font-bold font-12 extra-lh3 extra-ls">
+            //     2007
+            //     </div>
+            //     <div class="font-bold font-25">
+            //     TABLE MIRROR
+            // </div>
+            // <div class="font-light font-17">
+            //     HANDMADE BY MINAS ACCORDING TO THE SHAPE OF THE HUMAN BODY
+            // </div>
+            // </div>
+            // <div class="display--inline m-auto block-100 mt-50 popup-slider__image">
+            //     <img src="https://www.minas-designs.com/wp-content/uploads/mykonos_store_2.jpg" alt="Minas Designs-mykonos_store_2" class="popup-slider__img  display--block m-auto">
+            //     </div>
+            //     </article>
+            //
+            //
+            //     <article class="slider__item fill-dimensions a-center  " data-index="4">
+            //     <div class="maxw-270 abs-tl color-white a-left top-44 left-70 popup-slider__info">
+            //     <div class="font-bold font-12 extra-lh3 extra-ls"> 1998</div>
+            //     <div class="font-bold font-25">PRODUCT DISPLAYS</div>
+            // <div class="font-light font-17"> THAT ILLUMINATE AND HIGHLIGHT ONLY THE PRODUCTS</div>
+            // </div>
+            // <div class="display--inline m-auto block-100 mt-50 popup-slider__image"><img
+            // src="https://www.minas-designs.com/wp-content/uploads/mykonos_store_3.jpg"
+            // alt="Minas Designs-mykonos_store_3" class="popup-slider__img  display--block m-auto">
+            //     </div>
+            //     </article>
+            //
+            //     <article class="slider__item fill-dimensions a-center  " data-index="5">
+            //     <div class="maxw-270 abs-tl color-white a-left top-44 left-70 popup-slider__info">
+            //     <div class="font-bold font-12 extra-lh3 extra-ls"> 2009</div>
+            //     <div class="font-bold font-25">TABLE MIRROR</div>
+            // <div class="font-light font-17">
+            //     HANDMADE BY MINAS ACCORDING TO THE SHAPE OF THE HUMAN BODY
+            // </div>
+            // </div>
+            // <div class="display--inline m-auto block-100 mt-50 popup-slider__image"><img
+            // src="https://www.minas-designs.com/wp-content/uploads/mykonos_store_4.jpg"
+            // alt="Minas Designs-mykonos_store_4" class="popup-slider__img  display--block m-auto">
+            //     </div>
+            //     </article>`
+            //                     }
+            //                     console.log(a.total);
+            //                     1 < a.total && (Me.slider.attr("data-totalslides", a.total), Me.total = a.total, Me.contents.html(a.html), 1100 <= x && (Main.build_sliders(Me.slider), Me.slider_initialized = !0, 0 < t && Me.slider.data("plugin_gsapSlider").gotoSlide(t, 0, "next")), Te.timeScale(1).play())
+            //                 }
+            //             })
+            //         }),
+            //             Me.close.click(function () {
+            //                 TweenMax.to(Me.controls, .8, {autoAlpha: 0, ease: T.ease1}, 0), TweenMax.to(Me.close, .8, {
+            //                     autoAlpha: 0,
+            //                     ease: T.ease1
+            //                 }, 0), TweenMax.to(Me.contents, 1, {autoAlpha: 0, ease: T.ease1}, .5), Te.timeScale(1.2).reverse()
+            //             })
         }
         if (document.getElementById("open-form-popup")) {
             var Ae = new TimelineMax({ paused: !0 }),

@@ -31,8 +31,6 @@
 
 @section('content')
 
-
-
     <main class="overflow relative">
         <div class="embed-container relative full-height overflow" id="section-1">
             <div class="embed-container__inner overflow">

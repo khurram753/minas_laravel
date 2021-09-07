@@ -14,4 +14,9 @@ class QualityCraftsmanship extends Model
     {
         return $this->hasMany(QualityCraftsmanshipProcess::class,'quality_id');
     }
+
+    public function orderedProcess()
+    {
+        return $this->hasMany(QualityCraftsmanshipProcess::class,'quality_id')->orderBy('step_number','asc');
+    }
 }

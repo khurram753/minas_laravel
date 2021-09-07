@@ -28,14 +28,16 @@
                         <ul class="submenu-list trans-slower">
                             <li id="menu-item-352"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352 submenu-item submnu-1">
-                                <a href="about.html" class="submenu-a menu-link item--74">ABOUT</a></li>
+                                <a href="{{route('about')}}" class="submenu-a menu-link item--74">ABOUT</a></li>
                             <li id="menu-item-354"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-354 submenu-item submnu-2">
-                                <a href="quality-ans-craftsmanship.html" class="submenu-a menu-link item--111">QUALITY
-                                    AND CRAFTSMANSHIP</a></li>
+                                <a href="{{route('quality')}}" class="submenu-a menu-link item--111">
+                                    QUALITY AND CRAFTSMANSHIP
+                                </a>
+                            </li>
                             <li id="menu-item-353"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353 submenu-item submnu-3">
-                                <a href="heritage.html" class="submenu-a menu-link item--131">HERITAGE</a></li>
+                                <a href="{{route('heritage')}}" class="submenu-a menu-link item--131">HERITAGE</a></li>
                         </ul>
                     </li>
                     <li id="menu-item-661"
@@ -44,7 +46,8 @@
                         <ul class="submenu-list trans-slower">
                             <li id="menu-item-1372"
                                 class="menu-item menu-item-type-taxonomy menu-item-object-publication_category menu-item-1372 submenu-item submnu-1">
-                                <a href="publication-category.html" class="submenu-a menu-link item--28">PUBLICATIONS</a>
+                                <a href="publication-category.html"
+                                   class="submenu-a menu-link item--28">PUBLICATIONS</a>
                             </li>
                             <li id="menu-item-640"
                                 class="menu-item menu-item-type-taxonomy menu-item-object-mediakit_category menu-item-640 submenu-item submnu-2">
@@ -73,7 +76,7 @@
                         <a href="project.html" class="menu-a menu-link item--355">DESIGN PROJECTS</a></li>
                     <li id="menu-item-450"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-450 main-item item--383 mnu-4">
-                        <a href="news-and-update.html" class="menu-a menu-link item--383">NEWS &amp; UPDATES</a>
+                        <a href="{{route('newsUpdate')}}" class="menu-a menu-link item--383">NEWS &amp; UPDATES</a>
                     </li>
                     <li id="menu-item-1368"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1368 main-item item--288 mnu-5">
@@ -101,12 +104,13 @@
                 </ul>
             </div>
         </div>
-        <div
-            class="a-left over menu-box block-100 trans mobile-menu-gutter menu-holder-pad menu-holder__boxes pl-77">
+        <div class="a-left over menu-box block-100 trans mobile-menu-gutter menu-holder-pad menu-holder__boxes pl-77">
             <div class="display--inline-top menu-box--holder  menu-box--left   a-left">
-                <a href="heritage.html" class="link-underline menu-box-link">
-                            <span
-                                class="display--block font-12 font-bold extra-lh2 extra-ls mb-33 opc-0 js-menu-fade tablet-mb-15">THE HERITAGE</span>
+                <a href="{{route('heritage')}}" class="link-underline menu-box-link">
+                    <span
+                        class="display--block font-12 font-bold extra-lh2 extra-ls mb-33 opc-0 js-menu-fade tablet-mb-15">
+                        THE HERITAGE
+                    </span>
                     <div class="relative overflow">
                         <div class="js-scale-in--sm js-menu-scale opc-0">
                             <div class="fill-dimensions multiply bg-black opc-40 trans z-10"></div>
@@ -115,16 +119,18 @@
                         </div>
                     </div>
                     <span class="display--block font-35 extra-lh font-light opc-0 js-menu-fade">
-                                    <span class="link-underline-text">
-                                        57 YEARS OF HERITAGE<br>
-AND EXCELLENCE                                    </span>
-                                </span>
+                        <span class="link-underline-text">
+                            57 YEARS OF HERITAGE<br>
+                            AND EXCELLENCE
+                        </span>
+                    </span>
                 </a>
             </div>
             <div class="display--inline-top menu-box--holder  menu-box--right   a-left">
                 <a href="eshop.html" class="link-underline menu-box-link">
-                            <span
-                                class="display--block font-12 font-bold extra-lh2 extra-ls mb-33 opc-0 js-menu-fade tablet-mb-15">SHOP ONLINE</span>
+                    <span class="display--block font-12 font-bold extra-lh2 extra-ls mb-33 opc-0 js-menu-fade tablet-mb-15">
+                        SHOP ONLINE
+                    </span>
                     <div class="relative overflow">
                         <div class="js-scale-in--sm js-menu-scale opc-0">
                             <div class="fill-dimensions multiply bg-black opc-40 trans z-10"></div>
@@ -133,10 +139,11 @@ AND EXCELLENCE                                    </span>
                         </div>
                     </div>
                     <span class="display--block font-35 extra-lh font-light opc-0 js-menu-fade">
-                                    <span class="link-underline-text">
-                                        SHOP YOUR FAVOURITE<br>
-PRODUCTS ONLINE                                    </span>
-                                </span>
+                        <span class="link-underline-text">
+                            SHOP YOUR FAVOURITE<br>
+                            PRODUCTS ONLINE
+                        </span>
+                    </span>
                 </a>
             </div>
         </div>

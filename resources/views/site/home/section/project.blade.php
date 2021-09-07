@@ -11,10 +11,10 @@
                                 <span class="font-bold font-12 extra-l  bracket-title">FEATURED PROJECT</span>
                                 <span class="font-light font-18 bracket-icon">}</span></span>
                 </h3>
-                <div class="font-70 font-thin color-grey js-skew-letter skrollr-pointer skrollable skrollable-before"
-                     data-emit-events="" data-trans="1.4" data-bottom-top="" style="">TIME LASTING PROJECTS
-                    DESIGNED BY MINAS
-                </div>
+{{--                <div class="font-70 font-thin color-grey js-skew-letter skrollr-pointer skrollable skrollable-before"--}}
+{{--                     data-emit-events="" data-trans="1.4" data-bottom-top="" style="">TIME LASTING PROJECTS--}}
+{{--                    DESIGNED BY MINAS--}}
+{{--                </div>--}}
             </div>
 
             <div class="a-center relative mb-86 pt-80">
@@ -33,19 +33,21 @@
                             </div>
                         </div>
                     </div>
-                    <div
-                        class="abs-tr project_img_abHeight top-40 z-20 right--150 overflow js-img-reveal desktop-right--60 tablet-hor-hidden skrollr-pointer overflow skrollable skrollable-before"
-                        data-emit-events="" data-bottom-top="" data-trans="1.3" data-delay="0.1" style="">
-                        <div class="js-img-reveal__holder overflow">
-                            <div class="js-img-reveal__image">
-                                <div class="fill-dimensions multiply bg-grey opc-50 z-10"></div>
-                                <img class="resp-image" src="{{asset($project->projectGallery->first()->images)}}"
-                                     alt="">
+
+                    @if(sizeof($project->projectGallery) > 0)
+                        <div class="abs-tr project_img_abHeight top-40 z-20 right--150 overflow js-img-reveal desktop-right--60 tablet-hor-hidden skrollr-pointer overflow skrollable skrollable-before"
+                            data-emit-events="" data-bottom-top="" data-trans="1.3" data-delay="0.1" style="">
+                            <div class="js-img-reveal__holder overflow">
+                                <div class="js-img-reveal__image">
+                                    <div class="fill-dimensions multiply bg-grey opc-50 z-10"></div>
+                                    <img class="resp-image" src="{{asset($project->projectGallery->first()->images)}}"
+                                         alt="">
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endif
                     <div class=" maxw-770 m-auto a-right trans desktop-acenter">
-                        <a href="project.html" aria-label="Read more about Carbon Black Bar cart" itemprop="url" class="a-right link-to-white color-white link-underline display--inline desktop-acenter">
+                        <a href="{{route('projectDetail',['id'=>$project->id])}}" aria-label="Read more about Carbon Black Bar cart" itemprop="url" class="a-right link-to-white color-white link-underline display--inline desktop-acenter">
                             <span class="font-bold font-12 extra-lh4 extra-ls mb-33 display--block opc-0 no-visible js-fade-up skrollr-pointer skrollable skrollable-before" data-emit-events="" data-bottom-top="" data-trans="1.4" style="">
                                 {{\Carbon\Carbon::parse($project->created_at)->format('Y')}}
                             </span>
@@ -60,7 +62,7 @@
                 </div>
             </div>
             <div class="a-center opc-0 no-visible js-fade-in skrollr-pointer skrollable skrollable-before" data-emit-events="" data-bottom-top="" data-cubic="custom" data-trans="1.6" style="">
-                <a href="project.html" class="circle-btn cursor relative display--inline circle-link">
+                <a href="{{route('project')}}" class="circle-btn cursor relative display--inline circle-link">
                     <svg class="circle-btn__wrapper-circle" xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 151.689 148.568">
                         <path class="js-svg-circle circle-btn__circle" fill="none" stroke="#fff"

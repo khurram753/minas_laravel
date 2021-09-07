@@ -16,7 +16,7 @@ class AddStoreIdStoreImageTable extends Migration
         Schema::table('stores_images', function (Blueprint $table) {
             //
             $table->unsignedBigInteger('store_id')->after('image')->nullable();
-            $table->foreign('store_id')->references('id')->on('stores_descriptions')
+            $table->foreign('store_id')->references('id')->on('contact')
                 ->onDelete('cascade');
         });
     }
