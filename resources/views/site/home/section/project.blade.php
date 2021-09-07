@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div
-                        class="abs-tr top-40 z-20 right--150 overflow js-img-reveal desktop-right--60 tablet-hor-hidden skrollr-pointer overflow skrollable skrollable-before"
+                        class="abs-tr project_img_abHeight top-40 z-20 right--150 overflow js-img-reveal desktop-right--60 tablet-hor-hidden skrollr-pointer overflow skrollable skrollable-before"
                         data-emit-events="" data-bottom-top="" data-trans="1.3" data-delay="0.1" style="">
                         <div class="js-img-reveal__holder overflow">
                             <div class="js-img-reveal__image">
