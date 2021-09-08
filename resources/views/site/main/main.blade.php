@@ -32,7 +32,8 @@
                             </span>
                         </a>
                     </div>
-                </div><div class="block-50 display--inline-top">
+                </div>
+                <div class="block-50 display--inline-top">
                     <div class="site-intro-gutter opc-0 no-visible js-intro-fade mobile-hor-gutter-20 relative" style="visibility: inherit; opacity: 1;">
                         <a id="shop-link" href="eshop.html" class="site-intro-link a-center color-grey  display--block site-intro__line" data-url="home.html">
                         <span class="z--1 display--block relative ">
