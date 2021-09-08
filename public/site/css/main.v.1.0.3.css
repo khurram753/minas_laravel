@@ -3273,6 +3273,7 @@ ul.list.cloned {
     max-width: 925px;
     width: 90%;
     bottom: 20vh;
+    display: flex;
 }
 
 .site-intro-link:hover {
@@ -9194,7 +9195,7 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 
 .project_img_abHeight img {
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 
