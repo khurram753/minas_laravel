@@ -62,10 +62,10 @@
                                             <span
                                                 class="cover-img fill-dimensions display--block scale-out js-scale-in js-scale-in--sm skrollr-pointer opc-0"
                                                 data-delay=".4" data-emit-events data-bottom-top="" data-trans="1.2"
-                                                style="background-image: url({{isset($store->storeDescription) ? asset($store->storeDescription->rotate_image):''}}); "></span>
+                                                style="background-image: url({{asset($store->image)}}); "></span>
                                         </a>
                                         <a href="{{route('storeDetail',['id'=>$store->id])}}"
-                                           arial-label="Kifissia flagship store"
+{{--                                           arial-label="Kifissia flagship store"--}}
                                            class="font-bold font-17 display--inline text-underline text-underline--red color-red relative store-box__link store-box__link--white overflow"
                                            rel="noopener noreferrer">
                                             <span class="js-bt overflow relative display--inline skrollr-pointer"

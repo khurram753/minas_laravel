@@ -28,6 +28,7 @@ class ContactUsRequest extends FormRequest
             'email' => 'required|email',
             'phone_number' => 'required',
             'address' => 'required',
+            'image' => 'mimes:jpeg,jpg,png'
         ];
     }
 }

@@ -11,7 +11,7 @@
             <div class="fill-dimensions multiply bg-black opc-70 z-10"></div>
             <div class="cover-img fill-dimensions scale-out js-scale-in js-scale-in--sm skrollr-pointer opc-0 parallax"
                  data-parallax="-0.5" data-emit-events data-bottom-top="" data-trans="2"
-                 style="background-image: url('/site/images/store_mykonos.jpg');"></div>
+                 style="background-image: url({{asset($store->image)}});"></div>
             <div class="grid max-6cols-g full-height over mobile-hor-100 mobile-hor-height-100">
                 <div class="gutter full-height mobile-hor-gutter mobile-hor-height-100 mobile-hor-mb-40">
                     <header class="a-center store-page__header relative mobile-hor-rel-no-center">

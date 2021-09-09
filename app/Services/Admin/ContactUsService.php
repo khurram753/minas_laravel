@@ -28,8 +28,24 @@ class ContactUsService
     {
         DB::beginTransaction();
 
+        $save_image = null;
+        if ($request->has('image')) {
+            $image = $request->image;
+            $ext = $image->getClientOriginalExtension();
+            $fileName = $image->getClientOriginalName();
+            $fileNameUpload = time() . "-." . $ext;
+            $path = public_path('site/store/images/');
+            if (!file_exists($path)) {
+                File::makeDirectory($path, 0777, true);
+            }
+
+            $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'site/store/images/');
+            $save_image = $imageSave;
+        }
+
         try{
-            $save = ContactUs::create($request->except('_token'));
+
+            $save = ContactUs::create($request->except('_token','image')+['image'=>$save_image]);
 
             DB::commit();
             return response()->json(['result'=>'success','message'=>'Record Save']);
@@ -63,9 +79,23 @@ class ContactUsService
         if($data) {
             DB::beginTransaction();
 
+            $save_image = $data->image;
+            if ($request->has('image')) {
+                $image = $request->image;
+                $ext = $image->getClientOriginalExtension();
+                $fileName = $image->getClientOriginalName();
+                $fileNameUpload = time() . "-." . $ext;
+                $path = public_path('site/store/images/');
+                if (!file_exists($path)) {
+                    File::makeDirectory($path, 0777, true);
+                }
+
+                $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'site/store/images/');
+                $save_image = $imageSave;
+            }
 
             try {
-                $save = $data->update($request->except('_token'));
+                $save = $data->update($request->except('_token','image')+['image'=>$save_image]);
 
                 DB::commit();
                 return response()->json(['result' => 'success', 'message' => 'Record Updated']);
