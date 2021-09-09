@@ -72,7 +72,7 @@
                 <button class="btn btn-primary" type="button" id="createBtn">Create</button>
 
 
-                <a href="{{route('contactUsListing')}}">
+                <a href="{{route('storeListing')}}">
                     <button class="btn btn-primary" type="button">Cancel</button>
                 </a>
 
