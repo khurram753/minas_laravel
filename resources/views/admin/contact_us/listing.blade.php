@@ -26,11 +26,13 @@
                         {{--                            <li class="breadcrumb-item">Home</li>--}}
                         {{--                            <li class="breadcrumb-item active">Language Listing</li>--}}
                         {{--                        </ol>--}}
-                        <div class="float-right">
-                            <a href="{{route('contactUsCreate')}}">
-                                <button class="btn btn-primary">Create New</button>
-                            </a>
-                        </div>
+                        @if(sizeof($data) < 2 )
+                            <div class="float-right">
+                                <a href="{{route('contactUsCreate')}}">
+                                    <button class="btn btn-primary">Create New</button>
+                                </a>
+                            </div>
+                        @endif
                         <div class="clearfix"></div>
                     </div>
                 </div>

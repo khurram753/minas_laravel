@@ -131,10 +131,6 @@
 
 @section('script')
 
-    {{--<script src="{{asset('site/js/moment.min.js')}}"></script>--}}
-
-    {{--<script src="{{asset('site/js/daterangepicker.js')}}"></script>--}}
-
     <script>
 
         $(document).ready(function () {
