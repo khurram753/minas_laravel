@@ -85,20 +85,20 @@
                         <ul class="submenu-list trans-slower">
                             <li id="menu-item-360"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360 submenu-item submnu-1">
-                                <a href="contactus.html" class="submenu-a menu-link item--288">FIND US NEAR
+                                <a href="{{route('contactUs')}}" class="submenu-a menu-link item--288">FIND US NEAR
                                     YOU</a>
                             </li>
-                            <li id="menu-item-362"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362 submenu-item submnu-2">
-                                <a href="store.html" class="submenu-a menu-link item--303">MYKONOS</a></li>
-                            <li id="menu-item-361"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361 submenu-item submnu-3">
-                                <a href="store.html" class="submenu-a menu-link item--319">KIFISSIA /
-                                    FLAGSHIP</a>
-                            </li>
+{{--                            <li id="menu-item-362"--}}
+{{--                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362 submenu-item submnu-2">--}}
+{{--                                <a href="store.html" class="submenu-a menu-link item--303">MYKONOS</a></li>--}}
+{{--                            <li id="menu-item-361"--}}
+{{--                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361 submenu-item submnu-3">--}}
+{{--                                <a href="store.html" class="submenu-a menu-link item--319">KIFISSIA /--}}
+{{--                                    FLAGSHIP</a>--}}
+{{--                            </li>--}}
                             <li id="menu-item-1369"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1369 submenu-item submnu-4">
-                                <a href="contactus.html" class="submenu-a menu-link item--1369">RETAILERS</a>
+                                <a href="{{route('contactUs')}}" class="submenu-a menu-link item--1369">RETAILERS</a>
                             </li>
                         </ul>
                     </li>
