@@ -7,6 +7,7 @@ namespace App\Services\Admin;
 use App\Category;
 use App\ContactUs;
 use App\Helpers\ImageUploadHelper;
+use App\Retailer;
 use Illuminate\Support\Facades\DB;
 use File;
 
@@ -90,6 +91,35 @@ class ContactUsService
         }
         else{
             return response()->json(['result'=>'error','message'=>'Record Not Found']);
+        }
+    }
+
+    public function retailerListing()
+    {
+        $data = Retailer::all();
+        return view('admin.contact_us.retailer',compact('data'));
+    }
+
+    public function changeStatus($request)
+    {
+        $data = Retailer::find($request->id);
+        if ($data) {
+            if ($data->status == 'accepted') {
+                $data->status = 'pending';
+            } else {
+                $data->status = 'accepted';
+
+            }
+
+            if ($data->save()) {
+                return response()->json(['result' => 'success', 'message' => "Status Change"]);
+            } else {
+                return response()->json(['result' => 'error', 'message' => "Error in status change"]);
+            }
+
+
+        } else {
+            return response()->json(['result' => 'error', 'message' => "Link Not Found"]);
         }
     }
 

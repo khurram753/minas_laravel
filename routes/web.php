@@ -26,13 +26,12 @@ Route::namespace("Site")->group(function () {
     Route::get('heritage-detail/{id}',"HeritageController@detail")->name('getHeritageDetail');
     Route::get('project','ProjectController@index')->name('project');
     Route::get('project-detail/{id}','ProjectController@detail')->name('projectDetail');
-    Route::get('news-update','NewsController@index')->name('newsUpdate');
+    Route::get('news-update','NewsController@index')->name('newsUpdatePage');
     Route::get('news-update-detail/{id}','NewsController@detail')->name('newsUpdateDetail');
     Route::get('quality-craftsmanship','QualityController@index')->name('quality');
     Route::get('contact-us','ContactUsController@index')->name('contactUs');
     Route::get('store-detail/{id}','ContactUsController@storeDetail')->name('storeDetail');
-
-
+    Route::post('contact-us-request','ContactUsController@contactUsRequest')->name('contactUsRequest');
 
 });
 

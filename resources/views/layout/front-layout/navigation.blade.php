@@ -10,7 +10,8 @@
                    class="font-bold font-12 extra-lh extra-ls display--inline mr-35 a-left relative shop-link no-trans">
                         <span class="overflow display--block shop-link__text ">
                             <span class="display--block anim-bt js-hp-bt opc-0 ">
-                                SHOP ONLINE                            </span>
+                                SHOP ONLINE
+                            </span>
                             <span class="line line--abs abs-bl scale-x origin-l js-hp-scale-lr display--block">
                                 <span class="fill-dimensions bg-black line trans"></span>
                             </span>
@@ -73,14 +74,14 @@
                     </li>
                     <li id="menu-item-357"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-357 main-item item--355 mnu-3">
-                        <a href="project.html" class="menu-a menu-link item--355">DESIGN PROJECTS</a></li>
+                        <a href="{{route('project')}}" class="menu-a menu-link item--355">DESIGN PROJECTS</a></li>
                     <li id="menu-item-450"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-450 main-item item--383 mnu-4">
-                        <a href="{{route('newsUpdate')}}" class="menu-a menu-link item--383">NEWS &amp; UPDATES</a>
+                        <a href="{{route('newsUpdatePage')}}" class="menu-a menu-link item--383">NEWS &amp; UPDATES</a>
                     </li>
                     <li id="menu-item-1368"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1368 main-item item--288 mnu-5">
-                        <a href="contactus.html" class="menu-a menu-link item--288">CONTACT US</a>
+                        <a href="{{route('contactUs')}}" class="menu-a menu-link item--288">CONTACT US</a>
                         <ul class="submenu-list trans-slower">
                             <li id="menu-item-360"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360 submenu-item submnu-1">

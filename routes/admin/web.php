@@ -117,6 +117,10 @@ Route::namespace('Admin')->group(function () {
         Route::get('edit-contact-us/{id}', 'ContactUsController@edit')->name('contactUsEdit');
         Route::post('update-contact-us', 'ContactUsController@update')->name('contactUsUpdate');
         Route::post('contact-us-delete', 'ContactUsController@delete')->name('contactUsDelete');
+        Route::get('retailer-request-listing','ContactUsController@retailerListing')->name('retailerRequest');
+        Route::get('retailer-change-status','ContactUsController@changeStatus')->name('retailerStatusChange');
+
+
 
         Route::get('store-listing', 'StoreController@index')->name('storeListing');
         Route::get('create-store', 'StoreController@create')->name('storeCreate');

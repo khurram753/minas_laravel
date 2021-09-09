@@ -77,29 +77,40 @@
                style="">
             <span class="vertical-writing font-bold font-12 extra-ls  opc-0 js-hp-fade">
                 <span class="display--inline mb-4">N<sup>o</sup></span>
-                <span class="display--inline relative "><span class="aside-num display--inline trans faded loc"
-                                                              data-anchor-target="#section-1"
-                                                              data-0="@class:aside-num display--inline trans faded loc"
-                                                              data-center-bottom="@class:aside-num display--inline trans faded"
-                                                              style="">1</span><span
-                        class="aside-num display--inline trans abs-lc faded" data-anchor-target="#section-2"
+                <span class="display--inline relative">
+                    <span class="aside-num display--inline trans faded loc"
+                          data-anchor-target="#section-1"
+                          data-0="@class:aside-num display--inline trans faded loc"
+                          data-center-bottom="@class:aside-num display--inline trans faded"
+                          style="">1</span>
+                    <span class="aside-num display--inline trans abs-lc faded" data-anchor-target="#section-2"
                         data-0="@class:aside-num display--inline trans abs-lc faded"
                         data-center-top="@class:aside-num display--inline trans faded  abs-lc loc"
-                        data-center-bottom="@class:aside-num  abs-lc display--inline trans faded" style="">2</span><span
-                        class="aside-num display--inline trans abs-lc faded" data-anchor-target="#section-3"
+                        data-center-bottom="@class:aside-num  abs-lc display--inline trans faded" style="">
+                        2
+                    </span>
+                    <span class="aside-num display--inline trans abs-lc faded" data-anchor-target="#section-3"
                         data-0="@class:aside-num display--inline trans abs-lc faded"
                         data-center-top="@class:aside-num display--inline trans faded  abs-lc loc"
-                        data-center-bottom="@class:aside-num  abs-lc display--inline trans faded" style="">3</span><span
-                        class="aside-num display--inline trans abs-lc faded" data-anchor-target="#section-4"
+                        data-center-bottom="@class:aside-num  abs-lc display--inline trans faded" style="">
+                        3
+                    </span>
+                    <span class="aside-num display--inline trans abs-lc faded" data-anchor-target="#section-4"
                         data-0="@class:aside-num display--inline trans abs-lc faded"
                         data-center-top="@class:aside-num display--inline trans faded  abs-lc loc"
-                        data-center-bottom="@class:aside-num  abs-lc display--inline trans faded" style="">4</span><span
-                        class="aside-num display--inline trans abs-lc faded" data-anchor-target="#section-5"
+                        data-center-bottom="@class:aside-num  abs-lc display--inline trans faded" style="">
+                        4
+                    </span>
+                    <span class="aside-num display--inline trans abs-lc faded" data-anchor-target="#section-5"
                         data-0="@class:aside-num display--inline trans abs-lc faded"
                         data-center-top="@class:aside-num display--inline trans faded  abs-lc loc"
                         data-center-bottom="@class:aside-num  abs-lc display--inline trans faded"
-                        style="">5</span></span>
-                <span class="display--inline aside-line"></span><span class="display--inline">5</span>
+                        style="">
+                        5
+                    </span>
+                </span>
+                <span class="display--inline aside-line"></span>
+                <span class="display--inline">5</span>
             </span>
 
 

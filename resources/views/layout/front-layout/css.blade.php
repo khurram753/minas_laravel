@@ -9,5 +9,8 @@
     }
 </style>
 
+<link href="{{asset('custom/css/toastr.css')}}" rel="stylesheet">
+
+
 
 

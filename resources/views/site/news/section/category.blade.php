@@ -9,7 +9,7 @@
         @foreach($newsCategories as $newsCategory)
             <span class="display--block relative overflow">
                 <span class="popup-link-holder display--block">
-                    <a href="{{route('newsUpdate',['category_id'=>$newsCategory->id])}}" class="popup-link display--inline relative font-thin font-40 color-black relative">
+                    <a href="{{route('newsUpdatePage',['category_id'=>$newsCategory->id])}}" class="popup-link display--inline relative font-thin font-40 color-black relative">
                         {{$newsCategory->name}}
                     </a>
                 </span>

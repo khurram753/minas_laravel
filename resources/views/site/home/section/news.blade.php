@@ -13,8 +13,7 @@
                     DISCOVER OUR LATEST NEWS
                 </div>
                 <div class="btn-black opc-0 no-visible js-fade-in skrollr-pointer tablet-hor-hidden skrollable skrollable-before" data-emit-events="" data-bottom-top="" data-cubic="custom" data-trans="1.6" style="">
-                    <a href="{{route('newsUpdate')}}"
-                       class="circle-btn cursor relative display--inline circle-link">
+                    <a href="{{route('newsUpdatePage')}}" class="circle-btn cursor relative display--inline circle-link">
                         <svg class="circle-btn__wrapper-circle" xmlns="http://www.w3.org/2000/svg"
                              viewBox="0 0 151.689 148.568">
                             <path class="js-svg-circle circle-btn__circle" fill="none" stroke="#fff"

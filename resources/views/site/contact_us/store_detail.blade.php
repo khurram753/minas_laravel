@@ -92,52 +92,55 @@
                     {{--                    @endif--}}
 
                     <section class="grid max-12cols-g mobile-hor-100">
-                        @foreach($store->storeDescription->storeImage as $store_image)
-                            <div
-                                class="block-50 tablet-100 display--inline-top a-center mt-80 mb-144 tablet-hor-mb-60  mobile-hor-nomargin--top mobile-hor-mb-90">
-                                <div class="gutter mobile-hor-nomargin">
-                                    <div data-goto="0" data-id="303"
-                                         class="display--inline-top relative mb-22 gallery-image js-open-slider cursor">
-                                        <div class="relative">
-                                            <div class="display-inline relative js-scale-out skrollr-pointer"
-                                                 data-emit-events data-bottom-top="" data-delay="">
-                                                <div
-                                                    class="display--block js-scale-out__holder opc-0 no-visible overflow">
-                                                    <div class="display--block js-scale-out__img">
-                                                        <div class="parallax" data-parallax="-0.2">
-                                                            <div
-                                                                class="fill-dimensions trans multiply bg-grey-med opc-20 z-10"></div>
-                                                            <img class="resp-image display--block"
-                                                                 src="{{asset($store_image->image)}}"
-                                                                 alt="product displays"/>
+                        @if(isset($store->storeDescription) && isset($store->storeDescription->storeImage))
+                            @foreach($store->storeDescription->storeImage as $store_image)
+                                <div
+                                    class="block-50 tablet-100 display--inline-top a-center mt-80 mb-144 tablet-hor-mb-60  mobile-hor-nomargin--top mobile-hor-mb-90">
+                                    <div class="gutter mobile-hor-nomargin">
+                                        <div data-goto="0" data-id="303"
+                                             class="display--inline-top relative mb-22 gallery-image js-open-slider cursor">
+                                            <div class="relative">
+                                                <div class="display-inline relative js-scale-out skrollr-pointer"
+                                                     data-emit-events data-bottom-top="" data-delay="">
+                                                    <div
+                                                        class="display--block js-scale-out__holder opc-0 no-visible overflow">
+                                                        <div class="display--block js-scale-out__img">
+                                                            <div class="parallax" data-parallax="-0.2">
+                                                                <div
+                                                                    class="fill-dimensions trans multiply bg-grey-med opc-20 z-10"></div>
+                                                                <img class="resp-image display--block"
+                                                                     src="{{asset($store_image->image)}}"
+                                                                     alt="product displays"/>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="maxw-435 m-auto color-black">
-                                        <div
-                                            class="font-bold font-12 extra-ls extra-lh3 mb-20 opc-0 no-visible js-fade-left skrollr-pointer"
-                                            data-emit-events data-bottom-top="" data-trans="1.4">
-                                            {{$store->year}}
-                                        </div>
-                                        <div
-                                            class="font-bold font-25 mb-9 opc-0 no-visible js-fade-left skrollr-pointer"
-                                            data-emit-events data-delay=".1" data-bottom-top="" data-trans="1.4">
-                                            {{$store->title}}
-                                        </div>
-                                        <div
-                                            class="font-light font-20 extra-ls opc-0 no-visible js-fade-left skrollr-pointer"
-                                            data-emit-events data-delay=".15" data-bottom-top="" data-trans="1.4">
-                                            {{$store->description}}
+                                        <div class="maxw-435 m-auto color-black">
+                                            <div
+                                                class="font-bold font-12 extra-ls extra-lh3 mb-20 opc-0 no-visible js-fade-left skrollr-pointer"
+                                                data-emit-events data-bottom-top="" data-trans="1.4">
+                                                {{$store->year}}
+                                            </div>
+                                            <div
+                                                class="font-bold font-25 mb-9 opc-0 no-visible js-fade-left skrollr-pointer"
+                                                data-emit-events data-delay=".1" data-bottom-top="" data-trans="1.4">
+                                                {{$store->title}}
+                                            </div>
+                                            <div
+                                                class="font-light font-20 extra-ls opc-0 no-visible js-fade-left skrollr-pointer"
+                                                data-emit-events data-delay=".15" data-bottom-top="" data-trans="1.4">
+                                                {{$store->description}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        @endif
 
-                        <div class="a-center mb-43 btn-black mobile-hor-mt-60 opc-0 no-visible js-fade-in skrollr-pointer" data-emit-events data-bottom-top="" data-cubic="custom" data-trans="1.6">
+                        @if(isset($store->storeDescription) && isset($store->storeDescription->storeImage))
+                            <div class="a-center mb-43 btn-black mobile-hor-mt-60 opc-0 no-visible js-fade-in skrollr-pointer" data-emit-events data-bottom-top="" data-cubic="custom" data-trans="1.6">
                             <span data-id="303" class="js-open-slider display--inline cursor">
                                 <span class="circle-btn relative cursor display--inline circle-link">
                                     <svg
@@ -153,13 +156,19 @@
                                         c12.843,1.04,25.689,1.455,36.85-5.824c17.182-11.205,28.106-32.619,32.887-51.832c2.394-9.617,4.744-20.611,2.446-30.465
                                         c-2.123-9.098-8.54-15.85-14.888-22.307c-7.189-7.311-13.368-15.558-20.665-22.752C110.812,8.158,109.23,6.196,107.309,4.917z"/>
                                     </svg>
-                                    <span class="abs-center a-center z-5 font-12 extra-ls extra-lh2 font-bold block-70 galleryClass">VIEW GALLERY<span class="color-grey display--block">
-                                            ({{sizeof($store->storeDescription->storeImage)}} PHOTOS)
+                                        <span class="abs-center a-center z-5 font-12 extra-ls extra-lh2 font-bold block-70 galleryClass">VIEW GALLERY<span class="color-grey display--block">
+                                                @if(isset($store->storeDescription) && isset($store->storeDescription->storeImage))
+                                                    ({{sizeof($store->storeDescription->storeImage)}} PHOTOS)
+                                                @else
+                                                    (0 PHOTOS)
+                                                @endif
+                                            </span>
                                         </span>
-                                    </span>
                                 </span>
                             </span>
                         </div>
+                        @endif
+
 
                     </section>
                     <div class="a-center back-to-top-holder opc-0 no-visible js-fade-in skrollr-pointer"
@@ -204,29 +213,36 @@
             <div id="popup-slider__bg" class="fill-dimensions abs-tl fixed bg-black-light scale-y origin-l"></div>
             <section id="popup-slider__holder" class="popup-slider slider slider--fullheight overflow do-slide"
                      data-slides=".slider__item" data-images=".slider__img" data-animation="custom" data-speed="1"
-                     data-autoplay="false" data-autoplaytime="5" data-progressbar="false" data-totalslides="{{sizeof($store->storeDescription->storeImage )}}"
+                     data-autoplay="false" data-autoplaytime="5" data-progressbar="false"
+                     @if(isset($store->storeDescription) && isset($store->storeDescription->storeImage))
+                        data-totalslides="{{sizeof($store->storeDescription->storeImage )}}"
+                     @else
+                        data-totalslides="0"
+                     @endif
                      data-percentage="false" data-next="#popup-slider__next" data-prev="#popup-slider__prev"
                      data-dots="false" data-pagination="#slider__pagination" data-mousewheel="false" data-loop="true"
                      data-test_swipe="true">
                 <div id="popup-slider__contents" class="slider__holder slider--fullheight overflow opc-0 z-10">
-                    @foreach($store->storeDescription->storeImage as $key => $store_image)
-                        <article class="slider__item fill-dimensions a-center  {{$key == 0 ? 'slide--active':''}}" data-index="{{$key}}"
-                                 style="{{$key == 0 ? 'visibility: inherit; opacity: 1;':'opacity: 0; z-index: 5; visibility: hidden;'}}">
-                            <div class="maxw-270 abs-tl color-white a-left top-44 left-70 popup-slider__info">
-                                <div class="font-bold font-12 extra-lh3 extra-ls">
-                                    {{$store_image->date}}
+                    @if(isset($store->storeDescription) && isset($store->storeDescription->storeImage))
+                        @foreach($store->storeDescription->storeImage as $key => $store_image)
+                            <article class="slider__item fill-dimensions a-center  {{$key == 0 ? 'slide--active':''}}" data-index="{{$key}}"
+                                     style="{{$key == 0 ? 'visibility: inherit; opacity: 1;':'opacity: 0; z-index: 5; visibility: hidden;'}}">
+                                <div class="maxw-270 abs-tl color-white a-left top-44 left-70 popup-slider__info">
+                                    <div class="font-bold font-12 extra-lh3 extra-ls">
+                                        {{$store_image->date}}
+                                    </div>
+                                    <div class="font-bold font-25">{{$store_image->title}}
+                                    </div>
+                                    <div class="font-light font-17">
+                                        {{$store_image->description}}
+                                    </div>
                                 </div>
-                                <div class="font-bold font-25">{{$store_image->title}}
+                                <div class="display--inline m-auto block-100 mt-50 popup-slider__image">
+                                    <img src="{{asset($store_image->image)}}" alt="Minas Designs-kifisia_store_3" class="popup-slider__img  display--block m-auto">
                                 </div>
-                                <div class="font-light font-17">
-                                    {{$store_image->description}}
-                                </div>
-                            </div>
-                            <div class="display--inline m-auto block-100 mt-50 popup-slider__image">
-                                <img src="{{asset($store_image->image)}}" alt="Minas Designs-kifisia_store_3" class="popup-slider__img  display--block m-auto">
-                            </div>
-                        </article>
-                    @endforeach
+                            </article>
+                        @endforeach
+                    @endif
 
                 </div>
             </section>

@@ -53,6 +53,7 @@
                     <ul class="list-unstyled">
                         <li><a href="{{route('contactUsListing')}}">Listing</a></li>
                         <li><a href="{{route('contactUsCreate')}}">Create</a></li>
+                        <li><a href="{{route('retailerRequest')}}">Retailer Request</a></li>
                     </ul>
                 </li>
 

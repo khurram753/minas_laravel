@@ -38,4 +38,14 @@ class ContactUsController extends Controller
     {
         return $contactUsService->delete($request);
     }
+
+    public function changeStatus(Request $request,ContactUsService $contactUsService)
+    {
+        return $contactUsService->changeStatus($request);
+    }
+
+    public function retailerListing (Request $request,ContactUsService $contactUsService)
+    {
+        return $contactUsService->retailerListing($request);
+    }
 }

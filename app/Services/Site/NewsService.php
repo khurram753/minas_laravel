@@ -11,18 +11,37 @@ class NewsService
     {
         $newsCategories = NewsCategory::all();
         $newsYear = News::select('year')->orderBy('year', 'desc')->distinct('year')->get();
-        $singleNews = News::orderBy('year', 'desc')->first();
-        $news = News::orderBy('year', 'desc')->where('id','!=',$singleNews->id);
-
-        if ($request->category_id) {
-            $news = $news->where('category_id', $request->category_id);
+        $singleNews = News::orderBy('year', 'desc');
+        if($request->year)
+        {
+            $singleNews = $singleNews->where('year',$request->year);
+        }
+        if($request->category_id)
+        {
+            $singleNews = $singleNews->where('category_id',$request->category_id);
         }
 
-        if ($request->year) {
-            $news = $news->where('category_id', $request->year);
+        $singleNews = $singleNews->first();
+
+
+        if($singleNews)
+        {
+            $news = News::orderBy('year', 'desc')->where('id','!=',$singleNews->id);
+
+            if ($request->category_id) {
+                $news = $news->where('category_id', $request->category_id);
+            }
+
+            if ($request->year) {
+                $news = $news->where('category_id', $request->year);
+            }
+
+            $news = $news->get();
+        }
+        else{
+            $news = News::orderBy('year', 'desc')->get();
         }
 
-        $news = $news->get();
 
         return view('site.news.news', compact('newsCategories', 'newsYear','news','singleNews'));
     }
