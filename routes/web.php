@@ -33,6 +33,7 @@ Route::namespace("Site")->group(function () {
     Route::get('store-detail/{id}','ContactUsController@storeDetail')->name('storeDetail');
     Route::post('contact-us-request','ContactUsController@contactUsRequest')->name('contactUsRequest');
     Route::get('media-kit','MediaKitController@index')->name('mediaKit');
+    Route::get('get-collection','MainController@getCollection')->name('getCollection');
 
 });
 

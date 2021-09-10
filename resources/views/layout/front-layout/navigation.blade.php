@@ -43,33 +43,35 @@
                     </li>
                     <li id="menu-item-661"
                         class="menu-item menu-item-type-taxonomy menu-item-object-publication_category menu-item-has-children menu-item-661 main-item item--28 mnu-2">
-                        <a href="publication-category.html" class="menu-a menu-link item--28">PRESS OFFICE</a>
-                        <ul class="submenu-list trans-slower">
-                            <li id="menu-item-1372"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-publication_category menu-item-1372 submenu-item submnu-1">
-                                <a href="publication-category.html"
-                                   class="submenu-a menu-link item--28">PUBLICATIONS</a>
-                            </li>
-                            <li id="menu-item-640"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-mediakit_category menu-item-640 submenu-item submnu-2">
-                                <a href="media-kit-photos.html" class="submenu-a menu-link item--14">PHOTOS</a>
-                            </li>
-                            <li id="menu-item-641"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-mediakit_category menu-item-641 submenu-item submnu-3">
-                                <a href="mdida-kit-videos.html" class="submenu-a menu-link item--22">VIDEOS</a>
-                            </li>
-                            <li id="menu-item-648"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-mediakit_category menu-item-648 submenu-item submnu-4">
-                                <a href="mdida-kit-new-years-cards.html" class="submenu-a menu-link item--25">NEW
-                                    YEAR’S CARDS</a></li>
-                            <li id="menu-item-643"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-mediakit_category menu-item-643 submenu-item submnu-5">
-                                <a href="mdida-kit-press-releases.html" class="submenu-a menu-link item--24">PRESS
-                                    RELEASES</a></li>
-                            <li id="menu-item-1716"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-mediakit_category menu-item-1716 submenu-item submnu-6">
-                                <a href="mdida-kit-media-kit.html" class="submenu-a menu-link item--33">MEDIA
-                                    KIT</a></li>
+
+                        <a href="{{route('mediaKit',['collection_id'=>5])}}" class="menu-a menu-link item--28">PRESS OFFICE</a>
+
+                        <ul class="submenu-list trans-slower mediaKitList">
+{{--                            <li id="menu-item-1372"--}}
+{{--                                class="menu-item menu-item-type-taxonomy menu-item-object-publication_category menu-item-1372 submenu-item submnu-1">--}}
+{{--                                <a href="publication-category.html"--}}
+{{--                                   class="submenu-a menu-link item--28">PUBLICATIONS</a>--}}
+{{--                            </li>--}}
+{{--                            <li id="menu-item-640"--}}
+{{--                                class="menu-item menu-item-type-taxonomy menu-item-object-mediakit_category menu-item-640 submenu-item submnu-2">--}}
+{{--                                <a href="media-kit-photos.html" class="submenu-a menu-link item--14">PHOTOS</a>--}}
+{{--                            </li>--}}
+{{--                            <li id="menu-item-641"--}}
+{{--                                class="menu-item menu-item-type-taxonomy menu-item-object-mediakit_category menu-item-641 submenu-item submnu-3">--}}
+{{--                                <a href="mdida-kit-videos.html" class="submenu-a menu-link item--22">VIDEOS</a>--}}
+{{--                            </li>--}}
+{{--                            <li id="menu-item-648"--}}
+{{--                                class="menu-item menu-item-type-taxonomy menu-item-object-mediakit_category menu-item-648 submenu-item submnu-4">--}}
+{{--                                <a href="mdida-kit-new-years-cards.html" class="submenu-a menu-link item--25">NEW--}}
+{{--                                    YEAR’S CARDS</a></li>--}}
+{{--                            <li id="menu-item-643"--}}
+{{--                                class="menu-item menu-item-type-taxonomy menu-item-object-mediakit_category menu-item-643 submenu-item submnu-5">--}}
+{{--                                <a href="mdida-kit-press-releases.html" class="submenu-a menu-link item--24">PRESS--}}
+{{--                                    RELEASES</a></li>--}}
+{{--                            <li id="menu-item-1716"--}}
+{{--                                class="menu-item menu-item-type-taxonomy menu-item-object-mediakit_category menu-item-1716 submenu-item submnu-6">--}}
+{{--                                <a href="mdida-kit-media-kit.html" class="submenu-a menu-link item--33">MEDIA--}}
+{{--                                    KIT</a></li>--}}
                         </ul>
                     </li>
                     <li id="menu-item-357"

@@ -13,4 +13,9 @@ class MainController extends Controller
     {
         return $mainService->index();
     }
+
+    public function getCollection(MainService $mainService)
+    {
+        return $mainService->getCollection();
+    }
 }

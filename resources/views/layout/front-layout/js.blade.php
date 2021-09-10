@@ -14,6 +14,43 @@
 
 
 <script>
+
+    $(document).ready(function () {
+        getCollection();
+
+    });
+
+    function getCollection() {
+        $.ajax({
+            type: 'GET',
+            url: '{{route("getCollection")}}',
+
+            success: function (response, status) {
+
+                if (response.result == 'success') {
+                    var html = '';
+                    $.each(response.data, function (index, value) {
+                        var url = "{{url('media-kit?collection_id=')}}" + value.id;
+                        html += '<li id="menu-item-'+index+'" class="menu-item menu-item-type-taxonomy menu-item-object-publication_category menu-item-1372 submenu-item submnu-1" style="opacity: 1;transform: matrix(1, 0, 0, 1, 0, 0);">';
+                        html += '<a href="' + url + '" class="submenu-a menu-link item--28">' + value.name + '</a>';
+                        html += '</li>'
+
+
+                        // console.log(value);
+                    })
+
+                    // console.log(html);
+                    $('.mediaKitList').prepend(html);
+
+                } else if (response.result == 'error') {
+                }
+            }
+
+
+        });
+    }
+
+
     function successMsg(_msg) {
         window.toastr.success(_msg);
     }
