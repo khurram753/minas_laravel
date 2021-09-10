@@ -28,11 +28,13 @@
 
         @include('layout.front-layout.footer')
         @include('layout.front-layout.newletter')
+
         @include('layout.front-layout.js')
 
     </div>
 @else
     @yield('content')
+
     @include('layout.front-layout.js')
 
 @endif

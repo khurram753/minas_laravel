@@ -26,7 +26,7 @@
                             data-emit-events data-bottom-top="" data-cubic="custom" data-trans="1.3">
                             <div class="bg-gradient z-30 fill-dimensions"></div>
                             <div class="fill-dimensions z-20 cover-img"
-                                 style="background-image:url('/site/images/minasdesignes-cycladic-stool.jpg'); background-position: left;">
+                                 style="background-image:url({{asset('site/images/minasdesignes-cycladic-stool.jpg')}}); background-position: left;">
                                 <div class="fill-dimensions multiply bg-black opc-20 z-10"></div>
                             </div>
                         </div>
