@@ -1,8 +1,9 @@
+<div class="header_bg">
 <header class="header fixed trans " role="banner">
     <div class="fill-dimensions bg-black mobile-hor-visible hidden trans-scale header-bg scale-y origin-l z--1"
          data-0="@class:fill-dimensions bg-black mobile-hor-visible hidden trans-scale header-bg scale-y origin-l z--1"
          data-90="@class:fill-dimensions bg-black mobile-hor-visible hidden trans-scale header-bg origin-l z--1 scrolled"></div>
-    <a aria-label="Minas Designs" href="{{route('homepage')}}" class="logo abs-tl top-32">
+    <a aria-label="Minas Designs" href="{{route('homepage')}}" class="logo abs-tl">
         <span class="js-hp-fade opc-0">
             <svg class="block-100 maxw-210 logo-svg" width="525.349px" preserveAspectRatio="xMinYMin meet" viewBox="0 0 525.349 133.56" enable-background="new 0 0 525.349 133.56" xml:space="preserve">
                 <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF"
@@ -35,3 +36,4 @@
         </span>
     </div>
 </header>
+</div>

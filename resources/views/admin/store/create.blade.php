@@ -51,7 +51,7 @@
                     </div>
 
 
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 custm_form_class">
 
                         <div class="custom-dbhome">
                             <div class="form-group ">

@@ -1096,6 +1096,7 @@ figcaption .dat {
     width: 100%;
     height: 100%;
     display: block;
+    background-size: contain;
 }
 
 .bg-attachment-fixed {
@@ -1551,6 +1552,30 @@ figcaption {
     right: 65px;
     height: 86px;
     z-index: 100;
+}
+
+.abs-tl {
+    top: 25px;
+}
+
+#retailers-tab-1 {
+    justify-content: center;
+}
+
+.form-radio-holder {
+    width: 100%;
+}
+
+.a-center {
+    margin: auto;
+}
+
+.header_bg {
+    background: rgba(0, 0, 0, .25);
+    width: 100%;
+    position: fixed;
+    height: 90px;
+    z-index: 999;
 }
 
 .header.dark-header .link-white,
@@ -6200,6 +6225,11 @@ select:-webkit-autofill:focus {
 
 .screen-reader-response {
     display: none;
+}
+
+#submitRequestForm {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .wpcf7-form-control-wrap {

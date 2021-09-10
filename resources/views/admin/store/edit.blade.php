@@ -89,31 +89,8 @@
                     <input type="hidden" name="process[{{$key}}][id]" value="{{$image->id}}">
                     <div class="row delete_row">
 
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Title</label>
-                                <input type="text" class="form-control" name="process[{{$key}}][title]"
-                                       placeholder="Enter Page Name" required
-                                       maxlength="50" value="{{$image->title}}">
-                            </div>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
 
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Description</label>
-                                <textarea class="form-control" name="process[{{$key}}][description]">{{$image->description}}</textarea>
-                            </div>
-                        </div>
-                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Year</label>
-                                <input type="text" class="form-control" name="process[{{$key}}][date]"
-                                       placeholder="Enter Year" required
-                                       value="{{$image->date}}">
-                            </div>
-                        </div>
-
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                        <div class="col-xs-12 col-sm-12 col-md-12 custom_for_edit">
                             <div class="custom-dbhome">
                                 <div class="form-group" style="width: 100%!important">
                                     <div class="db-bannerIMG">
@@ -131,25 +108,41 @@
 
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Title</label>
+                                <input type="text" class="form-control" name="process[{{$key}}][title]"
+                                       placeholder="Enter Page Name" required
+                                       maxlength="50" value="{{$image->title}}">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Description</label>
+                                <textarea class="form-control" name="process[{{$key}}][description]">{{$image->description}}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Year</label>
+                                <input type="text" class="form-control" name="process[{{$key}}][date]"
+                                       placeholder="Enter Year" required
+                                       value="{{$image->date}}">
+                            </div>
                         </div>
 
 
 
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                            <button type="button" data-id="{{$image->id}}" class="delete_process">Delete Row</button>
-                        </div>
+                       
+                            <button type="button" data-id="{{$image->id}}" class="delete_process delete_process_custm">Delete Row</button>
+                       
 
                     </div>
                 @endforeach
 
-
+<div class="butn_flex">
                 <button class="btn btn-primary" type="button" id="createBtn">Update</button>
 
 
                 <a href="{{route('storeListing')}}">
                     <button class="btn btn-primary" type="button">Cancel</button>
                 </a>
-
+                </div>
             </form>
         </div>
 
@@ -227,26 +220,11 @@
 
                 var html = "<div class='row delete_row'>";
 
-                html += '<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">';
-                html += '<div class="form-group">';
-                html += '<label for="exampleInputEmail1">Title</label>';
-                html += '<input type="text" class="form-control" name="process['+number+'][title]" placeholder="Enter Page Name" required="" maxlength="50">';
-                html += '</div> </div>';
+                
 
-                html += '<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">';
-                html += '<div class="form-group">';
-                html += '<label for="exampleInputEmail1">Description</label>';
-                html += '<textarea class="form-control" name="process['+number+'][description]"></textarea>';
-                html += '</div> </div>';
+               
 
-
-                html += '<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">';
-                html += '<div class="form-group">';
-                html += '<label for="exampleInputEmail1">Year</label>';
-                html += '<input type="text" class="form-control" name="process['+number+'][date]" placeholder="Enter Year" maxlength="50">';
-                html += '</div> </div>';
-
-                html += '<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">';
+                html += '<div class="col-xs-12 col-sm-12 col-md-12 custom_for_edit">';
                 html += '<div class="custom-dbhome">';
                 html += '<div class="form-group" style="width: 100%!important">';
                 html += '<div class="db-bannerIMG">';
@@ -256,11 +234,24 @@
                 html += '<input type="file" class="images_select" name="process['+number+'][image]" onchange="readURL(this,`images_'+number+'`);">';
                 html += '</div>';
                 html += '</div>';
+                html += '<div class="form-group">';
+                html += '<label for="exampleInputEmail1">Title</label>';
+                html += '<input type="text" class="form-control" name="process['+number+'][title]" placeholder="Enter Page Name" required="" maxlength="50">';
+                html += '</div>';
+                html += '<div class="form-group">';
+                html += '<label for="exampleInputEmail1">Description</label>';
+                html += '<textarea class="form-control" name="process['+number+'][description]"></textarea>';
+                html += '</div>';
+                html += '<div class="form-group">';
+                html += '<label for="exampleInputEmail1">Year</label>';
+                html += '<input type="text" class="form-control" name="process['+number+'][date]" placeholder="Enter Year" maxlength="50">';
                 html += '</div>';
 
-                html += '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">';
-                html += '<button type="button"  class="delete_process">Delete Row</button>';
+               
                 html += '</div>';
+
+               
+                html += '<button type="button"  class="delete_process delete_process_custm">Delete Row</button>';
 
                 html += '</div>';
 
