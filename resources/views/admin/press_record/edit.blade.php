@@ -83,6 +83,18 @@
                             </div>
                         </div>
 
+                        <div class="type_hide" style="display: none">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Type</label>
+                                <select class="form-control" name="type">
+                                    <option value="printed">Printed</option>
+                                    <option value="digital">Digital</option>
+                                </select>
+
+                            </div>
+                        </div>
+
+
 
 
                     </div>
@@ -168,18 +180,27 @@
 
                 });
 
-                $('.collection_id').change(function(){
-                    var selectedOption = $('.collection_id option:selected').text();
+            });
 
-                    if(selectedOption == 'Videos' || selectedOption == 'videos')
-                    {
-                        $('.video_hide').css('display','block');
-                    }
-                    else{
-                        $('.video_hide').css('display','none');
-                    }
-                });
+            $('.collection_id').change(function(){
 
+                var selectedOption = $('.collection_id option:selected').text();
+
+                if(selectedOption == 'Videos' || selectedOption == 'videos')
+                {
+                    $('.video_hide').css('display','block');
+                    $('.type_hide').css('display','none');
+                }
+                else if(selectedOption == 'Publications' || selectedOption == 'publications' ||
+                    selectedOption == 'PRESS RELEASES' || selectedOption == 'Press Releases')
+                {
+                    $('.type_hide').css('display','block');
+                    $('.video_hide').css('display','none');
+                }
+                else{
+                    $('.video_hide').css('display','none');
+                    $('.type_hide').css('display','none');
+                }
             });
 
             var fileTypes = ['jpg', 'jpeg', 'png'];
