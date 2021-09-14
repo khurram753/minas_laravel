@@ -35,6 +35,11 @@ Route::namespace("Site")->group(function () {
     Route::get('media-kit','MediaKitController@index')->name('mediaKit');
     Route::get('get-collection','MainController@getCollection')->name('getCollection');
 
+    Route::prefix('shop')->group(function (){
+        Route::get('/','ShopController@index')->name('shop');
+
+    });
+
 });
 
 Route::namespace('Admin')->group(function () {
@@ -58,10 +63,4 @@ Route::namespace('Admin')->group(function () {
         });
     });
 
-
-
-    Route::middleware(['Admin', 'auth'])->group(function () {
-
-
-    });
 });

@@ -48,7 +48,7 @@
 
                     <div class="site-intro-gutter opc-0 no-visible js-intro-fade mobile-hor-gutter-20 relative"
                          style="visibility: inherit; opacity: 1;">
-                        <a id="shop-link" href="eshop.html"
+                        <a id="shop-link" href="{{route('shop')}}"
                            class="site-intro-link a-center color-grey  display--block site-intro__line"
                            data-url="home.html">
 
