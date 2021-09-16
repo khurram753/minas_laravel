@@ -1,25 +1,25 @@
-<aside
-    class="home-nav fixed to-tr a-right color--red font-bold title-13 ls-180 tablet-hor-hidden opc-0 no-visible js-fade-in in-view"
+<aside class="home-nav fixed to-tr a-right color--red font-bold title-13 ls-180 tablet-hor-hidden opc-0 no-visible js-fade-in in-view"
     data-emit-events data-bottom-top="" data-trans="1.4" data-cubic="custom">
     Nº<span class="relative">
-                        <span class="trans" data-anchor-target="#top-content" data-0="@class:trans"
-                              data-center-bottom="@class:trans faded">1</span><span
-            class="trans abs-tl block-100 display--block a-center faded" data-anchor-target="#section--0"
+        <span class="trans" data-anchor-target="#top-content" data-0="@class:trans"
+              data-center-bottom="@class:trans faded">1</span>
+        <span class="trans abs-tl block-100 display--block a-center faded" data-anchor-target="#section--0"
             data-0="@class:trans abs-tl block-100 display--block a-center faded"
             data-center-top="@class:trans abs-tl block-100 display--block a-center"
-            data-center-bottom="@class:trans abs-tl block-100 display--block a-center faded">2</span><span
-            class="trans abs-tl block-100 display--block a-center faded" data-anchor-target="#section--1"
+            data-center-bottom="@class:trans abs-tl block-100 display--block a-center faded">2</span>
+        <span class="trans abs-tl block-100 display--block a-center faded" data-anchor-target="#section--1"
             data-0="@class:trans abs-tl block-100 display--block a-center faded"
             data-center-top="@class:trans abs-tl block-100 display--block a-center"
-            data-center-bottom="@class:trans abs-tl block-100 display--block a-center faded">3</span><span
-            class="trans abs-tl block-100 display--block a-center faded" data-anchor-target="#section--2"
+            data-center-bottom="@class:trans abs-tl block-100 display--block a-center faded">3</span>
+        <span class="trans abs-tl block-100 display--block a-center faded" data-anchor-target="#section--2"
             data-0="@class:trans abs-tl block-100 display--block a-center faded"
             data-center-top="@class:trans abs-tl block-100 display--block a-center"
-            data-center-bottom="@class:trans abs-tl block-100 display--block a-center faded">4</span><span
-            class="trans abs-tl block-100 display--block a-center faded" data-anchor-target="#section-heritage"
+            data-center-bottom="@class:trans abs-tl block-100 display--block a-center faded">4</span>
+        <span class="trans abs-tl block-100 display--block a-center faded" data-anchor-target="#section-heritage"
             data-0="@class:trans abs-tl block-100 display--block a-center faded"
             data-center-top="@class:trans abs-tl block-100 display--block a-center"
-            data-center-bottom="@class:trans abs-tl block-100 display--block a-center faded">5</span>                    </span>
+            data-center-bottom="@class:trans abs-tl block-100 display--block a-center faded">5</span>
+    </span>
     <span class="home-nav__sep display--inline"></span> 5
 </aside>
 <footer class="footer relative" id="colophon">
@@ -59,20 +59,28 @@
                         <a href="eshop-product-category.html" class="footer__menu-item">Rings</a>
                         <ul id="menu-footermenu_en" class="menu-ul">
                             <li id="menu-item-494"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-494 main-item item--50 mnu-1"><span
-                                    class="menu-item-inner">
-                                            <a href="faqs.html" class="menu-a menu-link item--50">Shipping &#038; Returns</span></a>
+                                class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-494 main-item item--50 mnu-1">
+                                <span class="menu-item-inner">
+                                    <a href="faqs.html" class="menu-a menu-link item--50">
+                                        Shipping &#038; Returns
+                                    </a>
+                                </span>
                             </li>
                             <li id="menu-item-495"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-495 main-item item--53 mnu-2"><span
-                                    class="menu-item-inner">
-                                                <a href="faqs.html" class="menu-a menu-link item--53">Care &#038; Repair</span></a>
+                                class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-495 main-item item--53 mnu-2">
+                                <span class="menu-item-inner">
+                                    <a href="faqs.html" class="menu-a menu-link item--53">
+                                        Care &#038; Repair
+                                    </a>
+                                </span>
                             </li>
                             <li id="menu-item-496"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-496 main-item item--51 mnu-3"><span
-                                    class="menu-item-inner">
-                                                    <a href="faqs.html"
-                                                       class="menu-a menu-link item--51">Payment</span></a>
+                                class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-496 main-item item--51 mnu-3">
+                                <span class="menu-item-inner">
+                                    <a href="faqs.html" class="menu-a menu-link item--51">
+                                        Payment
+                                    </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -102,15 +110,19 @@
             <div class="pb-med mobile-hor-mt-25 mobile-hor-nopad--bottom">
                 <div class="columns-2-g display--inline-top tablet-33 mobile-hor-100">
                     <div class="gutter pb-25 mobile-hor-gutter">
-                        <div class="ls-180 uppercase"><a href="#" class="font-bold title-12 color--white underlined"
-                                                         target="_blank" rel="nofollow noopener noreferrer">View on
-                                map</a></div>
+                        <div class="ls-180 uppercase">
+                            <a href="#" class="font-bold title-12 color--white underlined" target="_blank"
+                               rel="nofollow noopener noreferrer">
+                                View on map
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="block-60 tablet-50 max-4cols-g display--inline-top mobile-hor-100">
                     <div class="gutter pb-25 ls-180 uppercase mobile-hor-gutter">
-                        <a href="index.html" class="font-bold title-12 color--white underlined">Discover Minas
-                            world</a>
+                        <a href="{{route('shop')}}" class="font-bold title-12 color--white underlined">
+                            Shop Online
+                        </a>
                     </div>
                 </div>
             </div>
@@ -126,36 +138,47 @@
                 <ul id="menu-copyrightsmenu_en" class="menu-ul">
                     <li id="menu-item-260"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-260 main-item item--200 mnu-1">
-                        <span class="menu-item-inner"><a href="#" class="menu-a menu-link item--200">TERMS &#038; CONDITIONS</span></a>
+                        <span class="menu-item-inner">
+                            <a href="#" class="menu-a menu-link item--200">
+                                TERMS &#038; CONDITIONS
+                            </a>
+                        </span>
                     </li>
                     <li id="menu-item-261"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-261 main-item item--3 mnu-2">
-                            <span class="menu-item-inner"><a href="#"
-                                                             class="menu-a menu-link item--3">PRIVACY POLICY</span></a>
+                            <span class="menu-item-inner">
+                                <a href="#" class="menu-a menu-link item--3">
+                                    PRIVACY POLICY
+                                </a>
+                            </span>
                     </li>
                     <li id="menu-item-262"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262 main-item item--258 mnu-3">
-                            <span class="menu-item-inner"><a href="#"
-                                                             class="menu-a menu-link item--258">SITEMAP</span></a></li>
+                        <span class="menu-item-inner">
+                            <a href="#" class="menu-a menu-link item--258">
+                                SITEMAP
+                            </a>
+                        </span>
+                    </li>
                 </ul>
             </nav>
             <div class="footer__logos float-right mobile-hor-hidden">
                 <div class="display--inline footer-logo">
-                    <img src="images/awwwards-mobile-award.png" alt="Minas Jewelry - Mobile Award"
+                    <img src="/site/images/awwwards-mobile-award.png" alt="Minas Jewelry - Mobile Award"
                          class="footer-logo-0">
                 </div>
                 <div class="display--inline footer-logo">
-                    <img src="images/css-best-innovation.png" alt="Minas Jewelry - Best Innovation"
+                    <img src="/site/images/css-best-innovation.png" alt="Minas Jewelry - Best Innovation"
                          class="footer-logo-1">
                 </div>
                 <div class="display--inline footer-logo">
-                    <img src="images/css-best-ux.png" alt="Minas Jewelry - Best UI Design" class="footer-logo-2">
+                    <img src="/site/images/css-best-ux.png" alt="Minas Jewelry - Best UI Design" class="footer-logo-2">
                 </div>
                 <div class="display--inline footer-logo">
-                    <img src="images/css-best-ui.png" alt="Minas Jewelry - Best UX Design" class="footer-logo-3">
+                    <img src="/site/images/css-best-ui.png" alt="Minas Jewelry - Best UX Design" class="footer-logo-3">
                 </div>
                 <div class="display--inline footer-logo">
-                    <img src="images/ermis-awards-logo.png" alt="Minas Jewelry - Ermis Awards 2019"
+                    <img src="/site/images/ermis-awards-logo.png" alt="Minas Jewelry - Ermis Awards 2019"
                          class="footer-logo-4">
                 </div>
             </div>

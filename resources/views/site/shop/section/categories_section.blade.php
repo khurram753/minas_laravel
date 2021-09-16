@@ -16,7 +16,7 @@
 
                 <div class="max-4cols gutter font title-20 columns-3 ls-30 js-st-fade-up in-view" data-emit-events data-bottom-top="" data-velocity="0.02">
                     @foreach($categories as $category)
-                        <a href="#" class="color--grey display--block mb-8 hover-white-underline">
+                        <a href="{{route('shopCategory',['category_id'=>$category->id])}}" class="color--grey display--block mb-8 hover-white-underline">
                                     <span class="display--block overflow relative">
                                         <span itemprop="name" class="display--block js-st-fade-up__el">{{$category->name}}</span>
                                     </span>

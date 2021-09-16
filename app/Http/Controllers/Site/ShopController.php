@@ -13,4 +13,9 @@ class ShopController extends Controller
     {
         return $shopService->index();
     }
+
+    public function detail($category_id,Request $request,ShopService $shopService)
+    {
+        return $shopService->detail($category_id,$request);
+    }
 }
