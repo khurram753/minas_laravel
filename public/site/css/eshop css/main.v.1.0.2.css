@@ -3331,7 +3331,7 @@ a:hover, .link:hover {
     width: 34px;
     height: 34px;
     text-align: center;
-    background: url(../../images/check-minus.png) no-repeat center;
+    /*background: url(../../images/check-minus.png) no-repeat center;*/
     background-color: rgba(187, 187, 187, 0.3);
     cursor: pointer;
     z-index: 8;
@@ -6300,7 +6300,7 @@ option {
 
 .woof_list.woof_list_checkbox input:checked:after {
     background-color: #000;
-    background-image: url("../../images/check-plus.png")
+    /*background-image: url("../../images//check-plus.png")*/
 }
 
 .woof_checkbox_label {

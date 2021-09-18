@@ -50,54 +50,55 @@
 
                                 <div class="gutter mobile-hor-gutter">
                                     <div class=" relative">
-
                                         <div
                                             class="tinv-wraper woocommerce tinv-wishlist tinvwl-above_thumb-add-to-cart tinvwl-loop-button-wrapper">
+
                                             <a role="button" aria-label="Add to Wishlist"
-                                               class="tinvwl_add_to_wishlist_button tinvwl-icon-custom no-txt  tinvwl-position-above_thumb"
-                                               data-tinv-wl-list="[]" data-tinv-wl-product="2496"
-                                               data-tinv-wl-productvariation="2498"
-                                               data-tinv-wl-productvariations="[0]" data-tinv-wl-producttype="variable"
-                                               data-tinv-wl-action="add">
-                                                <img src="/site/images/wishlist.png" alt="Add to Wishlist"/> </a>
+                                               class="tinvwl_add_to_wishlist_button tinvwl-icon-custom no-txt  tinvwl-position-above_thumb add_to_wishlist"
+                                               data-tinv-wl-producttype="variable"
+                                               data-id="{{$product->id}}">
+                                                <img src="{{asset('site/images/wishlist.png')}}" alt="Add to Wishlist"/>
+                                            </a>
                                             <div class="tinv-wishlist-clear"></div>
                                             {{--                                    <div class="tinvwl-tooltip">Add to Wishlist</div>--}}
                                         </div>
                                         <a itemprop="url" href="eshop-product-category.html"
                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                                    <span class="display--block relative overflow"
-                                          style="padding-top: 146.88128772636%">
-                                        <span class="hidden" itemprop="image"
-                                              content="images/product-young-hearts-pendant-497x730.jpg"></span>
-                                        <img src="{{asset($product->image)}}" class="b-lazy block-100 abs-tl z-1"
-                                             alt="Minas Jewelry-YOUNG HEARTS" data-src="{{asset($product->image)}}">
-                                        <span class="fill-dimensions img-overlay trans-slow"></span>
-                                    </span>
+                                            <span class="display--block relative overflow"
+                                                  style="padding-top: 146.88128772636%">
+                                                <span class="hidden" itemprop="image"
+                                                      content="images/product-young-hearts-pendant-497x730.jpg"></span>
+                                                <img src="{{asset($product->image)}}"
+                                                     class="b-lazy block-100 abs-tl z-1"
+                                                     alt="Minas Jewelry-YOUNG HEARTS"
+                                                     data-src="{{asset($product->image)}}">
+                                                <span class="fill-dimensions img-overlay trans-slow"></span>
+                                            </span>
                                             <span
                                                 class="prod-content display--block a-left op-0 no-visible js-fade-up in-view"
                                                 data-emit-events data-bottom-top="" data-trans="1.4"
                                                 style="visibility: inherit;opacity: 1;transform: matrix(1, 0, 0, 1, 0, 0);">
-                                        <h2 itemprop="name"
-                                            class="trans woocommerce-loop-product__title">{{ucfirst($product->name)}}</h2>
-                                        <span
-                                            class="display--block font-light title-15 mb-xs">{{ucfirst($product->category->name)}}</span>
+                                                <h2 itemprop="name"
+                                                    class="trans woocommerce-loop-product__title">{{ucfirst($product->name)}}</h2>
+                                                <span
+                                                    class="display--block font-light title-15 mb-xs">{{ucfirst($product->category->name)}}</span>
 {{--                                        <span class="display--block font-light title-15 mb-m">{{HEARTS}}</span>--}}
-                                        <span class="price">
-                                            <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                <link itemprop="availability" href="http://schema.org/InStock"/>
-                                                <span class="hidden" itemprop="url"></span>
-                                                <span class="from price">from</span>
-                                                <span class="woocommerce-Price-amount amount">
-                                                    <span class="woocommerce-Price-currencySymbol">$</span>
-                                                    {{$product->price}}
+                                                <span class="price">
+                                                    <span itemprop="offers" itemscope
+                                                          itemtype="http://schema.org/Offer">
+                                                        <link itemprop="availability" href="http://schema.org/InStock"/>
+                                                        <span class="hidden" itemprop="url"></span>
+                                                        <span class="from price">from</span>
+                                                        <span class="woocommerce-Price-amount amount">
+                                                            <span class="woocommerce-Price-currencySymbol">$</span>
+                                                            {{$product->price}}
+                                                        </span>
+                                                    </span>
                                                 </span>
                                             </span>
-                                        </span>
-                                    </span>
                                         </a>
                                     </div>
                                 </div>
-
                             </article>
                     @endforeach
 
@@ -222,6 +223,53 @@
             $('.woof_submit_search_form').click(function () {
                 $('#sorting-form').submit();
             });
+
+            $('.add_to_wishlist').click(function () {
+                var data = $(this).data('id');
+                $.blockUI({
+                    css: {
+                        border: 'none',
+                        padding: '15px',
+                        backgroundColor: '#000',
+                        '-webkit-border-radius': '10px',
+                        '-moz-border-radius': '10px',
+                        opacity: .5,
+                        color: '#fff'
+                    }
+                });
+
+                $.ajax({
+
+                    type: 'GET',
+                    url: '{{route("addToWishlist")}}',
+                    data: {'id':data},
+
+                    success: function (response, status) {
+
+                        if (response.result == 'success') {
+                            $.unblockUI();
+                            successMsg(response.message);
+
+                            setTimeout(function () {
+                                window.location.reload();
+                            }, 1000);
+
+                        } else if (response.result == 'error') {
+                            $.unblockUI();
+                            errorMsg(response.message);
+                        }
+                    },
+                    error: function (data) {
+                        $.each(data.responseJSON.errors, function (key, value) {
+                            $.unblockUI();
+                            errorMsg(value);
+                        });
+                    }
+
+
+                });
+            });
+
         });
     </script>
 @endsection

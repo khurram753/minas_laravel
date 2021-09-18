@@ -7,7 +7,9 @@ use App\Cord;
 use App\Heritage;
 use App\Material;
 use App\Product;
+use App\Wishlist;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Auth;
 
 class ShopService
 {
@@ -118,6 +120,28 @@ class ShopService
         }
         else{
             return redirect()->route('shop')->with('error','Category Not Found');
+        }
+    }
+
+    public function wishlist($request)
+    {
+        $product = Product::find($request->id);
+
+        if($product)
+        {
+            $wishlist = Wishlist::where('product_id',$request->id)->where('user_id',Auth::user()->id)->first();
+            if($wishlist)
+            {
+                $wishlist->delete();
+                return response()->json(['result'=>'success','message'=>'Product Removed From Wishlist']);
+            }
+            else{
+                Wishlist::create(['product_id',$request->id,'user_id'=>Auth::user()->id]);
+            }
+            return response()->json(['result'=>'success','message'=>'Product Added To Wishlist']);
+        }
+        else{
+            return response()->json(['result'=>'error','message'=>'Record Not Found']);
         }
     }
 }

@@ -18,4 +18,9 @@ class ShopController extends Controller
     {
         return $shopService->detail($category_id,$request);
     }
+
+    public function wishlist(Request $request,ShopService $shopService)
+    {
+        return $shopService->wishlist($request);
+    }
 }
