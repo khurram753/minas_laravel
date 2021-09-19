@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Auth\Notifications\ResetPassword as ResetPasswordNotification;
 use Illuminate\Support\Facades\Lang;
 
-class   ForgetPassword extends  ResetPasswordNotification
+class ForgetPassword extends  ResetPasswordNotification
 {
     use Queueable;
 

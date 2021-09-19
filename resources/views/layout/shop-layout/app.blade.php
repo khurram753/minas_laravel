@@ -11,7 +11,13 @@
     @yield('style')
 </head>
 
-<body class="home page-template page-template-page-templates page-template-home tinvwl-theme-style">
+@if(Request()->route()->getName() == 'loginPageUser')
+<body class="page-template page-template-page-templates page-template-account page-template-page-templatesaccount-php page page-id-17 wp-embed-responsive dark-header webkit desktop theme-minas woocommerce-account woocommerce-page woocommerce-no-js tinvwl-theme-style">
+@elseif(Request()->route()->getName() == 'forgetPasswordFormUser' || Request()->route()->getName() == 'resetPasswordUser')
+<body class="page-template page-template-page-templates page-template-account page-template-page-templatesaccount-php page page-id-17 wp-embed-responsive dark-header webkit desktop theme-minas woocommerce-account woocommerce-page woocommerce-no-js tinvwl-theme-style">
+@else
+    <body class="home page-template page-template-page-templates page-template-home tinvwl-theme-style">
+@endif
 
 <svg style="display:none;" xmlns="http://www.w3.org/2000/svg">
     <symbol viewBox="0 0 49.2 163.1" id="arrow-long-down">
