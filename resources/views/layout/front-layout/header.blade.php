@@ -16,7 +16,7 @@
         </span>
     </a>
     <div class="pt-17 display--inline">
-        <a href="eshop.html" arial-label="shop online"
+        <a href="{{route('shop')}}" arial-label="shop online"
            class="font-bold font-12 extra-lh extra-ls display--inline mr-35 color-white relative shop-link no-trans mobile-hidden">
                 <span class="overflow display--block shop-link__text ">
                     <span class="display--block anim-bt js-hp-bt opc-0 ">

@@ -14,15 +14,16 @@
         <a class="skip-link screen-reader-text" href="#site-navigation">Skip to navigation</a>
         <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
         <div class="header__items font-bold title-12 lh-n ls-180 color--white uppercase">
-            <a href="#" class="color--white line-underline hover-red header__item display--inline tablet-hidden">Minas`s
+            <a href="{{route('home')}}" class="color--white line-underline hover-red header__item display--inline tablet-hidden">Minas`s
                 world</a>
             <svg class="icon icon--user trans header__item display--inline mobile-hor-hidden ">
                 <use xlink:href="#user"></use>
             </svg>
-            <a href="login.html" class="color--white hover-red header__item display--inline mobile-hor-hidden">Login
-                / Register</a><a href="cart.html"
-                                 class="color--white hover-red header__item display--inline ml-arrow mobile-hor-nopad mobile-hor-nomargin">{
-                0 }</a>
+            <a href="{{route('loginPageUser')}}" class="color--white hover-red header__item display--inline mobile-hor-hidden">Login
+                / Register</a>
+            <a href="cart.html" class="color--white hover-red header__item display--inline ml-arrow mobile-hor-nopad mobile-hor-nomargin">
+                { 0 }
+            </a>
         </div>
         <div class="header__right abs-tr a-right">
                     <span class="header__item item--search hover-red display--inline clickable trans js-popup-opener"
