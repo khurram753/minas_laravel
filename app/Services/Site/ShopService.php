@@ -144,4 +144,18 @@ class ShopService
             return response()->json(['result'=>'error','message'=>'Record Not Found']);
         }
     }
+
+    public function productDetail($id)
+    {
+        $data = Product::find($id);
+
+        if($data)
+        {
+            $
+            return view('site.shop.detail',compact('data'));
+        }
+        else{
+            return redirect()->back()->with('error','Record Not Found');
+        }
+    }
 }

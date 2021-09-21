@@ -43,15 +43,13 @@
                             $loopVar = $loopVar+3;
                         @endphp
                         @else
-                            <article
-                                class="block-25 tablet-hor-33 tablet-50 mobile-hor-100 display--inline-top product type-product post-2496 status-publish first instock product_cat-pendants has-post-thumbnail taxable shipping-taxable purchasable product-type-variable has-default-attributes"
+                            <article class="block-25 tablet-hor-33 tablet-50 mobile-hor-100 display--inline-top product type-product post-2496 status-publish first instock product_cat-pendants has-post-thumbnail taxable shipping-taxable purchasable product-type-variable has-default-attributes"
                                 itemscope itemtype="http://schema.org/Product">
                                 @endif
 
                                 <div class="gutter mobile-hor-gutter">
                                     <div class=" relative">
-                                        <div
-                                            class="tinv-wraper woocommerce tinv-wishlist tinvwl-above_thumb-add-to-cart tinvwl-loop-button-wrapper">
+                                        <div class="tinv-wraper woocommerce tinv-wishlist tinvwl-above_thumb-add-to-cart tinvwl-loop-button-wrapper">
 
                                             <a role="button" aria-label="Add to Wishlist"
                                                class="tinvwl_add_to_wishlist_button tinvwl-icon-custom no-txt  tinvwl-position-above_thumb add_to_wishlist"
@@ -62,7 +60,7 @@
                                             <div class="tinv-wishlist-clear"></div>
                                             {{--                                    <div class="tinvwl-tooltip">Add to Wishlist</div>--}}
                                         </div>
-                                        <a itemprop="url" href="eshop-product-category.html"
+                                        <a itemprop="url" href="{{route('productDetail',['id'=>$product->id])}}"
                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
                                             <span class="display--block relative overflow"
                                                   style="padding-top: 146.88128772636%">

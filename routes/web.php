@@ -39,6 +39,7 @@ Route::namespace("Site")->group(function () {
         Route::get('/', 'ShopController@index')->name('shop');
         Route::get('/{category_id}', 'ShopController@detail')->name('shopCategory');
         Route::get('/add-to-wishlist', 'ShopController@wishlist')->name('addToWishlist');
+        Route::get('product_detail/{id}','ShopController@productDetail')->name('productDetail');
 
     });
 

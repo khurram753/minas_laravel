@@ -26,7 +26,8 @@
                         <span class="fill-dimensions bg-white line trans"></span>
                     </span>
                 </span>
-        </a><span class="display--inline clickable js-hp-fade opc-0" id="menu-burger">
+        </a>
+        <span class="display--inline clickable js-hp-fade opc-0" id="menu-burger">
             <span class="menu-burger display--block relative">
                 <span class="burger__line line--top abs-tl trans"></span>
                 <span class="burger__line line--mid abs-tl trans"></span>

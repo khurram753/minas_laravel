@@ -23,4 +23,9 @@ class ShopController extends Controller
     {
         return $shopService->wishlist($request);
     }
+
+    public function productDetail($id,ShopService $shopService)
+    {
+        return $shopService->productDetail($id);
+    }
 }
