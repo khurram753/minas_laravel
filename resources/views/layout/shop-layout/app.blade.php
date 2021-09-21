@@ -15,6 +15,8 @@
 <body class="page-template page-template-page-templates page-template-account page-template-page-templatesaccount-php page page-id-17 wp-embed-responsive dark-header webkit desktop theme-minas woocommerce-account woocommerce-page woocommerce-no-js tinvwl-theme-style">
 @elseif(Request()->route()->getName() == 'forgetPasswordFormUser' || Request()->route()->getName() == 'resetPasswordUser')
 <body class="page-template page-template-page-templates page-template-account page-template-page-templatesaccount-php page page-id-17 wp-embed-responsive dark-header webkit desktop theme-minas woocommerce-account woocommerce-page woocommerce-no-js tinvwl-theme-style">
+@elseif(Request()->route()->getName() == 'productDetail')
+<body class="product-template-default single single-product postid-2496 wp-embed-responsive bg--black webkit desktop theme-minas woocommerce woocommerce-page woocommerce-no-js tinvwl-theme-style">
 @else
     <body class="home page-template page-template-page-templates page-template-home tinvwl-theme-style">
 @endif

@@ -151,8 +151,11 @@ class ShopService
 
         if($data)
         {
-            $
-            return view('site.shop.detail',compact('data'));
+            $materials = $data->material;
+            $cords = $data->cord;
+            $relatedProducts = Product::where('category_id',$data->category_id)->where('id','!=',$data->id)
+                ->limit('4')->inRandomOrder()->get();
+            return view('site.shop.detail',compact('data','materials','cords','relatedProducts'));
         }
         else{
             return redirect()->back()->with('error','Record Not Found');

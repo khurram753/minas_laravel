@@ -54,13 +54,18 @@
                                             <a role="button" aria-label="Add to Wishlist"
                                                class="tinvwl_add_to_wishlist_button tinvwl-icon-custom no-txt  tinvwl-position-above_thumb add_to_wishlist"
                                                data-tinv-wl-producttype="variable"
-                                               data-id="{{$product->id}}">
+                                               data-id="{{$product->id}}"
+                                               @guest
+                                                   href="{{route('loginPageUser')}}"
+                                               @endguest
+                                            >
                                                 <img src="{{asset('site/images/wishlist.png')}}" alt="Add to Wishlist"/>
                                             </a>
                                             <div class="tinv-wishlist-clear"></div>
                                             {{--                                    <div class="tinvwl-tooltip">Add to Wishlist</div>--}}
                                         </div>
-                                        <a itemprop="url" href="{{route('productDetail',['id'=>$product->id])}}"
+                                        <a itemprop="url"
+                                           href="{{route('productDetail',['id'=>$product->id])}}"
                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
                                             <span class="display--block relative overflow"
                                                   style="padding-top: 99.88128772636%">
@@ -222,6 +227,7 @@
                 $('#sorting-form').submit();
             });
 
+            @auth
             $('.add_to_wishlist').click(function () {
                 var data = $(this).data('id');
                 $.blockUI({
@@ -267,6 +273,7 @@
 
                 });
             });
+            @endauth
 
         });
     </script>
