@@ -65,7 +65,7 @@
                                         <a itemprop="url" href="eshop-product-category.html"
                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
                                             <span class="display--block relative overflow"
-                                                  style="padding-top: 146.88128772636%">
+                                                  style="padding-top: 99.88128772636%">
                                                 <span class="hidden" itemprop="image"
                                                       content="images/product-young-hearts-pendant-497x730.jpg"></span>
                                                 <img src="{{asset($product->image)}}"

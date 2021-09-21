@@ -32,7 +32,7 @@
                                 <div class="tinvwl-tooltip">Add to Wishlist</div>
                             </div>
                             <a itemprop="url" href="eshop.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                                <span class="display--block relative overflow" style="padding-top: 146.88128772636%">
+                                <span class="display--block relative overflow" style="padding-top: 99.88128772636%">
                                     <img src="{{asset($earing->image)}}" class="b-lazy block-100 abs-tl z-1" alt="Minas Jewelry-THE VOLONTÉ CLIP EARRINGS" data-src="{{asset($earing->image)}}">
                                     <span class="fill-dimensions img-overlay trans-slow"></span>
                                 </span>

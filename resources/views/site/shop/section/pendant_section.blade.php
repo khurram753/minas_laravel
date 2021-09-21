@@ -35,7 +35,7 @@
                             <div class="tinvwl-tooltip">Add to Wishlist</div>
                         </div>
                         <a itemprop="url" href="eshop.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                            <span class="display--block relative overflow" style="padding-top: 146.88128772636%">
+                            <span class="display--block relative overflow" style="padding-top: 99.88128772636%">
                                 <span class="hidden" itemprop="image" content="images/product-pedant-2008-497x730.jpg"></span>
                                 <img src="{{asset($pendant->image)}}" class="b-lazy block-100 abs-tl z-1" alt="Minas Jewelry-INFINITY 2008" data-src="{{asset($pendant->image)}}">
                                 <span class="fill-dimensions img-overlay trans-slow"></span>
