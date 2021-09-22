@@ -21,8 +21,9 @@
                     <div class="secondary-nav secondary-nav--products">
                         <div class="secondary-nav__inner">
                             <ul class="submenu-list menu-ul">
-                                <li class="submenu-item submnu-1"><a href="eshop-product-category.html"
-                                                                     class="submenu-a menu-link item--32 uppercase">Pendants</a>
+                                <li class="submenu-item submnu-1">
+                                    <a href="eshop-product-category.html"
+                                       class="submenu-a menu-link item--32 uppercase">Pendants</a>
                                 </li>
                                 <li class="submenu-item submnu-1"><a href="eshop-product-category.html"
                                                                      class="submenu-a menu-link item--32 uppercase">Pendants</a>

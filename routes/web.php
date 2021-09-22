@@ -50,6 +50,7 @@ Route::namespace("Site")->group(function () {
     Route::get('clear-cart', 'ShoppingCartController@clearCart')->name('clearCart');
 
 
+
     Route::middleware('guest')->group(function () {
         Route::namespace("Authentication")->group(function () {
             Route::get('authentication', 'LoginController@loginPage')->name('loginPageUser');

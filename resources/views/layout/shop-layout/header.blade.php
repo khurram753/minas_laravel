@@ -21,8 +21,12 @@
             </svg>
             <a href="{{route('loginPageUser')}}" class="color--white hover-red header__item display--inline mobile-hor-hidden">Login
                 / Register</a>
-            <a href="cart.html" class="color--white hover-red header__item display--inline ml-arrow mobile-hor-nopad mobile-hor-nomargin">
-                { 0 }
+            <a href="{{route('cart')}}" class="color--white hover-red header__item display--inline ml-arrow mobile-hor-nopad mobile-hor-nomargin">
+                @if(Session::has('cart'))
+                    { {{count(Session::get('cart'))}} }
+                @else
+                    { 0 }
+                @endif
             </a>
         </div>
         <div class="header__right abs-tr a-right">
