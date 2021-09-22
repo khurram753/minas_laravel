@@ -129,3 +129,8 @@
         </div>
     </main>
 @endsection
+
+@section('script')
+    @include('site.shop.script.cart_script')
+@endsection
+

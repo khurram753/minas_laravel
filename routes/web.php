@@ -43,6 +43,13 @@ Route::namespace("Site")->group(function () {
 
     });
 
+    Route::get('cart', 'ShoppingCartController@index')->name('cart');
+    Route::post('add-to-cart', 'ShoppingCartController@addToCart')->name('addToCart');
+    Route::get('remove-from-cart', 'ShoppingCartController@removeCart')->name('removeFromCart');
+    Route::get('update-cart', 'ShoppingCartController@updateCart')->name('updateCart');
+    Route::get('clear-cart', 'ShoppingCartController@clearCart')->name('clearCart');
+
+
     Route::middleware('guest')->group(function () {
         Route::namespace("Authentication")->group(function () {
             Route::get('authentication', 'LoginController@loginPage')->name('loginPageUser');

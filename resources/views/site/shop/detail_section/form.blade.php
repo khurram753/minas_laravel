@@ -1,4 +1,8 @@
-<form class="variations_form cart" method="post">
+<form class="variations_form cart add_to_cart_form" method="post">
+    @csrf
+
+    <input type="hidden" name="product_id" value="{{$data->id}}">
+
     <table class="variations block-100 mb-med" cellspacing="0">
         <tbody>
         <tr>
@@ -54,25 +58,21 @@
                 </label>
                 <span class="quanity-handler br-50 display--inline relative clickable trans minus quant-minus"
                     data-id="#product-quantity-quantity_60ce9f9ce6b6d"></span>
-                <input type="number" id="product-quantity-quantity_60ce9f9ce6b6d"
+
+                <input type="text" id="product-quantity-quantity_60ce9f9ce6b6d"
                     class="input-text qty text  ls-80 display--inline product-quantity"
-                    step="1"
-                    min="1"
-                    max=""
-                    name="quantity"
-                    value="1"
-                    title="Qty"
-                    size="4"
+                    step="1"  name="quantity" title="Qty" readonly value="1"
                     inputmode="numeric"/>
+
                 <span class="quanity-handler br-50 display--inline relative clickable trans plus quant-plus"
                     data-id="#product-quantity-quantity_60ce9f9ce6b6d"></span>
             </div>
             <div class="woocommerce-variation single_variation"></div>
             <div class="add-to-cart-btn br-50 clickable trans abs-tr">
-                <div class="block-80 abs-center a-center z-1 font-bold title-12 uppercase ls-180">
+                <div class="block-80 abs-center a-center z-1 font-bold title-12 uppercase ls-180 add_to_cart_btn">
                     Add to cart
                 </div>
-                <button type="submit" class="single_add_to_cart_button button alt fill-dimensions transparent-button">
+                <button type="button" class="single_add_to_cart_button button alt fill-dimensions transparent-button add_to_cart_btn">
                     Add to cart
                 </button>
             </div>

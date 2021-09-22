@@ -10,6 +10,7 @@ use App\Product;
 use App\Wishlist;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class ShopService
 {
