@@ -40,88 +40,66 @@
                             </svg>
                             continue shopping
                         </a>
-                        <div class="mb-24">
-                            <span class="title-18 color--grey display--inline">{</span>
-                            <span class="font-bold title-13 uppercase color--black ls-180 display--inline gutter-20">01. cart</span>
-                            <span class="title-13 display--inline">/</span>
-                            <span class="font-bold title-13 uppercase ls-180 display--inline gutter-20">02. checkout</span>
-                            <span class="title-13 display--inline">/</span>
-                            <span class="font-bold title-13 uppercase ls-180 display--inline gutter-20">03. confirmation</span>
-                            <span class="title-18 color--grey display--inline">}</span>
-                        </div>
+{{--                        <div class="mb-24">--}}
+{{--                            <span class="title-18 color--grey display--inline">{</span>--}}
+{{--                            <span class="font-bold title-13 uppercase color--black ls-180 display--inline gutter-20">01. cart</span>--}}
+{{--                            <span class="title-13 display--inline">/</span>--}}
+{{--                            <span class="font-bold title-13 uppercase ls-180 display--inline gutter-20">02. checkout</span>--}}
+{{--                            <span class="title-13 display--inline">/</span>--}}
+{{--                            <span class="font-bold title-13 uppercase ls-180 display--inline gutter-20">03. confirmation</span>--}}
+{{--                            <span class="title-18 color--grey display--inline">}</span>--}}
+{{--                        </div>--}}
                         <h1 class="uppercase title-70 ls-30 font-thin color--black mb-title">Cart</h1>
                     </header>
                     <div class="relative z-20">
                         <div class="woocommerce">
                             <div class="woocommerce-notices-wrapper"></div>
                             <form class="woocommerce-cart-form" method="post">
-                                <span class="shop_table shop_table_responsive cart woocommerce-cart-form__contents display--block" cellspacing="0">
-                                    <span>
-                                        <span class="woocommerce-cart-form__cart-item  display--block relative  cart_item">
-                                            <span class="product-thumbnail display--inline-top block-26 mobile-hor-100">
-                                                <span class=" display--block mr-40 mobile-hor-nomargin">
-                                                    <a href="eshop-product-category.html" class="display--block">
-                                                        <span class="display--block relative">
-                                                            <img class="resp-image display--block" src="images/product-pedant-leo.jpg" alt="Minas Jewelry-LEO">
-                                                            <span class="fill-dimensions img-overlay trans-slow"></span>
-                                                        </span>
-                                                    </a>
-                                                </span>
-                                            </span>
-                                            <span class="product-name block-35 color--black pb-20 display--inline-top mobile-hor-100 mobile-hor-mt-25" data-title="Product">
-                                                <a href="eshop-product-category.html">LEO – Silver</a>
-                                                <span class="font-light uppercase ls-30 display--block title-14">
-                                                    ZODIAC
-                                                </span>
-                                                <div class="variation a-left ls-80 display--block title-14 extra-lh">
-                                                    <div class="display--inline uppercase mr-9">Silver</div></div>
-                                                <span class="a-left ls-80 pl-30 display--block title-14 mb-mm display--inline"></span>
-                                                <div class="quantity" id="quantity-field">
-                                                    <label class="screen-reader-text" for="quantity_60cfaae6be163">LEO - Silver quantity</label>
-                                                    <span class="quanity-handler br-50 display--inline relative clickable trans minus quant-minus"
-                                                          data-id="#product-quantity-quantity_60cfaae6be163"></span>
-                                                    <input type="number" id="product-quantity-quantity_60cfaae6be163"
-                                                           class="input-text qty text  ls-80 display--inline product-quantity" step="1" min="0" max=""
-                                                           name="cart[4b031166994b6cd1195ecc04502ab0bf][qty]" value="1" title="Qty" size="4" inputmode="numeric">
-                                                    <span class="quanity-handler br-50 display--inline relative clickable trans plus quant-plus"
-                                                          data-id="#product-quantity-quantity_60cfaae6be163"></span>
-                                                </div>
-                                            </span>
-                                            <span class="product-subtotal block-13  a-right pb-20 color--black display--inline-top mobile-hor-100 mobile-hor-left" data-title="Total">
-                                                <span class="woocommerce-Price-amount amount"><span
-                                                        class="woocommerce-Price-currencySymbol">€</span>270.00</span>
-                                            </span>
-                                            <span class="product-remove block-26 a-right pb-20 display--inline">
-                                                <a href="cart.html" class="remove cart-remove br-50 display--inline color--grey a-center"
-                                                   aria-label="Remove this item" data-product_id="1093" data-product_sku="LEO-S">×</a>
-                                            </span>
-                                        </span>
-                                        <span class="maxw-540 display--block m-auto pb-32 cart-contents mobile-hor-maxw-100 ">
-                                            <span class="gutter mobile-hor-nomargin">
-                                                <span class="display--block mb-65 pt-sm">
-                                                    <span class="update_cart-holder relative">
-                                                         <button type="submit" class="button update_cart" name="update_cart" value="Update cart">Update cart                                 <span
-                                                                 class="line abs-bl update_cart--line trans"></span>
-                                                             <svg class="icon icon--update abs-rc update_cart--icon trans"><use
-                                                                     xlink:href="#update"></use></svg>
-                                                         </button>
+                                @foreach($cart as $product)
+                                    <span class="shop_table shop_table_responsive cart woocommerce-cart-form__contents display--block" cellspacing="0">
+                                        <span>
+                                            <span class="woocommerce-cart-form__cart-item  display--block relative  cart_item">
+                                                <span class="product-thumbnail display--inline-top block-26 mobile-hor-100">
+                                                    <span class=" display--block mr-40 mobile-hor-nomargin">
+                                                        <a href="{{route('productDetail',['id'=>$product['product_id']])}}" class="display--block">
+                                                            <span class="display--block relative">
+                                                                <img class="resp-image display--block" src="{{asset($product['image'])}}" alt="Minas Jewelry-LEO">
+                                                                <span class="fill-dimensions img-overlay trans-slow"></span>
+                                                            </span>
+                                                        </a>
                                                     </span>
                                                 </span>
-
-                                                <span class="coupon">
-                                                    <input type="text" name="coupon_code" class="input-text coupon_code color--black title-17 ls-80 display--inline a-center" id="coupon_code" value="" placeholder="COUPON CODE">
-                                                    <button type="submit" class="button relative color--black hover-red ls-180 uppercase title-13 font-bold display--inline coupon_code__button"
-                                                            name="apply_coupon"
-                                                            value="APPLY">Apply
-                                                        <span class="line abs-bl bg--black trans coupon_code__line trans"></span>
-                                                    </button>
+                                                <span class="product-name block-35 color--black pb-20 display--inline-top mobile-hor-100 mobile-hor-mt-25" data-title="Product">
+                                                    <a href="{{route('productDetail',['id'=>$product['product_id']])}}">{{ucfirst($product['name'])}}</a>
+                                                    <span class="font-light uppercase ls-30 display--block title-14">
+                                                        {{ucfirst($product['category_name'])}}
+                                                    </span>
+                                                    <div class="variation a-left ls-80 display--block title-14 extra-lh">
+                                                        <div class="display--inline uppercase mr-9">{{ucfirst($product['material_name'])}}</div></div>
+                                                    <span class="a-left ls-80 pl-30 display--block title-14 mb-mm display--inline"></span>
+                                                    <div class="quantity" id="quantity-field">
+                                                        <label class="screen-reader-text" for="quantity_60cfaae6be163">{{ucfirst($product['name'])}}</label>
+                                                        <span class="quanity-handler br-50 display--inline relative clickable trans minus quant-minus" data-id="#product-quantity-quantity_60cfaae6be163"></span>
+                                                        <input type="number" id="product-quantity-quantity_60cfaae6be163" class="input-text qty text  ls-80 display--inline product-quantity" step="1" min="0" max=""
+                                                           name="cart[4b031166994b6cd1195ecc04502ab0bf][qty]" value="{{$product['quantity']}}" title="Qty" size="4" inputmode="numeric">
+                                                        <span class="quanity-handler br-50 display--inline relative clickable trans plus quant-plus" data-id="#product-quantity-quantity_60cfaae6be163"></span>
+                                                    </div>
                                                 </span>
-                                                <input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce" value="1d84e9fe80">
-                                                <input type="hidden" name="_wp_http_referer" value="/cart/">                </span>
+                                                <span class="product-subtotal block-13  a-right pb-20 color--black display--inline-top mobile-hor-100 mobile-hor-left" data-title="Total">
+                                                    <span class="woocommerce-Price-amount amount">
+                                                        <span class="woocommerce-Price-currencySymbol">$</span>
+                                                        {{$product['productSalePrice'] ? $product['productSalePrice']:$product['productOriginalAmount']}}
+                                                    </span>
+                                                </span>
+                                                <span class="product-remove block-26 a-right pb-20 display--inline">
+                                                    <a href="cart.html" class="remove cart-remove br-50 display--inline color--grey a-center" aria-label="Remove this item" data-product_id="1093" data-product_sku="LEO-S">×</a>
+                                                </span>
+                                            </span>
                                         </span>
                                         <span class="line bg-dot display--block"></span>
                                     </span>
-                                </span>
+                                @endforeach
+
                             </form>
 
                             <span class="cart-collaterals">
@@ -140,7 +118,7 @@
                                                                     <a role="button" aria-label="Add to Wishlist" class="tinvwl_add_to_wishlist_button tinvwl-icon-custom no-txt  tinvwl-position-above_thumb"
                                                                        data-tinv-wl-list="[]" data-tinv-wl-product="1189" data-tinv-wl-productvariation="1190"
                                                                        data-tinv-wl-productvariations="[0]" data-tinv-wl-producttype="variable" data-tinv-wl-action="add">
-                                                                        <img src="images/wishlist.png" alt="Add to Wishlist">
+                                                                        <img src="{{asset('site/images/wishlist.png')}}" alt="Add to Wishlist">
                                                                     </a>
                                                                     <div class="tinv-wishlist-clear"></div>
                                                                     <div class="tinvwl-tooltip">Add to Wishlist</div>
@@ -182,7 +160,7 @@
        class="tinvwl_add_to_wishlist_button tinvwl-icon-custom no-txt  tinvwl-position-above_thumb"
        data-tinv-wl-list="[]" data-tinv-wl-product="1183" data-tinv-wl-productvariation="1187"
        data-tinv-wl-productvariations="[0]" data-tinv-wl-producttype="variable" data-tinv-wl-action="add"><img
-            src="imagess/wishlist.png" alt="Add to Wishlist"> </a><div class="tinv-wishlist-clear"></div>		<div
+            src="/site/imagess/wishlist.png" alt="Add to Wishlist"> </a><div class="tinv-wishlist-clear"></div>		<div
                         class="tinvwl-tooltip">Add to Wishlist</div>
 </div>
 <a itemprop="url" href="eshop-product-category.html"
@@ -217,7 +195,7 @@
        class="tinvwl_add_to_wishlist_button tinvwl-icon-custom no-txt  tinvwl-position-above_thumb"
        data-tinv-wl-list="[]" data-tinv-wl-product="1142" data-tinv-wl-productvariation="1144"
        data-tinv-wl-productvariations="[0]" data-tinv-wl-producttype="variable" data-tinv-wl-action="add"><img
-            src="imagess/wishlist.png" alt="Add to Wishlist"> </a><div class="tinv-wishlist-clear"></div>		<div
+            src="/site/imagess/wishlist.png" alt="Add to Wishlist"> </a><div class="tinv-wishlist-clear"></div>		<div
                         class="tinvwl-tooltip">Add to Wishlist</div>
 </div>
 <a itemprop="url" href="eshop-product-category.html"
@@ -253,319 +231,27 @@
                                            <!-- <h2 class="title-20 uppercase ls-80"></h2>-->
 
                                             <div class="shop_table shop_table_responsive">
-                                                <div class="maxw-540 m-auto color--black uppercase title-20 ls-80 mobile-hor-maxw-100">
-                                                    <div class="gutter mobile-hor-nomargin">
-                                                    <div class="cart-subtotal mb-med">
-                                                        <div class="title-20 uppercase ls-80 display--inline">Subtotal</div>
-                                                        <div class="float-right" data-title="Subtotal"><span
-                                                                class="woocommerce-Price-amount amount"><span
-                                                                    class="woocommerce-Price-currencySymbol">€</span>270.00</span></div>
-                                                        <div class="clear"></div>
-                                                    </div>
 
-
-
-
-                                                    Shipping
-
-                                                                    <ul id="shipping_method"
-                                                                        class="woocommerce-shipping-methods">
-                                                                                    <li>
-                                                                        <input type="radio" name="shipping_method[0]"
-                                                                               data-index="0"
-                                                                               id="shipping_method_0_flat_rate1"
-                                                                               value="flat_rate:1"
-                                                                               class="shipping_method"
-                                                                               checked="checked"><label
-                                                                                            for="shipping_method_0_flat_rate1">Geniki Taxydromiki (FREE SHIPPING)</label>					</li>
-                                                                                    <li>
-                                                                        <input type="radio" name="shipping_method[0]"
-                                                                               data-index="0"
-                                                                               id="shipping_method_0_local_pickup3"
-                                                                               value="local_pickup:3"
-                                                                               class="shipping_method"><label
-                                                                                            for="shipping_method_0_local_pickup3">Local pickup (Click Away) • MINAS STORE, EM. BENAKI 8, KIFISSIA 14561</label>					</li>
-                                                                                    <li>
-                                                                        <input type="radio" name="shipping_method[0]"
-                                                                               data-index="0"
-                                                                               id="shipping_method_0_flat_rate8"
-                                                                               value="flat_rate:8"
-                                                                               class="shipping_method"><label
-                                                                                            for="shipping_method_0_flat_rate8">Speedex (FREE SHIPPING)</label>					</li>
-                                                                            </ul>
-                                                                            <p class="woocommerce-shipping-destination">
-                                                                    Shipping to <strong>ΑΤΤΙΚΗ</strong>. 				</p>
-
-
-
-                                                <form class="woocommerce-shipping-calculator" method="post">
-
-                                                    <a href="#" class="shipping-calculator-button">Change address</a>	<section
-                                                        class="shipping-calculator-form pt-m"
-                                                        style="display:none;">
-
-                                                                    <p class="form-row form-row-wide disable-pad"
-                                                                       id="calc_shipping_country_field">
-                                                                <select name="calc_shipping_country"
-                                                                        id="calc_shipping_country"
-                                                                        class="country_to_state country_select"
-                                                                        rel="calc_shipping_state">
-                                                                    <option value="">Select a country…</option>
-                                                                    <option value="AX">Åland Islands</option><option
-                                                                        value="AF">Afghanistan</option><option
-                                                                        value="AL">Albania</option><option
-                                                                        value="DZ">Algeria</option><option value="AS">American Samoa</option><option
-                                                                        value="AD">Andorra</option><option value="AO">Angola</option><option
-                                                                        value="AI">Anguilla</option><option value="AQ">Antarctica</option><option
-                                                                        value="AG">Antigua and Barbuda</option><option
-                                                                        value="AR">Argentina</option><option value="AM">Armenia</option><option
-                                                                        value="AW">Aruba</option><option value="AU">Australia</option><option
-                                                                        value="AT">Austria</option><option value="AZ">Azerbaijan</option><option
-                                                                        value="BS">Bahamas</option><option value="BH">Bahrain</option><option
-                                                                        value="BD">Bangladesh</option><option
-                                                                        value="BB">Barbados</option><option
-                                                                        value="BY">Belarus</option><option value="PW">Belau</option><option
-                                                                        value="BE">Belgium</option><option
-                                                                        value="BZ">Belize</option><option value="BJ">Benin</option><option
-                                                                        value="BM">Bermuda</option><option
-                                                                        value="BT">Bhutan</option><option value="BO">Bolivia</option><option
-                                                                        value="BQ">Bonaire, Saint Eustatius and Saba</option><option
-                                                                        value="BA">Bosnia and Herzegovina</option><option
-                                                                        value="BW">Botswana</option><option
-                                                                        value="BV">Bouvet Island</option><option
-                                                                        value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option
-                                                                        value="BN">Brunei</option><option value="BG">Bulgaria</option><option
-                                                                        value="BF">Burkina Faso</option><option
-                                                                        value="BI">Burundi</option><option
-                                                                        value="KH">Cambodia</option><option value="CM">Cameroon</option><option
-                                                                        value="CA">Canada</option><option value="CV">Cape Verde</option><option
-                                                                        value="KY">Cayman Islands</option><option
-                                                                        value="CF">Central African Republic</option><option
-                                                                        value="TD">Chad</option><option
-                                                                        value="CL">Chile</option><option
-                                                                        value="CN">China</option><option value="CX">Christmas Island</option><option
-                                                                        value="CC">Cocos (Keeling) Islands</option><option
-                                                                        value="CO">Colombia</option><option value="KM">Comoros</option><option
-                                                                        value="CG">Congo (Brazzaville)</option><option
-                                                                        value="CD">Congo (Kinshasa)</option><option
-                                                                        value="CK">Cook Islands</option><option
-                                                                        value="CR">Costa Rica</option><option
-                                                                        value="HR">Croatia</option><option value="CU">Cuba</option><option
-                                                                        value="CW">Curaçao</option><option
-                                                                        value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option
-                                                                        value="DK">Denmark</option><option value="DJ">Djibouti</option><option
-                                                                        value="DM">Dominica</option><option value="DO">Dominican Republic</option><option
-                                                                        value="EC">Ecuador</option><option
-                                                                        value="EG">Egypt</option><option value="SV">El Salvador</option><option
-                                                                        value="GQ">Equatorial Guinea</option><option
-                                                                        value="ER">Eritrea</option><option value="EE">Estonia</option><option
-                                                                        value="ET">Ethiopia</option><option value="FK">Falkland Islands</option><option
-                                                                        value="FO">Faroe Islands</option><option
-                                                                        value="FJ">Fiji</option><option value="FI">Finland</option><option
-                                                                        value="FR">France</option><option
-                                                                        value="GF">French Guiana</option><option
-                                                                        value="PF">French Polynesia</option><option
-                                                                        value="TF">French Southern Territories</option><option
-                                                                        value="GA">Gabon</option><option value="GM">Gambia</option><option
-                                                                        value="GE">Georgia</option><option
-                                                                        value="DE">Germany</option><option value="GH">Ghana</option><option
-                                                                        value="GI">Gibraltar</option><option value="GR"
-                                                                                                             selected="selected">Greece</option><option
-                                                                        value="GL">Greenland</option><option value="GD">Grenada</option><option
-                                                                        value="GP">Guadeloupe</option><option
-                                                                        value="GU">Guam</option><option
-                                                                        value="GT">Guatemala</option><option value="GG">Guernsey</option><option
-                                                                        value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option
-                                                                        value="GY">Guyana</option><option value="HT">Haiti</option><option
-                                                                        value="HM">Heard Island and McDonald Islands</option><option
-                                                                        value="HN">Honduras</option><option value="HK">Hong Kong</option><option
-                                                                        value="HU">Hungary</option><option value="IS">Iceland</option><option
-                                                                        value="IN">India</option><option
-                                                                        value="ID">Indonesia</option><option value="IR">Iran</option><option
-                                                                        value="IQ">Iraq</option><option
-                                                                        value="IE">Ireland</option><option value="IM">Isle of Man</option><option
-                                                                        value="IL">Israel</option><option value="IT">Italy</option><option
-                                                                        value="CI">Ivory Coast</option><option
-                                                                        value="JM">Jamaica</option><option
-                                                                        value="JP">Japan</option><option value="JE">Jersey</option><option
-                                                                        value="JO">Jordan</option><option
-                                                                        value="KZ">Kazakhstan</option><option
-                                                                        value="KE">Kenya</option><option
-                                                                        value="KI">Kiribati</option><option value="KW">Kuwait</option><option
-                                                                        value="KG">Kyrgyzstan</option><option
-                                                                        value="LA">Laos</option><option value="LV">Latvia</option><option
-                                                                        value="LB">Lebanon</option><option value="LS">Lesotho</option><option
-                                                                        value="LR">Liberia</option><option value="LY">Libya</option><option
-                                                                        value="LI">Liechtenstein</option><option
-                                                                        value="LT">Lithuania</option><option value="LU">Luxembourg</option><option
-                                                                        value="MO">Macao S.A.R., China</option><option
-                                                                        value="MG">Madagascar</option><option
-                                                                        value="MW">Malawi</option><option
-                                                                        value="MY">Malaysia</option><option value="MV">Maldives</option><option
-                                                                        value="ML">Mali</option><option
-                                                                        value="MT">Malta</option><option value="MH">Marshall Islands</option><option
-                                                                        value="MQ">Martinique</option><option
-                                                                        value="MR">Mauritania</option><option
-                                                                        value="MU">Mauritius</option><option
-                                                                        value="YT">Mayotte</option><option value="MX">Mexico</option><option
-                                                                        value="FM">Micronesia</option><option
-                                                                        value="MD">Moldova</option><option
-                                                                        value="MC">Monaco</option><option value="MN">Mongolia</option><option
-                                                                        value="ME">Montenegro</option><option
-                                                                        value="MS">Montserrat</option><option
-                                                                        value="MA">Morocco</option><option value="MZ">Mozambique</option><option
-                                                                        value="MM">Myanmar</option><option value="NA">Namibia</option><option
-                                                                        value="NR">Nauru</option><option
-                                                                        value="NP">Nepal</option><option value="NL">Netherlands</option><option
-                                                                        value="NC">New Caledonia</option><option
-                                                                        value="NZ">New Zealand</option><option
-                                                                        value="NI">Nicaragua</option><option
-                                                                        value="NE">Niger</option><option value="NG">Nigeria</option><option
-                                                                        value="NU">Niue</option><option
-                                                                        value="NF">Norfolk Island</option><option
-                                                                        value="KP">North Korea</option><option
-                                                                        value="MK">North Macedonia</option><option
-                                                                        value="MP">Northern Mariana Islands</option><option
-                                                                        value="NO">Norway</option><option
-                                                                        value="OM">Oman</option><option value="PK">Pakistan</option><option
-                                                                        value="PS">Palestinian Territory</option><option
-                                                                        value="PA">Panama</option><option value="PG">Papua New Guinea</option><option
-                                                                        value="PY">Paraguay</option><option
-                                                                        value="PE">Peru</option><option value="PH">Philippines</option><option
-                                                                        value="PN">Pitcairn</option><option value="PL">Poland</option><option
-                                                                        value="PT">Portugal</option><option value="PR">Puerto Rico</option><option
-                                                                        value="QA">Qatar</option><option value="RE">Reunion</option><option
-                                                                        value="RO">Romania</option><option
-                                                                        value="RU">Russia</option><option value="RW">Rwanda</option><option
-                                                                        value="ST">São Tomé and Príncipe</option><option
-                                                                        value="BL">Saint Barthélemy</option><option
-                                                                        value="SH">Saint Helena</option><option
-                                                                        value="KN">Saint Kitts and Nevis</option><option
-                                                                        value="LC">Saint Lucia</option><option
-                                                                        value="SX">Saint Martin (Dutch part)</option><option
-                                                                        value="MF">Saint Martin (French part)</option><option
-                                                                        value="PM">Saint Pierre and Miquelon</option><option
-                                                                        value="VC">Saint Vincent and the Grenadines</option><option
-                                                                        value="WS">Samoa</option><option
-                                                                        value="SM">San Marino</option><option
-                                                                        value="SA">Saudi Arabia</option><option
-                                                                        value="SN">Senegal</option><option value="RS">Serbia</option><option
-                                                                        value="SC">Seychelles</option><option
-                                                                        value="SL">Sierra Leone</option><option
-                                                                        value="SG">Singapore</option><option
-                                                                        value="SK">Slovakia</option><option value="SI">Slovenia</option><option
-                                                                        value="SB">Solomon Islands</option><option
-                                                                        value="SO">Somalia</option><option value="ZA">South Africa</option><option
-                                                                        value="GS">South Georgia/Sandwich Islands</option><option
-                                                                        value="KR">South Korea</option><option
-                                                                        value="SS">South Sudan</option><option
-                                                                        value="ES">Spain</option><option value="LK">Sri Lanka</option><option
-                                                                        value="SD">Sudan</option><option
-                                                                        value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option
-                                                                        value="SZ">Swaziland</option><option value="SE">Sweden</option><option
-                                                                        value="CH">Switzerland</option><option
-                                                                        value="SY">Syria</option><option
-                                                                        value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option
-                                                                        value="TZ">Tanzania</option><option value="TH">Thailand</option><option
-                                                                        value="TL">Timor-Leste</option><option
-                                                                        value="TG">Togo</option><option
-                                                                        value="TK">Tokelau</option><option value="TO">Tonga</option><option
-                                                                        value="TT">Trinidad and Tobago</option><option
-                                                                        value="TN">Tunisia</option><option value="TR">Turkey</option><option
-                                                                        value="TM">Turkmenistan</option><option
-                                                                        value="TC">Turks and Caicos Islands</option><option
-                                                                        value="TV">Tuvalu</option><option value="UG">Uganda</option><option
-                                                                        value="UA">Ukraine</option><option
-                                                                        value="AE">United Arab Emirates</option><option
-                                                                        value="GB">United Kingdom (UK)</option><option
-                                                                        value="US">United States (US)</option><option
-                                                                        value="UM">United States (US) Minor Outlying Islands</option><option
-                                                                        value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option
-                                                                        value="VU">Vanuatu</option><option value="VA">Vatican</option><option
-                                                                        value="VE">Venezuela</option><option value="VN">Vietnam</option><option
-                                                                        value="VG">Virgin Islands (British)</option><option
-                                                                        value="VI">Virgin Islands (US)</option><option
-                                                                        value="WF">Wallis and Futuna</option><option
-                                                                        value="EH">Western Sahara</option><option
-                                                                        value="YE">Yemen</option><option
-                                                                        value="ZM">Zambia</option><option value="ZW">Zimbabwe</option>				</select>
-                                                            </p>
-
-                                                                    <p class="form-row form-row-wide disable-pad"
-                                                                       id="calc_shipping_state_field">
-                                                                                    <span>
-                                                                        <select name="calc_shipping_state "
-                                                                                class="state_select"
-                                                                                id="calc_shipping_state"
-                                                                                data-placeholder="State / County">
-                                                                            <option value="">Select an option…</option>
-                                                                            <option value="I"
-                                                                                    selected="selected">Αττική</option><option
-                                                                                value="A">Ανατολική Μακεδονία και Θράκη</option><option
-                                                                                value="B">Κεντρική Μακεδονία</option><option
-                                                                                value="C">Δυτική Μακεδονία</option><option
-                                                                                value="D">Ήπειρος</option><option
-                                                                                value="E">Θεσσαλία</option><option
-                                                                                value="F">Ιόνιοι Νήσοι</option><option
-                                                                                value="G">Δυτική Ελλάδα</option><option
-                                                                                value="H">Στερεά Ελλάδα</option><option
-                                                                                value="J">Πελοπόννησος</option><option
-                                                                                value="K">Βόρειο Αιγαίο</option><option
-                                                                                value="L">Νότιο Αιγαίο</option><option
-                                                                                value="M">Κρήτη</option>						</select>
-                                                                    </span>
-                                                                                </p>
-
-                                                                    <p class="form-row form-row-wide disable-pad mb-sm"
-                                                                       id="calc_shipping_city_field">
-                                                                <input type="text" class="input-text shipping-input"
-                                                                       value="" placeholder="City"
-                                                                       name="calc_shipping_city"
-                                                                       id="calc_shipping_city">
-                                                            </p>
-
-                                                                    <p class="form-row form-row-wide disable-pad mb-sm"
-                                                                       id="calc_shipping_postcode_field">
-                                                                <input type="text " class="input-text shipping-input"
-                                                                       value="" placeholder="Postcode / ZIP"
-                                                                       name="calc_shipping_postcode"
-                                                                       id="calc_shipping_postcode">
-                                                            </p>
-
-                                                        <p><button type="submit" name="calc_shipping" value="1"
-                                                                   class="button shipping-button relative color--black hover-red ls-180 uppercase title-13 font-bold display--inline">Update                    <span
-                                                                    class="line abs-bl bg--black trans"></span>
-                                                            </button></p>
-                                                        <input type="hidden" id="woocommerce-shipping-calculator-nonce"
-                                                               name="woocommerce-shipping-calculator-nonce"
-                                                               value="24f85fe5ec"><input type="hidden"
-                                                                                         name="_wp_http_referer"
-                                                                                         value="/cart/">	</section>
-                                                </form>
-
-
-
-
-
-
-
-                                                                                        </div>
-                                                                </div>
                                                                 <div class="line bg--black mt-48"></div>
-                                                                <div
-                                                                    class="maxw-540 m-auto color--black pt-88 mb-70 mobile-hor-maxw-100">
+                                                                <div class="maxw-540 m-auto color--black pt-88 mb-70 mobile-hor-maxw-100">
                                                                     <div class="gutter mobile-hor-nomargin">
-                                                                                                <div
-                                                                                                    class="order-total uppercase">
-                                                                            <div
-                                                                                class="title-20 ls-30 display--inline font-bold">Total</div>
-                                                                            <div class="float-right title-20 a-right"
-                                                                                 data-title="Total"><strong><span
-                                                                                        class="woocommerce-Price-amount amount"><span
-                                                                                            class="woocommerce-Price-currencySymbol">€</span>270.00</span></strong> <small
-                                                                                    class="includes_tax">(includes <span
-                                                                                        class="woocommerce-Price-amount amount"><span
-                                                                                            class="woocommerce-Price-currencySymbol">€</span>52.26</span> VAT)</small></div>
+                                                                        <div class="order-total uppercase">
+                                                                            <div class="title-20 ls-30 display--inline font-bold">Total</div>
+                                                                            <div class="float-right title-20 a-right" data-title="Total">
+                                                                                <strong>
+                                                                                    <span class="woocommerce-Price-amount amount">
+                                                                                        <span class="woocommerce-Price-currencySymbol">$</span>
+                                                                                        270.00
+                                                                                    </span>
+                                                                                </strong>
+                                                                                <small class="includes_tax">(includes
+                                                                                    <span class="woocommerce-Price-amount amount">
+                                                                                        <span class="woocommerce-Price-currencySymbol">$</span>
+                                                                                        52.26
+                                                                                    </span>
+                                                                                    VAT)
+                                                                                </small>
+                                                                            </div>
                                                                             <div class="clear"></div>
                                                                         </div>
                                                                     </div>
@@ -580,13 +266,14 @@
                                                    class="checkout-button button color--black relative alt wc-forward button round-button xl br-50 round-button--black right-45 display--block m-auto  trans mb-70">
                                                     <span
                                                         class="block-80 abs-center a-center font-bold title-12 uppercase ls-180">
-                                                        Proceed to checkout    </span>
+                                                        Proceed to checkout
+                                                    </span>
                                                 </a>
                                                             </div>
 
 
                                                 </div>
-                                                </span>
+                            </span>
 
                         </div>
                     </div>

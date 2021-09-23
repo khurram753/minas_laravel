@@ -71,9 +71,8 @@ class ShoppingCartService
 
             }
 
-//            $relatedProducts = Product::whereNotIn('id',$productID)->inRandomOrder()->take('4')->get();
-
-            return view('site.cart.cart', compact('cart', 'totalPrice', 'totalDiscount'));
+            $relatedProducts = Product::whereNotIn('id',$productID)->inRandomOrder()->take('4')->get();
+            return view('site.cart.cart', compact('cart', 'totalPrice', 'totalDiscount','relatedProducts'));
         } else {
             return redirect()->route('shop')->with('error', 'Please Add Item in Cart to access this page');
         }

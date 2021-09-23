@@ -164,15 +164,17 @@
 
 <div id="page" class="site-container relative">
 
-    @include('layout.shop-layout.header')
-
-    @include('layout.shop-layout.navigation')
-
-    @include('layout.shop-layout.search')
+    @if(Request()->route()->getName() != 'cart')
+        @include('layout.shop-layout.header')
+        @include('layout.shop-layout.navigation')
+        @include('layout.shop-layout.search')
+    @endif
 
     @yield('content')
 
-    @include('layout.shop-layout.footer')
+    @if(Request()->route()->getName() != 'cart')
+        @include('layout.shop-layout.footer')
+    @endif
 
 
 
