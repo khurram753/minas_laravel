@@ -17,7 +17,7 @@ Route::namespace('Admin')->group(function () {
 
 
         Route::middleware(['Admin', 'auth'])->group(function () {
-            Route::get('/logout', "LogoutController@logout")->name('logoutUser');
+            Route::get('/admin-logout', "LogoutController@logout")->name('logoutUser');
 
         });
     });

@@ -131,7 +131,7 @@
                 </a>
             </div>
             <div class="display--inline-top menu-box--holder  menu-box--right   a-left">
-                <a href="eshop.html" class="link-underline menu-box-link">
+                <a href="{{route('shop')}}" class="link-underline menu-box-link">
                     <span class="display--block font-12 font-bold extra-lh2 extra-ls mb-33 opc-0 js-menu-fade tablet-mb-15">
                         SHOP ONLINE
                     </span>

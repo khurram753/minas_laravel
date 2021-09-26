@@ -19,8 +19,22 @@
             <svg class="icon icon--user trans header__item display--inline mobile-hor-hidden ">
                 <use xlink:href="#user"></use>
             </svg>
-            <a href="{{route('loginPageUser')}}" class="color--white hover-red header__item display--inline mobile-hor-hidden">Login
-                / Register</a>
+
+            @guest
+                <a href="{{route('loginPageUser')}}" class="color--white hover-red header__item display--inline mobile-hor-hidden">
+                    Login / Register
+                </a>
+            @else
+                @if(Auth::user()->role_id == 1)
+                    <a href="{{route('adminDashboard')}}" class="color--white hover-red header__item display--inline mobile-hor-hidden">
+                        Dashboard
+                    </a>
+                @else
+                    <a href="{{route('userDashboard')}}" class="color--white hover-red header__item display--inline mobile-hor-hidden">
+                        Dashboard
+                    </a>
+                @endif
+            @endguest
             <a href="{{route('cart')}}" class="color--white hover-red header__item display--inline ml-arrow mobile-hor-nopad mobile-hor-nomargin">
                 @if(Session::has('cart'))
                     { {{count(Session::get('cart'))}} }

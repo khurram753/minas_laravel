@@ -19,4 +19,14 @@ class OrderDetail extends Model
         return $this->belongsTo(Order::class,'order_id');
     }
 
+    public function material()
+    {
+        return $this->belongsTo(Material::class,'material_id');
+    }
+
+    public function cord()
+    {
+        return $this->belongsTo(Cord::class,'cord_id');
+    }
+
 }

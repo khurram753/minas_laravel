@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Site\Authentication;
 
 use App\Http\Controllers\Controller;
-use App\Services\Admin\Registration\RegistrationService;
+use App\Services\Site\Registration\RegistrationService;
 use Illuminate\Http\Request;
 
 class LogoutController extends Controller

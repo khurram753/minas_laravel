@@ -23,18 +23,18 @@
     <span class="home-nav__sep display--inline"></span> 5
 </aside>
 <footer class="footer relative" id="colophon">
-    <div class="fill-dimensions cover-img bLazy-bg mobile-hor-hidden" data-src="images/footer_bg.jpg"></div>
+    <div class="fill-dimensions cover-img bLazy-bg mobile-hor-hidden" data-src="{{asset('site/images/footer_bg.jpg')}}"></div>
     <div class="grad-black-top block-100 h-60 abs-tl z-1"></div>
     <div class="grid max-12cols-g over color--footer mobile-hor-100">
         <div class="gutter a-right mobile-hor-gutter mobile-hor-left">
             <div class="max-4cols ml-auto color--white pb-f mobile-pb-50 tablet-maxw-100">
                 <div class="font-thin title-70 uppercase mb-med">Be part of minas world</div>
-                <div class="font-bold title-12 uppercase ls-180 cursor hover-red trans" id="open-ns-popup">Subscribe
-                    to our newsletter
-                    <svg class="icon icon--arrow-long-right ml-arrow no-trans relative t-sm newsletter-arrow">
-                        <use xlink:href="#arrow-long-right"></use>
-                    </svg>
-                </div>
+{{--                <div class="font-bold title-12 uppercase ls-180 cursor hover-red trans" id="open-ns-popup">Subscribe--}}
+{{--                    to our newsletter--}}
+{{--                    <svg class="icon icon--arrow-long-right ml-arrow no-trans relative t-sm newsletter-arrow">--}}
+{{--                        <use xlink:href="#arrow-long-right"></use>--}}
+{{--                    </svg>--}}
+{{--                </div>--}}
             </div>
         </div>
         <div class="footer__gap-right relative">
@@ -94,18 +94,21 @@
                                     class="icon icon--instagram abs-center mobile-hor-rel-no-center"><use
                                         xlink:href="#social-instagram"></use></svg></span><span
                             class="mobile-hor-hidden">instagram</span>
-                    </a><a href="#" target="_blank" rel="nofollow noopener noreferrer"
+                    </a>
+                    <a href="#" target="_blank" rel="nofollow noopener noreferrer"
                            class="social-link relative display--block color--grey-med hover-white mobile-hor-display-inline">
                         <span class="social-link__icon abs-tl mobile-hor-rel mobile-hor-display-inline"><svg
                                 class="icon icon--vimeo abs-center mobile-hor-rel-no-center"><use
                                     xlink:href="#social-vimeo"></use></svg></span><span
                             class="mobile-hor-hidden">vimeo</span>
-                    </a><a href="#" target="_blank" rel="nofollow noopener noreferrer"
+                    </a>
+                    <a href="#" target="_blank" rel="nofollow noopener noreferrer"
                            class="social-link relative display--block color--grey-med hover-white mobile-hor-display-inline">
                         <span class="social-link__icon abs-tl mobile-hor-rel mobile-hor-display-inline"><svg
                                 class="icon icon--facebook abs-center mobile-hor-rel-no-center"><use
                                     xlink:href="#social-facebook"></use></svg></span><span class="mobile-hor-hidden">facebook</span>
-                    </a></div>
+                    </a>
+                </div>
             </div>
             <div class="pb-med mobile-hor-mt-25 mobile-hor-nopad--bottom">
                 <div class="columns-2-g display--inline-top tablet-33 mobile-hor-100">

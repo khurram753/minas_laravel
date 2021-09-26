@@ -67,53 +67,47 @@
                         <div id="products-tab-1"
                              class="product-holder trans a-left maxw-370 desktop-product-holder tablet-center tablet-maxw-370">
                             @foreach($products as $key => $product)
-                                <div class="main-product-link-holder a-left tablet-100" itemscope=""
-                                     itemtype="http://schema.org/Product">
+                                <div class="main-product-link-holder a-left tablet-100" itemscope="" itemtype="http://schema.org/Product">
                                     {{--                                        <span class="hidden" itemprop="brand">Minas Designs</span>--}}
-                                    <img class="hidden" itemprop="image"
-                                         src="{{asset($product->image)}}"
-                                         alt="{{$product->name}}">
+                                    <img class="hidden" itemprop="image" src="{{asset($product->image)}}" alt="{{$product->name}}">
 
                                     <a data-image="#hover-img-{{$key}}"
-                                       href="home.html/shop/bracelets/cuff-bracelet/"
+                                       href="{{route('productDetail',['id'=>$product->id])}}"
                                        class="display--block  relative main-product-link color-white">
-                                                        <span
-                                                            class="display--block relative pl-75 pr-30 js-bt skrollr-pointer skrollable skrollable-before"
-                                                            data-emit-events="" data-trans="1.6" data-bottom-top=""
-                                                            data-delay="0.0" style="">
-                                                            <span itemprop="name"
-                                                                  class="font-bold font-17 extra-ls display--block  opc-0 no-visible js-fade-left skrollr-pointer skrollable skrollable-before"
-                                                                  data-emit-events="" data-bottom-top=""
-                                                                  data-trans="1.4" data-delay="0.0"
-                                                                  style="">{{ucfirst($product->name)}}</span>
+                                        <span class="display--block relative pl-75 pr-30 js-bt skrollr-pointer skrollable skrollable-before"
+                                              data-emit-events="" data-trans="1.6" data-bottom-top=""
+                                              data-delay="0.0" style="">
+                                            <span itemprop="name"
+                                                  class="font-bold font-17 extra-ls display--block  opc-0 no-visible js-fade-left skrollr-pointer skrollable skrollable-before"
+                                                  data-emit-events="" data-bottom-top=""
+                                                  data-trans="1.4" data-delay="0.0"
+                                                  style="">{{ucfirst($product->name)}}</span>
 
-                                                            <span
-                                                                class="font-bold font-12 extra-ls display--block abs-tl top--3 overflow">
-                                                                <span class="js-bt__el display--block">
-                                                                    {{\Carbon\Carbon::parse($product->created_at)->format('Y')}}
-                                                                </span>
-                                                            </span>
-                                                            <span itemprop="category"
-                                                                  class="font-light font-14 extra-lh2 display--block opc-0 no-visible js-fade-left skrollr-pointer skrollable skrollable-before"
-                                                                  data-emit-events="" data-bottom-top=""
-                                                                  data-trans="1.6" data-delay="0.0"
-                                                                  style="">
-                                                                @foreach($product->cord as $category)
-                                                                    @if($loop->last)
-                                                                        {{$category->name}}
-                                                                    @else
-                                                                        {{$category->name}} ,
-                                                                    @endif
-                                                                @endforeach
-                                                            </span>
-                                                            <span
-                                                                class="icon icon--arrows-thick-right color-red abs-tr product-icon-right opc-0 trans"></span>
-                                                        </span>
-                                        <span
-                                            class="line bg-dark-grey display--block mt-12 scale-x origin-l js-scale-lr skrollr-pointer skrollable skrollable-before"
+                                            <span class="font-bold font-12 extra-ls display--block abs-tl top--3 overflow">
+                                                <span class="js-bt__el display--block">
+                                                    {{\Carbon\Carbon::parse($product->created_at)->format('Y')}}
+                                                </span>
+                                            </span>
+                                            <span itemprop="category"
+                                                  class="font-light font-14 extra-lh2 display--block opc-0 no-visible js-fade-left skrollr-pointer skrollable skrollable-before"
+                                                  data-emit-events="" data-bottom-top=""
+                                                  data-trans="1.6" data-delay="0.0"
+                                                  style="">
+                                                @foreach($product->cord as $category)
+                                                    @if($loop->last)
+                                                        {{$category->name}}
+                                                    @else
+                                                        {{$category->name}} ,
+                                                    @endif
+                                                @endforeach
+                                            </span>
+                                            <span class="icon icon--arrows-thick-right color-red abs-tr product-icon-right opc-0 trans"></span>
+                                        </span>
+                                        <span class="line bg-dark-grey display--block mt-12 scale-x origin-l js-scale-lr skrollr-pointer skrollable skrollable-before"
                                             data-delay="0.0" data-emit-events="" data-bottom-top=""
                                             data-trans="1.4" style=""></span>
-                                    </a></div>
+                                    </a>
+                                </div>
                             @endforeach
 
 
@@ -125,14 +119,13 @@
         @foreach($biggerProducts as $key => $bigProduct)
             <div class="block-50 display--inline-top mb-65 trans tablet-100 tablet-mb-150 bigProductClass" itemscope="">
                 <div class="gutter a-center mobile-hor-gutter">
-                    <a itemprop="url" href="home.html/shop/earrings/calisto-earrings/"
+                    <a itemprop="url" href="{{route('productDetail',['id'=>$bigProduct->id])}}"
                        class="display--inline a-left product-link link-underline ">
                         <span class="radial-holder relative mb-30 display--block">
                             <span class="fill-dimensions bg-radial display--block"></span>
                             <span class="z-20 relative overflow product-image display--block">
                                 <span class="parallax display--block" data-parallax="-0.2">
-                                    <span
-                                        class="display--block js-scale-in--sm scale-out skrollr-pointer skrollable skrollable-before"
+                                    <span class="display--block js-scale-in--sm scale-out skrollr-pointer skrollable skrollable-before"
                                         data-emit-events="" data-bottom-top="" data-trans="2" data-delay="0.1" style="">
                                         <span class="fill-dimensions multiply trans bg-black opc-20 z-10"></span>
                                         <img itemprop="image" class="bigProductImage resp-image display--block"
@@ -143,19 +136,18 @@
                             </span>
                         </span>
                         <span class="ml-40 display--block">
-                            <span
-                                class="font-12 extra-ls font-bold display--block mb-37 opc-0 no-visible js-fade-left skrollr-pointer skrollable skrollable-before"
+                            <span class="font-12 extra-ls font-bold display--block mb-37 opc-0 no-visible js-fade-left skrollr-pointer skrollable skrollable-before"
                                 data-emit-events="" data-bottom-top="" data-trans="1.4" data-delay="0.1"
-                                style="">{{\Carbon\Carbon::parse($bigProduct->created_at)->format('Y')}}
-                                    </span>
-                            <span
-                                class="display--block font-25 font-bold maxw-210 opc-0 no-visible js-fade-left skrollr-pointer skrollable skrollable-before"
+                                style="">
+                                {{\Carbon\Carbon::parse($bigProduct->created_at)->format('Y')}}
+                            </span>
+                            <span class="display--block font-25 font-bold maxw-210 opc-0 no-visible js-fade-left skrollr-pointer skrollable skrollable-before"
                                 data-emit-events="" data-bottom-top="" data-trans="1.6" data-delay="0.1"
                                 style="">
-                                        <span itemprop="name"
-                                              class="link-underline-text link-underline-white">{{ucfirst($bigProduct->name)}}
-                                        </span>
-                                    </span>
+                                <span itemprop="name" class="link-underline-text link-underline-white">
+                                    {{ucfirst($bigProduct->name)}}
+                                </span>
+                            </span>
                             <span itemprop="category"
                                   class="font-light font-14 extra-lh2 display--block mb-12 opc-0 no-visible js-fade-left skrollr-pointer skrollable skrollable-before"
                                   data-emit-events="" data-bottom-top="" data-trans="1.8" data-delay="0.1"
@@ -168,11 +160,9 @@
                                     @endif
                                 @endforeach
                                     </span>
-                            <span
-                                class="display--block opc-0 no-visible js-fade-left skrollr-pointer skrollable skrollable-before"
+                            <span class="display--block opc-0 no-visible js-fade-left skrollr-pointer skrollable skrollable-before"
                                 data-emit-events="" data-bottom-top="" data-trans="2" data-delay="0.1" style="">
-                                <span
-                                    class="display--inline-block font-bold font-12 extra-ls color-dark-light product-line-link trans relative">
+                                <span class="display--inline-block font-bold font-12 extra-ls color-dark-light product-line-link trans relative">
                                     SHOP NOW
                                 </span>
                             </span>
@@ -227,7 +217,8 @@
         {{--                </div>--}}
         <div class="a-center pt-16 opc-0 no-visible js-fade-in skrollr-pointer skrollable skrollable-before"
              data-emit-events="" data-bottom-top="" data-cubic="custom" data-trans="1.6" style="">
-            <a href="home.html" class="circle-btn cursor relative display--inline circle-link">
+            <a href="{{route('shop')}}" class="circle-btn cursor relative display--inline circle-link">
+
                 <svg class="circle-btn__wrapper-circle" xmlns="http://www.w3.org/2000/svg"
                      viewBox="0 0 151.689 148.568">
                     <path class="js-svg-circle circle-btn__circle" fill="none" stroke="#fff"
@@ -248,6 +239,7 @@
                                   c12.843,1.04,25.689,1.455,36.85-5.824c17.182-11.205,28.106-32.619,32.887-51.832c2.394-9.617,4.744-20.611,2.446-30.465
                                   c-2.123-9.098-8.54-15.85-14.888-22.307c-7.189-7.311-13.368-15.558-20.665-22.752C110.812,8.158,109.23,6.196,107.309,4.917z"></path>
                 </svg>
+
                 <span class="abs-center a-center z-5 font-12 extra-ls extra-lh2 font-bold block-70">
                     SHOP ONLINE
                 </span>

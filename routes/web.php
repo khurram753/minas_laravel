@@ -34,17 +34,16 @@ Route::namespace("Site")->group(function () {
     Route::post('contact-us-request', 'ContactUsController@contactUsRequest')->name('contactUsRequest');
     Route::get('media-kit', 'MediaKitController@index')->name('mediaKit');
     Route::get('get-collection', 'MainController@getCollection')->name('getCollection');
-    Route::get('privacy-policy','PrivacyPolicyController@index')->name('privacyPolicy');
-    Route::get('terms-conditions','TermsConditionsController@index')->name('termsConditions');
+    Route::get('privacy-policy', 'PrivacyPolicyController@index')->name('privacyPolicy');
+    Route::get('terms-conditions', 'TermsConditionsController@index')->name('termsConditions');
 
 
     Route::prefix('shop')->group(function () {
         Route::get('/', 'ShopController@index')->name('shop');
         Route::get('/{category_id}', 'ShopController@detail')->name('shopCategory');
-        Route::get('product_detail/{id}','ShopController@productDetail')->name('productDetail');
+        Route::get('product_detail/{id}', 'ShopController@productDetail')->name('productDetail');
     });
     Route::get('/add-to-wishlist', 'ShopController@wishlist')->name('addToWishlist');
-
 
 
     Route::get('cart', 'ShoppingCartController@index')->name('cart');
@@ -54,9 +53,7 @@ Route::namespace("Site")->group(function () {
     Route::get('clear-cart', 'ShoppingCartController@clearCart')->name('clearCart');
 
 
-
-
-        Route::middleware('guest')->group(function () {
+    Route::middleware('guest')->group(function () {
         Route::namespace("Authentication")->group(function () {
             Route::get('authentication', 'LoginController@loginPage')->name('loginPageUser');
 
@@ -76,15 +73,22 @@ Route::namespace("Site")->group(function () {
 
         Route::post('create-stripe-session', 'CheckoutController@createSession')->name('createStripeSession');
 
+        Route::get('user-dashboard', 'DashboardController@index')->name('userDashboard');
+        Route::get('user-order-listing', 'OrderController@index')->name('userOrderListing');
+        Route::get('user-order-detail/{id}', 'OrderController@orderDetail')->name('userOrderDetail');
+        Route::get('user-wishlist','DashboardController@wishlist')->name('userWishlist');
+
+
+
     });
 });
 
-Route::namespace('Admin')->group(function () {
+Route::namespace('Site')->group(function () {
     Route::namespace("Authentication")->group(function () {
-        Route::middleware(['Admin', 'auth'])->group(function () {
-            Route::get('/logout', "LogoutController@logout")->name('logoutUser');
+//        Route::middleware(['Admin', 'auth'])->group(function () {
+            Route::get('logout', "LogoutController@logout")->name('logout');
 
-        });
+//        });
     });
 
 });

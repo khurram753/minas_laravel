@@ -23,15 +23,19 @@
 <div id="main">
 
 
-@include('admin.header.top-navigation')
-@include('admin.header.sidebar')
-
+@if(Auth::user()->role_id == 1)
+    @include('admin.header.top-navigation')
+    @include('admin.header.sidebar')
+@else
+    @include('user.header.top-navigation')
+    @include('user.header.sidebar')
+@endif
 
 <!-- End Navigation -->
 
 
     <!-- Left Sidebar -->
-@include('admin.header.sidebar')
+{{--@include('admin.header.sidebar')--}}
 
 <!-- End Sidebar -->
 
