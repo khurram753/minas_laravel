@@ -9,7 +9,7 @@
     <span class="x-close trans abs-tr display--block clickable color--black hover-white z-20"
           id="menu-close"></span>
     <div class="menu-holder__inner relative z-40">
-        <div class="gutter">
+        <div class="gutter gutter_custom">
             <div class="main-item main-item menu-item menu-item--home menu-first">
                 <span class="menu-item-inner">
                     <a href="{{route('shop')}}" class="menu-a">HOMEPAGE</a>

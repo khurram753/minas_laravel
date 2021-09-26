@@ -39,7 +39,7 @@
 
                                 <span class="wpcf7-form-control-wrap full_name">
                                     <input type="text" name="full_name" value=""
-                                           class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input required pb-50 maxw-500 block-100 m-auto font-25 extra-lh font-light"
+                                           class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input required maxw-500 block-100 m-auto font-25 extra-lh font-light"
                                            id="contact_name" aria-required="true" aria-invalid="false"/>
                                 </span>
                             </div>
@@ -53,7 +53,7 @@
                                 <span class="wpcf7-form-control-wrap your-email">
                                     <input type="email" name="email"
                                            value=""
-                                           class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email input required email font-25 pb-50 extra-lh font-light"
+                                           class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email input required email font-25 extra-lh font-light"
                                            id="form-email"
                                            aria-required="true"
                                            aria-invalid="false"/>
@@ -70,7 +70,7 @@
                                     <input type="text"
                                            name="company" value=""
 
-                                           class="wpcf7-form-control wpcf7-text input font-25 extra-lh font-light pb-50"
+                                           class="wpcf7-form-control wpcf7-text input font-25 extra-lh font-light"
                                            id="form-company"
                                            aria-invalid="false"/>
                                 </span>
@@ -86,7 +86,7 @@
                                     <input type="text"
                                            name="country" value=""
 
-                                           class="wpcf7-form-control wpcf7-text input font-25 extra-lh font-light pb-50"
+                                           class="wpcf7-form-control wpcf7-text input font-25 extra-lh font-light "
                                            id="form-country"
                                            aria-invalid="false"/>
                                 </span>
@@ -100,7 +100,7 @@
                                        for="form-website">WEBSITE</label>
                                 <span class="wpcf7-form-control-wrap website">
                                     <input type="text" name="website" value=""
-                                           class="wpcf7-form-control wpcf7-text input font-25 extra-lh font-light pb-50"
+                                           class="wpcf7-form-control wpcf7-text input font-25 extra-lh font-light"
                                            id="form-website" aria-invalid="false"/>
                                 </span>
                             </div>
