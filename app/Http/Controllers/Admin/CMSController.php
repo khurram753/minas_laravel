@@ -41,6 +41,16 @@ class CMSController extends Controller
         return $service->updatePolicy($request);
     }
 
+    public function editTerms(CMSService $service)
+    {
+        return $service->editTerms();
+    }
+
+    public function updateTerms (Request $request,CMSService $service)
+    {
+        return $service->updateTerms($request);
+    }
+
     public function editQualityCraftsmanship(CMSService $service)
     {
         return $service->editQualityCraftsmanship();

@@ -10,108 +10,140 @@
           id="menu-close"></span>
     <div class="menu-holder__inner relative z-40">
         <div class="gutter">
-            <div class="main-item main-item menu-item menu-item--home menu-first"><span class="menu-item-inner"><a
-                        href="eshop.html" class="menu-a">HOMEPAGE</a></span></div>
+            <div class="main-item main-item menu-item menu-item--home menu-first">
+                <span class="menu-item-inner">
+                    <a href="{{route('shop')}}" class="menu-a">HOMEPAGE</a>
+                </span>
+            </div>
             <ul class="menu-primary menu-ul">
-                <li class="main-item main-item menu-item menu-item-has-children menu-item--categories">
-                        <span class="menu-item-inner display--block relative"><span
-                                class="menu-a uppercase">Categories</span><svg
-                                class="icon icon--arrow-small-right color--black abs-tr no-visible"><use
-                                    xlink:href="#arrow-small-right"></use></svg></span>
-                    <div class="secondary-nav secondary-nav--products">
-                        <div class="secondary-nav__inner">
-                            <ul class="submenu-list menu-ul">
-                                <li class="submenu-item submnu-1">
-                                    <a href="eshop-product-category.html"
-                                       class="submenu-a menu-link item--32 uppercase">Pendants</a>
-                                </li>
-                                <li class="submenu-item submnu-1">
-                                    <a href="eshop-product-category.html"
-                                       class="submenu-a menu-link item--32 uppercase">Pendants</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <ul id="menu-burgermenu_en" class="menu-ul menu-primary menu-safari">
-                    <li id="menu-item-1432"
-                        class="menu-item menu-item-type-taxonomy menu-item-object-collection menu-item-1432 main-item item--41 mnu-1"><span
-                            class="menu-item-inner">
-                            <a href="collection.html" class="menu-a menu-link item--41">SIGNATURE COLLECTION</span></a>
-                    </li>
-                    <li id="menu-item-513"
-                        class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-513 main-item item--49 mnu-2"><span
-                            class="menu-item-inner">
-                                <a href="#" class="menu-a menu-link item--49">FAQ</span></a></li>
-                </ul>
+{{--                <li class="main-item main-item menu-item menu-item-has-children menu-item--categories">--}}
+{{--                        <span class="menu-item-inner display--block relative">--}}
+{{--                            <span class="menu-a uppercase">Categories</span>--}}
+{{--                            <svg class="icon icon--arrow-small-right color--black abs-tr no-visible">--}}
+{{--                                <use xlink:href="#arrow-small-right"></use>--}}
+{{--                            </svg>--}}
+{{--                        </span>--}}
+{{--                    <div class="secondary-nav secondary-nav--products">--}}
+{{--                        <div class="secondary-nav__inner">--}}
+{{--                            <ul class="submenu-list menu-ul category_ul">--}}
+{{--                                <li class="submenu-item submnu-1">--}}
+{{--                                    <a href="eshop-product-category.html"--}}
+{{--                                       class="submenu-a menu-link item--32 uppercase">Pendants</a>--}}
+{{--                                </li>--}}
+{{--                                <li class="submenu-item submnu-1">--}}
+{{--                                    <a href="eshop-product-category.html"--}}
+{{--                                       class="submenu-a menu-link item--32 uppercase">Pendants</a>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </li>--}}
+{{--                <ul id="menu-burgermenu_en" class="menu-ul menu-primary menu-safari">--}}
+{{--                    <li id="menu-item-1432" class="menu-item menu-item-type-taxonomy menu-item-object-collection menu-item-1432 main-item item--41 mnu-1">--}}
+{{--                        <span class="menu-item-inner">--}}
+{{--                            <a href="collection.html" class="menu-a menu-link item--41">--}}
+{{--                                SIGNATURE COLLECTION--}}
+{{--                            </a>--}}
+{{--                        </span>--}}
+{{--                    </li>--}}
+{{--                    <li id="menu-item-513" class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-513 main-item item--49 mnu-2">--}}
+{{--                        <span class="menu-item-inner">--}}
+{{--                            <a href="#" class="menu-a menu-link item--49">--}}
+{{--                                FAQ--}}
+{{--                            </a>--}}
+{{--                        </span>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
                 <li class="main-item main-item menu-item menu-item-has-children menu-item--collections">
-                            <span class="menu-item-inner relative display--block"><span class="menu-a uppercase">Collections</span>
-                            <svg class="icon icon--arrow-small-right color--black abs-tr no-visible"><use
-                                    xlink:href="#arrow-small-right"></use></svg></span>
-                    <div class="secondary-nav secondary-nav--collections">
-                        <div class="secondary-nav__inner">
-                            <ul class="submenu-list menu-ul">
-                                <li class="submenu-item submnu-1"><a href="eshop-product-category.html"
-                                                                     class="submenu-a menu-link item--104 uppercase">Hearts</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="main-item main-item menu-item menu-item-has-children menu-item--lookbooks">
-                        <span class="menu-item-inner relative display--block"><span
-                                class="menu-a uppercase">Lookbooks</span><svg
-                                class="icon icon--arrow-small-right color--black abs-tr no-visible"><use
-                                    xlink:href="#arrow-small-right"></use></svg></span>
-                    <span class="secondary-nav secondary-nav--lookbooks display--block">
-                                <span class="secondary-nav__inner display--block">
-                                    <ul class="submenu-list menu-ul">
-                                        <li class="submenu-item submnu-lookbook-link"><a href="lost-pssword.html"
-                                                                                         class="submenu-a menu-link item--0 uppercase">All lookbooks</a></li>
-                                        <li class="submenu-item submnu-1"><a href="lookbooks.html"
-                                                                             class="submenu-a menu-link item--221 uppercase">Authentic Mykonos</a>
-                                        </li>
-                                    </ul>
-                                 </span>
-                            </span>
-                </li>
-                <li class="main-item main-item menu-item menu-item-has-children menu-item--contact">
-                        <span class="menu-item-inner relative display--block"><span
-                                class="menu-a uppercase">Contact us</span><svg
-                                class="icon icon--arrow-small-right color--black abs-tr no-visible"><use
-                                    xlink:href="#arrow-small-right"></use></svg></span>
+                      <span class="menu-item-inner relative display--block">
+                        <span class="menu-a uppercase">Contact us</span>
+                        <svg class="icon icon--arrow-small-right color--black abs-tr no-visible">
+                            <use xlink:href="#arrow-small-right"></use>
+                        </svg>
+                    </span>
                     <span class="secondary-nav secondary-nav--contact display--block">
-                                <span class="secondary-nav__inner display--block">
-                                   <ul class="submenu-list menu-ul">
-                                        <li class="submenu-item submnu-"><a href="contactus.html"
-                                                                            class="submenu-a menu-link item-- uppercase">Find us near you</a>
-                                        </li>
-                                        <li class="submenu-item submnu-"><a href="store.html"
-                                                                            class="submenu-a menu-link item-- uppercase">Kifissia flagship</a>
-                                        </li>
-                                        <li class="submenu-item submnu-"><a href="store.html"
-                                                                            class="submenu-a menu-link item-- uppercase">Mykonos</a></li>
-                                     </ul>
-                                </span>
-                            </span>
+                        <span class="secondary-nav__inner display--block">
+                            <ul class="submenu-list menu-ul">
+                                <li class="submenu-item submnu-">
+                                    <a href="{{route('contactUs')}}" class="submenu-a menu-link item-- uppercase">
+                                        Find us near you
+                                    </a>
+                                </li>
+                                <li class="submenu-item submnu-">
+                                    <a href="{{route('contactUs')}}" class="submenu-a menu-link item-- uppercase">
+                                        RETAILERS
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </span>
+                    </span>
                 </li>
+{{--                <li class="main-item main-item menu-item menu-item-has-children menu-item--lookbooks">--}}
+{{--                        <span class="menu-item-inner relative display--block"><span--}}
+{{--                                class="menu-a uppercase">Lookbooks</span><svg--}}
+{{--                                class="icon icon--arrow-small-right color--black abs-tr no-visible"><use--}}
+{{--                                    xlink:href="#arrow-small-right"></use></svg></span>--}}
+{{--                    <span class="secondary-nav secondary-nav--lookbooks display--block">--}}
+{{--                                <span class="secondary-nav__inner display--block">--}}
+{{--                                    <ul class="submenu-list menu-ul">--}}
+{{--                                        <li class="submenu-item submnu-lookbook-link"><a href="lost-pssword.html"--}}
+{{--                                                                                         class="submenu-a menu-link item--0 uppercase">All lookbooks</a></li>--}}
+{{--                                        <li class="submenu-item submnu-1"><a href="lookbooks.html"--}}
+{{--                                                                             class="submenu-a menu-link item--221 uppercase">Authentic Mykonos</a>--}}
+{{--                                        </li>--}}
+{{--                                    </ul>--}}
+{{--                                 </span>--}}
+{{--                            </span>--}}
+{{--                </li>--}}
+{{--                <li class="main-item main-item menu-item menu-item-has-children menu-item--contact">--}}
+{{--                    <span class="menu-item-inner relative display--block">--}}
+{{--                        <span class="menu-a uppercase">Contact us</span>--}}
+{{--                        <svg class="icon icon--arrow-small-right color--black abs-tr no-visible">--}}
+{{--                            <use xlink:href="#arrow-small-right"></use>--}}
+{{--                        </svg>--}}
+{{--                    </span>--}}
+{{--                    <span class="secondary-nav secondary-nav--contact display--block">--}}
+{{--                        <span class="secondary-nav__inner display--block">--}}
+{{--                            <ul class="submenu-list menu-ul">--}}
+{{--                                <li class="submenu-item submnu-">--}}
+{{--                                    <a href="{{route('contactUs')}}" class="submenu-a menu-link item-- uppercase">--}}
+{{--                                        Find us near you--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                                <li class="submenu-item submnu-">--}}
+{{--                                    <a href="{{route('contactUs')}}" class="submenu-a menu-link item-- uppercase">--}}
+{{--                                        RETAILERS--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+
+{{--                            </ul>--}}
+{{--                        </span>--}}
+{{--                    </span>--}}
+{{--                </li>--}}
             </ul>
 
             <ul id="menu-burgersecondarymenu_en" class="menu-ul menu-secondary">
-                <li id="menu-item-2358"
-                    class="menu-item menu-item-type-taxonomy menu-item-object-collection menu-item-2358 main-item item--41 mnu-1">
-                    <span class="menu-item-inner"><a href="collection.html" class="menu-a menu-link item--41">SIGNATURE COLLECTION</span></a>
+{{--                <li id="menu-item-2358"--}}
+{{--                    class="menu-item menu-item-type-taxonomy menu-item-object-collection menu-item-2358 main-item item--41 mnu-1">--}}
+{{--                    <span class="menu-item-inner"><a href="collection.html" class="menu-a menu-link item--41">SIGNATURE COLLECTION</span></a>--}}
+{{--                </li>--}}
+{{--                <li id="menu-item-515"--}}
+{{--                    class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-515 main-item item--49 mnu-2">--}}
+{{--                    <span class="menu-item-inner"><a href="#" class="menu-a menu-link item--49">FAQ</span></a></li>--}}
+                <li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-244 main-item item--3 mnu-3">
+                    <span class="menu-item-inner">
+                        <a href="{{route('privacyPolicy')}}" class="menu-a menu-link item--3">
+                            PRIVACY POLICY
+                        </a>
+                    </span>
                 </li>
-                <li id="menu-item-515"
-                    class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-515 main-item item--49 mnu-2">
-                    <span class="menu-item-inner"><a href="#" class="menu-a menu-link item--49">FAQ</span></a></li>
-                <li id="menu-item-244"
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-244 main-item item--3 mnu-3">
-                        <span class="menu-item-inner"><a href="#"
-                                                         class="menu-a menu-link item--3">PRIVACY POLICY</span></a></li>
-                <li id="menu-item-243"
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243 main-item item--200 mnu-4">
-                    <span class="menu-item-inner"><a href="#" class="menu-a menu-link item--200">TERMS &#038; CONDITIONS</span></a>
+                <li id="menu-item-243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243 main-item item--200 mnu-4">
+                    <span class="menu-item-inner">
+                        <a href="{{route('termsConditions')}}" class="menu-a menu-link item--200">
+                            TERMS & CONDITIONS
+                        </a>
+                    </span>
                 </li>
             </ul>
         </div>

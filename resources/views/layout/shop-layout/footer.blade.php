@@ -139,8 +139,8 @@
                     <li id="menu-item-260"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-260 main-item item--200 mnu-1">
                         <span class="menu-item-inner">
-                            <a href="#" class="menu-a menu-link item--200">
-                                TERMS &#038; CONDITIONS
+                            <a href="{{route('termsConditions')}}" class="menu-a menu-link item--200">
+                                TERMS & CONDITIONS
                             </a>
                         </span>
                     </li>

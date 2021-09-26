@@ -37,6 +37,7 @@
                         <li><a href="{{route('bannerEdit')}}">Banner Video and Text</a></li>
                         <li><a href="{{route('aboutUsEdit')}}">About Us</a></li>
                         <li><a href="{{route('policyEdit')}}">Privacy Policy</a></li>
+                        <li><a href="{{route('termsEdit')}}">Terms and Conditions</a></li>
                         <li><a href="{{route('qualityEdit')}}">Quality & Craftsmanship</a></li>
                     </ul>
                 </li>

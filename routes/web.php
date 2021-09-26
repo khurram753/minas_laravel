@@ -34,7 +34,9 @@ Route::namespace("Site")->group(function () {
     Route::post('contact-us-request', 'ContactUsController@contactUsRequest')->name('contactUsRequest');
     Route::get('media-kit', 'MediaKitController@index')->name('mediaKit');
     Route::get('get-collection', 'MainController@getCollection')->name('getCollection');
-    Route::get('privacy_policy','PrivacyPolicyController@index')->name('privacyPolicy');
+    Route::get('privacy-policy','PrivacyPolicyController@index')->name('privacyPolicy');
+    Route::get('terms-conditions','TermsConditionsController@index')->name('termsConditions');
+
 
     Route::prefix('shop')->group(function () {
         Route::get('/', 'ShopController@index')->name('shop');

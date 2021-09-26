@@ -6,26 +6,25 @@
         <div
             class="relative over pl-77 pt-71 trans mobile-menu-gutter a-left menu-holder-pad menu-holder__inner-holder">
             <div class="hidden mobile-block mobile-shop-link opc-0 js-menu-fade">
-                <a href="eshop.html"
-                   class="font-bold font-12 extra-lh extra-ls display--inline mr-35 a-left relative shop-link no-trans">
-                        <span class="overflow display--block shop-link__text ">
-                            <span class="display--block anim-bt js-hp-bt opc-0 ">
-                                SHOP ONLINE
-                            </span>
-                            <span class="line line--abs abs-bl scale-x origin-l js-hp-scale-lr display--block">
-                                <span class="fill-dimensions bg-black line trans"></span>
-                            </span>
+                <a href="{{route('shop')}}" class="font-bold font-12 extra-lh extra-ls display--inline mr-35 a-left relative shop-link no-trans">
+                    <span class="overflow display--block shop-link__text ">
+                        <span class="display--block anim-bt js-hp-bt opc-0 ">
+                            SHOP ONLINE
                         </span>
+                        <span class="line line--abs abs-bl scale-x origin-l js-hp-scale-lr display--block">
+                            <span class="fill-dimensions bg-black line trans"></span>
+                        </span>
+                    </span>
                 </a>
             </div>
             <div class="a-left mb-23 opc-0 js-menu-fade">
-                <a href="index.html" class="link-black font-12 font-bold extra-ls link-line">HOMEPAGE</a>
+                <a href="{{route('home')}}" class="link-black font-12 font-bold extra-ls link-line">HOMEPAGE</a>
             </div>
             <div class="maxw-1076">
                 <ul id="menu-main-menu_en" class="menu-ul a-left">
                     <li id="menu-item-1375"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1375 main-item item--74 mnu-1">
-                        <a href="about.html" class="menu-a menu-link item--74">HOW IT ALL STARTED</a>
+                        <a href="{{route('about')}}" class="menu-a menu-link item--74">HOW IT ALL STARTED</a>
                         <ul class="submenu-list trans-slower">
                             <li id="menu-item-352"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352 submenu-item submnu-1">
@@ -36,15 +35,16 @@
                                     QUALITY AND CRAFTSMANSHIP
                                 </a>
                             </li>
-                            <li id="menu-item-353"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353 submenu-item submnu-3">
-                                <a href="{{route('heritage')}}" class="submenu-a menu-link item--131">HERITAGE</a></li>
+                            <li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353 submenu-item submnu-3">
+                                <a href="{{route('heritage')}}" class="submenu-a menu-link item--131">HERITAGE</a>
+                            </li>
                         </ul>
                     </li>
-                    <li id="menu-item-661"
-                        class="menu-item menu-item-type-taxonomy menu-item-object-publication_category menu-item-has-children menu-item-661 main-item item--28 mnu-2">
+                    <li id="menu-item-661" class="menu-item menu-item-type-taxonomy menu-item-object-publication_category menu-item-has-children menu-item-661 main-item item--28 mnu-2">
 
-                        <a href="{{route('mediaKit',['collection_id'=>5])}}" class="menu-a menu-link item--28">PRESS OFFICE</a>
+                        <a href="{{route('mediaKit',['collection_id'=>5])}}" class="menu-a menu-link item--28">
+                            PRESS OFFICE
+                        </a>
 
                         <ul class="submenu-list trans-slower mediaKitList">
 {{--                            <li id="menu-item-1372"--}}
@@ -87,8 +87,9 @@
                         <ul class="submenu-list trans-slower">
                             <li id="menu-item-360"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360 submenu-item submnu-1">
-                                <a href="{{route('contactUs')}}" class="submenu-a menu-link item--288">FIND US NEAR
-                                    YOU</a>
+                                <a href="{{route('contactUs')}}" class="submenu-a menu-link item--288">
+                                    FIND US NEAR YOU
+                                </a>
                             </li>
 {{--                            <li id="menu-item-362"--}}
 {{--                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362 submenu-item submnu-2">--}}

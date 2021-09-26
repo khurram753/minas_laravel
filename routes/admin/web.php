@@ -39,6 +39,9 @@ Route::namespace('Admin')->group(function () {
         Route::get('edit-privacy-policy','CMSController@editPolicy')->name('policyEdit');
         Route::post('update-privacy-policy', 'CMSController@updatePolicy')->name('policyUpdate');
 
+        Route::get('edit-terms-conditions','CMSController@editTerms')->name('termsEdit');
+        Route::post('update-terms-conditions', 'CMSController@updateTerms')->name('termsUpdate');
+
         Route::get('edit-quality-craftsmanship','CMSController@editQualityCraftsmanship')->name('qualityEdit');
         Route::post('update-quality-craftsmanship', 'CMSController@updateQualityCraftsmanship')->name('qualityUpdate');
 
