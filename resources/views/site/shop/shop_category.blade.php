@@ -52,8 +52,7 @@
                                         <div class="tinv-wraper woocommerce tinv-wishlist tinvwl-above_thumb-add-to-cart tinvwl-loop-button-wrapper">
 
                                             <a role="button" aria-label="Add to Wishlist"
-                                               class="tinvwl_add_to_wishlist_button tinvwl-icon-custom no-txt  tinvwl-position-above_thumb add_to_wishlist"
-                                               data-tinv-wl-producttype="variable"
+                                               class="add_to_wishlist"
                                                data-id="{{$product->id}}"
                                                @guest
                                                    href="{{route('loginPageUser')}}"
@@ -77,8 +76,7 @@
                                                      data-src="{{asset($product->image)}}">
                                                 <span class="fill-dimensions img-overlay trans-slow"></span>
                                             </span>
-                                            <span
-                                                class="prod-content display--block a-left op-0 no-visible js-fade-up in-view"
+                                            <span class="prod-content display--block a-left op-0 no-visible js-fade-up in-view"
                                                 data-emit-events data-bottom-top="" data-trans="1.4"
                                                 style="visibility: inherit;opacity: 1;transform: matrix(1, 0, 0, 1, 0, 0);">
                                                 <h2 itemprop="name"
@@ -218,7 +216,7 @@
 
 @endsection
 
-<script src="{{asset('admin/js/jquery.min.js')}}"></script>
+{{--<script src="{{asset('admin/js/jquery.min.js')}}"></script>--}}
 
 @section('script')
     <script>
@@ -227,53 +225,6 @@
                 $('#sorting-form').submit();
             });
 
-            @auth
-            $('.add_to_wishlist').click(function () {
-                var data = $(this).data('id');
-                $.blockUI({
-                    css: {
-                        border: 'none',
-                        padding: '15px',
-                        backgroundColor: '#000',
-                        '-webkit-border-radius': '10px',
-                        '-moz-border-radius': '10px',
-                        opacity: .5,
-                        color: '#fff'
-                    }
-                });
-
-                $.ajax({
-
-                    type: 'GET',
-                    url: '{{route("addToWishlist")}}',
-                    data: {'id':data},
-
-                    success: function (response, status) {
-
-                        if (response.result == 'success') {
-                            $.unblockUI();
-                            successMsg(response.message);
-
-                            setTimeout(function () {
-                                window.location.reload();
-                            }, 1000);
-
-                        } else if (response.result == 'error') {
-                            $.unblockUI();
-                            errorMsg(response.message);
-                        }
-                    },
-                    error: function (data) {
-                        $.each(data.responseJSON.errors, function (key, value) {
-                            $.unblockUI();
-                            errorMsg(value);
-                        });
-                    }
-
-
-                });
-            });
-            @endauth
 
         });
     </script>

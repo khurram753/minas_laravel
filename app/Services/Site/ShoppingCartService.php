@@ -178,6 +178,11 @@ class ShoppingCartService
                             "price" => $productPrice,
                             "image" => $image,
                             'product_id' => $productRecord->id,
+
+                            'category_id' => $productRecord->category_id,
+                            'cord_id' => isset($request->cord_id) ? $request->cord_id:null,
+                            'material_id' => isset($request->material_id) ? $request->material_id:null,
+
                             'productOriginalAmount' => $productOriginalAmount,
                             'productSaleEndDate' => $productSaleEndDate,
                             'productSalePrice' => $productSalePrice,
@@ -243,6 +248,11 @@ class ShoppingCartService
                     "price" => $productPrice,
                     "image" => $image,
                     'product_id' => $productRecord->id,
+
+                    'category_id' => $productRecord->category_id,
+                    'cord_id' => isset($request->cord_id) ? $request->cord_id:null,
+                    'material_id' => isset($request->material_id) ? $request->material_id:null,
+
                     'productOriginalAmount' => $productOriginalAmount,
                     'productSaleEndDate' => $productSaleEndDate,
                     'productSalePrice' => $productSalePrice,
@@ -273,7 +283,7 @@ class ShoppingCartService
         if ($request->id) {
 
             $cart = Session::get('cart');
-            $data = $cart[$request->id];
+            $data = $cart[$request->cart_id];
 
 //            $variationId = explode("-", $request->id);
 
@@ -281,9 +291,9 @@ class ShoppingCartService
 
             if ($stock->quantity >= $request->quantity) {
 
-                $cart[$request->id]['quantity'] = $request->quantity;
+                $cart[$request->cart_id]['quantity'] = $request->quantity;
 
-                $data = $cart[$request->id];
+                $data = $cart[$request->cart_id];
 
                 Session::put('cart', $cart);
 

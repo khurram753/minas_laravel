@@ -4,18 +4,77 @@ namespace App\Services\Site;
 
 use App\Category;
 use App\Cord;
+use App\CustomOrder;
 use App\Heritage;
 use App\Material;
+use App\Order;
 use App\Product;
+use App\User;
 use App\Wishlist;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Session;
+use Stripe\PaymentIntent;
+use Stripe\Stripe;
 
 class ShopService
 {
-    public function index()
+    public function index($request)
     {
+        Stripe::setApiKey(env('STRIPE_SECRET'));
+
+        if ($request->has('success') && Session::get('stripe_session_id')) {
+
+//            Stripe::setApiKey(env('STRIPE_SECRET'));
+
+            $retrieveStripeSession = \Stripe\Checkout\Session::retrieve(Session::get('stripe_session_id'));
+
+            if ($retrieveStripeSession) {
+                $getPaymentIntent = PaymentIntent::retrieve($retrieveStripeSession->payment_intent);
+
+                if ($getPaymentIntent) {
+                    $customOrder = Order::where('stripe_session_id',Session::get('stripe_session_id'))->first();
+                    if ($customOrder) {
+
+                        $customOrder->city = $getPaymentIntent->charges->data[0]->billing_details->address->city;
+                        $customOrder->country =  $getPaymentIntent->charges->data[0]->billing_details->address->country;
+                        $customOrder->postal_code =  $getPaymentIntent->charges->data[0]->billing_details->address->postal_code;
+                        $customOrder->address1 = $getPaymentIntent->charges->data[0]->billing_details->address->line1;
+                        $customOrder->address2 =  $getPaymentIntent->charges->data[0]->billing_details->address->line2;
+                        $customOrder->status = $retrieveStripeSession->payment_status;
+                    }
+                    $customOrder->save();
+
+                    $getOrderDetail =  $customOrder->orderDetail;
+                    foreach ($getOrderDetail as $orderDetail)
+                    {
+                        $quantity = $orderDetail->product->quantity;
+                        if($quantity)
+                        {
+                            $updatedQuantity = $quantity - $orderDetail->quantity;
+                            $orderDetail->product->update(['quantity'=>$updatedQuantity]);
+                        }
+
+
+                    }
+
+                    $emailArray = ['email' => Auth::user()->email,
+                        'name'=>Auth::user()->name,'order_id'=>$customOrder->id];
+
+                    $user = User::find(Auth::user()->id);
+
+//                    Notification::send($user, new OrderGenerateNotification($emailArray));
+//                    Notification::route('mail', env('MAIL_CLIENT'))->notify(new AdminOrderGenerateNotification($emailArray));
+
+
+                    $request->session()->forget('stripe_session_id');
+
+
+                }
+            }
+        }
+
         $categories = Category::all();
 
         $heritageImages = Heritage::select('image')->get();
@@ -137,7 +196,7 @@ class ShopService
                 return response()->json(['result'=>'success','message'=>'Product Removed From Wishlist']);
             }
             else{
-                Wishlist::create(['product_id',$request->id,'user_id'=>Auth::user()->id]);
+                Wishlist::create(['product_id'=>$request->id,'user_id'=>Auth::user()->id]);
             }
             return response()->json(['result'=>'success','message'=>'Product Added To Wishlist']);
         }

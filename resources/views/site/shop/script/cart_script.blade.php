@@ -172,14 +172,7 @@
 
         $(".altera").click(function () {
             var sameRecord = $(this);
-//            var parent = $(this).parents('div.cart_counter');
             if ($(this).hasClass('acrescimo')) {
-                // if (parent.find('#txtAcrescimo').val() == 5) {
-                //     // parent.find('.acrescimo').attr('disabled', 'disabled');
-                // }
-                // else {
-                //     parent.find('.decrescimo').removeAttr('disabled');
-
 
                 $.blockUI({
                     css: {
@@ -193,34 +186,23 @@
                     }
                 });
 
-                var id = $(this).parents('div.item-quantity').find('.product_id').val();
-                var quantity = parseInt($(this).parents('div.item-quantity').find('.qty').val()) + 1;
+                var id = $(this).parents('div#quantity-field').find('.product_id').val();
+                var cart_id = $(this).parents('div#quantity-field').find('.cart_id').val();
+                var quantity = parseInt($(this).parents('div#quantity-field').find('.qty').val()) + 1;
 
                 $.ajax({
                     type: 'GET',
                     url: '{{route("updateCart")}}',
                     data: {
                         id: id,
+                        cart_id:cart_id,
                         quantity: quantity,
                     },
 
                     success: function (response, status) {
 
                         if (response.result == 'success') {
-//                            var discountAmount = parseFloat($('.discount-value').text());
-//                                console.log(discountAmount);
-//                            var discount = 0;
-//                            var type = 0;
-                            {{--@if(Session::has('couponDiscount') && count(Session::get('couponDiscount')))--}}
-                            {{--discount = "{{Session::get('couponDiscount')['discount']}}";--}}
-                            {{--discount = parseFloat(discount);--}}
-                            {{--@if(Session::get('couponDiscount')['type']=='percentage')--}}
-                            {{--type = 1;--}}
-                            {{--@else--}}
-                            {{--type = 0;--}}
-                            {{--@endif--}}
 
-                            {{--@endif--}}
 
                             var product_price = 0;
                             var currency = '$';
@@ -240,40 +222,19 @@
                             }
 
 
+                            sameRecord.parents('div.quantity').find('input.qty').val(response.data.quantity);
 
-                            sameRecord.parents('td.Qty').siblings('td.cartPriceSection').find('span.cart_price_8000')
-                                .text(product_price);
+                            sameRecord.parents('span.cart_item').find('span.cartPriceSection')
+                                .find('span.cart_price_8000').text(product_price);
 
-                            var subtotal = parseInt($('.total').find('span').text())  + parseInt(singlePrice);
-                            // $('.subTotal').find('span').text( subtotal);
-
-                            // console.log($('td.subTotal').find('span.subTotalValue').text());
+                            var subtotal = parseInt($('.total').find('span.totalPriceSpan').text())  + parseInt(singlePrice);
 
 
-                            var totalPrice = $('.total').find('span').text(subtotal);
-
-//                            var sumTotalPrice = parseInt(totalPrice) + parseInt(response.data.price);
-//
-//                            $('.totalPriceSection').text(sumTotalPrice);
-
-//                            if (discount && type) {
-//                                $('.overallPriceSection').text((sumTotalPrice.toFixed(2) - (discount * sumTotalPrice).toFixed(2)).toFixed(2));
-//                                $('.totalDiscountSection').text((discount * sumTotalPrice).toFixed(2));
-//
-//                            } else if (discount) {
-//                                $('.overallPriceSection').text((sumTotalPrice.toFixed(2) - (discount).toFixed(2)).toFixed(2));
-//                                $('.totalDiscountSection').text((discount).toFixed(2));
-//                            } else {
-//
-//                                $('.overallPriceSection').text(sumTotalPrice.toFixed(2));
-//                                $('.totalDiscountSection').text(0);
-//                            }
-
+                            var totalPrice = $('.total').find('span.totalPriceSpan').text(subtotal);
 
                             $.unblockUI();
                             successMsg(response.message);
                             sameRecord.parents('div.item-quantity').find('.qty').val(quantity);
-//                            parent.find('#txtAcrescimo').val(parseInt(parent.find('#txtAcrescimo').val()) + 1);
 
                         } else if (response.result == 'error') {
                             $.unblockUI();
@@ -290,12 +251,8 @@
 
 
             }
-            else if (parseInt($(this).parents('div.item-quantity').find('.qty').val()) >= 1) {
-                // if (parent.find('#txtAcrescimo').val() == 1) {
-                //     parent.find('.decrescimo').attr('disabled', 'disabled');
-                // }
-                // else {
-//                parent.find('.acrescimo').removeAttr('disabled');
+            else if (parseInt($(this).parents('div.quantity').find('input.qty').val()) >= 1) {
+
 
                 $.blockUI({
                     css: {
@@ -309,38 +266,22 @@
                     }
                 });
 
-                var id = $(this).parents('div.item-quantity').find('.product_id').val();
-                var quantity = parseInt($(this).parents('div.item-quantity').find('.qty').val()) - 1;
+                var id = $(this).parents('div#quantity-field').find('.product_id').val();
+                var cart_id = $(this).parents('div#quantity-field').find('.cart_id').val();
+                var quantity = parseInt($(this).parents('div#quantity-field').find('.qty').val()) - 1;
 
                 $.ajax({
                     type: 'GET',
                     url: '{{route("updateCart")}}',
                     data: {
                         id: id,
+                        cart_id:cart_id,
                         quantity: quantity,
                     },
 
                     success: function (response, status) {
 
                         if (response.result == 'success') {
-
-                            {{--var discountAmount = parseFloat($('.discount-value').text());--}}
-                            {{--var discount = 0;--}}
-                            {{--var type = 0;--}}
-
-                            {{--@if(Session::has('couponDiscount') && count(Session::get('couponDiscount')))--}}
-                            {{--discount = "{{Session::get('couponDiscount')['discount']}}";--}}
-                            {{--discount = parseFloat(discount);--}}
-                            {{--@if(Session::get('couponDiscount')['type']=='percentage')--}}
-                            {{--type = 1;--}}
-                            {{--@else--}}
-                            {{--type = 0;--}}
-                            {{--@endif--}}
-
-                            {{--@endif--}}
-
-                            //                            sameRecord.parents('li#' + id).find('.cart_price_column')
-                            //                                .text('$' + response.data.price * response.data.quantity);
 
 
                             var product_price = 0;
@@ -361,33 +302,16 @@
                             }
 
 
-                            sameRecord.parents('td.Qty').siblings('td.cartPriceSection').find('span.cart_price_8000')
-                                .text(product_price);
+                            sameRecord.parents('div.quantity').find('input.qty').val(response.data.quantity);
 
-                            var subtotal = parseInt($('.total').find('span').text())  - parseInt(singlePrice);
-                            // $('.subTotal').find('span').text(subtotal);
-
-
-                            var totalPrice = $('.total').find('span').text(subtotal);
+                            sameRecord.parents('span.cart_item').find('span.cartPriceSection')
+                                .find('span.cart_price_8000').text(product_price);
 
 
-//                            var totalPrice = $('.totalPriceSection').text();
-//                            var sumTotalPrice = parseInt(totalPrice) - parseInt(response.data.price);
-//                            $('.totalPriceSection').text(sumTotalPrice);
-//
-//
-//                            if (discount && type) {
-//                                $('.overallPriceSection').text((sumTotalPrice.toFixed(2) - (discount * sumTotalPrice).toFixed(2)).toFixed(2));
-//                                $('.totalDiscountSection').text((discount * sumTotalPrice).toFixed(2));
-//
-//                            } else if (discount) {
-//                                $('.overallPriceSection').text((sumTotalPrice.toFixed(2) - (discount).toFixed(2)).toFixed(2));
-//                                $('.totalDiscountSection').text((discount).toFixed(2));
-//                            } else {
-//
-//                                $('.overallPriceSection').text(sumTotalPrice.toFixed(2));
-//                                $('.totalDiscountSection').text(0);
-//                            }
+                            var subtotal = parseInt($('.total').find('span.totalPriceSpan').text())  - parseInt(singlePrice);
+
+
+                            var totalPrice = $('.total').find('span.totalPriceSpan').text(subtotal);
 
                             $.unblockUI();
                             successMsg(response.message);
@@ -408,7 +332,6 @@
 
                 sameRecord.parents('div.item-quantity').find('.qty').val(quantity);
 
-//                parent.find('#txtAcrescimo').val(parseInt(parent.find('#txtAcrescimo').val()) - 1);
 
 
             }

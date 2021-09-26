@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <title>@yield('title')</title>
 
+    @yield('tags')
+
     @include('layout.shop-layout.css')
 
-    @include('layout.shop-layout.js')
 
     @yield('style')
 </head>
 
 @if(Request()->route()->getName() == 'loginPageUser')
-<body class="page-template page-template-page-templates page-template-account page-template-page-templatesaccount-php page page-id-17 wp-embed-responsive dark-header webkit desktop theme-minas woocommerce-account woocommerce-page woocommerce-no-js tinvwl-theme-style">
+    <body class="page-template page-template-page-templates page-template-account page-template-page-templatesaccount-php page page-id-17 wp-embed-responsive dark-header webkit desktop theme-minas woocommerce-account woocommerce-page woocommerce-no-js tinvwl-theme-style">
 @elseif(Request()->route()->getName() == 'forgetPasswordFormUser' || Request()->route()->getName() == 'resetPasswordUser')
-<body class="page-template page-template-page-templates page-template-account page-template-page-templatesaccount-php page page-id-17 wp-embed-responsive dark-header webkit desktop theme-minas woocommerce-account woocommerce-page woocommerce-no-js tinvwl-theme-style">
+    <body class="page-template page-template-page-templates page-template-account page-template-page-templatesaccount-php page page-id-17 wp-embed-responsive dark-header webkit desktop theme-minas woocommerce-account woocommerce-page woocommerce-no-js tinvwl-theme-style">
 @elseif(Request()->route()->getName() == 'productDetail')
-<body class="product-template-default single single-product postid-2496 wp-embed-responsive bg--black webkit desktop theme-minas woocommerce woocommerce-page woocommerce-no-js tinvwl-theme-style">
+    <body class="product-template-default single single-product postid-2496 wp-embed-responsive bg--black webkit desktop theme-minas woocommerce woocommerce-page woocommerce-no-js tinvwl-theme-style">
+@elseif(Request()->route()->getName() == 'cart')
+    <body class="page-template page-template-page-templates page-template-cart page-template-page-templatescart-php page page-id-13 wp-embed-responsive dark-header webkit desktop theme-minas woocommerce-cart woocommerce-page woocommerce-no-js tinvwl-theme-style">
+@elseif(Request()->route()->getName() == 'privacyPolicy')
+    <body class="page-template-default page page-id-200 wp-embed-responsive bg--black webkit desktop theme-minas woocommerce-no-js tinvwl-theme-style">
 @else
     <body class="home page-template page-template-page-templates page-template-home tinvwl-theme-style">
 @endif
@@ -179,6 +184,9 @@
 
 
 </div>
+
+@include('layout.shop-layout.js')
+
 
 @include('layout.shop-layout.newsletter')
 

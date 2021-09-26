@@ -25,8 +25,9 @@
                                     <a href="eshop-product-category.html"
                                        class="submenu-a menu-link item--32 uppercase">Pendants</a>
                                 </li>
-                                <li class="submenu-item submnu-1"><a href="eshop-product-category.html"
-                                                                     class="submenu-a menu-link item--32 uppercase">Pendants</a>
+                                <li class="submenu-item submnu-1">
+                                    <a href="eshop-product-category.html"
+                                       class="submenu-a menu-link item--32 uppercase">Pendants</a>
                                 </li>
                             </ul>
                         </div>
@@ -117,27 +118,27 @@
         <div class="max-6cols-g pt-sm">
             <header class="gutter font-bold title-13 mb-y ls-180 uppercase js-bring-in">Featured Categories</header>
             <div class="block-50 display--inline-top js-bring-in">
-                <a href="eshop-product-category.html" class="menu__banner gutter a-center color--black">
-                                            <span class="menu__banner-img display--block relative cover-img mb-c"
-                                                  style="background-image: url('images/pendants-1.jpg')">
-                                                <span class="grad-bot-grey-light block-100 h-50 abs-bl z-1"></span>
-                                                <span class="circ current-c abs-bc br-50 mb-med"><span
-                                                        class="block-100 abs-lc font-bold title-13 ls-180">Nº 1</span></span>
-                                            </span>
+                <a href="{{route('shopCategory',['category_id'=>2])}}" class="menu__banner gutter a-center color--black">
+                    <span class="menu__banner-img display--block relative cover-img mb-c"
+                          style="background-image: url('{{asset('site/images/pendants-1.jpg')}}')">
+                        <span class="grad-bot-grey-light block-100 h-50 abs-bl z-1"></span>
+                        <span class="circ current-c abs-bc br-50 mb-med"><span
+                                class="block-100 abs-lc font-bold title-13 ls-180">Nº 1</span></span>
+                    </span>
                     <span class="menu__banner-title trans font-bold title-25 uppercase ls-30">Pendants</span>
-                    <span class="font-light display--block title-15 uppercase ls-80">82 Products</span>
+{{--                    <span class="font-light display--block title-15 uppercase ls-80">82 Products</span>--}}
                 </a>
             </div>
-            <div class="block-50 display--inline-top js-bring-in">
-                <a href="eshop-product-category.html" class="menu__banner gutter a-center color--black">
-                                            <span class="menu__banner-img display--block relative cover-img mb-c"
-                                                  style="background-image: url('images/default.jpg')">
-                                                <span class="grad-bot-grey-light block-100 h-50 abs-bl z-1"></span>
-                                                <span class="circ current-c abs-bc br-50 mb-med"><span
-                                                        class="block-100 abs-lc font-bold title-13 ls-180">Nº 2</span></span>
-                                            </span>
-                    <span class="menu__banner-title trans font-bold title-25 uppercase ls-30">Signature collection</span>
-                    <span class="font-light display--block title-15 uppercase ls-80">29 Products</span>
+            <div class="block-50 display--inline-top js-bring-in" style="float:right;">
+                <a href="{{route('shopCategory',5)}}" class="menu__banner gutter a-center color--black">
+                    <span class="menu__banner-img display--block relative cover-img mb-c"
+                          style="background-image: url('{{asset('site/images/default.jpg')}}')">
+                        <span class="grad-bot-grey-light block-100 h-50 abs-bl z-1"></span>
+                        <span class="circ current-c abs-bc br-50 mb-med"><span
+                                class="block-100 abs-lc font-bold title-13 ls-180">Nº 2</span></span>
+                    </span>
+                    <span class="menu__banner-title trans font-bold title-25 uppercase ls-30">Men's Accessory</span>
+{{--                    <span class="font-light display--block title-15 uppercase ls-80">29 Products</span>--}}
                 </a>
             </div>
         </div>

@@ -34,14 +34,16 @@ Route::namespace("Site")->group(function () {
     Route::post('contact-us-request', 'ContactUsController@contactUsRequest')->name('contactUsRequest');
     Route::get('media-kit', 'MediaKitController@index')->name('mediaKit');
     Route::get('get-collection', 'MainController@getCollection')->name('getCollection');
+    Route::get('privacy_policy','PrivacyPolicyController@index')->name('privacyPolicy');
 
     Route::prefix('shop')->group(function () {
         Route::get('/', 'ShopController@index')->name('shop');
         Route::get('/{category_id}', 'ShopController@detail')->name('shopCategory');
-        Route::get('/add-to-wishlist', 'ShopController@wishlist')->name('addToWishlist');
         Route::get('product_detail/{id}','ShopController@productDetail')->name('productDetail');
-
     });
+    Route::get('/add-to-wishlist', 'ShopController@wishlist')->name('addToWishlist');
+
+
 
     Route::get('cart', 'ShoppingCartController@index')->name('cart');
     Route::post('add-to-cart', 'ShoppingCartController@addToCart')->name('addToCart');
@@ -51,7 +53,8 @@ Route::namespace("Site")->group(function () {
 
 
 
-    Route::middleware('guest')->group(function () {
+
+        Route::middleware('guest')->group(function () {
         Route::namespace("Authentication")->group(function () {
             Route::get('authentication', 'LoginController@loginPage')->name('loginPageUser');
 
@@ -66,23 +69,16 @@ Route::namespace("Site")->group(function () {
             Route::post('change-password-user', 'ForgetPasswordController@changePassword')->name('changePasswordUser');
         });
     });
+
+    Route::middleware(['auth'])->group(function () {
+
+        Route::post('create-stripe-session', 'CheckoutController@createSession')->name('createStripeSession');
+
+    });
 });
 
 Route::namespace('Admin')->group(function () {
     Route::namespace("Authentication")->group(function () {
-        Route::middleware('guest')->group(function () {
-//            Route::get('login', 'LoginController@loginPage')->name('loginPage');
-//            Route::post('login', 'LoginController@login')->name('loginUser');
-//
-//            Route::get('/forget-password', 'ForgetPasswordController@forgetPasswordForm')->name('forgetPasswordForm');
-//            Route::post('/forget-password', 'ForgetPasswordController@forgetPassword')->name('forgetPassword');
-//
-//            Route::get('reset/password/{token}', 'ForgetPasswordController@resetPassword')->name('resetPassword');
-//            Route::post('change-password', 'ForgetPasswordController@changePassword')->name('changePassword');
-
-        });
-
-
         Route::middleware(['Admin', 'auth'])->group(function () {
             Route::get('/logout', "LogoutController@logout")->name('logoutUser');
 

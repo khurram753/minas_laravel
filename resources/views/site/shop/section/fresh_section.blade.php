@@ -22,16 +22,19 @@
                     <div class="gutter mobile-hor-gutter">
                         <div class="prod-width-max-wide relative">
                             <div class="tinv-wraper woocommerce tinv-wishlist tinvwl-above_thumb-add-to-cart tinvwl-loop-button-wrapper">
-                                <a role="button" aria-label="Add to Wishlist" class="tinvwl_add_to_wishlist_button tinvwl-icon-custom no-txt  tinvwl-position-above_thumb"
-                                   data-tinv-wl-list="[]" data-tinv-wl-product="4848"
-                                   data-tinv-wl-productvariation="4853" data-tinv-wl-productvariations="[0]"
-                                   data-tinv-wl-producttype="variable" data-tinv-wl-action="add">
-                                    <img src="{{$earing->image}}" alt="Add to Wishlist"/>
+                                <a role="button" aria-label="Add to Wishlist"
+                                   class="add_to_wishlist"
+                                   data-id="{{$earing->id}}"
+                                   @guest
+                                   href="{{route('loginPageUser')}}"
+                                    @endguest
+                                >
+                                    <img src="{{asset('site/images/wishlist.png')}}" alt="Add to Wishlist"/>
                                 </a>
                                 <div class="tinv-wishlist-clear"></div>
-                                <div class="tinvwl-tooltip">Add to Wishlist</div>
+                                {{--                            <div class="tinvwl-tooltip">Add to Wishlist</div>--}}
                             </div>
-                            <a itemprop="url" href="eshop.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                            <a itemprop="url" href="{{route('productDetail',['id'=>$earing->id])}}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
                                 <span class="display--block relative overflow" style="padding-top: 99.88128772636%">
                                     <img src="{{asset($earing->image)}}" class="b-lazy block-100 abs-tl z-1" alt="Minas Jewelry-THE VOLONTÉ CLIP EARRINGS" data-src="{{asset($earing->image)}}">
                                     <span class="fill-dimensions img-overlay trans-slow"></span>
@@ -58,7 +61,7 @@
         @endforeach
 
         <div class="a-center pb-32">
-            <a href="eshop-product-category.html/earrings/" class="more-link"><span class="highlight-underline">Discover the freshness </span>
+            <a href="{{route('shopCategory',['category_id'=>6])}}" class="more-link"><span class="highlight-underline">Discover the freshness </span>
                 <svg class="icon icon--arrow-small-right ml-arrow">
                     <use xlink:href="#arrow-small-right"></use>
                 </svg>

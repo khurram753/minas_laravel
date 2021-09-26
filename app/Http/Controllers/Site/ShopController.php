@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 class ShopController extends Controller
 {
     //
-    public function index(ShopService $shopService)
+    public function index(Request $request,ShopService $shopService)
     {
-        return $shopService->index();
+        return $shopService->index($request);
     }
 
     public function detail($category_id,Request $request,ShopService $shopService)

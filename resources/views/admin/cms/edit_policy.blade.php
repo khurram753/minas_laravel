@@ -1,7 +1,7 @@
 @extends('layout.dashboard-layout.app')
 
 @section('title')
-    Edit Banner
+    Edit Privacy Policy
 @endsection
 
 
@@ -12,10 +12,10 @@
             <div class="row">
                 <div class="col-xl-12 bh-mb">
                     <div class="breadcrumb-holder">
-                        <h1 class="main-title float-left"> Edit Banner</h1>
+                        <h1 class="main-title float-left"> Edit Privacy Policy</h1>
                         <ol class="breadcrumb float-right">
                             <li class="breadcrumb-item">Home</li>
-                            <li class="breadcrumb-item active"> Edit Banner</li>
+                            <li class="breadcrumb-item active"> Edit Privacy Policy</li>
                         </ol>
                         <div class="clearfix"></div>
                     </div>
@@ -40,12 +40,7 @@
                             <textarea class="form-control editor" name="description">{{$data->description}}</textarea>
                         </div>
 
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Video</label>
-                            <input type="text" class="form-control" name="video"
-                                   placeholder="Enter Video" required
-                                   maxlength="50" value="{{$data->video}}">
-                        </div>
+
 
                         <button class="btn btn-primary" type="button" id="createBtn">Update</button>
 
@@ -58,9 +53,9 @@
 
 
 
-{{--                <a href="{{route('cmsListing')}}">--}}
-{{--                    <button class="btn btn-primary" type="button">Cancel</button>--}}
-{{--                </a>--}}
+                {{--                <a href="{{route('cmsListing')}}">--}}
+                {{--                    <button class="btn btn-primary" type="button">Cancel</button>--}}
+                {{--                </a>--}}
 
             </form>
         </div>
@@ -95,7 +90,7 @@
                 $.ajax({
 
                     type: 'POST',
-                    url: '{{route("bannerUpdate")}}',
+                    url: '{{route("policyUpdate")}}',
                     data: data,
                     cache: false,
                     contentType: false,

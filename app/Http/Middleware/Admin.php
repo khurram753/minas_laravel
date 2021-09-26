@@ -18,7 +18,14 @@ class Admin
     {
 
         if (Auth::check()) {
-            return $next($request);
+            if(Auth::user()->role_id == 1)
+            {
+                return $next($request);
+            }
+            else{
+                return redirect()->route('home');
+            }
+
         }
         else {
             return redirect()->route('loginPage');

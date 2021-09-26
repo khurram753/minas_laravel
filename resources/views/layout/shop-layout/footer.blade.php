@@ -51,40 +51,40 @@
                 </div>
             </div>
             <div class="block-60 max-4cols-g display--inline-top tablet-33 mobile-hor-100 mobile-hor-hidden">
-                <div class="gutter pb-med mobile-hor-gutter">
-                    <div class="font-light title-25 color--white uppercase style-bolds mb-g"><b>The shopping</b><br>experience
-                    </div>
-                    <div class="footer__menu columns-3 footer__text">
-                        <a href="eshop-product-category.html" class="footer__menu-item">Pendants</a>
-                        <a href="eshop-product-category.html" class="footer__menu-item">Rings</a>
-                        <ul id="menu-footermenu_en" class="menu-ul">
-                            <li id="menu-item-494"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-494 main-item item--50 mnu-1">
-                                <span class="menu-item-inner">
-                                    <a href="faqs.html" class="menu-a menu-link item--50">
-                                        Shipping &#038; Returns
-                                    </a>
-                                </span>
-                            </li>
-                            <li id="menu-item-495"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-495 main-item item--53 mnu-2">
-                                <span class="menu-item-inner">
-                                    <a href="faqs.html" class="menu-a menu-link item--53">
-                                        Care &#038; Repair
-                                    </a>
-                                </span>
-                            </li>
-                            <li id="menu-item-496"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-496 main-item item--51 mnu-3">
-                                <span class="menu-item-inner">
-                                    <a href="faqs.html" class="menu-a menu-link item--51">
-                                        Payment
-                                    </a>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+{{--                <div class="gutter pb-med mobile-hor-gutter">--}}
+{{--                    <div class="font-light title-25 color--white uppercase style-bolds mb-g"><b>The shopping</b><br>experience--}}
+{{--                    </div>--}}
+{{--                    <div class="footer__menu columns-3 footer__text">--}}
+{{--                        <a href="eshop-product-category.html" class="footer__menu-item">Pendants</a>--}}
+{{--                        <a href="eshop-product-category.html" class="footer__menu-item">Rings</a>--}}
+{{--                        <ul id="menu-footermenu_en" class="menu-ul">--}}
+{{--                            <li id="menu-item-494"--}}
+{{--                                class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-494 main-item item--50 mnu-1">--}}
+{{--                                <span class="menu-item-inner">--}}
+{{--                                    <a href="faqs.html" class="menu-a menu-link item--50">--}}
+{{--                                        Shipping &#038; Returns--}}
+{{--                                    </a>--}}
+{{--                                </span>--}}
+{{--                            </li>--}}
+{{--                            <li id="menu-item-495"--}}
+{{--                                class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-495 main-item item--53 mnu-2">--}}
+{{--                                <span class="menu-item-inner">--}}
+{{--                                    <a href="faqs.html" class="menu-a menu-link item--53">--}}
+{{--                                        Care &#038; Repair--}}
+{{--                                    </a>--}}
+{{--                                </span>--}}
+{{--                            </li>--}}
+{{--                            <li id="menu-item-496"--}}
+{{--                                class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-496 main-item item--51 mnu-3">--}}
+{{--                                <span class="menu-item-inner">--}}
+{{--                                    <a href="faqs.html" class="menu-a menu-link item--51">--}}
+{{--                                        Payment--}}
+{{--                                    </a>--}}
+{{--                                </span>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
             <div class="footer__socials columns-2-g abs-tr display--inline-top tablet-rel tablet-33 mobile-hor-100">
                 <div class="gutter font-light title-12 ls-180 uppercase mobile-hor-gutter">
@@ -147,19 +147,19 @@
                     <li id="menu-item-261"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-261 main-item item--3 mnu-2">
                             <span class="menu-item-inner">
-                                <a href="#" class="menu-a menu-link item--3">
+                                <a href="{{route('privacyPolicy')}}" class="menu-a menu-link item--3">
                                     PRIVACY POLICY
                                 </a>
                             </span>
                     </li>
-                    <li id="menu-item-262"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262 main-item item--258 mnu-3">
-                        <span class="menu-item-inner">
-                            <a href="#" class="menu-a menu-link item--258">
-                                SITEMAP
-                            </a>
-                        </span>
-                    </li>
+{{--                    <li id="menu-item-262"--}}
+{{--                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262 main-item item--258 mnu-3">--}}
+{{--                        <span class="menu-item-inner">--}}
+{{--                            <a href="#" class="menu-a menu-link item--258">--}}
+{{--                                SITEMAP--}}
+{{--                            </a>--}}
+{{--                        </span>--}}
+{{--                    </li>--}}
                 </ul>
             </nav>
             <div class="footer__logos float-right mobile-hor-hidden">

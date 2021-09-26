@@ -24,6 +24,7 @@
                     <a
                         @if(Request()->route()->getName() == 'aboutUsEdit' ||
                         Request()->route()->getName() == 'qualityEdit' ||
+                        Request()->route()->getName() == 'policyEdit' ||
                         Request()->route()->getName() == 'bannerEdit')
                         class="active"
                         @endif
@@ -35,6 +36,7 @@
                     <ul class="list-unstyled">
                         <li><a href="{{route('bannerEdit')}}">Banner Video and Text</a></li>
                         <li><a href="{{route('aboutUsEdit')}}">About Us</a></li>
+                        <li><a href="{{route('policyEdit')}}">Privacy Policy</a></li>
                         <li><a href="{{route('qualityEdit')}}">Quality & Craftsmanship</a></li>
                     </ul>
                 </li>

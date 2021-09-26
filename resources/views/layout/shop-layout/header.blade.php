@@ -2,7 +2,7 @@
         data-0="@class: header abs-tl fixed block-100" data-90="@class: header abs-tl fixed block-100 scrolled">
     <div class="fill-dimensions header__bg abs-tl bg--black-light scale-y mobile-hor-visible trans-scale origin-l"></div>
     <div class="header__inner relative a-right color--white mobile-hor-gutter">
-        <a href="eshop.html" class="logo abs-tl">
+        <a href="{{route('shop')}}" class="logo abs-tl">
             <svg class="block-100" xmlns="http://www.w3.org/2000/svg" width="525.349"
                  preserveAspectRatio="xMinYMin meet" viewBox="0 0 525.349 133.56">
                 <g fill-rule="evenodd" clip-rule="evenodd">
