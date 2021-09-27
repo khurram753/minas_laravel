@@ -3,13 +3,13 @@
 
     <!-- LOGO -->
     <div class="headerbar-left align-items-center justify-content-between">
-{{--                <a href="{{route('adminDashboard')}}" class="logo">--}}
-{{--                    <span><img alt="Logo" src="{{asset('admin/images/Assetlogo.png')}}"/></span>--}}
-{{--                    <img alt="Logo" src="{{asset('admin/images/favicon.png')}}"/>--}}
-{{--                </a>--}}
+                <a href="{{route('adminDashboard')}}" class="logo">
+                    <span><img alt="Logo" src="{{asset('site/images/minas_logodashl.jpeg')}}"/></span>
+                    <img alt="Logo" src="{{asset('site/images/minas_logodash.jpeg')}}"/>
+                </a>
 
 
-        <h1 class="logo"><a href="{{route('adminDashboard')}}" class="site_name">MINAS</a></h1>
+        
 
     </div>
 

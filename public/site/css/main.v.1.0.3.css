@@ -1558,13 +1558,15 @@ figcaption {
     top: 14px;
 }
 
-.abs-tl span.js-hp-fade {
+.abs-tl span.js-hp-fade,
+.mian_logo {
     width: 200px;
     height: 60px;
     display: block;
 }
 
-.abs-tl span.js-hp-fade img {
+.abs-tl span.js-hp-fade img,
+.mian_logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -1577,6 +1579,10 @@ figcaption {
 
 .form-radio-holder {
     width: 100%;
+}
+
+.abs-tl.icon--check {
+    top: 2px !important;
 }
 
 .a-center {
