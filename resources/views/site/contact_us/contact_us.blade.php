@@ -16,7 +16,7 @@
                             class="font-light font-18 bracket-icon">}</span></span></h1>
                 <h2 class="font-70 font-thin maxw-725 m-auto mb-21 js-skew-letter skrollr-pointer" data-emit-events
                     data-trans="1.4" data-bottom-top="" data-delay=".2">
-                    <SPAN>MINAS</SPAN> <SPAN>STORES</SPAN>
+                    <SPAN>SEVENTY</SPAN> <SPAN>NINE</SPAN>
                 </h2>
                 <div class="maxw-480 font-light font-17 m-auto overflow js-skew-letter skrollr-pointer" data-delay=".25"
                      data-trans="1.4" data-emit-events data-bottom-top=""><P>DISCOVER OUR STORES AND FIND A LOCATION
@@ -150,7 +150,10 @@
                         '-webkit-border-radius': '10px',
                         '-moz-border-radius': '10px',
                         opacity: .5,
-                        color: '#fff'
+                        color: '#fff',
+                        textTransform:'uppercase',
+                        fontFamily:'Arial'
+                        
                     }
                 });
                 $.ajax({
