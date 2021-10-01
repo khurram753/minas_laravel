@@ -170,7 +170,7 @@ Route::namespace('Admin')->group(function () {
         Route::post('faq-category-delete', 'FAQCategoriesController@delete')->name('faqCategoryDelete');
 
 
-        Route::get('faq--listing', 'FAQController@index')->name('faqListing');
+        Route::get('faq-listing', 'FAQController@index')->name('faqListing');
         Route::get('create-faq', 'FAQController@create')->name('faqCreate');
         Route::post('save-faq', 'FAQController@save')->name('faqSave');
         Route::get('edit-faq/{id}', 'FAQController@edit')->name('faqEdit');

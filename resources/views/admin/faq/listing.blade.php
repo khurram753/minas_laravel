@@ -61,7 +61,7 @@
                                     @foreach($data as $faq)
                                         <tr>
                                             <td>{{$loop->iteration}}</td>
-                                            <td>{{$faq->name}}</td>
+                                            <td>{{$faq->question}}</td>
                                             <td>{{$faq->faqCategory->name}}</td>
                                             <td>
 

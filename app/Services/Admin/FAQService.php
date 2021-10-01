@@ -48,7 +48,7 @@ class FAQService
         {
             $categories = FaqCategory::all();
 
-            return view('admin.faq_category.edit',compact('data','categories'));
+            return view('admin.faq.edit',compact('data','categories'));
         }
         else{
             return redirect()->route('faqListing')->with('error','Record Not Found');

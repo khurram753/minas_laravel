@@ -22,7 +22,7 @@
                 </div>
             </div>
 
-            <form method="post" id="updateEmployee">
+            <form method="post" id="employeeForm">
                 @csrf
                 <input type="hidden" name="id" value="{{$data->id}}">
                 <div class="row">
@@ -31,8 +31,8 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Name</label>
                             <input type="text" class="form-control" name="name"
-                                   placeholder="Enter Name" required
-                                   maxlength="50" value="{{$data->name}}">
+                                   placeholder="Enter Name" required value="{{$data->name}}"
+                                   maxlength="50">
                         </div>
 
 
@@ -70,9 +70,7 @@
             $('#createBtn').click(function () {
 
 
-
-
-                var data = $('#updateEmployee').serialize();
+                var data = $('#employeeForm').serialize();
 
                 $.blockUI({
                     css: {
@@ -98,11 +96,11 @@
                             $.unblockUI();
                             successMsg(response.message);
 
-                            setTimeout(function(){
-                                    window.location.href='{{route('faqCategoryListing')}}'}
-                                ,2000);
-                        }
-                        else if(response.result == 'error'){
+                            setTimeout(function () {
+                                    window.location.href = '{{route('faqCategoryListing')}}'
+                                }
+                                , 2000);
+                        } else if (response.result == 'error') {
                             $.unblockUI();
                             errorMsg(response.message);
                         }
@@ -120,8 +118,6 @@
                 });
 
             });
-
-
 
 
         });

@@ -1,7 +1,7 @@
 @extends('layout.dashboard-layout.app')
 
 @section('title')
-    Edit FAQ Category
+    Edit FAQ
 @endsection
 
 
@@ -12,17 +12,17 @@
             <div class="row">
                 <div class="col-xl-12 bh-mb">
                     <div class="breadcrumb-holder">
-                        <h1 class="main-title float-left">Edit FAQ Category</h1>
+                        <h1 class="main-title float-left">Edit FAQ </h1>
                         <ol class="breadcrumb float-right">
                             <li class="breadcrumb-item">Home</li>
-                            <li class="breadcrumb-item active">Edit FAQ Category</li>
+                            <li class="breadcrumb-item active">Edit FAQ </li>
                         </ol>
                         <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
 
-            <form method="post" id="updateEmployee">
+            <form method="post" id="employeeForm">
                 @csrf
                 <input type="hidden" name="id" value="{{$data->id}}">
                 <div class="row">
@@ -95,10 +95,7 @@
 
             $('#createBtn').click(function () {
 
-
-
-
-                var data = $('#updateEmployee').serialize();
+                var data = $('#employeeForm').serialize();
 
                 $.blockUI({
                     css: {
@@ -115,7 +112,7 @@
                 $.ajax({
 
                     type: 'POST',
-                    url: '{{route("faqCategoryUpdate")}}',
+                    url: '{{route("faqUpdate")}}',
                     data: data,
 
                     success: function (response, status) {
@@ -125,7 +122,7 @@
                             successMsg(response.message);
 
                             setTimeout(function(){
-                                    window.location.href='{{route('faqCategoryListing')}}'}
+                                    window.location.href='{{route('faqListing')}}'}
                                 ,2000);
                         }
                         else if(response.result == 'error'){
