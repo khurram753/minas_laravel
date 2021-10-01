@@ -205,6 +205,24 @@
                     </ul>
                 </li>
 
+                <li class="submenu">
+                    <a
+                        @if(Request()->route()->getName() == 'faqCategoryListing' ||
+                            Request()->route()->getName() == 'faqCategoryCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-tachometer-alt"></i> <span> FAQ Category </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('faqCategoryListing')}}">Listing</a></li>
+                        <li><a href="{{route('faqCategoryCreate')}}">Create New FAQ Category</a></li>
+                    </ul>
+                </li>
+
+
 
                 <li class="submenu">
                     <a

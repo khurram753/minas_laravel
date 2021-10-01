@@ -92,6 +92,26 @@
 
                     </div>
 
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Size</label>
+                            <input type="text" class="form-control" name="size"
+                                   placeholder="Enter Size" required>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Dimension</label>
+                            <input type="text" class="form-control" name="dimension"
+                                   placeholder="Enter Dimension" required>
+                        </div>
+
+                    </div>
+
+
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <div class="custom-dbhome">
                             <div class="form-group ">

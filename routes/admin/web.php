@@ -162,6 +162,21 @@ Route::namespace('Admin')->group(function () {
         Route::post('update-user', 'UserController@update')->name('userUpdate');
         Route::post('user-delete', 'UserController@delete')->name('userDelete');
 
+        Route::get('faq-category-listing', 'FAQCategoriesController@index')->name('faqCategoryListing');
+        Route::get('create-faq-category', 'FAQCategoriesController@create')->name('faqCategoryCreate');
+        Route::post('save-faq-category', 'FAQCategoriesController@save')->name('faqCategorySave');
+        Route::get('edit-faq-category/{id}', 'FAQCategoriesController@edit')->name('faqCategoryEdit');
+        Route::post('update-faq-category', 'FAQCategoriesController@update')->name('faqCategoryUpdate');
+        Route::post('faq-category-delete', 'FAQCategoriesController@delete')->name('faqCategoryDelete');
+
+
+        Route::get('faq--listing', 'FAQController@index')->name('faqListing');
+        Route::get('create-faq', 'FAQController@create')->name('faqCreate');
+        Route::post('save-faq', 'FAQController@save')->name('faqSave');
+        Route::get('edit-faq/{id}', 'FAQController@edit')->name('faqEdit');
+        Route::post('update-faq', 'FAQController@update')->name('faqUpdate');
+        Route::post('faq-delete', 'FAQController@delete')->name('faqDelete');
+
 
     });
 });
