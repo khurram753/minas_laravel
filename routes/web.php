@@ -36,6 +36,7 @@ Route::namespace("Site")->group(function () {
     Route::get('get-collection', 'MainController@getCollection')->name('getCollection');
     Route::get('privacy-policy', 'PrivacyPolicyController@index')->name('privacyPolicy');
     Route::get('terms-conditions', 'TermsConditionsController@index')->name('termsConditions');
+    Route::get('faq','FAQController@faq')->name('faq');
 
 
     Route::prefix('shop')->group(function () {

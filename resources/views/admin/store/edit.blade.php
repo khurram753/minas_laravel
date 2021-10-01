@@ -22,7 +22,7 @@
                 </div>
             </div>
 
-            <form method="post" id="updateEmployee">
+            <form method="post" class="updateEmployee" id="updateEmployee">
                 @csrf
                 <input type="hidden" name="id" value="{{$data->id}}">
                 <div class="row">
@@ -128,9 +128,9 @@
 
 
 
-                       
+
                             <button type="button" data-id="{{$image->id}}" class="delete_process delete_process_custm">Delete Row</button>
-                       
+
 
                     </div>
                 @endforeach
@@ -220,9 +220,9 @@
 
                 var html = "<div class='row delete_row'>";
 
-                
 
-               
+
+
 
                 html += '<div class="col-xs-12 col-sm-12 col-md-12 custom_for_edit">';
                 html += '<div class="custom-dbhome">';
@@ -247,10 +247,10 @@
                 html += '<input type="text" class="form-control" name="process['+number+'][date]" placeholder="Enter Year" maxlength="50">';
                 html += '</div>';
 
-               
+
                 html += '</div>';
 
-               
+
                 html += '<button type="button"  class="delete_process delete_process_custm">Delete Row</button>';
 
                 html += '</div>';

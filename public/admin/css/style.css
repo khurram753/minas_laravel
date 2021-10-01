@@ -3210,27 +3210,27 @@ a.btn:focus {
     width: 100%;
 }
 
-#updateEmployee {
+.updateEmployee {
     display: flex;
     flex-wrap: wrap;
 }
 
-#updateEmployee h2 {
+.updateEmployee h2 {
     width: 100%;
 }
 
-#updateEmployee .add_more_button_row {
+.updateEmployee .add_more_button_row {
     width: 100%;
     margin-bottom: 30px;
 }
 
-#updateEmployee .delete_row {
+.updateEmployee .delete_row {
     width: 32%;
     margin: 0px 10px;
     position: relative;
 }
 
-#updateEmployee .delete_row .custom-dbhome {
+.updateEmployee .delete_row .custom-dbhome {
     width: 100%;
     border: none;
     box-shadow: none;
