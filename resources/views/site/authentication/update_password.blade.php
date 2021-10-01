@@ -91,7 +91,9 @@
                         '-webkit-border-radius': '10px',
                         '-moz-border-radius': '10px',
                         opacity: .5,
-                        color: '#fff'
+                        color: '#fff',
+                        textTransform:'uppercase',
+                        fontFamily:'Arial'
                     }
                 });
                 $.ajax({

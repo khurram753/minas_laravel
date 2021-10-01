@@ -5,15 +5,19 @@
                 <h3 class="font-bold font-40 mb-43 js-bt overflow relative skrollr-pointer" data-emit-events
                     data-bottom-top="">
                     <span class="js-bt__el display--block">
-                        LIST OF RETAILERS
+                        LIST OF PARTNAR
                     </span>
                 </h3>
                 <div class="retailers__buttons opc-0 no-visible js-fade-in skrollr-pointer" data-emit-events
                      data-bottom-top="" data-cubic="custom" data-trans="1.4">
                     <div class="retailers-btn mobile-hor-100 display--inline a-center trans cursor loc"
                          data-link="#retailers-tab-1">
+                         <span class="uk_partner_img">
+                                <img src="	http://127.0.0.1:8000/site/store/images/1631197433-.jpg" alt="">
+                            </span>
                         <div class="font-bold font-25 relative retailers-btn__txt display--inline">
-                            GREECE
+                            
+                            UK
                             <div class="abs-tr font-thin">({{sizeof($greeceRetailers)}})</div>
                         </div>
                     </div>

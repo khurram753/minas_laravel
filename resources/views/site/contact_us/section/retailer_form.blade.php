@@ -15,8 +15,8 @@
                             <span class="wpcf7-form-control wpcf7-radio radio">
                                 <span class="wpcf7-list-item first">
                                     <label>
-                                        <span class="wpcf7-list-item-label">BECOME A RETAILER</span>
-                                        <input type="radio" name="request_type" value="BECOME A RETAILER"
+                                        <span class="wpcf7-list-item-label">BECOME A PARTNAR</span>
+                                        <input type="radio" name="request_type" value="BECOME A PARTNAR"
                                                checked="checked"/>
                                     </label>
                                 </span>
