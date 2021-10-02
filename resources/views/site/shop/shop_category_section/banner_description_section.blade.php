@@ -5,7 +5,7 @@
         transform-origin: center center 0px;
     transform: matrix(1, 0, 0, 1, 0, 0);">
         <div class="fill-dimensions cover-img"
-             style="background-image: url('{{asset('site/images/pendants-1.jpg')}}')"></div>
+             style="background-image: url('{{$data->image ? asset($data->image):asset('site/images/pendants-1.jpg')}}')"></div>
     </div>
 
 
@@ -23,10 +23,12 @@
             <div class="page-header-right__text font-light title-17 ls-80 uppercase color--grey gutter mobile-hor-gutter">
                 <div class="js-bt overflow relative in-view display--block overflow" data-emit-events
                      data-bottom-top="" data-delay=".15" data-trans="1.5">
-                    <div class="js-bt__el">
-                        {{--                        <div class="term-description"><p>Strong and sensual, modern but classic, designs for--}}
-                        {{--                                women and men. Timeless designs that have stood the test of time.</p>--}}
-                        {{--                        </div>--}}
+                    <div class="js-bt__el" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <div class="term-description">
+                            <p>
+                                {{$data->short_description}}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

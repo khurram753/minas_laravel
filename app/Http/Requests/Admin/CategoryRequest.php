@@ -24,7 +24,8 @@ class CategoryRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required'
+            'name' => 'required',
+            'image' => 'mimes:jpeg,jpg,png'
         ];
     }
 }
