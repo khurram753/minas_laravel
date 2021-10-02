@@ -1558,10 +1558,15 @@ figcaption {
     top: 14px;
 }
 
-.abs-tl span.js-hp-fade,
-.mian_logo {
+.abs-tl span.js-hp-fade {
     width: 200px;
     height: 60px;
+    display: block;
+}
+
+.mian_logo {
+    width: 250px;
+    height: 100px;
     display: block;
 }
 
