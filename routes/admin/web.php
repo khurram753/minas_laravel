@@ -30,6 +30,10 @@ Route::namespace('Admin')->group(function () {
         Route::get('admin-profile', 'ProfileController@profile')->name('adminProfile');
         Route::post('save-admin-profile', 'ProfileController@saveProfile')->name('adminProfileSave');
 
+        Route::get('edit-main-page','CMSController@editMainPage')->name('mainPageEdit');
+        Route::post('update-main-page', 'CMSController@updateMainPage')->name('mainPageUpdate');
+
+
         Route::get('edit-about-us','CMSController@editAboutUs')->name('aboutUsEdit');
         Route::post('update-about-us', 'CMSController@updateAboutUs')->name('aboutUsUpdate');
 

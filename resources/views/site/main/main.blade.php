@@ -9,7 +9,7 @@
     <div class="fill-dimensions fixed full-height site-intro bg-black overflow" id="site-intro">
 
         <div class="fill-dimensions cover-img z--1 opc-0 no-visible js-scale-in--sm js-intro-bg"
-             style="background-image: url({{asset('site/images/minas_intro_homepage.jpg')}}); transform-origin: center center 0px; visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+             style="background-image: url({{$data->image ? asset($data->image):asset('site/images/minas_intro_homepage.jpg')}}); transform-origin: center center 0px; visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
 
         <div class="opc-0 no-visible js-intro-fade abs-tc" style="visibility: inherit; opacity: 1;">
             <a aria-label="Minas Designs" href="{{route('home')}}" class="site-intro__logo abs-tc">
@@ -25,14 +25,14 @@
                     <div class="site-intro-gutter opc-0 no-visible js-intro-fade mobile-hor-gutter-20 relative"
                          style="visibility: inherit; opacity: 1;">
                         <a id="shop-link" href="{{route('homepage')}}"
-                           class="site-intro-link a-center color-grey  display--block site-intro__line"
-                           data-url="home.html">
+                           class="site-intro-link a-center color-grey  display--block site-intro__line">
                             <span id="home-link"
                                   class="site-intro-link a-center color-grey display--block trans cursor  site-intro__line">
                                 <span class="z--1 display--block relative">
-                                    <span class="font-thin font-40 mb-5 display--block">MINAS’ WORLD</span>
-                                    <span
-                                        class="font-bold font-12 extra-ls site-intro__line-label   relative display--inline mobile-hor-hidden">DISCOVER THE HERITAGE</span>
+                                    <span class="font-thin font-40 mb-5 display--block">{{$data->first_text}}</span>
+                                    <span class="font-bold font-12 extra-ls site-intro__line-label   relative display--inline mobile-hor-hidden">
+                                        {{$data->first_short_description}}
+                                    </span>
                                 </span>
                             </span>
                         </a>
@@ -43,13 +43,13 @@
                     <div class="site-intro-gutter opc-0 no-visible js-intro-fade mobile-hor-gutter-20 relative"
                          style="visibility: inherit; opacity: 1;">
                         <a id="shop-link" href="{{route('shop')}}"
-                           class="site-intro-link a-center color-grey  display--block site-intro__line"
-                           data-url="home.html">
+                           class="site-intro-link a-center color-grey  display--block site-intro__line">
 
                         <span class="z--1 display--block relative ">
-                            <span class="font-thin font-40 mb-5 display--block">SHOP ONLINE</span>
-                            <span
-                                class="font-bold font-12 extra-ls  site-intro__line-label relative display--inline mobile-hor-hidden">YOUR FAVOURITE PRODUCTS</span>
+                            <span class="font-thin font-40 mb-5 display--block">{{$data->second_text}}</span>
+                            <span class="font-bold font-12 extra-ls  site-intro__line-label relative display--inline mobile-hor-hidden">
+                                {{$data->second_short_description}}
+                            </span>
                         </span>
                         </a>
                     </div>

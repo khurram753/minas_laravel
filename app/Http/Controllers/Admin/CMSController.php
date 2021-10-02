@@ -21,6 +21,23 @@ class CMSController extends Controller
         return $service->update($request);
     }
 
+
+    public function editMainPage(CMSService $service)
+    {
+        return $service->editMainPage();
+    }
+
+    public function updateMainPage (Request $request,CMSService $service)
+    {
+        $this->validate($request,[
+            'first_text' => 'required',
+            'second_text' => 'required',
+            'image' => 'mimes:jpeg,jpg,png'
+        ]);
+
+        return $service->updateMainPage($request);
+    }
+
     public function editBanner(CMSService $service)
     {
         return $service->editBanner();

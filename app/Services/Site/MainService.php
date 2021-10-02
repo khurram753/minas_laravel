@@ -3,12 +3,14 @@
 namespace App\Services\Site;
 
 use App\Collection;
+use App\MainPageContent;
 
 class MainService
 {
     public function index()
     {
-        return view('site.main.main');
+        $data = MainPageContent::first();
+        return view('site.main.main',compact('data'));
     }
 
     public function getCollection()
