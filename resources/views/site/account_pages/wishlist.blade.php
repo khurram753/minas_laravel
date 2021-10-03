@@ -14,7 +14,7 @@
         <div class="fill-dimensions bg--white"></div>
         <div class="grid max-12cols-g  pb-200 relative z-20 mobile-hor-100  tablet-nopad--bottom">
             <div class="a-center color--black mb-xl mobile-hor-mb-60">
-                <div class="mb-y"><span class="font-light title-17 bracket-icon">{</span><span class="font-bold title-13 ls-180 bracket-title">HELLO ASDSA</span><span class="font-light title-17 bracket-icon">}</span></div>
+                <div class="mb-y"><span class="font-light title-17 bracket-icon">{</span><span class="font-bold title-13 ls-180 bracket-title">HELLO {{Auth::user()->name}}</span><span class="font-light title-17 bracket-icon">}</span></div>
                 <div class="uppercase font-thin title-70 ls-30 mb-9">Wishlist</div>
                 <span class="display--block wishlist_products_counter  wishlist-counter-with-products">
                     <span class="font-bold title-25 ls-30 uppercase">

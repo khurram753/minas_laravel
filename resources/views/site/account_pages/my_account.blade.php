@@ -14,7 +14,7 @@
         <div class="fill-dimensions bg--white"></div>
         <div class="grid max-12cols-g  pb-200 relative z-20 mobile-hor-100 mobile-hor-pb-90">
             <div class="a-center color--black mb-large mobile-hor-gutter">
-                <div class="mb-y"><span class="font-light title-17 bracket-icon">{</span><span class="font-bold title-13 ls-180 bracket-title">HELLO TODALEX770.TA</span><span class="font-light title-17 bracket-icon">}</span></div>
+                <div class="mb-y"><span class="font-light title-17 bracket-icon">{</span><span class="font-bold title-13 ls-180 bracket-title">HELLO {{Auth::user()->name}}</span><span class="font-light title-17 bracket-icon">}</span></div>
                 <div class="uppercase font-thin title-70 ls-30 mb-9">My account</div>
                 <a class="font-bold title-13 ls-80 pl-37 uppercase hover-red color--black relative" href="{{route('logout')}}">
                     <svg class="icon icon--sign-out no-icon-trans abs-lc">
