@@ -27,7 +27,7 @@
                         Dashboard
                     </a>
                 @else
-                    <a href="{{route('myAccount')}}" class="color--white hover-red header__item display--inline mobile-hor-hidden">
+                    <a href="{{route('editAccount')}}" class="color--white hover-red header__item display--inline mobile-hor-hidden">
                         Dashboard
                     </a>
                 @endif

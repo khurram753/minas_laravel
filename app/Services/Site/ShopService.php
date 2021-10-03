@@ -79,35 +79,51 @@ class ShopService
 
         $heritageImages = Heritage::select('image')->get();
 
-        $pendant_category = Category::where('name','Pendent')->first();
+        $pendant_category = Category::where('name','Gold')->first();
+
+        $getThreeCategory = Category::limit(3)->get();
+
+
+        $pendants = array();
+
 
         if($pendant_category)
         {
             $pendants = Product::where('category_id',$pendant_category->id)->inRandomOrder()->limit('3')->get();
         }
         else{
-            $pendants = array();
+            if(isset($getThreeCategory[0]))
+            {
+                $pendants = Product::where('category_id',$getThreeCategory[0]->id)->inRandomOrder()->limit('3')->get();
+            }
+
         }
 
 
         $mensCategory = Category::where('name','Mens Accessory')->first();
-
+        $mensCollection = array();
         if($mensCategory)
         {
             $mensCollection = Product::where('category_id',$mensCategory->id)->inRandomOrder()->limit('4')->get();
         }
         else{
-            $mensCollection = array();
+            if(isset($getThreeCategory[1]))
+            {
+                $mensCollection = Product::where('category_id',$getThreeCategory[1]->id)->inRandomOrder()->limit('3')->get();
+            }
         }
 
         $earingCategory = Category::where('name','Earing')->first();
-
+        $earings =  array();
         if($earingCategory)
         {
             $earings = Product::where('category_id',$earingCategory->id)->inRandomOrder()->limit('3')->get();
         }
         else{
-            $earings = array();
+            if(isset($getThreeCategory[2]))
+            {
+                $earings = Product::where('category_id',$getThreeCategory[2]->id)->inRandomOrder()->limit('3')->get();
+            }
         }
 
 

@@ -75,6 +75,8 @@ Route::namespace("Site")->group(function () {
         Route::post('create-stripe-session', 'CheckoutController@createSession')->name('createStripeSession');
 
         Route::get('user-dashboard', 'DashboardController@index')->name('userDashboard');
+
+
         Route::get('user-order-listing', 'OrderController@index')->name('userOrderListing');
         Route::get('user-order-detail/{id}', 'OrderController@orderDetail')->name('userOrderDetail');
 

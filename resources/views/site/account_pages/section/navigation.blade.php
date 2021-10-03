@@ -17,8 +17,8 @@
 {{--                        Addresses--}}
 {{--                    </a>--}}
 {{--                </li>--}}
-                <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders tablet-block">
-                    <a class="uppercase dashboard-link" href="orders.html">
+                <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders {{Request()->route()->getName() == 'userOrderListing' ? 'is-active':''}} tablet-block">
+                    <a class="uppercase dashboard-link" href="{{route('userOrderListing')}}">
                         Orders
                     </a>
                 </li>

@@ -29,4 +29,9 @@ class OrderDetail extends Model
         return $this->belongsTo(Cord::class,'cord_id');
     }
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class,'material_id');
+    }
+
 }
