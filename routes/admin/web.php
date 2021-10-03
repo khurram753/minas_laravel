@@ -185,5 +185,10 @@ Route::namespace('Admin')->group(function () {
         Route::post('faq-delete', 'FAQController@delete')->name('faqDelete');
 
 
+        Route::get('order-listing','OrderController@index')->name('orderListing');
+        Route::get('order-detail/{id}', 'OrderController@orderDetail')->name('orderDetail');
+        Route::get('order-completed/{id}','OrderController@completed')->name('orderCompleted');
+
+
     });
 });
