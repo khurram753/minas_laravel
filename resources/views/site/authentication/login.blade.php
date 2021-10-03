@@ -1,7 +1,7 @@
 @extends('layout.shop-layout.app')
 
 @section('title')
-    MINAS - Authentication
+    {{env('APP_NAME')}} - Authentication
 @endsection
 
 @section('style')

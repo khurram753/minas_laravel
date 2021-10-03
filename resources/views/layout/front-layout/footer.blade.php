@@ -63,12 +63,15 @@
                             </li>
                             <li id="menu-item-385"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-385 main-item item--383 mnu-5">
-                                <a href="{{route('newsUpdatePage')}}l" class="menu-a menu-link item--383">News &amp;
-                                    Updates</a>
+                                <a href="{{route('newsUpdatePage')}}" class="menu-a menu-link item--383">
+                                    News &amp; Updates
+                                </a>
                             </li>
                             <li id="menu-item-387"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387 main-item item--288 mnu-6">
-                                <a href="{{route('contactUs')}}" class="menu-a menu-link item--288">Contact us</a>
+                                <a href="{{route('contactUs')}}" class="menu-a menu-link item--288">
+                                    Contact us
+                                </a>
                             </li>
                         </ul>
                     </nav>

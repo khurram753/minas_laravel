@@ -1,7 +1,7 @@
 @extends('layout.shop-layout.app')
 
 @section('title')
-    MINAS - Product Detail
+    {{env('APP_NAME')}} - Product Detail
 @endsection
 
 @section('style')
@@ -67,11 +67,13 @@
 {{--                                        </span>--}}
                                         <div class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart">
                                             <a role="button" aria-label="Add to Wishlist"
-                                               class="tinvwl_add_to_wishlist_button tinvwl-icon-custom no-txt wishlist tinvwl-position-shortcode ftinvwl-animated"
-                                               data-tinv-wl-list="[]" data-tinv-wl-product="2496"
-                                               data-tinv-wl-productvariation="" data-tinv-wl-productvariations="[0]"
-                                               data-tinv-wl-producttype="variable" data-tinv-wl-action="add"><img
-                                                    src="{{asset('site/images/wishlist.png')}}" alt="Add to Wishlist"/> </a>
+                                               class="add_to_wishlist tinvwl_add_to_wishlist_button tinvwl-icon-custom no-txt wishlist tinvwl-position-shortcode ftinvwl-animated"
+                                               data-id="{{$data->id}}"
+                                               @guest
+                                                    href="{{route('loginPageUser')}}"
+                                                @endguest
+                                               >
+                                                <img src="{{asset('site/images/wishlist.png')}}" alt="Add to Wishlist"/> </a>
                                             <div class="tinv-wishlist-clear"></div>
                                             <div class="tinvwl-tooltip">Add to Wishlist</div>
                                         </div>

@@ -33,6 +33,9 @@ Route::namespace('Admin')->group(function () {
         Route::get('edit-main-page','CMSController@editMainPage')->name('mainPageEdit');
         Route::post('update-main-page', 'CMSController@updateMainPage')->name('mainPageUpdate');
 
+        Route::get('edit-heritage-page','CMSController@editHeritage')->name('heritagePageEdit');
+        Route::post('update-heritage-page', 'CMSController@updateHeritage')->name('heritagePageUpdate');
+
 
         Route::get('edit-about-us','CMSController@editAboutUs')->name('aboutUsEdit');
         Route::post('update-about-us', 'CMSController@updateAboutUs')->name('aboutUsUpdate');

@@ -1,7 +1,7 @@
 @extends('layout.front-layout.app')
 
 @section('title')
-    MINAS - Heritage Detail
+    {{env('APP_NAME')}} - Heritage Detail
 @endsection
 
 

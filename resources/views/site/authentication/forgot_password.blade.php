@@ -1,7 +1,7 @@
 @extends('layout.shop-layout.app')
 
 @section('title')
-    MINAS - Lost Password
+    {{env('APP_NAME')}} - Lost Password
 @endsection
 
 @section('style')

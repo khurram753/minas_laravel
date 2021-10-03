@@ -1,7 +1,7 @@
 @extends('layout.front-layout.app')
 
 @section('title')
-    MINAS
+    {{env('APP_NAME')}}
 @endsection
 
 @section('content')

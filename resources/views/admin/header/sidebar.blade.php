@@ -41,6 +41,7 @@
                         <li><a href="{{route('policyEdit')}}">Privacy Policy</a></li>
                         <li><a href="{{route('termsEdit')}}">Terms and Conditions</a></li>
                         <li><a href="{{route('qualityEdit')}}">Quality & Craftsmanship</a></li>
+                        <li><a href="{{route('heritagePageEdit')}}">Heritage</a></li>
                     </ul>
                 </li>
 

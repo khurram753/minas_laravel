@@ -1,7 +1,7 @@
 @extends('layout.front-layout.app')
 
 @section('title')
-    MINAS - {{ucfirst($collection->name)}}
+    {{env('APP_NAME')}} - {{ucfirst($collection->name)}}
 @endsection
 
 

@@ -26,8 +26,7 @@
                 </div>
             </div>
         </div>
-        <div
-            class="block-100 abs-bl a-center ls-180 color--white home-top-content__scrolldown tablet-hor-rel op-0 js-fade-up in-view "
+        <div class="block-100 abs-bl a-center ls-180 color--white home-top-content__scrolldown tablet-hor-rel op-0 js-fade-up in-view "
             data-emit-events data-bottom-top="" data-trans="1.8">
                     <span class="circle-btn relative cursor display--inline circle-link scroll-to "
                           data-target="#section-2">

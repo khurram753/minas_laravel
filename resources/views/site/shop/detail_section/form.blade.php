@@ -81,7 +81,7 @@
     </div>
 </form>
 <div class="pt-56">
-    <a href="javascript:void(0)"
+    <a href="{{route('faq')}}"
        class="font-bold title-12 ls-180 uppercase underlined color--dark-grey-light hover-white">
         Delivery & Returns
     </a>

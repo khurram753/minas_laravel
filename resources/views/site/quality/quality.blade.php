@@ -1,7 +1,7 @@
 @extends('layout.front-layout.app')
 
 @section('title')
-    MINAS - Quality And Craftsmanship
+    {{env('APP_NAME')}} - Quality And Craftsmanship
 @endsection
 
 @section('content')

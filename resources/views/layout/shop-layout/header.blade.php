@@ -10,8 +10,9 @@
         <a class="skip-link screen-reader-text" href="#site-navigation">Skip to navigation</a>
         <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
         <div class="header__items font-bold title-12 lh-n ls-180 color--white uppercase">
-            <a href="{{route('home')}}" class="color--white line-underline hover-red header__item display--inline tablet-hidden">Minas`s
-                world</a>
+            <a href="{{route('home')}}" class="color--white line-underline hover-red header__item display--inline tablet-hidden">
+                Minas`s world
+            </a>
             <svg class="icon icon--user trans header__item display--inline mobile-hor-hidden ">
                 <use xlink:href="#user"></use>
             </svg>
@@ -26,7 +27,7 @@
                         Dashboard
                     </a>
                 @else
-                    <a href="{{route('userDashboard')}}" class="color--white hover-red header__item display--inline mobile-hor-hidden">
+                    <a href="{{route('myAccount')}}" class="color--white hover-red header__item display--inline mobile-hor-hidden">
                         Dashboard
                     </a>
                 @endif

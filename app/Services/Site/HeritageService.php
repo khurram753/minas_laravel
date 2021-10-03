@@ -2,6 +2,7 @@
 
 namespace App\Services\Site;
 
+use App\CMS;
 use App\Heritage;
 
 class HeritageService
@@ -10,7 +11,9 @@ class HeritageService
     {
         $data = Heritage::orderBy('year','asc')->get();
 
-        return view('site.heritage.heritage',compact('data'));
+        $heritageRecord = CMS::where('page_name','heritage')->first();
+
+        return view('site.heritage.heritage',compact('data','heritageRecord'));
     }
 
     public function show($request)

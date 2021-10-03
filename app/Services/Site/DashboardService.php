@@ -12,14 +12,17 @@ class DashboardService
 {
     public function index()
     {
-        $order = Order::where('user_id',Auth::user()->id)->count();
-        return view('user.dashboard.dashboard',compact('order'));
+//        $order = Order::where('user_id',Auth::user()->id)->count();
+//        return view('user.dashboard.dashboard',compact('order'));
+//        return view('');
     }
 
     public function wishlist()
     {
         $data =  Wishlist::where('user_id',Auth::user()->id)->get();
 
-        return view('user.wishlist.listing',compact('data'));
+//        return view('user.wishlist.listing',compact('data'));
+        return view('site.account_pages.wishlist',compact('data'));
+
     }
 }

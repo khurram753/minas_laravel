@@ -48,6 +48,16 @@ class CMSController extends Controller
         return $service->updateBanner($request);
     }
 
+    public function editHeritage(CMSService $service)
+    {
+        return $service->editHeritage();
+    }
+
+    public function updateHeritage (CMSRequest $request,CMSService $service)
+    {
+        return $service->updateHeritage($request);
+    }
+
     public function editPolicy(CMSService $service)
     {
         return $service->editPolicy();

@@ -1,7 +1,7 @@
 @extends('layout.shop-layout.app')
 
 @section('title')
-    MINAS - Shop
+    {{env('APP_NAME')}} - Shop
 @endsection
 
 @section('style')

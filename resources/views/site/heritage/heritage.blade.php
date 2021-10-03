@@ -1,7 +1,7 @@
 @extends('layout.front-layout.app')
 
 @section('title')
-    MINAS - Heritage
+    {{env('APP_NAME')}} - Heritage
 @endsection
 
 
@@ -54,23 +54,14 @@
                             <div class="relative">
                                 <div class="fill-dimensions fill-dimensions--extra bg-black origin-l js-mask-bg"></div>
                                 <div class="overflow">
-                                    <img src="/site/images/heritage_top.jpg"
+                                    <img src="{{asset($heritageRecord->image)}}"
                                          alt="Minas Designs-a heritage of design excellence "
                                          class="block-image js-scale-mask__el">
                                 </div>
                             </div>
                         </div>
                         <div class="abs-br heritage-intro__texts  mobile-hor-rel-no-center mobile-hor-hidden">
-                            <div
-                                class="font-70 font-thin maxw-725 m-auto content-hr content-hr--white mb-21 opc-0 no-visible js-h-fade">
-                                <SPAN>57</SPAN> <SPAN>YEARS</SPAN> <SPAN>OF</SPAN> <SPAN>HERITAGE</SPAN>
-                                <HR/>
-                                <SPAN></SPAN>
-                                <SPAN>PURITY</SPAN> <SPAN>AND</SPAN> <SPAN>EXCELLENCE</SPAN>
-                            </div>
-                            <div class="maxw-470 font-light font-20 color-white opc-0 no-visible js-h-fade">
-                                THE BIRTH OF AN ARTIST, HIS PATH AND EVOLUTION, DISCOVER THE STORY.
-                            </div>
+                            {!! $heritageRecord->description !!}
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 @extends('layout.front-layout.app')
 
 @section('title')
-    MINAS - Contact Us
+    {{env('APP_NAME')}} - Contact Us
 @endsection
 
 
@@ -153,7 +153,7 @@
                         color: '#fff',
                         textTransform:'uppercase',
                         fontFamily:'Arial'
-                        
+
                     }
                 });
                 $.ajax({

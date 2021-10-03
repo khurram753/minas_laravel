@@ -28,16 +28,16 @@
 {{--                </p>--}}
             </div>
             <div class="font-bold title-12 ls-180 uppercase pt-sm">
-                <a href="https://eshop.minas-designs.com/faq-categories/care-repair/"
-                   class="mr-50 display--inline-top color--dark-grey-light hover-white"
-                   target="_blank">
+                <a href="{{route('faq')}}" class="mr-50 display--inline-top color--dark-grey-light hover-white" target="_blank">
                     <svg class="icon icon--heart mr-i display--inline">
                         <use xlink:href="#heart"></use>
                     </svg>
-                    <span class="underlined">Care instructions</span></a><a
-                    href="images/Minas_v_5-super-final-2.pdf" target="_blank"
-                    class="mr-50 display--inline-top color--dark-grey-light hover-white underlined">Size
-                    guide</a></div>
+                    <span class="underlined">Care instructions</span></a>
+                <a href="{{asset('site/files/Minas_v_5-super-final-2.pdf')}}" target="_blank"
+                    class="mr-50 display--inline-top color--dark-grey-light hover-white underlined">
+                    Size Guide
+                </a>
+            </div>
         </div>
     </div>
     <div class="block-40 display--inline-top tablet-100">
@@ -89,6 +89,30 @@
                             </p>
                         </td>
                     </tr>
+
+                    @if($data->dimension)
+                        <tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_cord">
+                            <th class="woocommerce-product-attributes-item__label">Dimensions</th>
+                            <td class="woocommerce-product-attributes-item__value">
+                                <p>
+                                    {{$data->dimension}}
+                                </p>
+                            </td>
+                        </tr>
+                    @endif
+
+                    @if($data->size)
+                        <tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_cord">
+                            <th class="woocommerce-product-attributes-item__label">Size</th>
+                            <td class="woocommerce-product-attributes-item__value">
+                                <p>
+                                    {{$data->size}}
+                                </p>
+                            </td>
+                        </tr>
+                    @endif
+
+
                 </table>
             </div>
         </div>

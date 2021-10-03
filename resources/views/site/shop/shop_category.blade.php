@@ -1,7 +1,7 @@
 @extends('layout.shop-layout.app')
 
 @section('title')
-    MINAS - Shop
+{{env('APP_NAME')}} - Shop
 @endsection
 
 @section('style')
@@ -224,8 +224,6 @@
             $('.woof_submit_search_form').click(function () {
                 $('#sorting-form').submit();
             });
-
-
         });
     </script>
 @endsection

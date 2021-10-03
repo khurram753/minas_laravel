@@ -1,7 +1,7 @@
 @extends('layout.shop-layout.app')
 
 @section('title')
-    MINAS - Cart
+    {{env('APP_NAME')}} - Cart
 @endsection
 
 @section('tags')

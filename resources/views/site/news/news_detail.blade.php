@@ -1,7 +1,7 @@
 @extends('layout.front-layout.app')
 
 @section('title')
-    MINAS - News Detail
+    {{env('APP_NAME')}} - News Detail
 @endsection
 
 @section('style')

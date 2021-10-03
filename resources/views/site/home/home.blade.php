@@ -1,7 +1,7 @@
 @extends('layout.front-layout.app')
 
 @section('title')
-    MINAS - HOMEPAGE
+    {{env('APP_NAME')}} - HOMEPAGE
 @endsection
 
 @section('style')

@@ -1,7 +1,7 @@
 @extends('layout.shop-layout.app')
 
 @section('title')
-    MINAS - Privacy Policy
+    {{env('APP_NAME')}} - Privacy Policy
 @endsection
 
 @section('style')

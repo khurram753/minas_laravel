@@ -1,7 +1,7 @@
 @extends('layout.shop-layout.app')
 
 @section('title')
-    MINAS - Terms & Conditions
+    {{env('APP_NAME')}} - Terms & Conditions
 @endsection
 
 @section('style')

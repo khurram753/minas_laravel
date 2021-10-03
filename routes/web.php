@@ -77,7 +77,13 @@ Route::namespace("Site")->group(function () {
         Route::get('user-dashboard', 'DashboardController@index')->name('userDashboard');
         Route::get('user-order-listing', 'OrderController@index')->name('userOrderListing');
         Route::get('user-order-detail/{id}', 'OrderController@orderDetail')->name('userOrderDetail');
+
         Route::get('user-wishlist','DashboardController@wishlist')->name('userWishlist');
+
+        Route::get('my-account','AccountController@accountPage')->name('myAccount');
+        Route::get('edit-account','AccountController@editAccount')->name('editAccount');
+        Route::post('save-account','AccountController@saveAccount')->name('saveAccount');
+        Route::get('remove-wishlist','AccountController@removeFromWishlist')->name('removeWishlist');
 
 
 

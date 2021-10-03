@@ -1,7 +1,7 @@
 @extends('layout.shop-layout.app')
 
 @section('title')
-    MINAS - Update Password
+    {{env('APP_NAME')}} - Update Password
 @endsection
 
 @section('style')

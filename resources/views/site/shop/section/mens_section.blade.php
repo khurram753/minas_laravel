@@ -1,4 +1,4 @@
-@if(sizeof($mensCollection) > 0)
+{{--@if(sizeof($mensCollection) > 0)--}}
 
     <section class="grid max-12cols-g pt-section pb-section mobile-hor-100" id="section--1">
         <header class="max-6cols-g m-auto a-center">
@@ -65,4 +65,4 @@
     </section>
 
 
-@endif
+{{--@endif--}}

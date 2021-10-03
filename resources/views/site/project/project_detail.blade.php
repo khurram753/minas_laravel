@@ -1,7 +1,7 @@
 @extends('layout.front-layout.app')
 
 @section('title')
-    MINAS - Project Detail
+    {{env('APP_NAME')}} - Project Detail
 @endsection
 
 @section('style')

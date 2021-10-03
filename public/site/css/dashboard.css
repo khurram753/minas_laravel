@@ -1,0 +1,32 @@
+.col2-set.addresses {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.edit_profile_custom .custom-input {
+    padding-bottom: 20px;
+}
+
+.edit_profile_custom form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.billing_custom {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.billing_custom .input-text {
+    padding-bottom: 20px;
+}
+
+.address-line {
+    background-image: none;
+    border-left: 2px dotted;
+}
+
+.trans .icon.icon--arrow-long-right {
+    height: 20px;
+}
