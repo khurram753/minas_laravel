@@ -43,6 +43,10 @@ Route::namespace('Admin')->group(function () {
         Route::get('edit-banner','CMSController@editBanner')->name('bannerEdit');
         Route::post('update-banner', 'CMSController@updateBanner')->name('bannerUpdate');
 
+        Route::get('edit-footer','CMSController@editFooter')->name('footerEdit');
+        Route::post('update-footer', 'CMSController@updateFooter')->name('footerUpdate');
+
+
         Route::get('edit-privacy-policy','CMSController@editPolicy')->name('policyEdit');
         Route::post('update-privacy-policy', 'CMSController@updatePolicy')->name('policyUpdate');
 

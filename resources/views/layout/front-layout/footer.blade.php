@@ -6,7 +6,8 @@
     <div class="over grid max-12cols-g trans mobile-hor-100">
         <div class="gutter mobile-hor-gutter">
             <div class="font-70 font-thin color-white pt-139 maxw-480  m-left-auto a-right mb-12 opc-0 no-visible mobile-hor-left mobile-hor-ml-0 mobile-pt-48 js-fade-left skrollr-pointer skrollable skrollable-before"
-                data-emit-events="" data-bottom-top="" data-trans="1.4" style="">BE PART OF MINAS WORLD
+                data-emit-events="" data-bottom-top="" data-trans="1.4" style="">
+                {{$footer->tag_line}}
             </div>
             <span class="display--block a-right mb-139 mobile-mb-50">
 {{--                <span--}}
@@ -32,15 +33,15 @@
                             E &nbsp; <a href="#">getintouch@minas-designs.com</a></p>
                     </div>
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                            <span
-                                class="opc-0 no-visible js-fade-up relative skrollr-pointer display--block skrollable skrollable-before"
-                                data-delay=".1" data-emit-events="" data-bottom-top="" style="">VIEW ON MAP</span></a>
+                        <span class="opc-0 no-visible js-fade-up relative skrollr-pointer display--block skrollable skrollable-before" data-delay=".1" data-emit-events="" data-bottom-top="" style="">
+                            VIEW ON MAP
+                        </span>
+                    </a>
                 </div>
-                <div
-                    class="footer-content color-grey-med display--inline-top maxw-370 block-100 mb-43 opc-0 no-visible js-fade-up relative  mobile-100 skrollr-pointer skrollable skrollable-before"
+                <div class="footer-content color-grey-med display--inline-top maxw-370 block-100 mb-43 opc-0 no-visible js-fade-up relative  mobile-100 skrollr-pointer skrollable skrollable-before"
                     data-emit-events="" data-delay=".1" data-bottom-top="" style="">
                     <h3>DISCOVER</h3>
-                    <p><em>MINAS’ WORLD</em></p>
+                    <p><em>Seventeen WORLD</em></p>
                     <nav class="footer-menu mb-24">
                         <ul id="menu-footer-menu_en" class="menu-ul">
                             <li id="menu-item-379"
@@ -87,7 +88,7 @@
                         data-emit-events="" data-bottom-top="" data-trans="1.4" style="">
                         <div class="opc-0 no-visible js-fade-left single-social skrollr-pointer skrollable skrollable-before"
                             data-emit-events="" data-bottom-top="" data-trans="1.4" data-delay="0.1" style="">
-                            <a href="#" target="_blank" rel="nofollow noopener noreferrer"
+                            <a href="{{$footer->instagram_link}}" target="_blank" rel="nofollow noopener noreferrer"
                                class="social-link relative display--block font-light font-12 extra-ls color-grey-med">
                                 <span class="abs-lc left-7 icon-social-media icon icon--social-media-instagram"></span>
                                 <span class="tablet-hidden">INSTAGRAM</span>
@@ -95,7 +96,7 @@
                         </div>
                         <div class="opc-0 no-visible js-fade-left single-social skrollr-pointer skrollable skrollable-before"
                             data-emit-events="" data-bottom-top="" data-trans="1.4" data-delay="0.2" style="">
-                            <a href="#" target="_blank" rel="nofollow noopener noreferrer"
+                            <a href="{{$footer->vimeo_link}}" target="_blank" rel="nofollow noopener noreferrer"
                                class="social-link relative display--block font-light font-12 extra-ls color-grey-med">
                                 <span class="abs-lc left-7 icon-social-media icon icon--social-media-vimeo"></span>
                                 <span class="tablet-hidden">VIMEO</span>
@@ -103,7 +104,7 @@
                         </div>
                         <div class="opc-0 no-visible js-fade-left single-social skrollr-pointer skrollable skrollable-before"
                             data-emit-events="" data-bottom-top="" data-trans="1.4" data-delay="0.3" style="">
-                            <a href="#" target="_blank" rel="nofollow noopener noreferrer"
+                            <a href="{{$footer->facebook_link}}" target="_blank" rel="nofollow noopener noreferrer"
                                class="social-link relative display--block font-light font-12 extra-ls color-grey-med">
                                 <span class="abs-lc left-7 icon-social-media icon icon--social-media-facebook"></span>
                                 <span class="tablet-hidden">FACEBOOK</span>
@@ -116,7 +117,7 @@
                 data-emit-events="" data-bottom-top="" data-delay=".25" data-trans="1.4" style="">
                 <div class="mr-25 display--inline-top mr-20">
                     <a href="#" target="_blank" rel="noopener noreferrer" class="link-line link-to-white">KOMMIGRAPHICS</a>
-                    FOR MINAS DESIGNS © 2019-2021
+                    FOR Seventeen Design© 2019-2021
                 </div>
                 <nav class="copyright-menu display--inline-top">
                     <ul id="menu-copyright_menu_en" class="menu-ul">

@@ -42,6 +42,7 @@
                         <li><a href="{{route('termsEdit')}}">Terms and Conditions</a></li>
                         <li><a href="{{route('qualityEdit')}}">Quality & Craftsmanship</a></li>
                         <li><a href="{{route('heritagePageEdit')}}">Heritage</a></li>
+                        <li><a href="{{route('footerEdit')}}">Footer</a></li>
                     </ul>
                 </li>
 

@@ -5,6 +5,7 @@ namespace App\Services\Admin;
 
 
 use App\CMS;
+use App\FooterManagement;
 use App\Helpers\ImageUploadHelper;
 use App\MainPageContent;
 use App\News;
@@ -188,6 +189,134 @@ class CMSService
 
             try {
                 $save = $data->update($request->except('_token'));
+
+                DB::commit();
+                return response()->json(['result' => 'success', 'message' => 'Record Updated']);
+
+            } catch (\Exception $e) {
+                DB::rollBack();
+                return response()->json(['result' => 'error', 'message' => 'Unable to Update Record: ' . $e]);
+            }
+        }
+        else{
+            return response()->json(['result'=>'error','message'=>'Record Not Found']);
+        }
+    }
+
+    public function editFooter()
+    {
+        $data =  FooterManagement::first();
+
+        if($data)
+        {
+            return view('admin.cms.edit_footer',compact('data'));
+        }
+        else{
+            return redirect()->route('adminDashboard')->with('error','Record Not Found');
+        }
+    }
+
+    public function updateFooter($request)
+    {
+        $data = FooterManagement::find($request->id);
+
+
+        if($data) {
+            DB::beginTransaction();
+
+
+            $save_image_1 = $data->image_1;
+
+            if ($request->has('image_1')) {
+                $image = $request->image_1;
+                $ext = $image->getClientOriginalExtension();
+                $fileName = $image->getClientOriginalName();
+                $fileNameUpload = time() . "-." .$ext;
+                $path = public_path('site/cms/images/');
+                if (!file_exists($path)) {
+                    File::makeDirectory($path, 0777, true);
+                }
+
+                $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'site/cms/images/');
+                $save_image_1 = $imageSave;
+            }
+
+
+
+            $save_image_2 = $data->image_2;
+
+            if ($request->has('image_2')) {
+                $image = $request->image_2;
+                $ext = $image->getClientOriginalExtension();
+                $fileName = $image->getClientOriginalName();
+                $fileNameUpload = time() . "-." .$ext;
+                $path = public_path('site/cms/images/');
+                if (!file_exists($path)) {
+                    File::makeDirectory($path, 0777, true);
+                }
+
+                $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'site/cms/images/');
+                $save_image_2 = $imageSave;
+            }
+
+
+
+            $save_image_3 = $data->image_3;
+
+            if ($request->has('image_3')) {
+                $image = $request->image_3;
+                $ext = $image->getClientOriginalExtension();
+                $fileName = $image->getClientOriginalName();
+                $fileNameUpload = time() . "-." .$ext;
+                $path = public_path('site/cms/images/');
+                if (!file_exists($path)) {
+                    File::makeDirectory($path, 0777, true);
+                }
+
+                $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'site/cms/images/');
+                $save_image_3 = $imageSave;
+            }
+
+
+
+            $save_image_4 = $data->image_4;
+
+            if ($request->has('image_4')) {
+                $image = $request->image_4;
+                $ext = $image->getClientOriginalExtension();
+                $fileName = $image->getClientOriginalName();
+                $fileNameUpload = time() . "-." .$ext;
+                $path = public_path('site/cms/images/');
+                if (!file_exists($path)) {
+                    File::makeDirectory($path, 0777, true);
+                }
+
+                $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'site/cms/images/');
+                $save_image_4 = $imageSave;
+            }
+
+            $save_image_5 = $data->image_5;
+
+            if ($request->has('image_5')) {
+                $image = $request->image_5;
+                $ext = $image->getClientOriginalExtension();
+                $fileName = $image->getClientOriginalName();
+                $fileNameUpload = time() . "-." .$ext;
+                $path = public_path('site/cms/images/');
+                if (!file_exists($path)) {
+                    File::makeDirectory($path, 0777, true);
+                }
+
+                $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'site/cms/images/');
+                $save_image_5 = $imageSave;
+            }
+
+            try {
+                $save = $data->update($request->except('_token','image_1','image_2','image_3','image_4','image_5')+
+                    [
+                        'image_1' => $save_image_1 , 'image_2' => $save_image_2, 'image_3' => $save_image_3,
+                        'image_4' => $save_image_4, 'image_5' => $save_image_5
+                    ]);
 
                 DB::commit();
                 return response()->json(['result' => 'success', 'message' => 'Record Updated']);
