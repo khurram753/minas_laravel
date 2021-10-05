@@ -29,6 +29,13 @@ class AppServiceProvider extends ServiceProvider
 
         view()->composer('layout.front-layout.footer',function ($view){
             $footer = FooterManagement::first();
+
+            $view->with('footer',$footer);
+        });
+
+        view()->composer('layout.shop-layout.footer',function ($view){
+            $footer = FooterManagement::first();
+
             $view->with('footer',$footer);
         });
     }

@@ -1,7 +1,7 @@
 @extends('layout.shop-layout.app')
 
 @section('title')
-    {{env('APP_NAME')}} - My Account
+    {{env('APP_NAME')}} - Order Detail
 @endsection
 
 @section('style')

@@ -1,7 +1,7 @@
 @extends('layout.shop-layout.app')
 
 @section('title')
-    {{env('APP_NAME')}} - Edit Account
+    {{env('APP_NAME')}} - Wishlist
 @endsection
 
 @section('style')

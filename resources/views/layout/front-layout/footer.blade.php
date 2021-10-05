@@ -135,23 +135,23 @@
                 </nav>
                 <div class="footer__logos float-right mobile-hor-hidden">
                     <div class="display--inline footer-logo">
-                        <img src="/site/images/awwwards-mobile-award.png" alt="Minas Designs - Mobile Award"
+                        <img src="{{asset($footer->image_1)}}" alt="Minas Designs - Mobile Award"
                              class="footer-logo-0">
                     </div>
                     <div class="display--inline footer-logo">
-                        <img src="/site/images/css-best-innovation.png" alt="Minas Designs - Best Innovation"
+                        <img src="{{asset($footer->image_2)}}" alt="Minas Designs - Best Innovation"
                              class="footer-logo-1">
                     </div>
                     <div class="display--inline footer-logo">
-                        <img src="/site/images/css-best-ux.png" alt="Minas Designs - Best UI Design"
+                        <img src="{{asset($footer->image_3)}}" alt="Minas Designs - Best UI Design"
                              class="footer-logo-2">
                     </div>
                     <div class="display--inline footer-logo">
-                        <img src="/site/images/css-best-ui.png" alt="Minas Designs - Best UX Design"
+                        <img src="{{asset($footer->image_4)}}" alt="Minas Designs - Best UX Design"
                              class="footer-logo-3">
                     </div>
                     <div class="display--inline footer-logo">
-                        <img src="/site/images/ermis-awards-logo.png" alt="Minas Designs - Ermis Awards 2019"
+                        <img src="{{asset($footer->image_5)}}" alt="Minas Designs - Ermis Awards 2019"
                              class="footer-logo-4">
                     </div>
                 </div>

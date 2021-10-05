@@ -41,10 +41,10 @@
             </a>
         </div>
         <div class="header__right abs-tr a-right">
-                    <span class="header__item item--search hover-red display--inline clickable trans js-popup-opener"
-                          data-target="#popup-search">
-                        <svg class="icon icon--search no-trans"><use xlink:href="#search"></use></svg>
-                    </span>
+{{--                    <span class="header__item item--search hover-red display--inline clickable trans js-popup-opener"--}}
+{{--                          data-target="#popup-search">--}}
+{{--                        <svg class="icon icon--search no-trans"><use xlink:href="#search"></use></svg>--}}
+{{--                    </span>--}}
             <span class="menu-burger display--inline clickable trans relative overflow" id="menu-burger">
                         <span class="burger__line line--top abs-tl trans delay-1"></span>
                         <span class="burger__line line--mid abs-tl trans"></span>

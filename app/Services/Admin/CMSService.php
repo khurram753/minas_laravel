@@ -231,7 +231,7 @@ class CMSService
                 $image = $request->image_1;
                 $ext = $image->getClientOriginalExtension();
                 $fileName = $image->getClientOriginalName();
-                $fileNameUpload = time() . "-." .$ext;
+                $fileNameUpload = time()  . "-1." .$ext;
                 $path = public_path('site/cms/images/');
                 if (!file_exists($path)) {
                     File::makeDirectory($path, 0777, true);
@@ -249,7 +249,7 @@ class CMSService
                 $image = $request->image_2;
                 $ext = $image->getClientOriginalExtension();
                 $fileName = $image->getClientOriginalName();
-                $fileNameUpload = time() . "-." .$ext;
+                $fileNameUpload = time() . "-2." .$ext;
                 $path = public_path('site/cms/images/');
                 if (!file_exists($path)) {
                     File::makeDirectory($path, 0777, true);
@@ -267,7 +267,7 @@ class CMSService
                 $image = $request->image_3;
                 $ext = $image->getClientOriginalExtension();
                 $fileName = $image->getClientOriginalName();
-                $fileNameUpload = time() . "-." .$ext;
+                $fileNameUpload = time() . "-3." .$ext;
                 $path = public_path('site/cms/images/');
                 if (!file_exists($path)) {
                     File::makeDirectory($path, 0777, true);
@@ -285,7 +285,7 @@ class CMSService
                 $image = $request->image_4;
                 $ext = $image->getClientOriginalExtension();
                 $fileName = $image->getClientOriginalName();
-                $fileNameUpload = time() . "-." .$ext;
+                $fileNameUpload = time() . "-4." .$ext;
                 $path = public_path('site/cms/images/');
                 if (!file_exists($path)) {
                     File::makeDirectory($path, 0777, true);
@@ -301,7 +301,7 @@ class CMSService
                 $image = $request->image_5;
                 $ext = $image->getClientOriginalExtension();
                 $fileName = $image->getClientOriginalName();
-                $fileNameUpload = time() . "-." .$ext;
+                $fileNameUpload = time() . "-5." .$ext;
                 $path = public_path('site/cms/images/');
                 if (!file_exists($path)) {
                     File::makeDirectory($path, 0777, true);

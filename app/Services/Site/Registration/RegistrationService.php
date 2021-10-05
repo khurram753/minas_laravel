@@ -41,7 +41,7 @@ class RegistrationService
                     $message = 'Login Successful';
                 }
                 else if (Auth::user()->role->name == 'User') {
-                    $url = route('userDashboard');
+                    $url = route('myAccount');
                     $message = 'Login Successful.';
                 }
                 else{
@@ -66,7 +66,7 @@ class RegistrationService
                     $url = route('adminDashboard');
                     $message = 'Login Successful';
                 } else if (Auth::user()->role->name == 'User') {
-                    $url = route('userDashboard');
+                    $url = route('myAccount');
                     $message = 'Login Successful.';
                 }
                 else if (Auth::user()->role->name == 'SuperAdmin') {

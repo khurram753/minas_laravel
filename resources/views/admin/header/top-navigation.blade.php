@@ -3,13 +3,13 @@
 
     <!-- LOGO -->
     <div class="headerbar-left align-items-center justify-content-between">
-                <a href="{{route('adminDashboard')}}" class="logo">
+                <a href="{{route('home')}}" class="logo">
                     <span><img alt="Logo" src="{{asset('site/images/minas_logodashl.jpeg')}}"/></span>
                     <img alt="Logo" src="{{asset('site/images/minas_logodash.jpeg')}}"/>
                 </a>
 
 
-        
+
 
     </div>
 

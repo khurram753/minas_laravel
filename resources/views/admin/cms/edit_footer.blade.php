@@ -51,8 +51,8 @@
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Vimeo</label>
-                            <input type="text" class="form-control" name="video"
-                                   placeholder="Enter Video" required
+                            <input type="text" class="form-control" name="vimeo_link"
+                                   placeholder="Enter Vimeo Link" required
                                    maxlength="120" value="{{$data->vimeo_link}}">
                         </div>
 
@@ -235,6 +235,51 @@
             });
 
         });
+
+        var fileTypes = ['jpg', 'jpeg', 'png'];
+
+
+        function readURL(input, className) {
+
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                var size = input.files[0].size;
+
+                var extension = input.files[0].name.split('.').pop().toLowerCase(),  //file extension from input file
+                    isSuccess = fileTypes.indexOf(extension) > -1;
+                if (extension != 'jfif') {
+                    // if (isSuccess && size <= 1000000) {
+                    reader.onload = function (e) {
+                        $('.' + className).attr('src', e.target.result);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                    // $('#image_upload_preview').show();
+
+                    // } else {
+                    //     errorMsg('You can only upload png,jpg or jpeg files and size of flag should not greater than 1MB');
+                    //     // $("#image").val('');
+                    //     $('.' + className).parents('div.form-group').find('input').val('');
+                    //     // $('#image_upload_preview').hide();
+                    //     $('.' + className).removeAttr('src');
+                    //     return false;
+                    // }
+                } else {
+                    errorMsg('You can only upload png,jpg or jpeg files');
+                    // $("#image").val('');
+                    // $('#image_upload_preview').hide();
+                    // $('#image_upload_preview').removeAttr('src');
+
+                    // $("#image").val('');
+                    $('.' + className).parents('div.form-group').find('input').val('');
+                    // $('#image_upload_preview').hide();
+                    $('.' + className).removeAttr('src');
+                    return false;
+                }
+            }
+        }
 
 
     </script>
