@@ -5,6 +5,15 @@
 
 .edit_profile_custom .custom-input {
     padding-bottom: 20px;
+    border: none;
+}
+
+.edit_profile_custom .custom-input:focus {
+    outline: none;
+}
+
+.tinv-wishlist-clear .icon.icon--close-thick {
+    fill: red;
 }
 
 .edit_profile_custom form {
