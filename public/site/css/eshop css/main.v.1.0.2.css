@@ -2520,7 +2520,12 @@ button:hover {
 
 .page-template-account .custom-input {
     padding-bottom: 0px;
-    outline: none
+    outline: none;
+    padding-top: 25px;
+}
+
+.page-template-account .woocommerce-Input {
+    padding-top: 25px;
 }
 
 .page-template-account .woocommerce-form-login input:-webkit-autofill,
