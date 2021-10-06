@@ -39,3 +39,21 @@
 .trans .icon.icon--arrow-long-right {
     height: 20px;
 }
+
+.max-12cols-g {
+    padding-top: 200px;
+}
+
+.header__items .color--white,
+.header__items .icon.icon--user {
+    color: #000;
+}
+
+.burger__line {
+    background-color: #000;
+}
+
+.header {
+    background: #fff;
+    height: 100px;
+}
