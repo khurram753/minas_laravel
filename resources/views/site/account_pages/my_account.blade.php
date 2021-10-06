@@ -31,7 +31,7 @@
 
                     <div class="color--black max-8cols-g m-auto">
                         <div class="pt-96">
-                            <div class="pr-xl mb-block relative tablet-nopad--right mobile-hor-mb-60">
+                            <div class="pr-xl mb-block relative tablet-nopad--right mobile-hor-mb-60" style="text-align: center;float: left;width: 35%;">
 {{--                                <div class="u-columns woocommerce-Addresses col2-set addresses relative">--}}
 
 

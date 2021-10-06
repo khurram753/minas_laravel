@@ -69,7 +69,7 @@ class RegistrationService
                     $url = route('myAccount');
                     $message = 'Login Successful.';
                 }
-                else if (Auth::user()->role->name == 'SuperAdmin') {
+                else  {
 //                    $url = route('userProfile');
                     $message = 'Login Successful.';
                 }
