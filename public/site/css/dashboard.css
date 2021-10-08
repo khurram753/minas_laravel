@@ -55,5 +55,25 @@
 
 .header {
     background: #fff;
-    height: 100px;
+    height: 90px;
+}
+
+@media all and (min-width: 340px) {
+    .set_circle_btn {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left: 62%;
+        transform: translate(-50%, 0px);
+    }
+}
+
+@media all and (min-width: 1199px) {
+    .set_circle_btn {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left: 56%;
+        transform: translate(-50%, 0px);
+    }
 }
