@@ -11,7 +11,7 @@
         <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
         <div class="header__items font-bold title-12 lh-n ls-180 color--white uppercase">
             <a href="{{route('home')}}" class="color--white line-underline hover-red header__item display--inline tablet-hidden">
-                Minas`s world
+                Seventy Nine`s world
             </a>
             <svg class="icon icon--user trans header__item display--inline mobile-hor-hidden ">
                 <use xlink:href="#user"></use>

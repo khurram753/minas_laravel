@@ -20,17 +20,15 @@
 {{--                </span>--}}
             </span>
             <div class="relative">
-                <div
-                    class="footer-content color-grey-med display--inline-top maxw-270 block-100 mb-43 mobile-hor-mb-20 trans mobile-100">
-                    <div
-                        class="mb-24 opc-0 no-visible js-fade-up relative skrollr-pointer skrollable skrollable-before"
+
+                <div class="footer-content color-grey-med display--inline-top maxw-270 block-100 mb-43 mobile-hor-mb-20 trans mobile-100">
+                    <div class="mb-24 opc-0 no-visible js-fade-up relative skrollr-pointer skrollable skrollable-before"
                         data-emit-events="" data-bottom-top="" style="">
-                        <h3>KIFISSIA</h3>
-                        <p><em>FLAGSHIP STORE</em></p>
-                        <p>8, Emmanouel Benaki Str.<br>
-                            145 61 Kifissia, Athens<br>
-                            T&nbsp; &nbsp;<a href="tel:+30 210 6233 577">+30 210 6233 577</a><br>
-                            E &nbsp; <a href="#">getintouch@minas-designs.com</a></p>
+                        <h3>{{$contactUs->title}}</h3>
+{{--                        <p><em>FLAGSHIP STORE</em></p>--}}
+                        <p>{{$contactUs->address}}<br>
+                            T&nbsp; &nbsp;<a href="tel:{{$contactUs->phone_number}}">{{$contactUs->phone_number}}</a><br>
+                            E &nbsp; <a href="mailto:{{$contactUs->email}}" target="_blank" rel="noopener noreferrer">{{$contactUs->email}}</a></p>
                     </div>
                     <a href="#" target="_blank" rel="noopener noreferrer">
                         <span class="opc-0 no-visible js-fade-up relative skrollr-pointer display--block skrollable skrollable-before" data-delay=".1" data-emit-events="" data-bottom-top="" style="">
@@ -116,8 +114,8 @@
             <div class="footer__copyrights  relative color-grey-med font-light font-12 opc-0 no-visible js-fade-up skrollr-pointer skrollable skrollable-before"
                 data-emit-events="" data-bottom-top="" data-delay=".25" data-trans="1.4" style="">
                 <div class="mr-25 display--inline-top mr-20">
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="link-line link-to-white">KOMMIGRAPHICS</a>
-                    FOR Seventeen Design© 2019-2021
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="link-line link-to-white">SEVENTY NINE</a>
+                    SAITH DEG NAW LTD © {{\Carbon\Carbon::now()->format('Y')}}
                 </div>
                 <nav class="copyright-menu display--inline-top">
                     <ul id="menu-copyright_menu_en" class="menu-ul">

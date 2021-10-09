@@ -40,13 +40,13 @@
         <div class="footer__gap-right relative">
             <div class="columns-2-g display--inline-top tablet-hor-40 tablet-33 mobile-hor-100">
                 <div class="gutter mobile-hor-gutter">
-                    <div class="font-light title-25 color--white uppercase style-bolds mb-g"><b>Kifissia</b><br>flagship
-                        store
+                    <div class="font-light title-25 color--white uppercase style-bolds mb-g"><b>{{$contactUs->title}}</b>
                     </div>
-                    <div class="footer__text style-links-hover-white"><p>8, Emmanouel Benaki Str.<br/>
-                            145 61 Kifissia, Athens<br/>
-                            T +30 210 6233 577<br/>
-                            E <a href="#">getintouch@minas-designs.com</a></p>
+                    <div class="footer__text style-links-hover-white">
+                        <p>{{$contactUs->address}}.<br/>
+                            T <a href="tel:{{$contactUs->phone_number}}">{{$contactUs->phone_number}}</a><br/>
+                            E <a href="mailto:{{$contactUs->email}}" target="_blank" rel="noopener noreferrer">{{$contactUs->email}}</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -133,9 +133,9 @@
         <div class="gutter font-light title-12 ls-100 color--grey-med uppercase mobile-hor-gutter">
             <div class="display--inline">
                 <a href="#" target="_blank" rel="noopener noreferrer"
-                   class="color--grey-med hover-white">Kommigraphics</a>
+                   class="color--grey-med hover-white">SEVENTY NINE</a>
                 &amp; <a href="https://www.lab21.gr" target="_blank" rel="noopener noreferrer"
-                         class="color--grey-med hover-white">Lab21</a> for Minas designs &copy; 2019-2021
+                         class="color--grey-med hover-white">SAITH DEG NAW LTD </a> &copy; {{\Carbon\Carbon::now()->format('Y')}}
             </div>
             <nav class="footer__copyright-menu display--inline">
                 <ul id="menu-copyrightsmenu_en" class="menu-ul">

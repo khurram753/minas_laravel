@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Category;
+use App\ContactUs;
 use App\FooterManagement;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
@@ -29,14 +31,25 @@ class AppServiceProvider extends ServiceProvider
 
         view()->composer('layout.front-layout.footer',function ($view){
             $footer = FooterManagement::first();
-
-            $view->with('footer',$footer);
+            $contactUs = ContactUs::first();
+            $view->with('footer',$footer)->with( 'contactUs',$contactUs);
         });
+
+
+
+
 
         view()->composer('layout.shop-layout.footer',function ($view){
             $footer = FooterManagement::first();
-
-            $view->with('footer',$footer);
+            $contactUs = ContactUs::first();
+            $view->with('footer',$footer)->with( 'contactUs',$contactUs);
         });
+
+
+        view()->composer('layout.shop-layout.navigation',function ($view){
+            $headerCategories = Category::inRandomOrder()->limit('2')->get();
+            $view->with('headerCategories',$headerCategories);
+        });
+
     }
 }
