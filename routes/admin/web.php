@@ -189,6 +189,14 @@ Route::namespace('Admin')->group(function () {
         Route::post('faq-delete', 'FAQController@delete')->name('faqDelete');
 
 
+        Route::get('collection-listing', 'CollectionController@index')->name('collectionListing');
+        Route::get('create-collection', 'CollectionController@create')->name('collectionCreate');
+        Route::post('save-collection', 'CollectionController@save')->name('collectionSave');
+        Route::get('edit-collection/{id}', 'CollectionController@edit')->name('collectionEdit');
+        Route::post('update-collection', 'CollectionController@update')->name('collectionUpdate');
+        Route::post('collection-delete', 'CollectionController@delete')->name('collectionDelete');
+
+
         Route::get('order-listing','OrderController@index')->name('orderListing');
         Route::get('order-detail/{id}', 'OrderController@orderDetail')->name('orderDetail');
         Route::get('order-completed/{id}','OrderController@completed')->name('orderCompleted');

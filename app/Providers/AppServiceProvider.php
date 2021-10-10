@@ -48,7 +48,9 @@ class AppServiceProvider extends ServiceProvider
 
         view()->composer('layout.shop-layout.navigation',function ($view){
             $headerCategories = Category::inRandomOrder()->limit('2')->get();
-            $view->with('headerCategories',$headerCategories);
+            $headerAllCategories = Category::all();
+
+            $view->with('headerCategories',$headerCategories)->with('headerAllCategories',$headerAllCategories);
         });
 
     }

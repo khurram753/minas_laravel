@@ -1,7 +1,7 @@
 @extends('layout.dashboard-layout.app')
 
 @section('title')
-    Create Product
+    Create Collection
 @endsection
 
 
@@ -12,10 +12,10 @@
             <div class="row">
                 <div class="col-xl-12 bh-mb">
                     <div class="breadcrumb-holder">
-                        <h1 class="main-title float-left">Create Product</h1>
+                        <h1 class="main-title float-left">Create Collection</h1>
                         <ol class="breadcrumb float-right">
                             <li class="breadcrumb-item">Home</li>
-                            <li class="breadcrumb-item active">Create Product</li>
+                            <li class="breadcrumb-item active">Create Collection</li>
                         </ol>
                         <div class="clearfix"></div>
                     </div>
@@ -26,117 +26,37 @@
                 @csrf
                 <div class="row">
 
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Name</label>
                             <input type="text" class="form-control" name="name"
                                    placeholder="Enter Name" required
                                    maxlength="50">
                         </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
 
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Price</label>
-                            <input type="text" class="form-control" name="price"
-                                   placeholder="Enter Price" required
-                                   maxlength="5">
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Description</label>
-                            <textarea type="text" class="form-control editor" name="description"
-                                      placeholder="Enter Description"></textarea>
+                            <label for="exampleInputEmail1">Short Description</label>
+                            <textarea class="form-control" name="short_description" placeholder="Enter Short Description"></textarea>
                         </div>
 
-                    </div>
 
-
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Category</label>
-                            <select name="category_id" class="form-control">
-                                <option value="" selected disabled>Please Select Category</option>
-                                @foreach($categories as $category)
-                                    <option value="{{$category->id}}">{{$category->name}}</option>
-                                @endforeach
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Cords</label>
-                            <select name="cord_id[]" multiple class="form-control multi">
-                                @foreach($cords as $cord)
-                                    <option value="{{$cord->id}}">{{$cord->name}}</option>
-                                @endforeach
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Materials</label>
-                            <select name="material_id[]" multiple class="form-control multi">
-                                @foreach($materials as $material)
-                                    <option value="{{$material->id}}">{{$material->name}}</option>
-                                @endforeach
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Size</label>
-                            <input type="text" class="form-control" name="size"
-                                   placeholder="Enter Size" required>
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Dimension</label>
-                            <input type="text" class="form-control" name="dimension"
-                                   placeholder="Enter Dimension" required>
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Collection</label>
-                            <select name="collection_id"  class="form-control">
-                                <option value="" selected disabled>Please Select Collection</option>
-                                @foreach($collections as $collection)
-                                    <option value="{{$collection->id}}">{{$collection->name}}</option>
-                                @endforeach
-                            </select>
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <div class="custom-dbhome">
                             <div class="form-group ">
                                 <div class="db-bannerIMG">
+
                                     <img class="image_1" src="{{asset('admin/images/no_image.jpg')}}">
+
+
                                 </div>
-                                <label for="exampleInputEmail1">Image </label>
+                                <label for="exampleInputEmail1">Background Image </label>
                                 <input type="file" class="images_select" name="image"
                                        onchange="readURL(this,'image_1');">
+
                             </div>
                         </div>
+
+
+
                     </div>
 
 
@@ -146,7 +66,7 @@
                 <button class="btn btn-primary" type="button" id="createBtn">Create</button>
 
 
-                <a href="{{route('productListing')}}">
+                <a href="{{route('collectionListing')}}">
                     <button class="btn btn-primary" type="button">Cancel</button>
                 </a>
 
@@ -165,11 +85,9 @@
 
         $(document).ready(function () {
 
-            $('.multi').select2();
-
             $('#createBtn').click(function () {
 
-
+                // var data = $('#employeeForm').serialize();
                 var data = new FormData($('#employeeForm')[0]);
 
                 $.blockUI({
@@ -188,7 +106,7 @@
                 $.ajax({
 
                     type: 'POST',
-                    url: '{{route("productSave")}}',
+                    url: '{{route("collectionSave")}}',
                     data: data,
                     cache: false,
                     contentType: false,
@@ -202,7 +120,7 @@
                             successMsg(response.message);
 
                             setTimeout(function () {
-                                    window.location.href = '{{route('productListing')}}'
+                                    window.location.href = '{{route('collectionListing')}}'
                                 }
                                 , 2000);
                         } else if (response.result == 'error') {
@@ -223,11 +141,10 @@
                 });
 
             });
-
-
         });
 
         var fileTypes = ['jpg', 'jpeg', 'png'];
+
 
         function readURL(input, className) {
 
@@ -270,7 +187,6 @@
                 }
             }
         }
-
     </script>
 
 @endsection

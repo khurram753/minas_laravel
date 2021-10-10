@@ -299,6 +299,23 @@
 
                 <li class="submenu">
                     <a
+                        @if(Request()->route()->getName() == 'collectionListing' ||
+                            Request()->route()->getName() == 'collectionCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-tachometer-alt"></i> <span> Collection </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('collectionListing')}}">Listing</a></li>
+                        <li><a href="{{route('collectionCreate')}}">Create New Collection</a></li>
+                    </ul>
+                </li>
+
+                <li class="submenu">
+                    <a
                         @if(Request()->route()->getName() == 'productListing' ||
                             Request()->route()->getName() == 'productCreate')
                         class="active"

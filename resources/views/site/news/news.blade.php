@@ -14,6 +14,7 @@
 
 @section('content')
     <main class="main-content new-page bg-grey tablet-hor-padded tablet-hor-pb-100" id="content">
+
         <section class="news-page-intro">
             @include('site.news.section.category')
             @include('site.news.section.year')
@@ -49,6 +50,7 @@
 
             </div>
         </section>
+
         <div class="grid max-8cols-g mobile-hor-100">
             <div class="gutter mobile-hor-gutter">
                 <article class="block-100 display--block" itemscope itemtype="http://schema.org/NewsArticle">
@@ -96,14 +98,31 @@
 
         <div class="grid max-12cols-g mobile-hor-100">
             <div class="gutter news-list mobile-hor-nomargin">
+                @php
+                    $loopVar = 3;
+                @endphp
                 @foreach($news as $key => $simpleNews)
 
-                    @if($key == 0)
+{{--                    @dump($key+1,$loopVar)--}}
+                    @if($key+1 == 1)
                         <div class="post-holder relative tablet-hor-center">
                             <div class="line line--black line--abs abs-bl post-holder__line scale-x origin-c js-scale-lr skrollr-pointer skrollable skrollable-after loc" data-emit-events="" data-bottom-top="" data-cubic="custom" data-trans="1.3" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
-                    @elseif($key !=0 && $key % 3  == 0)
-                                <div class="post-holder relative tablet-hor-center">
-                                    <div class="line line--black line--abs abs-bl post-holder__line scale-x origin-c js-scale-lr skrollr-pointer skrollable skrollable-after loc" data-emit-events="" data-bottom-top="" data-cubic="custom" data-trans="1.3" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                    @elseif($key+1 == 4)
+{{--                        @dump('draw linw 1st else if')--}}
+                        </div>
+                        <div class="post-holder relative tablet-hor-center">
+                            <div class="line line--black line--abs abs-bl post-holder__line scale-x origin-c js-scale-lr skrollr-pointer skrollable skrollable-after loc" data-emit-events="" data-bottom-top="" data-cubic="custom" data-trans="1.3" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                            @php
+                                $loopVar = ($key+1)+3;
+                            @endphp
+                    @elseif( $key+1 == $loopVar && $loopVar != 3 )
+{{--                                @dump('draw linw 2nd else if')--}}
+                        </div>
+                        <div class="post-holder relative tablet-hor-center">
+                            <div class="line line--black line--abs abs-bl post-holder__line scale-x origin-c js-scale-lr skrollr-pointer skrollable skrollable-after loc" data-emit-events="" data-bottom-top="" data-cubic="custom" data-trans="1.3" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                            @php
+                                $loopVar = $loopVar+3;
+                            @endphp
                     @endif
 
                         <article class="block-33 tablet-hor-50 tablet-100 mb-37 display--inline-top mt-50 " itemscope itemtype="http://schema.org/NewsArticle">
@@ -143,9 +162,12 @@
                             </div>
                         </article>
 
-                    @if($key !=0 && $key % 3  == 0)
-                                </div>
-                    @endif
+{{--                    @if($key+1 == $loopVar)--}}
+{{--                       </div>--}}
+{{--                                @php--}}
+{{--                                    $loopVar = $loopVar+3;--}}
+{{--                                @endphp--}}
+{{--                    @endif--}}
                 @endforeach
 {{--                <div class="page-navigation relative gutter opc-0 no-visible js-fade-in skrollr-pointer" data-emit-events  data-bottom-top="" data-delay=".4" data-cubic="custom" data-trans="0.8">--}}
 {{--                    <nav class="navigation pagination" role="navigation">--}}
