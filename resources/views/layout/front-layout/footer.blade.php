@@ -1,6 +1,6 @@
 <footer id="footer" class="relative footer z-30 overflow">
     <div class="fill-dimensions cover-img bg-attachment-fixed"
-         style="background-image: url('{{asset('/site/images/footer_bg.jpg')}}')">
+         style="background-image: url('{{$footer->background_image ? asset($footer->background_image):asset('/site/images/footer_bg.jpg')}}')">
         <div class="multiply bg-black opc-30 fill-dimensions"></div>
     </div>
     <div class="over grid max-12cols-g trans mobile-hor-100">

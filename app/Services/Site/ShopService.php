@@ -3,6 +3,8 @@
 namespace App\Services\Site;
 
 use App\Category;
+use App\CMS;
+
 use App\Cord;
 use App\CustomOrder;
 use App\Heritage;
@@ -76,6 +78,8 @@ class ShopService
             }
         }
 
+        $cms = CMS::where('page_name','shop')->first();
+
         $categories = Category::all();
 
         $heritageImages = Heritage::select('image')->get();
@@ -129,7 +133,7 @@ class ShopService
 
 
         return view('site.shop.shop',compact('heritageImages','earings','mensCollection',
-            'pendants','categories'));
+            'pendants','categories','cms'));
     }
 
     public function detail($category_id,$request)

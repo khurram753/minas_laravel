@@ -23,7 +23,7 @@
     <span class="home-nav__sep display--inline"></span> 5
 </aside>
 <footer class="footer relative" id="colophon">
-    <div class="fill-dimensions cover-img bLazy-bg mobile-hor-hidden" data-src="{{asset('site/images/footer_bg.jpg')}}"></div>
+    <div class="fill-dimensions cover-img bLazy-bg mobile-hor-hidden" data-src="{{$footer->background_image ? asset($footer->background_image):asset('/site/images/footer_bg.jpg')}}"></div>
     <div class="grad-black-top block-100 h-60 abs-tl z-1"></div>
     <div class="grid max-12cols-g over color--footer mobile-hor-100">
         <div class="gutter a-right mobile-hor-gutter mobile-hor-left">

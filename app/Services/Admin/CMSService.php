@@ -311,11 +311,27 @@ class CMSService
                 $save_image_5 = $imageSave;
             }
 
+            $save_background_image = $data->background_image;
+
+            if ($request->has('background_image')) {
+                $image = $request->background_image;
+                $ext = $image->getClientOriginalExtension();
+                $fileName = $image->getClientOriginalName();
+                $fileNameUpload = time() . "-6." .$ext;
+                $path = public_path('site/cms/images/');
+                if (!file_exists($path)) {
+                    File::makeDirectory($path, 0777, true);
+                }
+
+                $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'site/cms/images/');
+                $save_background_image = $imageSave;
+            }
+
             try {
-                $save = $data->update($request->except('_token','image_1','image_2','image_3','image_4','image_5')+
+                $save = $data->update($request->except('_token','image_1','image_2','image_3','image_4','image_5','background_image')+
                     [
                         'image_1' => $save_image_1 , 'image_2' => $save_image_2, 'image_3' => $save_image_3,
-                        'image_4' => $save_image_4, 'image_5' => $save_image_5
+                        'image_4' => $save_image_4, 'image_5' => $save_image_5, 'background_image'=>$save_background_image
                     ]);
 
                 DB::commit();
@@ -572,5 +588,59 @@ class CMSService
             return response()->json(['result'=>'error','message'=>'Record Not Found']);
         }
     }
+
+    public function editShop()
+    {
+        $data =  CMS::where('page_name','shop')->first();
+
+        if($data)
+        {
+            return view('admin.cms.edit_shop',compact('data'));
+        }
+        else{
+            return redirect()->route('adminDashboard')->with('error','Record Not Found');
+        }
+    }
+
+    public function updateShop($request)
+    {
+        $data = CMS::find($request->id);
+
+
+        if($data) {
+            DB::beginTransaction();
+
+            $save_image = $data->image;
+
+            if ($request->has('image')) {
+                $image = $request->image;
+                $ext = $image->getClientOriginalExtension();
+                $fileName = $image->getClientOriginalName();
+                $fileNameUpload = time() . "-." .$ext;
+                $path = public_path('site/cms/images/');
+                if (!file_exists($path)) {
+                    File::makeDirectory($path, 0777, true);
+                }
+
+                $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'site/cms/images/');
+                $save_image = $imageSave;
+            }
+
+            try {
+                $save = $data->update($request->except('_token', 'image') + ['image' => $save_image]);
+
+                DB::commit();
+                return response()->json(['result' => 'success', 'message' => 'Record Updated']);
+
+            } catch (\Exception $e) {
+                DB::rollBack();
+                return response()->json(['result' => 'error', 'message' => 'Unable to Update Record: ' . $e]);
+            }
+        }
+        else{
+            return response()->json(['result'=>'error','message'=>'Record Not Found']);
+        }
+    }
+
 
 }

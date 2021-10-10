@@ -26,6 +26,7 @@
                         Request()->route()->getName() == 'qualityEdit' ||
                         Request()->route()->getName() == 'mainPageEdit' ||
                         Request()->route()->getName() == 'policyEdit' ||
+                        Request()->route()->getName() == 'shopPageEdit' ||
                         Request()->route()->getName() == 'bannerEdit')
                         class="active"
                         @endif
@@ -43,6 +44,7 @@
                         <li><a href="{{route('qualityEdit')}}">Quality & Craftsmanship</a></li>
                         <li><a href="{{route('heritagePageEdit')}}">Heritage</a></li>
                         <li><a href="{{route('footerEdit')}}">Footer</a></li>
+                        <li><a href="{{route('shopPageEdit')}}">Shop</a></li>
                     </ul>
                 </li>
 

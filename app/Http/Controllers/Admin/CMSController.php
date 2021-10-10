@@ -105,5 +105,15 @@ class CMSController extends Controller
     }
 
 
+    public function editShop(CMSService $service)
+    {
+        return $service->editShop();
+    }
+
+    public function updateShop (Request $request,CMSService $service)
+    {
+        return $service->updateShop($request);
+    }
+
 
 }
