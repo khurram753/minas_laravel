@@ -8,4 +8,5 @@ class ProductCollection extends Model
 {
     //
     protected $guarded = [];
+
 }

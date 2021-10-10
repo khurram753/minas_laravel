@@ -28,7 +28,9 @@
     <div class="grid max-12cols-g over color--footer mobile-hor-100">
         <div class="gutter a-right mobile-hor-gutter mobile-hor-left">
             <div class="max-4cols ml-auto color--white pb-f mobile-pb-50 tablet-maxw-100">
-                <div class="font-thin title-70 uppercase mb-med">Be part of minas world</div>
+                <div class="font-thin title-70 uppercase mb-med">
+                    {{$footer->tag_line}}
+                </div>
 {{--                <div class="font-bold title-12 uppercase ls-180 cursor hover-red trans" id="open-ns-popup">Subscribe--}}
 {{--                    to our newsletter--}}
 {{--                    <svg class="icon icon--arrow-long-right ml-arrow no-trans relative t-sm newsletter-arrow">--}}
@@ -51,11 +53,13 @@
                 </div>
             </div>
             <div class="block-60 max-4cols-g display--inline-top tablet-33 mobile-hor-100 mobile-hor-hidden">
-{{--                <div class="gutter pb-med mobile-hor-gutter">--}}
-{{--                    <div class="font-light title-25 color--white uppercase style-bolds mb-g"><b>The shopping</b><br>experience--}}
-{{--                    </div>--}}
-{{--                    <div class="footer__menu columns-3 footer__text">--}}
-{{--                        <a href="eshop-product-category.html" class="footer__menu-item">Pendants</a>--}}
+                <div class="gutter pb-med mobile-hor-gutter">
+                    <div class="font-light title-25 color--white uppercase style-bolds mb-g"><b>The shopping</b><br>experience
+                    </div>
+                    <div class="footer__menu columns-3 footer__text">
+                        @foreach($footerCategories as $footerCategory)
+                            <a href="{{route('shopCategory',['category_id'=>$footerCategory->id])}}" class="footer__menu-item">{{$footerCategory->name}}</a>
+                        @endforeach
 {{--                        <a href="eshop-product-category.html" class="footer__menu-item">Rings</a>--}}
 {{--                        <ul id="menu-footermenu_en" class="menu-ul">--}}
 {{--                            <li id="menu-item-494"--}}
@@ -83,26 +87,26 @@
 {{--                                </span>--}}
 {{--                            </li>--}}
 {{--                        </ul>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                    </div>
+                </div>
             </div>
             <div class="footer__socials columns-2-g abs-tr display--inline-top tablet-rel tablet-33 mobile-hor-100">
                 <div class="gutter font-light title-12 ls-180 uppercase mobile-hor-gutter">
-                    <a href="#" target="_blank" rel="nofollow noopener noreferrer"
+                    <a href="{{$footer->instagram_link}}" target="_blank" rel="nofollow noopener noreferrer"
                        class="social-link relative display--block color--grey-med hover-white mobile-hor-display-inline">
                             <span class="social-link__icon abs-tl mobile-hor-rel mobile-hor-display-inline"><svg
                                     class="icon icon--instagram abs-center mobile-hor-rel-no-center"><use
                                         xlink:href="#social-instagram"></use></svg></span><span
                             class="mobile-hor-hidden">instagram</span>
                     </a>
-                    <a href="#" target="_blank" rel="nofollow noopener noreferrer"
+                    <a href="{{$footer->vimeo_link}}" target="_blank" rel="nofollow noopener noreferrer"
                            class="social-link relative display--block color--grey-med hover-white mobile-hor-display-inline">
                         <span class="social-link__icon abs-tl mobile-hor-rel mobile-hor-display-inline"><svg
                                 class="icon icon--vimeo abs-center mobile-hor-rel-no-center"><use
                                     xlink:href="#social-vimeo"></use></svg></span><span
                             class="mobile-hor-hidden">vimeo</span>
                     </a>
-                    <a href="#" target="_blank" rel="nofollow noopener noreferrer"
+                    <a href="{{$footer->facebook_link}}" target="_blank" rel="nofollow noopener noreferrer"
                            class="social-link relative display--block color--grey-med hover-white mobile-hor-display-inline">
                         <span class="social-link__icon abs-tl mobile-hor-rel mobile-hor-display-inline"><svg
                                 class="icon icon--facebook abs-center mobile-hor-rel-no-center"><use

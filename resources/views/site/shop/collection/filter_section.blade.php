@@ -55,7 +55,7 @@
                                  class="woof_container woof_container_checkbox woof_container_collection woof_container_1 woof_container_collections">
                                 <div class="woof_container_overlay_item"></div>
                                 <div class="woof_container_inner woof_container_inner_collections">
-                                    <h4>Collections </h4>
+                                    <h4>Product Category </h4>
                                     <div class="woof_block_html_items">
                                         <ul class="woof_list woof_list_checkbox">
 
@@ -63,7 +63,7 @@
                                                 <li class="woof_term_41 ">
                                                 <input type="radio" id="woof_41_60ce9a873a7eb"
                                                        class="woof_checkbox_term woof_checkbox_term_41"
-                                                       data-tax="collection" name="collection_id"
+                                                       data-tax="collection" name="category_id"
                                                        {{Request()->get('collection_id') == $cord->id ? 'checked':''}}
                                                        data-term-id="41" value="{{$cord->id}}"/>
                                                 <label class="woof_checkbox_label " for="woof_41_60ce9a873a7eb">

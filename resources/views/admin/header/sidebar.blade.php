@@ -270,13 +270,13 @@
                         class="active"
                         @endif
                         href="javascript:void(0)">
-                        <i class="fas fa-tachometer-alt"></i> <span> Cords </span>
+                        <i class="fas fa-tachometer-alt"></i> <span> Bar </span>
                         <span class="menu-arrow"></span>
                     </a>
 
                     <ul class="list-unstyled">
                         <li><a href="{{route('cordListing')}}">Listing</a></li>
-                        <li><a href="{{route('cordCreate')}}">Create New Cords</a></li>
+                        <li><a href="{{route('cordCreate')}}">Create New Bar</a></li>
                     </ul>
                 </li>
 

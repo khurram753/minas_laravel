@@ -49,27 +49,29 @@
                         </span>
                     </li>
                 </ul>
-{{--                <li class="main-item main-item menu-item menu-item-has-children menu-item--collections">--}}
-{{--                    <span class="menu-item-inner relative display--block">--}}
-{{--                        <span class="menu-a uppercase">--}}
-{{--                            Collections--}}
-{{--                        </span>--}}
-{{--                        <svg class="icon icon--arrow-small-right color--black abs-tr no-visible">--}}
-{{--                            <use xlink:href="#arrow-small-right"></use>--}}
-{{--                        </svg>--}}
-{{--                    </span>--}}
-{{--                    <div class="secondary-nav secondary-nav--collections">--}}
-{{--                        <div class="secondary-nav__inner">--}}
-{{--                            <ul class="submenu-list menu-ul">--}}
-{{--                                <li class="submenu-item submnu-1">--}}
-{{--                                    <a href="eshop-product-category.html" class="submenu-a menu-link item--104 uppercase">--}}
-{{--                                        Hearts--}}
-{{--                                    </a>--}}
-{{--                                </li>--}}
-{{--                            </ul>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </li>--}}
+                <li class="main-item main-item menu-item menu-item-has-children menu-item--collections">
+                    <span class="menu-item-inner relative display--block">
+                        <span class="menu-a uppercase">
+                            Collections
+                        </span>
+                        <svg class="icon icon--arrow-small-right color--black abs-tr no-visible">
+                            <use xlink:href="#arrow-small-right"></use>
+                        </svg>
+                    </span>
+                    <div class="secondary-nav secondary-nav--collections">
+                        <div class="secondary-nav__inner">
+                            <ul class="submenu-list menu-ul">
+                                @foreach($headerCollections as $key => $headerCollection)
+                                <li class="submenu-item submnu-1">
+                                    <a href="{{route('collectionPage',['collection_id'=>$headerCollection->id])}}" class="submenu-a menu-link item--104 uppercase">
+                                        {{$headerCollection->name}}
+                                    </a>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </li>
 {{--                <li class="main-item main-item menu-item menu-item-has-children menu-item--lookbooks">--}}
 {{--                    <span class="menu-item-inner relative display--block">--}}
 {{--                        <span class="menu-a uppercase">--}}
