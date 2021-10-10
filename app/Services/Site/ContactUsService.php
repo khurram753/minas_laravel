@@ -11,9 +11,9 @@ class ContactUsService
     public function index()
     {
         $stores = ContactUs::all();
-        $greeceRetailers = Retailer::where('country','GREECE')->where('status','accepted')
+        $greeceRetailers = Retailer::where('country','UK')->where('status','accepted')
             ->where('request_type','BECOME A RETAILER')->get();
-        $internationalRetailers = Retailer::where('country','!=','GREECE')->where('status','accepted')
+        $internationalRetailers = Retailer::where('country','!=','UK')->where('status','accepted')
             ->where('request_type','BECOME A RETAILER')->get();
         return view('site.contact_us.contact_us',compact('stores','greeceRetailers','internationalRetailers'));
     }
