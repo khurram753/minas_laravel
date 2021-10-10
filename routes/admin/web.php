@@ -36,6 +36,9 @@ Route::namespace('Admin')->group(function () {
         Route::get('edit-heritage-page','CMSController@editHeritage')->name('heritagePageEdit');
         Route::post('update-heritage-page', 'CMSController@updateHeritage')->name('heritagePageUpdate');
 
+        Route::get('edit-shop-page','CMSController@editShop')->name('shopPageEdit');
+        Route::post('update-shop-page', 'CMSController@updateShop')->name('shopPageUpdate');
+
 
         Route::get('edit-about-us','CMSController@editAboutUs')->name('aboutUsEdit');
         Route::post('update-about-us', 'CMSController@updateAboutUs')->name('aboutUsUpdate');
@@ -187,6 +190,14 @@ Route::namespace('Admin')->group(function () {
         Route::get('edit-faq/{id}', 'FAQController@edit')->name('faqEdit');
         Route::post('update-faq', 'FAQController@update')->name('faqUpdate');
         Route::post('faq-delete', 'FAQController@delete')->name('faqDelete');
+
+
+        Route::get('collection-listing', 'CollectionController@index')->name('collectionListing');
+        Route::get('create-collection', 'CollectionController@create')->name('collectionCreate');
+        Route::post('save-collection', 'CollectionController@save')->name('collectionSave');
+        Route::get('edit-collection/{id}', 'CollectionController@edit')->name('collectionEdit');
+        Route::post('update-collection', 'CollectionController@update')->name('collectionUpdate');
+        Route::post('collection-delete', 'CollectionController@delete')->name('collectionDelete');
 
 
         Route::get('order-listing','OrderController@index')->name('orderListing');

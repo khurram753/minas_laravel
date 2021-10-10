@@ -26,6 +26,7 @@
                         Request()->route()->getName() == 'qualityEdit' ||
                         Request()->route()->getName() == 'mainPageEdit' ||
                         Request()->route()->getName() == 'policyEdit' ||
+                        Request()->route()->getName() == 'shopPageEdit' ||
                         Request()->route()->getName() == 'bannerEdit')
                         class="active"
                         @endif
@@ -43,6 +44,7 @@
                         <li><a href="{{route('qualityEdit')}}">Quality & Craftsmanship</a></li>
                         <li><a href="{{route('heritagePageEdit')}}">Heritage</a></li>
                         <li><a href="{{route('footerEdit')}}">Footer</a></li>
+                        <li><a href="{{route('shopPageEdit')}}">Shop</a></li>
                     </ul>
                 </li>
 
@@ -270,13 +272,13 @@
                         class="active"
                         @endif
                         href="javascript:void(0)">
-                        <i class="fas fa-tachometer-alt"></i> <span> Cords </span>
+                        <i class="fas fa-tachometer-alt"></i> <span> Bar </span>
                         <span class="menu-arrow"></span>
                     </a>
 
                     <ul class="list-unstyled">
                         <li><a href="{{route('cordListing')}}">Listing</a></li>
-                        <li><a href="{{route('cordCreate')}}">Create New Cords</a></li>
+                        <li><a href="{{route('cordCreate')}}">Create New Bar</a></li>
                     </ul>
                 </li>
 
@@ -294,6 +296,23 @@
                     <ul class="list-unstyled">
                         <li><a href="{{route('materialListing')}}">Listing</a></li>
                         <li><a href="{{route('materialCreate')}}">Create New Material</a></li>
+                    </ul>
+                </li>
+
+                <li class="submenu">
+                    <a
+                        @if(Request()->route()->getName() == 'collectionListing' ||
+                            Request()->route()->getName() == 'collectionCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-tachometer-alt"></i> <span> Collection </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('collectionListing')}}">Listing</a></li>
+                        <li><a href="{{route('collectionCreate')}}">Create New Collection</a></li>
                     </ul>
                 </li>
 

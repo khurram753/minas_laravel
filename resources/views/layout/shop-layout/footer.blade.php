@@ -23,12 +23,14 @@
     <span class="home-nav__sep display--inline"></span> 5
 </aside>
 <footer class="footer relative" id="colophon">
-    <div class="fill-dimensions cover-img bLazy-bg mobile-hor-hidden" data-src="{{asset('site/images/footer_bg.jpg')}}"></div>
+    <div class="fill-dimensions cover-img bLazy-bg mobile-hor-hidden" data-src="{{$footer->background_image ? asset($footer->background_image):asset('/site/images/footer_bg.jpg')}}"></div>
     <div class="grad-black-top block-100 h-60 abs-tl z-1"></div>
     <div class="grid max-12cols-g over color--footer mobile-hor-100">
         <div class="gutter a-right mobile-hor-gutter mobile-hor-left">
             <div class="max-4cols ml-auto color--white pb-f mobile-pb-50 tablet-maxw-100">
-                <div class="font-thin title-70 uppercase mb-med">Be part of minas world</div>
+                <div class="font-thin title-70 uppercase mb-med">
+                    {{$footer->tag_line}}
+                </div>
 {{--                <div class="font-bold title-12 uppercase ls-180 cursor hover-red trans" id="open-ns-popup">Subscribe--}}
 {{--                    to our newsletter--}}
 {{--                    <svg class="icon icon--arrow-long-right ml-arrow no-trans relative t-sm newsletter-arrow">--}}
@@ -40,22 +42,24 @@
         <div class="footer__gap-right relative">
             <div class="columns-2-g display--inline-top tablet-hor-40 tablet-33 mobile-hor-100">
                 <div class="gutter mobile-hor-gutter">
-                    <div class="font-light title-25 color--white uppercase style-bolds mb-g"><b>Kifissia</b><br>flagship
-                        store
+                    <div class="font-light title-25 color--white uppercase style-bolds mb-g"><b>{{$contactUs->title}}</b>
                     </div>
-                    <div class="footer__text style-links-hover-white"><p>8, Emmanouel Benaki Str.<br/>
-                            145 61 Kifissia, Athens<br/>
-                            T +30 210 6233 577<br/>
-                            E <a href="#">getintouch@minas-designs.com</a></p>
+                    <div class="footer__text style-links-hover-white">
+                        <p>{{$contactUs->address}}.<br/>
+                            T <a href="tel:{{$contactUs->phone_number}}">{{$contactUs->phone_number}}</a><br/>
+                            E <a href="mailto:{{$contactUs->email}}" target="_blank" rel="noopener noreferrer">{{$contactUs->email}}</a>
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="block-60 max-4cols-g display--inline-top tablet-33 mobile-hor-100 mobile-hor-hidden">
-{{--                <div class="gutter pb-med mobile-hor-gutter">--}}
-{{--                    <div class="font-light title-25 color--white uppercase style-bolds mb-g"><b>The shopping</b><br>experience--}}
-{{--                    </div>--}}
-{{--                    <div class="footer__menu columns-3 footer__text">--}}
-{{--                        <a href="eshop-product-category.html" class="footer__menu-item">Pendants</a>--}}
+                <div class="gutter pb-med mobile-hor-gutter">
+                    <div class="font-light title-25 color--white uppercase style-bolds mb-g"><b>The shopping</b><br>experience
+                    </div>
+                    <div class="footer__menu columns-3 footer__text">
+                        @foreach($footerCategories as $footerCategory)
+                            <a href="{{route('shopCategory',['category_id'=>$footerCategory->id])}}" class="footer__menu-item">{{$footerCategory->name}}</a>
+                        @endforeach
 {{--                        <a href="eshop-product-category.html" class="footer__menu-item">Rings</a>--}}
 {{--                        <ul id="menu-footermenu_en" class="menu-ul">--}}
 {{--                            <li id="menu-item-494"--}}
@@ -83,26 +87,26 @@
 {{--                                </span>--}}
 {{--                            </li>--}}
 {{--                        </ul>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                    </div>
+                </div>
             </div>
             <div class="footer__socials columns-2-g abs-tr display--inline-top tablet-rel tablet-33 mobile-hor-100">
                 <div class="gutter font-light title-12 ls-180 uppercase mobile-hor-gutter">
-                    <a href="#" target="_blank" rel="nofollow noopener noreferrer"
+                    <a href="{{$footer->instagram_link}}" target="_blank" rel="nofollow noopener noreferrer"
                        class="social-link relative display--block color--grey-med hover-white mobile-hor-display-inline">
                             <span class="social-link__icon abs-tl mobile-hor-rel mobile-hor-display-inline"><svg
                                     class="icon icon--instagram abs-center mobile-hor-rel-no-center"><use
                                         xlink:href="#social-instagram"></use></svg></span><span
                             class="mobile-hor-hidden">instagram</span>
                     </a>
-                    <a href="#" target="_blank" rel="nofollow noopener noreferrer"
+                    <a href="{{$footer->vimeo_link}}" target="_blank" rel="nofollow noopener noreferrer"
                            class="social-link relative display--block color--grey-med hover-white mobile-hor-display-inline">
                         <span class="social-link__icon abs-tl mobile-hor-rel mobile-hor-display-inline"><svg
                                 class="icon icon--vimeo abs-center mobile-hor-rel-no-center"><use
                                     xlink:href="#social-vimeo"></use></svg></span><span
                             class="mobile-hor-hidden">vimeo</span>
                     </a>
-                    <a href="#" target="_blank" rel="nofollow noopener noreferrer"
+                    <a href="{{$footer->facebook_link}}" target="_blank" rel="nofollow noopener noreferrer"
                            class="social-link relative display--block color--grey-med hover-white mobile-hor-display-inline">
                         <span class="social-link__icon abs-tl mobile-hor-rel mobile-hor-display-inline"><svg
                                 class="icon icon--facebook abs-center mobile-hor-rel-no-center"><use
@@ -133,9 +137,9 @@
         <div class="gutter font-light title-12 ls-100 color--grey-med uppercase mobile-hor-gutter">
             <div class="display--inline">
                 <a href="#" target="_blank" rel="noopener noreferrer"
-                   class="color--grey-med hover-white">Kommigraphics</a>
+                   class="color--grey-med hover-white">SEVENTY NINE</a>
                 &amp; <a href="https://www.lab21.gr" target="_blank" rel="noopener noreferrer"
-                         class="color--grey-med hover-white">Lab21</a> for Minas designs &copy; 2019-2021
+                         class="color--grey-med hover-white">SAITH DEG NAW LTD </a> &copy; {{\Carbon\Carbon::now()->format('Y')}}
             </div>
             <nav class="footer__copyright-menu display--inline">
                 <ul id="menu-copyrightsmenu_en" class="menu-ul">

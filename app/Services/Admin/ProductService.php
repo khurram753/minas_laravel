@@ -11,6 +11,7 @@ use App\Material;
 use App\PivotCordProduct;
 use App\PivotMaterialProduct;
 use App\Product;
+use App\ProductCollection;
 use Illuminate\Support\Facades\DB;
 use File;
 
@@ -27,7 +28,8 @@ class ProductService
         $categories = Category::all();
         $cords = Cord::all();
         $materials = Material::all();
-        return view('admin.product.create', compact('categories', 'cords', 'materials'));
+        $collections = ProductCollection::all();
+        return view('admin.product.create', compact('categories', 'cords', 'materials','collections'));
     }
 
     public function save($request)
@@ -98,12 +100,12 @@ class ProductService
             $categories = Category::all();
             $cords = Cord::all();
             $materials = Material::all();
-
+            $collections = ProductCollection::all();
             $selectedCord = $data->cord->pluck('id')->toArray();
             $selectedMaterial = $data->material->pluck('id')->toArray();
 
             return view('admin.product.edit', compact('data',
-                'selectedMaterial','selectedCord','categories','cords','materials'));
+                'selectedMaterial','selectedCord','categories','cords','materials','collections'));
         } else {
             return redirect()->route('productListing')->with('error', 'Record Not Found');
         }

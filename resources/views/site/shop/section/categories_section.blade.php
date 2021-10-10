@@ -2,7 +2,7 @@
     <section class="home-top-content relative box-sizing overflow">
         <div class="fill-dimensions z-1 scale-out js-scale-in js-scale-in--sm in-view op-0" data-emit-events
              data-bottom-top="" data-cubic="custom" data-trans="1.8">
-            <img src="{{asset('site/images/red-asian-web-ready-wide.png')}}" class="home-top__img abs-bc z-1">
+            <img src="{{$cms->image ? asset($cms->image):asset('site/images/red-asian-web-ready-wide.png')}}" class="home-top__img abs-bc z-1">
             <div class="block-100 h-50 grad-black abs-bl"></div>
         </div>
         <div class="grid max-12cols-g over mobile-hor-100">
@@ -10,7 +10,7 @@
                 <header class="color--white gutter mb-t op-0 js-fade-in in-view" data-emit-events
                         data-bottom-top="" data-delay="0.15">
                     <h1 class="font-thin title-80 title-80-bg disp-inline bg-highlight">
-                        A NEW ERA
+                        {{$cms->description}}
                     </h1>
                 </header>
 

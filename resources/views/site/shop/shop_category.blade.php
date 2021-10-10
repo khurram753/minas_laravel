@@ -42,6 +42,8 @@
                         @php
                             $loopVar = $loopVar+3;
                         @endphp
+
+
                         @else
                             <article class="block-25 tablet-hor-33 tablet-50 mobile-hor-100 display--inline-top product type-product post-2496 status-publish first instock product_cat-pendants has-post-thumbnail taxable shipping-taxable purchasable product-type-variable has-default-attributes"
                                 itemscope itemtype="http://schema.org/Product">

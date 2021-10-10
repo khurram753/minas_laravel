@@ -3,12 +3,15 @@
 namespace App\Services\Site;
 
 use App\Category;
+use App\CMS;
+
 use App\Cord;
 use App\CustomOrder;
 use App\Heritage;
 use App\Material;
 use App\Order;
 use App\Product;
+use App\ProductCollection;
 use App\User;
 use App\Wishlist;
 use Illuminate\Database\Eloquent\Builder;
@@ -75,6 +78,8 @@ class ShopService
             }
         }
 
+        $cms = CMS::where('page_name','shop')->first();
+
         $categories = Category::all();
 
         $heritageImages = Heritage::select('image')->get();
@@ -128,7 +133,7 @@ class ShopService
 
 
         return view('site.shop.shop',compact('heritageImages','earings','mensCollection',
-            'pendants','categories'));
+            'pendants','categories','cms'));
     }
 
     public function detail($category_id,$request)
@@ -171,11 +176,12 @@ class ShopService
 
             }
 
-            if($request->cord_id)
+            if($request->collection_id)
             {
-                $products = $products->whereHas('cord',function (Builder $query) use($request){
-                    $query->where('cord_id', $request->cord_id);
-                });
+//                $products = $products->whereHas('cord',function (Builder $query) use($request){
+//                    $query->where('cord_id', $request->cord_id);
+//                });
+                $products = $products->where('collection_id',$request->collection_id);
             }
 
             if($request->material_id)
@@ -187,7 +193,7 @@ class ShopService
 
             $products = $products->get();
             $materials = Material::all();
-            $cords = Cord::all();
+            $cords = ProductCollection::all();
 
 
 

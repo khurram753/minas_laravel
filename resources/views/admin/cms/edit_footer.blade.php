@@ -156,6 +156,23 @@
                             </div>
                         </div>
 
+                        <div class="custom-dbhome">
+                            <div class="form-group ">
+                                <div class="db-bannerIMG">
+                                    @if($data->background_image)
+                                        <img class="background_image" src="{{asset($data->background_image)}}">
+                                    @else
+                                        <img class="background_image" src="{{asset('admin/images/no_image.jpg')}}">
+                                    @endif
+
+                                </div>
+                                <label for="exampleInputEmail1"> Background Image </label>
+                                <input type="file" class="images_select" name="background_image"
+                                       onchange="readURL(this,'background_image');">
+
+                            </div>
+                        </div>
+
 
 
                     </div>
