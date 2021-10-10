@@ -3012,6 +3012,11 @@ input[type=range].time::-webkit-slider-thumb {
     background-color: #000 !important
 }
 
+.woof_submit_search_form_container {
+    display: flex;
+    justify-content: center;
+}
+
 .custom-share__popup.pinterest-popup .mCSB_container {
     margin-left: 30px
 }
