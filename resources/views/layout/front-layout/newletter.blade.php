@@ -138,7 +138,7 @@
                                     </label>
                                     <input type="email" value="" name="EMAIL"
                                            class="input required pb-50 maxw-500 block-100 m-auto font-25 extra-lh font-light email"
-                                           id="mce-EMAIL">
+                                           id="mce-EMAIL" style="color: black">
                                 </div>
 
 
@@ -154,7 +154,7 @@
                                     </label>
                                     <input type="text" value="" name="FNAME"
                                            class="input pb-50 maxw-500 block-100 m-auto font-25 extra-lh font-light"
-                                           id="mce-FNAME">
+                                           id="mce-FNAME" style="color: black">
                                 </div>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                                     </label>
                                     <input type="text" value="" name="LNAME"
                                            class="input pb-50 maxw-500 block-100 m-auto font-25 extra-lh font-light"
-                                           id="mce-LNAME">
+                                           id="mce-LNAME" style="color: black">
                                 </div>
                             </div>
                         </div>
@@ -196,17 +196,17 @@
 
                         <div class="clear">
 
-                                    <span class="display--block">
-                                        <span class="display--inline circle-link relative">
+                            <span class="display--block" style="text-align: center">
+                                <span class="display--inline circle-link relative">
 {{--                                            <input type="button" class="submit-button opc-0 z-30 fill-dimensions trans"--}}
                                             {{--                                                   value="ΕΓΓΡΑΦΗ" id="ns-submit" data-reply="#ns-reply-text">--}}
 
-                                            <input type="submit" value="Subscribe" name="subscribe"
-                                                   id="mc-embedded-subscribe"
-                                                   class="button submit-button opc-0 z-30 fill-dimensions trans">
-                                            <span class="btn-black display--block">
-                                                <span class="circle-btn relative cursor display--inline circle-link">
-                                                    <svg
+                                    <input type="submit" value="Subscribe" name="subscribe"
+                                           id="mc-embedded-subscribe" style="width: 100%;height: 100%"
+                                           class="button submit-button opc-0 z-30 fill-dimensions trans">
+                                    <span class="btn-black display--block">
+                                        <span class="circle-btn relative cursor display--inline circle-link">
+                                            <svg
                                                         class="circle-btn__wrapper-circle"
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 0 151.689 148.568">
@@ -223,18 +223,16 @@
                     c12.843,1.04,25.689,1.455,36.85-5.824c17.182-11.205,28.106-32.619,32.887-51.832c2.394-9.617,4.744-20.611,2.446-30.465
                     c-2.123-9.098-8.54-15.85-14.888-22.307c-7.189-7.311-13.368-15.558-20.665-22.752C110.812,8.158,109.23,6.196,107.309,4.917z"></path>
                     </svg>
-                                                    <span
-                                                        class="abs-center a-center z-5 font-12 extra-ls extra-lh2 font-bold block-70">
-                                                        SUBSCRIBE
-                                                    </span>
-                                                </span>
+                                            <span class="abs-center a-center z-5 font-12 extra-ls extra-lh2 font-bold block-70">
+                                                SUBSCRIBE
                                             </span>
                                         </span>
                                     </span>
+                                </span>
+                            </span>
 
-
-                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                                   class="button">
+{{--                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"--}}
+{{--                                   class="button">--}}
                         </div>
                     </div>
                 </form>
