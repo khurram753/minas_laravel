@@ -10,14 +10,14 @@
                 {{$footer->tag_line}}
             </div>
             <span class="display--block a-right mb-139 mobile-mb-50">
-{{--                <span--}}
-{{--                    class="display--block a-right mb-139 opc-0 mobile-hor-left no-visible js-fade-left skrollr-pointer mobile-no-margin skrollable skrollable-before"--}}
-{{--                    data-emit-events="" data-bottom-top="" data-delay=".1" data-trans="1.4" style="">--}}
-{{--                    <span class="font-bold font-12 extra-ls newsletter-link link-white trans cursor">--}}
-{{--                        <span class="display--inline mr-20 cursor" id="open-ns-popup">SUBSCRIBE TO OUR NEWSLETTER</span>--}}
-{{--                        <span class="icon icon--arrows-long-right newsletter-icon display--inline"></span>--}}
-{{--                    </span>--}}
-{{--                </span>--}}
+                <span
+                    class="display--block a-right mb-139 opc-0 mobile-hor-left no-visible js-fade-left skrollr-pointer mobile-no-margin skrollable skrollable-before"
+                    data-emit-events="" data-bottom-top="" data-delay=".1" data-trans="1.4" style="">
+                    <span class="font-bold font-12 extra-ls newsletter-link link-white trans cursor">
+                        <span class="display--inline mr-20 cursor" id="open-ns-popup">SUBSCRIBE TO OUR NEWSLETTER</span>
+                        <span class="icon icon--arrows-long-right newsletter-icon display--inline"></span>
+                    </span>
+                </span>
             </span>
             <div class="relative">
 

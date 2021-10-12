@@ -1,7 +1,7 @@
 @extends('layout.dashboard-layout.app')
 
 @section('title')
-    Edit FAQ
+    Edit FREQUENTLY ASKED QUESTIONS
 @endsection
 
 
@@ -12,10 +12,10 @@
             <div class="row">
                 <div class="col-xl-12 bh-mb">
                     <div class="breadcrumb-holder">
-                        <h1 class="main-title float-left">Edit FAQ </h1>
+                        <h1 class="main-title float-left">Edit FREQUENTLY ASKED QUESTIONS </h1>
                         <ol class="breadcrumb float-right">
                             <li class="breadcrumb-item">Home</li>
-                            <li class="breadcrumb-item active">Edit FAQ </li>
+                            <li class="breadcrumb-item active">Edit FREQUENTLY ASKED QUESTIONS </li>
                         </ol>
                         <div class="clearfix"></div>
                     </div>

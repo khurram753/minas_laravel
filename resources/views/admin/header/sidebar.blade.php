@@ -236,7 +236,7 @@
                         class="active"
                         @endif
                         href="javascript:void(0)">
-                        <i class="fas fa-tachometer-alt"></i> <span> FAQ </span>
+                        <i class="fas fa-tachometer-alt"></i> <span> FREQUENTLY ASKED QUESTIONS </span>
                         <span class="menu-arrow"></span>
                     </a>
 

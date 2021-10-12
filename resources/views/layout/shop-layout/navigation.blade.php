@@ -44,7 +44,7 @@
                     <li id="menu-item-513" class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-513 main-item item--49 mnu-2">
                         <span class="menu-item-inner">
                             <a href="{{route('faq')}}" class="menu-a menu-link item--49">
-                                FAQ
+                                FAFREQUENTLY ASKED QUESTIONSQ
                             </a>
                         </span>
                     </li>
@@ -134,7 +134,7 @@
                 <li id="menu-item-515" class="menu-item menu-item-type-taxonomy menu-item-object-faq-categories menu-item-515 main-item item--49 mnu-2">
                     <span class="menu-item-inner">
                         <a href="{{route('faq')}}" class="menu-a menu-link item--49">
-                            FAQ
+                            FREQUENTLY ASKED QUESTIONS
                         </a>
                     </span>
                 </li>

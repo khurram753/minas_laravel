@@ -16,7 +16,6 @@
 {{--                                <img src="	http://127.0.0.1:8000/site/store/images/1631197433-.jpg" alt="">--}}
 {{--                            </span>--}}
                         <div class="font-bold font-25 relative retailers-btn__txt display--inline">
-
                             UK
                             <div class="abs-tr font-thin">({{sizeof($greeceRetailers)}})</div>
                         </div>
@@ -68,34 +67,31 @@
                     <h3 class="text-center">No Records Found</h3>
                 @endif
             </div>
-            <div id="retailers-tab-2"
-                 class="retailers-tab trans-slow block-100 display-flex flex-wrap opc-0 no-visible abs-tl">
+            <div id="retailers-tab-2" class="retailers-tab trans-slow block-100 display-flex flex-wrap opc-0 no-visible abs-tl">
+
+
+
                 @if(sizeof($internationalRetailers) > 0)
                     @foreach($internationalRetailers as $int_retailer)
                         <div class="block-50 display-flex tablet-hor-med-100">
                             <div class="gutter block-100 relative">
                                 <div class="retailer-box color-black relative">
-                                    <div
-                                        class="font-12 extra-ls font-bold mb-20 opc-0 no-visible js-fade-left skrollr-pointer"
-                                        data-emit-events data-bottom-top="" data-trans="1.4">
-                                        {{$int_retailer->company}}
+                                    <div class="font-12 extra-ls font-bold mb-20 opc-0 no-visible js-fade-left skrollr-pointer skrollable skrollable-after loc" data-emit-events="" data-bottom-top="" data-trans="1.4" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                        {{ucfirst($int_retailer->company)}}
                                     </div>
                                     <div class="retailer-box__details">
-                                        <h4 class="font-bold font-25 mb-5 opc-0 no-visible js-fade-left skrollr-pointer"
-                                            data-emit-events data-bottom-top="" data-trans="1.4" data-delay="0.1">
-                                            {{$int_retailer->name}}
+                                        <h4 class="font-bold font-25 mb-5 opc-0 no-visible js-fade-left skrollr-pointer skrollable skrollable-after loc" data-emit-events="" data-bottom-top="" data-trans="1.4" data-delay="0.1" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                            {{ucfirst($int_retailer->name)}}
                                         </h4>
-                                        <div class="font-thin font-17 opc-0 no-visible js-fade-left skrollr-pointer"
-                                             data-emit-events data-bottom-top="" data-trans="1.4" data-delay="0.15">
-                                            <p>{{$int_retailer->website}} <BR/>
-                                                {{$int_retailer->address}} <BR/>
-                                                {{$int_retailer->email}}<BR/>
-                                                <BR/>
-                                            </p></div>
+                                        <div class="font-thin font-17 opc-0 no-visible js-fade-left skrollr-pointer skrollable skrollable-after loc" data-emit-events="" data-bottom-top="" data-trans="1.4" data-delay="0.15" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                            <p>{{$int_retailer->website}}<br>
+                                                {{$int_retailer->address}}<br>
+                                                {{$int_retailer->email}}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="line line--black line--abs abs-bl js-scale-lr skrollr-pointer"
-                                     data-delay=".2" data-emit-events data-bottom-top="" data-trans="1.6"></div>
+                                <div class="line line--black line--abs abs-bl js-scale-lr skrollable loc skrollable-after" data-delay=".2" data-emit-events="" data-bottom-top="" data-trans="1.6" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
                             </div>
 
                         </div>

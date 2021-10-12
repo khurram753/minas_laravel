@@ -1,7 +1,7 @@
 @extends('layout.shop-layout.app')
 
 @section('title')
-    {{env('APP_NAME')}} - FAQ
+    {{env('APP_NAME')}} - FREQUENTLY ASKED QUESTIONS
 @endsection
 
 @section('style')
