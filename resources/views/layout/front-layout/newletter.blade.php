@@ -120,10 +120,10 @@
                    We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
             </style>
             <div id="mc_embed_signup">
-                <form
-                    action="https://gmail.us6.list-manage.com/subscribe/post?u=a8dd4d2ffbd7af26fd0d4babb&amp;id=abc38ac618"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                    class="validate" target="_blank" novalidate>
+                <form action="https://SeventyNine.us5.list-manage.com/subscribe/post?u=0ebd772ded6b16a65771f7dcb&amp;id=6030945bed"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                    target="_blank" novalidate>
+
                     <div id="mc_embed_signup_scroll">
                         <div class="font-bold font-40 color-black ns-popup__top-title js-anim-fade mb-86"
                              style="text-align: center;">
@@ -199,7 +199,7 @@
                             <span class="display--block" style="text-align: center">
                                 <span class="display--inline circle-link relative">
 {{--                                            <input type="button" class="submit-button opc-0 z-30 fill-dimensions trans"--}}
-                                            {{--                                                   value="ΕΓΓΡΑΦΗ" id="ns-submit" data-reply="#ns-reply-text">--}}
+                                    {{--                                                   value="ΕΓΓΡΑΦΗ" id="ns-submit" data-reply="#ns-reply-text">--}}
 
                                     <input type="submit" value="Subscribe" name="subscribe"
                                            id="mc-embedded-subscribe" style="width: 100%;height: 100%"
@@ -207,9 +207,9 @@
                                     <span class="btn-black display--block">
                                         <span class="circle-btn relative cursor display--inline circle-link">
                                             <svg
-                                                        class="circle-btn__wrapper-circle"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 151.689 148.568">
+                                                class="circle-btn__wrapper-circle"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 151.689 148.568">
                         <path class="js-svg-circle circle-btn__circle" fill="none" stroke="#fff" stroke-width="1"
                               stroke-miterlimit="10" d="M75.845,145.15
                     c-39.139,0-70.867-31.728-70.867-70.866S36.706,3.418,75.845,3.418c39.138,0,70.866,31.728,70.866,70.866
@@ -223,7 +223,8 @@
                     c12.843,1.04,25.689,1.455,36.85-5.824c17.182-11.205,28.106-32.619,32.887-51.832c2.394-9.617,4.744-20.611,2.446-30.465
                     c-2.123-9.098-8.54-15.85-14.888-22.307c-7.189-7.311-13.368-15.558-20.665-22.752C110.812,8.158,109.23,6.196,107.309,4.917z"></path>
                     </svg>
-                                            <span class="abs-center a-center z-5 font-12 extra-ls extra-lh2 font-bold block-70">
+                                            <span
+                                                class="abs-center a-center z-5 font-12 extra-ls extra-lh2 font-bold block-70">
                                                 SUBSCRIBE
                                             </span>
                                         </span>
@@ -231,14 +232,15 @@
                                 </span>
                             </span>
 
-{{--                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"--}}
-{{--                                   class="button">--}}
+                            {{--                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"--}}
+                            {{--                                   class="button">--}}
                         </div>
                     </div>
                 </form>
             </div>
             <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-            <script type='text/javascript'>(function ($) {
+            <script type='text/javascript'>
+                (function ($) {
                     window.fnames = new Array();
                     window.ftypes = new Array();
                     fnames[0] = 'EMAIL';
@@ -248,7 +250,8 @@
                     fnames[2] = 'LNAME';
                     ftypes[2] = 'text';
                 }(jQuery));
-                var $mcj = jQuery.noConflict(true);</script>
+                var $mcj = jQuery.noConflict(true);
+            </script>
             <!--End mc_embed_signup-->
         </div>
     </div>
