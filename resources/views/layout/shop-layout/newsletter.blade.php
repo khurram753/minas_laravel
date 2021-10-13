@@ -125,8 +125,8 @@
                         {{--                        <h2>Newsletter Subscription</h2>--}}
                         <div class="form-field block-100 display--inline-top">
                             <div class="gutter">
-                                <div class="mc-field-grouinput">
-                                    <label for="mce-EMAIL font-bold font-17 extra-ls extra-lh display--block">
+                                <div class="mc-field-group input">
+                                    <label for="mce-EMAIL font-bold title-17 extra-ls extra-lh display--block">
                                         Email Address
                                     </label>
                                     <input type="email" value="" name="EMAIL"
@@ -141,7 +141,7 @@
 
                         <div class="form-field block-100 display--inline-top">
                             <div class="gutter">
-                                <div class="mc-field-grouinput">
+                                <div class="mc-field-group input">
                                     <label for="mce-FNAME font-bold font-17 extra-ls extra-lh display--block">
                                         First Name
                                     </label>
@@ -154,7 +154,7 @@
 
                         <div class="form-field block-100 display--inline-top">
                             <div class="gutter">
-                                <div class="mc-field-grouinput">
+                                <div class="mc-field-group input">
                                     <label for="mce-LNAME font-bold font-17 extra-ls extra-lh display--block">
                                         Last Name
                                     </label>
@@ -199,7 +199,7 @@
                                         <span class="circle-btn relative cursor display--inline circle-link " id="">
                                             <svg class="circle-btn__wrapper-circle" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 151.689 148.568">
-                    <path class="js-svg-circle path" fill="none" stroke="#fff" stroke-width="1" stroke-miterlimit="10" d="M75.845,145.15
+                                                <path class="js-svg-circle path" fill="none" stroke="#fff" stroke-width="1" stroke-miterlimit="10" d="M75.845,145.15
         		c-39.139,0-70.867-31.728-70.867-70.866S36.706,3.418,75.845,3.418c39.138,0,70.866,31.728,70.866,70.866
         		S114.983,145.15,75.845,145.15"/>
                     <path class="js-stretched path" fill="none" opacity="0" stroke="#fff" stroke-width="1"
