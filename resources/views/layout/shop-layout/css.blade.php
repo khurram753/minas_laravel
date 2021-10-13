@@ -1,4 +1,4 @@
-<link rel="icon" type="image/png" href="{{asset('site/images/favicon-32x32.png')}}">
+<link rel="icon" type="image/png" href="{{asset('site/images/minas_logodash.jpeg')}}">
 
 
 <link href="{{asset('custom/css/toastr.css')}}" rel="stylesheet">

@@ -125,7 +125,7 @@
                         {{--                        <h2>Newsletter Subscription</h2>--}}
                         <div class="form-field block-100 display--inline-top">
                             <div class="gutter">
-                                <div class="mc-field-group form-field__inner a-left maxw-500 m-auto a-left mb-24">
+                                <div class="mc-field-grouinput">
                                     <label for="mce-EMAIL font-bold font-17 extra-ls extra-lh display--block">
                                         Email Address
                                     </label>
@@ -141,7 +141,7 @@
 
                         <div class="form-field block-100 display--inline-top">
                             <div class="gutter">
-                                <div class="mc-field-group form-field__inner a-left maxw-500 m-auto a-left mb-24">
+                                <div class="mc-field-grouinput">
                                     <label for="mce-FNAME font-bold font-17 extra-ls extra-lh display--block">
                                         First Name
                                     </label>
@@ -154,7 +154,7 @@
 
                         <div class="form-field block-100 display--inline-top">
                             <div class="gutter">
-                                <div class="mc-field-group form-field__inner a-left maxw-500 m-auto a-left mb-24">
+                                <div class="mc-field-grouinput">
                                     <label for="mce-LNAME font-bold font-17 extra-ls extra-lh display--block">
                                         Last Name
                                     </label>

@@ -12,8 +12,7 @@
 @yield('style')
 <!-- END CSS for this page -->
     <!-- Favicons -->
-    {{--  <link href="{{asset('front-side/images/Asset 2@4x-8.png')}}" rel="icon">--}}
-    {{--    <link href="{{asset('front-side/images/apple-touch-icon.png')}}" rel="apple-touch-icon">--}}
+    <link rel="icon" type="image/png" href="{{asset('site/images/minas_logodash.jpeg')}}">
 
 
 </head>

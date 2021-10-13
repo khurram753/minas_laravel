@@ -4380,7 +4380,7 @@ figcaption .heritage-page-m__title .dat,
 }
 
 .retailer-box__details {
-    padding-left: 66px;
+    padding-left: 25px;
 }
 
 .retailer-box__details p {
@@ -6071,11 +6071,26 @@ figcaption .heritage-page-m__title .dat,
 }
 
 .ns-popup {
-    z-index: 600;
+    z-index: 999;
     filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     visibility: hidden;
     overflow: auto;
+}
+
+.mc-field-grouinput input {
+    color: black !important;
+    border: none !important;
+    border-bottom: 1px solid #000 !important;
+    margin-bottom: 24px !important;
+}
+
+.mc-field-grouinput label {
+    font-size: 25px;
+    max-width: 500px;
+    color: #000;
+    margin: auto;
+    display: block;
 }
 
 .ns-popup-bg {
@@ -9288,3 +9303,5 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 .page-template-about h2 {
     font-size: 25px;
 }
+
+!important
