@@ -1,7 +1,7 @@
 <aside class="ns-popup fill-dimensions fixed z-20" id="ns-popup-holder">
     <div class="op-0 fill-dimensions fixed bg--black" id="ns-popup-mask"></div>
     <div class="scale-y fill-dimensions fixed bg--white origin-l ns-popup-bg" id="ns-popup-bg"></div>
-    <div class="over">
+    <div class="over SET_input">
         <div class="pb-150 pt-184 m-auto maxw-1400 relative a-center mobile-hor-pt-150">
             <div class="abs-tc cursor op-0 js-anim-fade  cursor top-35 close-popup close-popup--black"
                  id="ns-popup-close"></div>

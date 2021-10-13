@@ -69,7 +69,7 @@
                     <h3 class="text-center">No Records Found</h3>
                 @endif
             </div>
-            <div id="retailers-tab-2" class="retailers-tab trans-slow block-100 display-flex flex-wrap opc-0 no-visible abs-tl">
+            <div id="retailers-tab-2" class="retailers-tab trans-slow block-100 display-flex flex-wrap opc-0 no-visible">
                 @if(sizeof($internationalRetailers) > 0)
                     @foreach($internationalRetailers as $int_retailer)
                         <div class="block-50 display-flex tablet-hor-med-100">
