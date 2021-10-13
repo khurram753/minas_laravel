@@ -104,21 +104,21 @@
 
                         </div>
                     @endforeach
-                        <div class="block-50 display-flex tablet-hor-med-100">
-                            <div class="gutter block-100 relative">
-                                <div class="retailer-box color-black relative">
-                                    <div class="font-12 extra-ls font-bold mb-20 opc-0 no-visible js-fade-left skrollable loc skrollable-after" data-emit-events="" data-bottom-top="" data-trans="1.4" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">AZERBAIJAN</div>
-                                    <div class="retailer-box__details">
-                                        <h4 class="font-bold font-25 mb-5 opc-0 no-visible js-fade-left skrollable loc skrollable-after" data-emit-events="" data-bottom-top="" data-trans="1.4" data-delay="0.1" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">SOROKA CONCEPT STORE</h4>
-                                        <div class="font-thin font-17 opc-0 no-visible js-fade-left skrollable loc skrollable-after" data-emit-events="" data-bottom-top="" data-trans="1.4" data-delay="0.15" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><p>93 NIZAMI STREET<br>
-                                                BAKU, AZERBAIJAN<br>
-                                                +994 77 277 33 16</p></div>
-                                    </div>
-                                </div>
-                                <div class="line line--black line--abs abs-bl js-scale-lr skrollable loc skrollable-after" data-delay=".2" data-emit-events="" data-bottom-top="" data-trans="1.6" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
-                            </div>
+{{--                        <div class="block-50 display-flex tablet-hor-med-100">--}}
+{{--                            <div class="gutter block-100 relative">--}}
+{{--                                <div class="retailer-box color-black relative">--}}
+{{--                                    <div class="font-12 extra-ls font-bold mb-20 opc-0 no-visible js-fade-left skrollable loc skrollable-after" data-emit-events="" data-bottom-top="" data-trans="1.4" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">AZERBAIJAN</div>--}}
+{{--                                    <div class="retailer-box__details">--}}
+{{--                                        <h4 class="font-bold font-25 mb-5 opc-0 no-visible js-fade-left skrollable loc skrollable-after" data-emit-events="" data-bottom-top="" data-trans="1.4" data-delay="0.1" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">SOROKA CONCEPT STORE</h4>--}}
+{{--                                        <div class="font-thin font-17 opc-0 no-visible js-fade-left skrollable loc skrollable-after" data-emit-events="" data-bottom-top="" data-trans="1.4" data-delay="0.15" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><p>93 NIZAMI STREET<br>--}}
+{{--                                                BAKU, AZERBAIJAN<br>--}}
+{{--                                                +994 77 277 33 16</p></div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="line line--black line--abs abs-bl js-scale-lr skrollable loc skrollable-after" data-delay=".2" data-emit-events="" data-bottom-top="" data-trans="1.6" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>--}}
+{{--                            </div>--}}
 
-                        </div>
+{{--                        </div>--}}
                 @else
                     <h3 class="text-center">No Records Found</h3>
                 @endif
