@@ -1,7 +1,7 @@
 <script>
 
     $(document).ready(function () {
-        $(document).on('click','.add_to_cart_btn',function () {
+        $(document).on('click', '.add_to_cart_btn', function () {
             var data = $('.add_to_cart_form').serializeArray();
 
             $.blockUI({
@@ -28,13 +28,17 @@
                         $.unblockUI();
                         successMsg(response.message);
 
+                        $('.checkout_modal').show();
+
 //                        var value = $('.cartCounter').text();
 //                        var increment = parseInt(value)+1;
 //                        $('.cartCounter').text(increment);
 
-                        setTimeout(function(){
-                            window.location.reload();
-                        },1000);
+
+
+                        // setTimeout(function () {
+                        //     window.location.reload();
+                        // }, 1000);
 
 
                     } else if (response.result == 'error') {
@@ -51,7 +55,7 @@
             });
         });
 
-        $(document).on('click','.qtypluscart',function () {
+        $(document).on('click', '.qtypluscart', function () {
             var value = $(this).parents('.add_to_cart_form').find('.qty').val();
 
             value = parseInt(value) + 1;
@@ -60,23 +64,22 @@
 
         });
 
-        $(document).on('click','.qtyminuscart',function () {
+        $(document).on('click', '.qtyminuscart', function () {
             var value = $(this).parents('.add_to_cart_form').find('.qty').val();
 
 
-            if(value > 1) {
+            if (value > 1) {
                 value = parseInt(value) - 1;
 
                 $(this).parents('.add_to_cart_form').find('.qty').val(value);
-            }
-            else{
+            } else {
                 errorMsg('Product Quantity cannot be less than 0');
             }
 
         });
 
 
-        $('.trashIcon').click(function(){
+        $('.trashIcon').click(function () {
             var data = $(this).parents('li').find('input.id').val();
 
             $.blockUI({
@@ -95,7 +98,7 @@
 
                 type: 'GET',
                 url: '{{route("removeFromCart")}}',
-                data: {id:data},
+                data: {id: data},
 
 
                 success: function (response, status) {
@@ -142,7 +145,7 @@
 
                 type: 'GET',
                 url: '{{route("removeFromCart")}}',
-                data: {id:data},
+                data: {id: data},
 
 
                 success: function (response, status) {
@@ -195,7 +198,7 @@
                     url: '{{route("updateCart")}}',
                     data: {
                         id: id,
-                        cart_id:cart_id,
+                        cart_id: cart_id,
                         quantity: quantity,
                     },
 
@@ -208,14 +211,11 @@
                             var currency = '$';
                             var singlePrice = 0;
 
-                            if(response.data.productSalePrice)
-                            {
-                                product_price = '$ ' + response.data.productSalePrice * response.data.quantity ;
+                            if (response.data.productSalePrice) {
+                                product_price = '$ ' + response.data.productSalePrice * response.data.quantity;
                                 currency = '$';
                                 singlePrice = response.data.productSalePrice;
-                            }
-                            else
-                            {
+                            } else {
                                 product_price = '$' + response.data.price * response.data.quantity;
                                 currency = '$';
                                 singlePrice = response.data.price;
@@ -227,7 +227,7 @@
                             sameRecord.parents('span.cart_item').find('span.cartPriceSection')
                                 .find('span.cart_price_8000').text(product_price);
 
-                            var subtotal = parseInt($('.total').find('span.totalPriceSpan').text())  + parseInt(singlePrice);
+                            var subtotal = parseInt($('.total').find('span.totalPriceSpan').text()) + parseInt(singlePrice);
 
 
                             var totalPrice = $('.total').find('span.totalPriceSpan').text(subtotal);
@@ -250,8 +250,7 @@
                 });
 
 
-            }
-            else if (parseInt($(this).parents('div.quantity').find('input.qty').val()) >= 1) {
+            } else if (parseInt($(this).parents('div.quantity').find('input.qty').val()) >= 1) {
 
 
                 $.blockUI({
@@ -275,7 +274,7 @@
                     url: '{{route("updateCart")}}',
                     data: {
                         id: id,
-                        cart_id:cart_id,
+                        cart_id: cart_id,
                         quantity: quantity,
                     },
 
@@ -288,14 +287,11 @@
                             var currency = '$';
                             var singlePrice = 0;
 
-                            if(response.data.productSalePrice)
-                            {
-                                product_price = '$' + response.data.productSalePrice * response.data.quantity ;
+                            if (response.data.productSalePrice) {
+                                product_price = '$' + response.data.productSalePrice * response.data.quantity;
                                 currency = '$';
                                 singlePrice = response.data.productSalePrice;
-                            }
-                            else
-                            {
+                            } else {
                                 product_price = '$' + response.data.price * response.data.quantity;
                                 currency = '$';
                                 singlePrice = response.data.price;
@@ -308,7 +304,7 @@
                                 .find('span.cart_price_8000').text(product_price);
 
 
-                            var subtotal = parseInt($('.total').find('span.totalPriceSpan').text())  - parseInt(singlePrice);
+                            var subtotal = parseInt($('.total').find('span.totalPriceSpan').text()) - parseInt(singlePrice);
 
 
                             var totalPrice = $('.total').find('span.totalPriceSpan').text(subtotal);
@@ -333,10 +329,60 @@
                 sameRecord.parents('div.item-quantity').find('.qty').val(quantity);
 
 
-
             }
         });
 
+
+        @auth
+
+
+            $('.checkout').click(function () {
+
+                var stripe = Stripe('{{env('STRIPE_KEY')}}');
+
+
+                $.blockUI({
+                    css: {
+                        border: 'none',
+                        padding: '15px',
+                        backgroundColor: '#000',
+                        '-webkit-border-radius': '10px',
+                        '-moz-border-radius': '10px',
+                        opacity: .5,
+                        color: '#fff'
+                    }
+                });
+
+                $.ajax({
+
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    method: 'POST',
+                    url: '{{route('createStripeSession')}}',
+                    // data: data,
+                    success: function (response, status) {
+                        if (response.result == 'success') {
+                            $.unblockUI();
+                            return stripe.redirectToCheckout({sessionId: response.data});
+
+                        } else if (response.result == 'error') {
+                            $.unblockUI();
+                            errorMsg(response.message);
+                        }
+                    },
+                    error: function (data) {
+                        $.each(data.responseJSON.errors, function (key, value) {
+                            $.unblockUI();
+                            errorMsg(value);
+                        });
+                    }
+
+                });
+
+
+            });
+        @endauth
 
     });
 
