@@ -9505,3 +9505,40 @@ strong {
 .SET_input .mc-field-group input:focus {
     outline: none;
 }
+
+.checkout_modal a {
+    font-weight: 900;
+    color: #000;
+    font-size: 18px;
+}
+
+.product_name_class {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.ns-popup__top-title {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+#mc_embed_signup .mc-field-group label,
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+    text-transform: uppercase;
+}
+
+#mc_embed_signup .mc-field-group input {
+    line-height: 35px;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {
+    border-bottom: 2px solid #e85c41 !important;
+}
+
+.circle-btn span {
+    color: #000;
+}
+
+.circle-btn .path {
+    stroke: #000;
+}
