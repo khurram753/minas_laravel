@@ -1,7 +1,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="{{asset('site/images/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" href="{{asset('site/images/minas_logodash.jpeg')}}">
     <title>@yield('title')</title>
 
     @include('layout.front-layout.css')

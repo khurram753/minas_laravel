@@ -13,6 +13,23 @@
 
 <script>
 
+    @if(Request()->route()->getName() != 'shop')
+    $(document).ready(function(){
+        $('#open-ns-popup').click(function(){
+            $('#ns-popup-holder').css({visibility:'visible',opacity:1});
+            $('#ns-popup-close').css({visibility:'visible',opacity:1});
+            $('#ns-popup-bg').css({'transform-origin': 'left top 0px',transform: 'translate(-50%, 0%) matrix(1, 0, 0, 1, 0, 0)'})
+        });
+
+        $('#ns-popup-close').click(function(){
+            $('#ns-popup-holder').css({visibility:'hidden',opacity:0});
+            // $('#open-ns-popup').css({visibility:'hidden',opacity:0});
+            $('#ns-popup-bg').css({'transform-origin': 'left top 0px',transform: 'translate(-50%, 0%) matrix(1, 0, 0, 1, 0, 0)'})
+        });
+
+    });
+    @endif
+
     @auth
         $('.add_to_wishlist').click(function () {
 

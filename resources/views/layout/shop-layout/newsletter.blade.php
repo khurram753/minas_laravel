@@ -1,7 +1,7 @@
 <aside class="ns-popup fill-dimensions fixed z-20" id="ns-popup-holder">
     <div class="op-0 fill-dimensions fixed bg--black" id="ns-popup-mask"></div>
     <div class="scale-y fill-dimensions fixed bg--white origin-l ns-popup-bg" id="ns-popup-bg"></div>
-    <div class="over">
+    <div class="over SET_input">
         <div class="pb-150 pt-184 m-auto maxw-1400 relative a-center mobile-hor-pt-150">
             <div class="abs-tc cursor op-0 js-anim-fade  cursor top-35 close-popup close-popup--black"
                  id="ns-popup-close"></div>
@@ -113,10 +113,8 @@
                    We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
             </style>
             <div id="mc_embed_signup">
-                <form
-                    action="https://gmail.us6.list-manage.com/subscribe/post?u=a8dd4d2ffbd7af26fd0d4babb&amp;id=abc38ac618"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                    class="validate" target="_blank" novalidate>
+                <form action="https://SeventyNine.us5.list-manage.com/subscribe/post?u=0ebd772ded6b16a65771f7dcb&amp;id=6030945bed" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
                     <div id="mc_embed_signup_scroll">
                         <div class="font-bold title-40 color--black ns-popup__top-title op-0 no-visible js-anim-fade mb-86"
                              style="text-align: center;">
@@ -125,8 +123,8 @@
                         {{--                        <h2>Newsletter Subscription</h2>--}}
                         <div class="form-field block-100 display--inline-top">
                             <div class="gutter">
-                                <div class="mc-field-group form-field__inner a-left maxw-500 m-auto a-left mb-24">
-                                    <label for="mce-EMAIL font-bold font-17 extra-ls extra-lh display--block">
+                                <div class="mc-field-group input">
+                                    <label for="mce-EMAIL font-bold title-17 extra-ls extra-lh display--block">
                                         Email Address
                                     </label>
                                     <input type="email" value="" name="EMAIL"
@@ -141,7 +139,7 @@
 
                         <div class="form-field block-100 display--inline-top">
                             <div class="gutter">
-                                <div class="mc-field-group form-field__inner a-left maxw-500 m-auto a-left mb-24">
+                                <div class="mc-field-group input">
                                     <label for="mce-FNAME font-bold font-17 extra-ls extra-lh display--block">
                                         First Name
                                     </label>
@@ -154,7 +152,7 @@
 
                         <div class="form-field block-100 display--inline-top">
                             <div class="gutter">
-                                <div class="mc-field-group form-field__inner a-left maxw-500 m-auto a-left mb-24">
+                                <div class="mc-field-group input">
                                     <label for="mce-LNAME font-bold font-17 extra-ls extra-lh display--block">
                                         Last Name
                                     </label>
@@ -199,7 +197,7 @@
                                         <span class="circle-btn relative cursor display--inline circle-link " id="">
                                             <svg class="circle-btn__wrapper-circle" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 151.689 148.568">
-                    <path class="js-svg-circle path" fill="none" stroke="#fff" stroke-width="1" stroke-miterlimit="10" d="M75.845,145.15
+                                                <path class="js-svg-circle path" fill="none" stroke="#fff" stroke-width="1" stroke-miterlimit="10" d="M75.845,145.15
         		c-39.139,0-70.867-31.728-70.867-70.866S36.706,3.418,75.845,3.418c39.138,0,70.866,31.728,70.866,70.866
         		S114.983,145.15,75.845,145.15"/>
                     <path class="js-stretched path" fill="none" opacity="0" stroke="#fff" stroke-width="1"
@@ -225,18 +223,19 @@
                 </form>
             </div>
             <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-            <script type='text/javascript'>(function ($) {
+            <script type='text/javascript'>
+                (function($) {
                     window.fnames = new Array();
                     window.ftypes = new Array();
-                    fnames[0] = 'EMAIL';
-                    ftypes[0] = 'email';
-                    fnames[1] = 'FNAME';
-                    ftypes[1] = 'text';
-                    fnames[2] = 'LNAME';
-                    ftypes[2] = 'text';
+                    fnames[0]='EMAIL';
+                    ftypes[0]='email';
+                    fnames[1]='FNAME';
+                    ftypes[1]='text';
+                    fnames[2]='LNAME';
+                    ftypes[2]='text';
                 }(jQuery));
-                var $mcj = jQuery.noConflict(true);</script>
-            <!--End mc_embed_signup-->
+                var $mcj = jQuery.noConflict(true);
+            </script>
         </div>
     </div>
 

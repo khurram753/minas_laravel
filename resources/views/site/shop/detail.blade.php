@@ -6,12 +6,44 @@
 
 @section('style')
     <style>
-        .block-60{
+        .block-60 {
             width: 59%;
         }
-        .block-25{
+
+        .block-25 {
             width: 24%;
         }
+
+        .checkout_modal {
+            width: 90%;
+            max-width: 550px;
+            background-color: #e3e3e3;
+            position: relative;
+            margin: 0 auto 50px;
+            z-index: 100;
+            text-align: center;
+            font-family: "helvetica_neue_light", Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            color: #000;
+            padding: 44px;
+            letter-spacing: 0.03em;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        .close-notice {
+            position: absolute;
+            display: block;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+        }
+
+
     </style>
 @endsection
 
@@ -20,7 +52,8 @@
     <main id="content" class="site-content relative">
 
         <!-- cart popup end -->
-        <div id="product-2496" class="product type-product post-2496 status-publish first instock product_cat-pendants has-post-thumbnail taxable shipping-taxable purchasable product-type-variable has-default-attributes">
+        <div id="product-2496"
+             class="product type-product post-2496 status-publish first instock product_cat-pendants has-post-thumbnail taxable shipping-taxable purchasable product-type-variable has-default-attributes">
             <div id="main-product-info" itemscope itemtype="http://schema.org/Product">
                 <span class="hidden" itemprop="sku" content="young-hearts"></span>
                 <div class="grad-black-top-grey-bottom">
@@ -33,8 +66,11 @@
                                      id="js-main-product-img">
                                 <div class="fill-dimensions"></div>
                                 <div class="grad-black-top op-07 block-100 h-50 abs-tl"></div>
-                                <span class="arrow-scroll abs-bl z-15 scroll-to color--red clickable trans hover-white tablet-hidden" data-target="#product-info">
-                                    <span class="op-0 no-visible js-fade-in in-view display--block" data-emit-events data-delay=".15" data-bottom-top="">
+                                <span
+                                    class="arrow-scroll abs-bl z-15 scroll-to color--red clickable trans hover-white tablet-hidden"
+                                    data-target="#product-info">
+                                    <span class="op-0 no-visible js-fade-in in-view display--block" data-emit-events
+                                          data-delay=".15" data-bottom-top="">
                                         <svg class="icon icon--arrow-long-down display--block">
                                             <use xlink:href="#arrow-long-down"></use>
                                         </svg>
@@ -45,7 +81,9 @@
                         <div class="product-top-section__content ml-auto">
                             <div class="mobile-hor-gutter">
                                 <div class="woocommerce-notices-wrapper"></div>
-                                <header class="product-header abs-tl color--white uppercase tablet-hor-rel js-bt in-view" data-emit-events data-bottom-top="">
+                                <header
+                                    class="product-header abs-tl color--white uppercase tablet-hor-rel js-bt in-view"
+                                    data-emit-events data-bottom-top="">
                                     <div class="font-bold title-13 ls-180 mb-g overflow">
                                         <div class="js-bt__el">
                                             Designed In {{\Carbon\Carbon::parse($data->created_at)->format('Y')}}
@@ -58,22 +96,24 @@
                                     </h1>
                                 </header>
                                 <div class="product-addtocart op-0 no-visible js-fade-in in-view" data-emit-events
-                                     data-delay=".15" data-bottom-top="" id="add-to-cart" style="visibility: inherit; opacity: 1;">
+                                     data-delay=".15" data-bottom-top="" id="add-to-cart"
+                                     style="visibility: inherit; opacity: 1;">
                                     <div class="product__actions a-right mb-y color--grey">
-{{--                                        <span class="product__info br-50 display--inline ml-icon relative trans clickable hover-white scroll-to" data-target="#product-info">--}}
-{{--                                            <svg class="icon icon--info abs-center">--}}
-{{--                                                <use xlink:href="#info"></use>--}}
-{{--                                            </svg>--}}
-{{--                                        </span>--}}
+                                        {{--                                        <span class="product__info br-50 display--inline ml-icon relative trans clickable hover-white scroll-to" data-target="#product-info">--}}
+                                        {{--                                            <svg class="icon icon--info abs-center">--}}
+                                        {{--                                                <use xlink:href="#info"></use>--}}
+                                        {{--                                            </svg>--}}
+                                        {{--                                        </span>--}}
                                         <div class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart">
                                             <a role="button" aria-label="Add to Wishlist"
                                                class="add_to_wishlist tinvwl_add_to_wishlist_button tinvwl-icon-custom no-txt wishlist tinvwl-position-shortcode ftinvwl-animated"
                                                data-id="{{$data->id}}"
                                                @guest
-                                                    href="{{route('loginPageUser')}}"
+                                               href="{{route('loginPageUser')}}"
                                                 @endguest
-                                               >
-                                                <img src="{{asset('site/images/wishlist.png')}}" alt="Add to Wishlist"/> </a>
+                                            >
+                                                <img src="{{asset('site/images/wishlist.png')}}" alt="Add to Wishlist"/>
+                                            </a>
                                             <div class="tinv-wishlist-clear"></div>
                                             <div class="tinvwl-tooltip">Add to Wishlist</div>
                                         </div>
@@ -133,6 +173,14 @@
 @endsection
 
 @section('script')
+    <script src="https://js.stripe.com/v3/"></script>
+    @include('site.shop.detail_section.after_cart_modal')
     @include('site.shop.script.cart_script')
+    <script>
+        $(".js-notice-close").click(function () {
+            $(".checkout_modal").hide();
+            window.location.reload();
+        });
+    </script>
 @endsection
 

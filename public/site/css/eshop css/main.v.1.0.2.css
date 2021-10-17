@@ -3060,6 +3060,29 @@ input[type=range].time::-webkit-slider-thumb {
     width: 100%
 }
 
+.mc-field-grouinput input {
+    color: black !important;
+    border: none !important;
+    margin: auto;
+    border-bottom: 1px solid #000 !important;
+    margin-bottom: 24px !important;
+    max-width: 500px;
+    display: block;
+    font-size: 24px;
+}
+
+.mc-field-grouinput input:focus {
+    outline: none;
+}
+
+.mc-field-grouinput label {
+    font-size: 25px;
+    max-width: 500px;
+    color: #000;
+    margin: auto;
+    display: block;
+}
+
 .custom-share__popup-subtitle {
     font-size: 12px;
     line-height: 15px

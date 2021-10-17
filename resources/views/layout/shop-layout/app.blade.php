@@ -184,6 +184,7 @@
 
 
 </div>
+{{--@include('layout.front-layout.newletter')--}}
 
 @include('layout.shop-layout.js')
 

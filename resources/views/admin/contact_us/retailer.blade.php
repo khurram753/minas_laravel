@@ -74,20 +74,20 @@
                                             <td>{{$contactUs->status}}</td>
                                             <td>
 
-                                                <a title="change-status" data-id="{{$contactUs->id}}"
+                                                <a title="Change Status" data-id="{{$contactUs->id}}"
                                                    href="javascript:void(0)"
                                                    class="btn btn-primary btn-sm changeStatus">
                                                     <i class="fas fa-retweet"></i></a>
 
 
 
-                                                <a title="Edit" href="{{route('contactUsEdit',['id'=>$contactUs->id])}}"
-                                                   class="btn btn-primary btn-sm"><i class="fas fa-pencil-alt"></i></a>
+{{--                                                <a title="Edit" href="{{route('contactUsEdit',['id'=>$contactUs->id])}}"--}}
+{{--                                                   class="btn btn-primary btn-sm"><i class="fas fa-pencil-alt"></i></a>--}}
 
-                                                <a title="Delete" data-id="{{$contactUs->id}}"
-                                                   href="javascript:void(0)"
-                                                   class="btn btn-primary btn-sm deleteRecord">
-                                                    <i class="fas fa-trash-alt"></i></a>
+{{--                                                <a title="Delete" data-id="{{$contactUs->id}}"--}}
+{{--                                                   href="javascript:void(0)"--}}
+{{--                                                   class="btn btn-primary btn-sm deleteRecord">--}}
+{{--                                                    <i class="fas fa-trash-alt"></i></a>--}}
                                             </td>
 
                                         </tr>
@@ -144,52 +144,52 @@
             });
 
 
-            $('#deleteRecordBtn').click(function () {
+            {{--$('#deleteRecordBtn').click(function () {--}}
 
-                var data = $('#delete_form').serialize();
+            {{--    var data = $('#delete_form').serialize();--}}
 
-                $.blockUI({
-                    css: {
-                        border: 'none',
-                        padding: '15px',
-                        backgroundColor: '#000',
-                        '-webkit-border-radius': '10px',
-                        '-moz-border-radius': '10px',
-                        opacity: .5,
-                        color: '#fff'
-                    }
-                });
-                $.ajax({
+            {{--    $.blockUI({--}}
+            {{--        css: {--}}
+            {{--            border: 'none',--}}
+            {{--            padding: '15px',--}}
+            {{--            backgroundColor: '#000',--}}
+            {{--            '-webkit-border-radius': '10px',--}}
+            {{--            '-moz-border-radius': '10px',--}}
+            {{--            opacity: .5,--}}
+            {{--            color: '#fff'--}}
+            {{--        }--}}
+            {{--    });--}}
+            {{--    $.ajax({--}}
 
-                    type: 'POST',
-                    url: '{{route("contactUsDelete")}}',
-                    data: data,
+            {{--        type: 'POST',--}}
+            {{--        url: '{{route("contactUsDelete")}}',--}}
+            {{--        data: data,--}}
 
-                    success: function (response, status) {
+            {{--        success: function (response, status) {--}}
 
-                        if (response.result == 'success') {
-                            $.unblockUI();
-                            successMsg(response.message);
+            {{--            if (response.result == 'success') {--}}
+            {{--                $.unblockUI();--}}
+            {{--                successMsg(response.message);--}}
 
-                            setTimeout(function () {
-                                window.location.href = '{{route('contactUsListing')}}';
-                            }, 1000);
+            {{--                setTimeout(function () {--}}
+            {{--                    window.location.href = '{{route('contactUsListing')}}';--}}
+            {{--                }, 1000);--}}
 
-                        } else if (response.result == 'error') {
-                            $.unblockUI();
-                            errorMsg(response.message);
-                        }
-                    },
-                    error: function (data) {
-                        $.each(data.responseJSON.errors, function (key, value) {
-                            $.unblockUI();
-                            errorMsg(value);
-                        });
-                    }
+            {{--            } else if (response.result == 'error') {--}}
+            {{--                $.unblockUI();--}}
+            {{--                errorMsg(response.message);--}}
+            {{--            }--}}
+            {{--        },--}}
+            {{--        error: function (data) {--}}
+            {{--            $.each(data.responseJSON.errors, function (key, value) {--}}
+            {{--                $.unblockUI();--}}
+            {{--                errorMsg(value);--}}
+            {{--            });--}}
+            {{--        }--}}
 
 
-                });
-            });
+            {{--    });--}}
+            {{--});--}}
 
         });
 

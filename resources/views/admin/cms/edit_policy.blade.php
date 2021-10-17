@@ -4,6 +4,10 @@
     Edit Privacy Policy
 @endsection
 
+@section('style')
+
+@endsection
+
 
 @section('body')
 
@@ -62,12 +66,43 @@
 
     </div>
 
+
+{{--    <div id="throbber" class="modal" role="dialog" style="display:none; position:relative; opacity:0.6; background-color:white;">--}}
+{{--        <img style="margin: 0 auto;--}}
+{{--                position: absolute;--}}
+{{--                top: 0; bottom: 0; left:0; right:0;--}}
+{{--                margin: auto;--}}
+{{--                display: block;" src="{{asset('custom/images/oQ0tF.gif')}}" />--}}
+{{--    </div>--}}
+
 @endsection
 
 
 @section('script')
 
     <script>
+
+        // function block() {
+        //     var body = $('#panel-body');
+        //     var w = body.css("width");
+        //     var h = body.css("height");
+        //     var trb = $('#throbber');
+        //     var position = body.offset(); // top and left coord, related to document
+        //
+        //     trb.css({
+        //         width: w,
+        //         height: h,
+        //         opacity: 0.7,
+        //         position: 'absolute',
+        //         // top:        position.top,
+        //         // left:       position.left
+        //     });
+        //     trb.show();
+        // }
+        // function unblock() {
+        //     var trb = $('#throbber');
+        //     trb.hide();
+        // }
 
         $(document).ready(function () {
 
@@ -87,6 +122,9 @@
                     }
                 });
 
+                // block();
+
+
                 $.ajax({
 
                     type: 'POST',
@@ -100,6 +138,8 @@
 
                         if (response.result == 'success') {
                             $.unblockUI();
+                            // unblock();
+
                             successMsg(response.message);
 
                             setTimeout(function () {
@@ -108,6 +148,8 @@
                                 , 2000);
                         } else if (response.result == 'error') {
                             $.unblockUI();
+                            // unblock();
+
                             errorMsg(response.message);
                         }
 
@@ -116,6 +158,8 @@
                     error: function (data) {
                         $.each(data.responseJSON.errors, function (key, value) {
                             $.unblockUI();
+                            // unblock();
+
                             errorMsg(value);
                         });
                     }
