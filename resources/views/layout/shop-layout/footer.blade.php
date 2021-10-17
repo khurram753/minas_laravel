@@ -31,12 +31,12 @@
                 <div class="font-thin title-70 uppercase mb-med">
                     {{$footer->tag_line}}
                 </div>
-{{--                <div class="font-bold title-12 uppercase ls-180 cursor hover-red trans" id="open-ns-popup">Subscribe--}}
-{{--                    to our newsletter--}}
-{{--                    <svg class="icon icon--arrow-long-right ml-arrow no-trans relative t-sm newsletter-arrow">--}}
-{{--                        <use xlink:href="#arrow-long-right"></use>--}}
-{{--                    </svg>--}}
-{{--                </div>--}}
+                <div class="font-bold title-12 uppercase ls-180 cursor hover-red trans" id="open-ns-popup">
+                    Subscribe to our newsletter
+                    <svg class="icon icon--arrow-long-right ml-arrow no-trans relative t-sm newsletter-arrow">
+                        <use xlink:href="#arrow-long-right"></use>
+                    </svg>
+                </div>
             </div>
         </div>
         <div class="footer__gap-right relative">
