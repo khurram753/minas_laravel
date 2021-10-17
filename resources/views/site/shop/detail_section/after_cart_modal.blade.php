@@ -1,5 +1,7 @@
 <div class="checkout_modal">
-    <p class="product_name_class"> "SILVER NEOPRENE HOOPS" has been added to your cart.</p>
+    <p class="product_name_class">
+        "{{$data->name}}" has been added to your cart.
+    </p>
 
     <a
         @guest

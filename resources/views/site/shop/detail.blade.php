@@ -4,6 +4,10 @@
     {{env('APP_NAME')}} - Product Detail
 @endsection
 
+@section('tags')
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
+@endsection
+
 @section('style')
     <style>
         .block-60 {
@@ -170,6 +174,8 @@
             </span>
         </div>
     </main>
+
+
 @endsection
 
 @section('script')
